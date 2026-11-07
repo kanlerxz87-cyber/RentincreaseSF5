@@ -271,7 +271,7 @@ def layout(title, body, active="", rel=""):
     <nav class="main">%(nav)s</nav>
   </div>
 </header>
-<div class="wrap">%(body)s</div>
+<main id="main" class="wrap">%(body)s</main>
 <footer>
   <div class="wrap">
     <strong>Not legal advice.</strong> This is a source-linked research record compiled for one owner.

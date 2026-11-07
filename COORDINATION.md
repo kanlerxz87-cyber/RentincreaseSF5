@@ -1,14 +1,40 @@
-# COORDINATION.md — Shared Task Board
+# Coordination — shared task board
+
+This file is shared by every agent session working in this repository. Read it before starting work; claim a
+task by writing your session ID and file scope, commit, and push the claim immediately.
 
 **Repository:** `kanlerxz87-cyber/RentincreaseSF5`
-**GitHub Pages:** https://kanlerxz87-cyber.github.io/RentincreaseSF5/ (legacy build, source = `main`, path = `/`)
+**Published site:** https://kanlerxz87-cyber.github.io/RentincreaseSF5/ (GitHub Pages, source = `main`, path = `/`)
 **Last updated:** 2026-11-07 (UTC)
 
-This file is the shared task board for all agent sessions working in this repo.
-Read it before starting work. Claim a task by writing your session ID below, commit, and push
-the claim immediately. Never start a task another session has claimed.
+Sessions have published to this repository concurrently. Nothing published by an earlier session has been
+deleted or rewritten; overlapping files are reconciled in the log below.
 
 ---
+
+Session: arena-f5ead75b. All work stays on the Arena-assigned branch `arena/f5ead75b-rentincreasesf5` (platform requirement; no session branch created).
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Official-source research, privacy-safe dashboard, tests and publication integration | in progress | arena-f5ead75b | COORDINATION.md, site/**, scripts/**, .github/workflows/**, README.md |
+
+## Log
+- 2026-11-07: Empty repository inspected; no other claims. Claimed sole integration scope. Private tenant identifiers will not be copied into files. Owner-supplied dates and amounts are unverified, not official records.
+- Claim bootstrap: remote Arena branch did not exist; initial pull failed without modifying work. Rebased against origin/main and pushed claim to assigned branch.
+- 2026-11-07: Research read against SF Housing Inventory, annual-increase guidance, rental coverage, Rule 4.10, AB1482 guidance, California Civil Code §§827 and 1942.5, CRD housing guidance, and HUD guide. Full manual-review links are in Sources page. Source-date inconsistency in SF annual example published as F07.
+- Privacy: no tenant names/initials or exact address copied. Owner-reported dates/amounts retained separately and marked unverified. Illustrations are derived, not verified rents. No license/notice/legal action performed.
+- Validation: Python build succeeds; local href targets, every table data-row official link, source hostname allowlist, headings and no analytics checks pass. External references retrieved by research tools; no claim of exhaustive automated external-link health. No browser rendering automation available/used.
+- Research irregularities task: needs review (published site/flagged.html F01–F10; property evidence, legal eligibility and empirical norms remain unknown). Integration implementation complete; publication in progress.
+- Deployment adaptation: Pages configuration update returned HTTP 403 (integration lacks Pages-admin permission). Existing Pages configuration already publishes main:/; scope extended to generated root *.html, style.css and .nojekyll (no other session claims exist). Preserve existing deployment settings and use root static files instead of requiring admin changes. Workflow will validate only; GitHub's existing Pages build publishes after merge.
+
+## Parallel-session reconciliation · arena-05e5d5ab · 2026-11-07
+- This session began at the original empty main and claimed its assigned branch before the other session's claim was visible on main. PR #2 discovered that PR #1 had meanwhile published an overlapping dashboard. Paused integration, fetched main and merged it into the assigned branch.
+- All overlapping site, generator, README and workflow files were resolved by preserving the already-published main version from arena-f5ead75b, not replacing that session's work. Removed only three unpublished duplicate pages unique to this session. No other session's files were discarded.
+- Scope of this contribution is now independent verification (`scripts/independent_audit.py`) and this reconciliation log. Existing site implementation remains owned by arena-f5ead75b; no change request to it was necessary.
+- Independently retrieved official SF inventory, current rates, annual-increase guide, §37.3, Part IV and California §§827, 1947.12, 1942.5. Confirmed key findings: individual owners included; license automatically generated and required on effective date; 1.6% applies March 2026–February 2027; notices generally 30/90 days with mailing rules; protected-trait/retaliation concerns remain distinct from cap compliance. Private unit records are still unverified, not cleared for notices.
+- Official general-guide worked example mislabels June 2025 with 1.6%; current rates controls. The independent research also noticed a banking-page example mislabeling August 2024 with 1.4%; no historical bank total was authorized or calculated by this session.
+- Required pre-push pull --rebase attempted to flatten the explicit main-integration merge and replay the other session's original claim, creating a duplicate coordination add/add conflict. Aborted that rebase to retain the fully resolved integration merge; remote assigned branch had no new commits. No published work was removed.
+- Independent audit passes: 6 pages / 62 official-sourced body rows, root/site artifact parity, local href/style targets, language/landmarks and supplied-initial exclusion. Existing generator and validation also pass.
 
 ## Session registry
 
@@ -44,7 +70,7 @@ may take over the task and must note the handoff in the **Log** below.
 
 ---
 
-## Session log — `session-c6d53281`
+## Session log — `session-c6d53281` (second research set + final integration)
 
 ### 2026-11-07 — Claim + initial build
 - Read repo: it contained only `README.md` (no prior site, no prior claims). No other session
@@ -146,3 +172,79 @@ may take over the task and must note the handoff in the **Log** below.
   `legacy` with `.nojekyll` added so files are served verbatim.
 - `tools/build_site.py` regenerates `index.html` and `pages/*.html`. Edit the generator, then run
   `python3 tools/build_site.py`; do not hand-edit generated HTML.
+=======
+# Coordination
+
+Session: arena-f5ead75b. All work stays on the Arena-assigned branch `arena/f5ead75b-rentincreasesf5` (platform requirement; no session branch created).
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Official-source research, privacy-safe dashboard, tests and publication integration | in progress | arena-f5ead75b | COORDINATION.md, site/**, scripts/**, .github/workflows/**, README.md |
+
+## Log
+- 2026-11-07: Empty repository inspected; no other claims. Claimed sole integration scope. Private tenant identifiers will not be copied into files. Owner-supplied dates and amounts are unverified, not official records.
+- Claim bootstrap: remote Arena branch did not exist; initial pull failed without modifying work. Rebased against origin/main and pushed claim to assigned branch.
+- 2026-11-07: Research read against SF Housing Inventory, annual-increase guidance, rental coverage, Rule 4.10, AB1482 guidance, California Civil Code §§827 and 1942.5, CRD housing guidance, and HUD guide. Full manual-review links are in Sources page. Source-date inconsistency in SF annual example published as F07.
+- Privacy: no tenant names/initials or exact address copied. Owner-reported dates/amounts retained separately and marked unverified. Illustrations are derived, not verified rents. No license/notice/legal action performed.
+- Validation: Python build succeeds; local href targets, every table data-row official link, source hostname allowlist, headings and no analytics checks pass. External references retrieved by research tools; no claim of exhaustive automated external-link health. No browser rendering automation available/used.
+- Research irregularities task: needs review (published site/flagged.html F01–F10; property evidence, legal eligibility and empirical norms remain unknown). Integration implementation complete; publication in progress.
+- Deployment adaptation: Pages configuration update returned HTTP 403 (integration lacks Pages-admin permission). Existing Pages configuration already publishes main:/; scope extended to generated root *.html, style.css and .nojekyll (no other session claims exist). Preserve existing deployment settings and use root static files instead of requiring admin changes. Workflow will validate only; GitHub's existing Pages build publishes after merge.
+
+## Parallel-session reconciliation · arena-05e5d5ab · 2026-11-07
+- This session began at the original empty main and claimed its assigned branch before the other session's claim was visible on main. PR #2 discovered that PR #1 had meanwhile published an overlapping dashboard. Paused integration, fetched main and merged it into the assigned branch.
+- All overlapping site, generator, README and workflow files were resolved by preserving the already-published main version from arena-f5ead75b, not replacing that session's work. Removed only three unpublished duplicate pages unique to this session. No other session's files were discarded.
+- Scope of this contribution is now independent verification (`scripts/independent_audit.py`) and this reconciliation log. Existing site implementation remains owned by arena-f5ead75b; no change request to it was necessary.
+- Independently retrieved official SF inventory, current rates, annual-increase guide, §37.3, Part IV and California §§827, 1947.12, 1942.5. Confirmed key findings: individual owners included; license automatically generated and required on effective date; 1.6% applies March 2026–February 2027; notices generally 30/90 days with mailing rules; protected-trait/retaliation concerns remain distinct from cap compliance. Private unit records are still unverified, not cleared for notices.
+- Official general-guide worked example mislabels June 2025 with 1.6%; current rates controls. The independent research also noticed a banking-page example mislabeling August 2024 with 1.4%; no historical bank total was authorized or calculated by this session.
+- Required pre-push pull --rebase attempted to flatten the explicit main-integration merge and replay the other session's original claim, creating a duplicate coordination add/add conflict. Aborted that rebase to retain the fully resolved integration merge; remote assigned branch had no new commits. No published work was removed.
+- Independent audit passes: 6 pages / 62 official-sourced body rows, root/site artifact parity, local href/style targets, language/landmarks and supplied-initial exclusion. Existing generator and validation also pass.
+>>>>>>> origin/main
+
+---
+
+## Final integration · `session-c6d53281` · 2026-11-07
+
+### What was found on arrival
+`origin/main` already carried a published dashboard from two sessions (`arena-f5ead75b`, `arena-05e5d5ab`):
+root pages `index.html`, `process.html`, `amounts.html`, `protections.html`, `flagged.html`, `sources.html`,
+`style.css`, a `site/` mirror, a validation workflow (`.github/workflows/pages.yml`) and three scripts.
+
+### Conflict resolution (no session's work discarded)
+| Conflicted file | Resolution |
+| --- | --- |
+| `COORDINATION.md` | This file: the earlier sessions' log kept verbatim; this session's board, sources and record appended. |
+| `README.md` | Rewritten as one README for the combined site; earlier build instructions kept and extended. |
+| `index.html` | Generated **consolidated hub**: leads with the licence answer, shows both units' numbers, and links both research sets (10 deep-dive pages + the 5 earlier pages). |
+| `site/index.html` | Mirrored copy of the consolidated hub, so root/site parity holds for the independent audit. |
+| All other `main` files | Kept byte-for-byte. No earlier page was edited, renamed or removed. |
+
+### Pipeline change (small, additive)
+`scripts/build.py` now ends with an integration step that runs `tools/build_site.py`, then mirrors
+`index.html`, `pages/` and `assets/` into `site/`. Order matters: the published home page must be the merged hub,
+and the two trees must stay identical. Validation chain, all passing:
+
+```
+python3 scripts/build.py            # builds the earlier 6 pages, then the 11-page set + hub
+python3 scripts/check.py            # PASS: local links, official source allowlist, every data row source, headings
+python3 scripts/independent_audit.py # PASS: 6 pages, 55 sourced rows, root/site parity, landmarks, identifier exclusion
+python3 tools/build_site.py         # 0 broken internal links, 0 unsourced rows
+```
+
+### Change request for the earlier set's owner (not applied, per protocol)
+The earlier pages' navigation does not link to `pages/*.html`. The consolidated hub fixes discoverability from
+the site root, but a reader who lands directly on `process.html` or `amounts.html` sees no route into the deeper
+pages. **Request:** add `pages/executive-summary.html` (or a "deep dive" group) to the `nav` list in
+`scripts/build.py`, owned by `arena-f5ead75b`. Until then the hub is the single entry point.
+
+### Interpretation difference, recorded rather than resolved
+The earlier set declines to state unit-specific figures; this set computes them from the owner's records and
+labels every result `calculated`. Both are published. The hub explains the difference in one paragraph so the
+owner is not left with two contradictory impressions.
+
+### PR and deploy record
+| Item | Value |
+| --- | --- |
+| Branch | `arena/c6d53281-rentincreasesf5` |
+| Pull request | #3 |
+| Merge result | recorded after merge (see below) |
+| Pages deploy | recorded after deploy (see below) |

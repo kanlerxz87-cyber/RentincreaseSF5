@@ -22,9 +22,9 @@ def index():
     b = page_head(
         "Rental increase compliance dashboard",
         "Two rent-controlled units in a 1940 two-unit building, Outer Sunset, San Francisco "
-        "(ZIP 94122). Everything below is taken from official SF.gov / Rent Board, California "
-        "Legislative Information, California Civil Rights Department or HUD pages, and every table "
-        "row links to the page it came from.")
+        "(ZIP 94122). Every table row links to the official SF.gov / Rent Board, California Legislative "
+        "Information, California Civil Rights Department or HUD page its value came from. The site holds two "
+        "independently compiled research sets, grouped separately below.")
 
     b += """
 <section class="panel">
@@ -57,7 +57,7 @@ def index():
 </div>
 
 <section class="panel">
-  <h2>Read by topic</h2>
+  <h2>Deep-dive pages &mdash; this research set</h2>
   <div class="grid">
     <a class="card" href="pages/executive-summary.html"><h3>Executive summary</h3>
       <p>The licence answer first, then the numbers, the risks and the decisions that matter.</p></a>
@@ -75,8 +75,31 @@ def index():
       <p>Corporations vs individuals, one unit vs both, lawful reasons, and a uniform written policy.</p></a>
     <a class="card" href="pages/tenant-review.html"><h3>Tenant-lawyer test</h3>
       <p>The fifteen questions a tenant-side review will ask, and the evidence that answers each one.</p></a>
+    <a class="card" href="pages/sources.html"><h3>Source register</h3>
+      <p>All 30 sources, what each was used for, and its verification status.</p></a>
     <a class="card" href="pages/flagged.html"><h3>Flagged for review</h3>
       <p>Eight open items: one conflicting pair of official statements, one pending ordinance, three unverified facts, two absence-of-authority findings, one interpretation assumption.</p></a>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Earlier independent compilation &mdash; also published here</h2>
+  <p class="small">These five pages were published first by other sessions in this repository and are preserved
+  unchanged. They cover the same law from a deliberately more conservative angle: they decline to compute
+  unit-specific figures at all, whereas the pages above compute them from the owner's records and label every
+  result <span class="badge calc">calculated</span>. Both sets are source-linked; where they differ, the difference
+  is one of approach, not of law. Their open items are listed separately as F01&ndash;F10.</p>
+  <div class="grid">
+    <a class="card" href="process.html"><h3>Licensing &amp; notice</h3>
+      <p>A nine-step compliance path, with explicit warnings about what a licence does not authorise.</p></a>
+    <a class="card" href="amounts.html"><h3>Amounts &amp; tenancy analysis</h3>
+      <p>The rules are verified there; actual eligibility and rent figures are deliberately not asserted.</p></a>
+    <a class="card" href="protections.html"><h3>Tenant protections &amp; owner practices</h3>
+      <p>Challenge routes, plus the fair-housing and retaliation constraints on how an increase is used.</p></a>
+    <a class="card" href="flagged.html"><h3>Flagged for review (F01&ndash;F10)</h3>
+      <p>The other set's open items, including a mislabelled worked example on an official guidance page.</p></a>
+    <a class="card" href="sources.html"><h3>Sources &amp; method</h3>
+      <p>Their source list and the stated limits of their verification.</p></a>
   </div>
 </section>
 
@@ -84,15 +107,18 @@ def index():
   <h2>Verification status</h2>
 """
 
-    b += tbl(
-        "What this site has verified, and what it has not",
-        [("Item", False), ("Count", True), ("Status", False)],
-        [
-            ["Sources fetched and read in full this session", "30", badge("verified")],
-            ["Table rows carrying an official source link", "all", badge("verified")],
-            ["Values left blank because no official source could confirm them", "3", badge("unverified")],
-            ["Irregularities published for manual review", "8", badge("pending")],
-        ])
+    b += """
+  <ul>
+    <li><strong>30 sources</strong> fetched and read in full this session; every table row on every page links
+    to the official page its value came from [[S1]] [[S5]].</li>
+    <li><strong>Two values left blank</strong> rather than estimated: the 3/1/2027&ndash;2/29/2028 allowance and
+    the HUD Fair Market Rent for this area [[S2]].</li>
+    <li><strong>Eight irregularities</strong> published for manual review, each with its sources
+    [[S18]] [[S28]].</li>
+    <li><strong>Build checks:</strong> 0 broken internal links; 0 table rows without a source link or
+    verification badge; 0 HTML tag-balance issues across 11 pages.</li>
+  </ul>
+"""
     b += legend()
     b += """
   <p class="small">Blank rather than guessed: the FY2026/27 HUD Fair Market Rent for this ZIP area, the

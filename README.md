@@ -1,70 +1,81 @@
-# Rental Increase Research — San Francisco (Outer Sunset, ZIP 94122)
+# SF Rent Review — rental increase research dashboard
 
-A source-linked research record and published dashboard about lawful rent increases for **two rent-controlled
-units in a 1940 two-unit building** in San Francisco's Outer Sunset.
+Privacy-safe, official-source research on lawful rent increases for **two rent-controlled units in a 1940
+two-unit building** in San Francisco's Outer Sunset (ZIP 94122).
 
-**Live site:** https://kanlerxz87-cyber.github.io/RentincreaseSF5/
+**Public site:** https://kanlerxz87-cyber.github.io/RentincreaseSF5/
 
----
+Two independently compiled research sets are published here and linked from the home page:
 
-## What the research answers
+| Set | Pages | Character |
+| --- | --- | --- |
+| Deep dive (`pages/`) | executive summary, Rent Board process, units & numbers, allowed increases, local/state/federal law, notices, owner playbook, tenant-lawyer test, source register, flagged for review | Computes unit-specific figures from the owner's records and labels every result `calculated` |
+| Earlier compilation (root) | `process.html`, `amounts.html`, `protections.html`, `flagged.html`, `sources.html` | Deliberately declines to assert unit-specific figures; assertions limited to verified rules |
 
-1. **Does an individual owner need to inform the Rent Board and obtain a licence before raising rent?**
-   Yes to the licence, no to an application: every owner must report into the Rent Board **Housing Inventory**,
-   which generates a **rent increase licence** that must be current on the effective date of the notice.
-   No petition or approval is required for an ordinary annual or banked increase.
-2. **What is a reasonable and normal increase?** The Rent Board's published annual allowance — **1.6%** for
-   3/1/2026–2/28/2027, once every 12 months per tenancy, plus properly banked skipped years (added, never
-   compounded, never rounded up).
-3. **What is available to each unit?** Unit A: **3.0%** ($119.85 → $4,114.85) on its 2027-02-01 anniversary.
-   Unit B: **13.1%** ($412.65 → $3,562.65) from seven skipped years.
-4. **How should tenants be told, and can it survive a tenant-side review?** 30 days' notice (90 days above
-   10%), with the dollar amount, percentage, effective date and the annual/banked split; see the fifteen-question
-   stress test on the site.
-5. **One unit or both?** The law does not require equal percentages; a documented, uniform method does the work
-   that equal percentages are imagined to do.
+Both sets are source-linked to official pages. Where they differ, the difference is one of approach, not of law.
+
+## The question the research answers first
+
+*Does an individual owner need to tell the Rent Board and apply for a licence before notifying tenants of a rent
+increase?* **Licence yes, application no.** Every owner — individual or corporate — must report into the Rent
+Board Housing Inventory; that generates a rent increase licence for a tenant-occupied unit, which must be current
+on the effective date of the notice or the increase is not enforceable (S.F. Admin Code §37.15(e)). No petition or
+approval is needed for an ordinary annual or banked increase (§37.3(a)(1)–(2); the Rent Board's 571 rate sheet
+states it may be imposed "without filing a petition"). Only six special increase types require a petition filed
+before notice.
+
+## Numbers (arithmetic on owner-supplied base rents; not a Rent Board determination)
+
+| Unit | Tenancy from | Base rent | Available | Increase | New base | Notice |
+| --- | --- | --- | --- | --- | --- | --- |
+| A | 2025-02-01 | $3,995.00 | 1.4% + 1.6% = **3.0%** | $119.85 | $4,114.85 | 30 days |
+| B | 2019-06-01 | $3,150.00 | 1.8+0.7+2.3+3.6+1.7+1.4+1.6 = **13.1%** | $412.65 | $3,562.65 | 90 days |
+
+## Build and validate
+
+Requires Python 3, no packages or external assets:
+
+```
+python3 scripts/build.py             # earlier 6 pages, then the 11-page set and the consolidated hub
+python3 scripts/check.py             # local links, official-source allowlist, every data row sourced, headings
+python3 scripts/independent_audit.py # root/site parity, landmarks, identifier exclusion
+python3 tools/build_site.py          # link + source-coverage check for the pages/ set
+python3 -m http.server 8000 --bind 0.0.0.0   # preview from the repository root
+```
+
+Generated HTML is written to the repository root (GitHub Pages publishes `main:/`) and mirrored into `site/`.
+`.nojekyll` keeps Pages from processing the files.
 
 ## Repository layout
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Dashboard (published) |
-| `pages/*.html` | Topic pages (published) |
-| `assets/style.css` | Stylesheet (published) |
-| `data/*.csv` | Machine-readable tables: sources, allowances, unit figures, flags |
-| `tools/site_lib.py` | Layout, source register, citation helper |
-| `tools/pages_1.py`, `tools/pages_2.py` | Page content |
-| `tools/build_site.py` | Builds the site and runs the link + source checks |
-| `COORDINATION.md` | Shared task board for agent sessions |
-| `internal/notes.md` | Internal working notes (contains no personal data) |
+| `index.html` | Consolidated hub (generated) |
+| `pages/*.html`, `assets/style.css`, `data/*.csv` | Deep-dive set, its stylesheet and machine-readable tables |
+| `process.html`, `amounts.html`, `protections.html`, `flagged.html`, `sources.html`, `style.css` | Earlier published set (unchanged) |
+| `site/` | Mirror of the published root, used by the validation scripts |
+| `tools/` | Generator for the deep-dive set (`site_lib.py`, `pages_1.py`, `pages_2.py`, `build_site.py`) |
+| `scripts/` | Earlier set's generator, checks and independent audit |
+| `COORDINATION.md` | Shared task board, source list and reconciliation log |
 
-## Rebuild
+## Verification rules
 
-```bash
-python3 tools/build_site.py
-```
-
-The build writes `index.html`, `pages/*.html`, `assets/style.css`, `data/*.csv`, and fails (non-zero exit) if any
-internal link is broken or any table row lacks a source link or verification badge. GitHub Pages is configured to
-publish from the repository root of `main`; `.nojekyll` makes it serve the HTML verbatim.
-
-## Verification rules used
-
-- Every table row links to the official page its value came from (SF.gov / Rent Board, California Legislative
+- Every table row links the official page its value came from (SF.gov / Rent Board, California Legislative
   Information, California Civil Rights Department, U.S. HUD).
-- Values are never inferred. If an official source could not confirm a value, the cell is **blank** and the gap
-  appears on the *Flagged for review* page.
-- Arithmetic is labelled **calculated** and shows the official percentages it derives from. It is not a Rent
-  Board determination.
+- Values are never inferred. If an official source could not confirm a value, the cell is blank and the gap is
+  listed on the *Flagged for review* page.
+- Arithmetic is labelled `calculated` and shows the official percentages it derives from.
+- Research date: **7 November 2026**. Statutes, rules and rates change; re-check before acting.
 
 ## Privacy
 
-Tenant names, initials and addresses are **not** stored in this repository, in git history, or on the site.
-The record uses `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenant B2`, `Unit A` and `Unit B`. Dates and dollar
-amounts are preserved because the arithmetic depends on them.
+No tenant names, initials, addresses, parcel numbers or personal documents are stored in this repository, its
+history or the site. The record uses `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenant B2`, `Unit A` and `Unit B`.
+Dates and dollar amounts are preserved because the arithmetic depends on them. Housing Inventory submissions are
+public and made under penalty of perjury — use truthful data in the official Rent Board portal, never placeholders.
 
 ## Not legal advice
 
-This is a research record compiled for one owner from public official sources. The Rent Ordinance and Rent Board
-rules change. The controlling text is on the official pages linked throughout the site. The Rent Board counsellor
-line is 415-252-4600.
+Research only. No licence was obtained, no inventory report filed, and no notice served or approved by this
+repository. Recommendations and hypothetical arithmetic are not official determinations. The controlling text is
+on the official pages linked throughout; the Rent Board counsellor line is 415-252-4600.
