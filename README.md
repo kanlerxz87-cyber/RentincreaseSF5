@@ -91,3 +91,38 @@ on the official pages linked throughout; the Rent Board counsellor line is 415-2
 ## Independent compilation (session arena/0502f829-rentincreasesf5)
 
 A fourth, independently verified compilation is also published here and linked from the hub: `pages/compilation.html` (executive summary — the licence answer first), `pages/process.html` (step-by-step Rent Board process), `pages/rates.html` (Form 571 allowable-increase history), `pages/questions.html` (owner Q&A) and `pages/review.html` (flagged items). It uses its own stylesheet (`assets/rent-dashboard.css`) and links every table row directly to the official source page. Where this compilation and the deep-dive set differ, the difference is one of approach, not of law. Its open items are listed on its own flagged page.
+
+---
+
+## Independent second dashboard — `docs/`
+
+A complete second research dashboard lives in **`docs/`**, built and verified by another
+session and merged alongside the pages above. It is published at:
+
+**https://kanlerxz87-cyber.github.io/RentincreaseSF5/docs/**
+
+Its 12 pages are: executive summary, the licence question, a step-by-step checklist,
+allowable-increase rates, anonymized unit ledgers, notice requirements, petitions and
+passthroughs, corporate vs. individual owners, discrimination risk, the federal/state/local
+law breakdown, a Flagged for Review page, and a source registry.
+
+Build and verify it with:
+
+```bash
+python3 tools/rent_calc.py            # recompute + 21 self-tests (all pass)
+python3 tools/dashboard_build.py      # regenerate docs/
+python3 tools/dashboard_check_links.py
+```
+
+It reaches the same headline conclusion by an independent route: **§37.15 requires every
+owner — individual or corporate — to hold a current rent-increase licence before an annual
+or banked increase takes effect, and no petition is needed for the increase itself.**
+
+Its data files live in `docs/data/` and its scripts are prefixed `dashboard_`/`rent_` to
+avoid colliding with the scripts above.
+
+### Privacy
+
+Tenant names and initials are anonymized throughout. The identity mapping exists only in
+`PRIVATE.md` and `private/identifiers.txt`, both git-ignored and never published. Note that
+GitHub Pages serves this repository's **root**, so anything committed anywhere is public.

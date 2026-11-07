@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "policy": "All tenant names and initials are anonymized on the published site. Real identifying details are kept in PRIVATE.md, which is git-ignored and never published. Dates and dollar amounts are unchanged.",
+    "location": "San Francisco, Outer Sunset, ZIP 94122",
+    "building_year_built": 1940,
+    "building_year_source": "Owner statement (unverified against the SF Property Information Map)",
+    "analysis_date": "2026-11-07",
+    "owner_type": "Individual / natural person (not a corporation, not a REIT)"
+  },
+  "units": [
+    {
+      "unit_id": "A",
+      "public_label": "Unit A",
+      "tenancy_start": "2025-02-01",
+      "initial_base_rent": 3995.00,
+      "current_base_rent": 3995.00,
+      "current_rent_as_of": "2026-04-01",
+      "anniversary_month": 2,
+      "anniversary_day": 1,
+      "occupants_initial": [
+        { "label": "Occupant A-1", "role": "Original occupant", "status": "Continuing", "since": "2025-02-01" },
+        { "label": "Occupant A-2", "role": "Original occupant", "status": "Vacated", "since": "2025-02-01" },
+        { "label": "Occupant A-3", "role": "Original occupant", "status": "Vacated", "since": "2025-02-01" }
+      ],
+      "occupants_current": [
+        { "label": "Occupant A-1", "role": "Original occupant", "status": "Continuing", "since": "2025-02-01" },
+        { "label": "Occupant A-4", "role": "Replacement occupant (moved in after the original lease)", "status": "Continuing", "since": "2026-04-01" }
+      ],
+      "rent_history_confirmed": false,
+      "rent_history_note": "No increase has been confirmed by the owner between 2025-02-01 and the analysis date. All scenarios below assume no prior increase."
+    },
+    {
+      "unit_id": "B",
+      "public_label": "Unit B",
+      "tenancy_start": "2019-06-01",
+      "initial_base_rent": 3150.00,
+      "current_base_rent": 3150.00,
+      "current_rent_as_of": "2026-11-07",
+      "anniversary_month": 6,
+      "anniversary_day": 1,
+      "occupants_initial": [
+        { "label": "Occupant B-1", "role": "Original occupant", "status": "Continuing", "since": "2019-06-01" },
+        { "label": "Occupant B-2", "role": "Original occupant", "status": "Continuing", "since": "2019-06-01" }
+      ],
+      "occupants_current": [
+        { "label": "Occupant B-1", "role": "Original occupant", "status": "Continuing", "since": "2019-06-01" },
+        { "label": "Occupant B-2", "role": "Original occupant", "status": "Continuing", "since": "2019-06-01" }
+      ],
+      "rent_history_confirmed": false,
+      "rent_history_note": "No increase has been confirmed by the owner since 2019-06-01. All banked-increase scenarios below assume no prior increase."
+    }
+  ],
+  "coverage_assumptions": [
+    {
+      "assumption": "Both units are covered by San Francisco rent control (building built 1940, i.e. before the June 13, 1979 cutoff).",
+      "verified": false,
+      "source_url": "https://www.sf.gov/learn-about-san-francisco-rental-laws",
+      "flag": "The June 13, 1979 test is necessary but not sufficient. If either unit is a single-family home or a condominium, Costa-Hawkins removes the rent-increase limits because both tenancies commenced on or after January 1, 1996. Verify the property type before serving any notice."
+    },
+    {
+      "assumption": "Neither unit received a rent increase before the analysis date of 2026-11-07.",
+      "verified": false,
+      "source_url": null,
+      "flag": "Owner-supplied records were not provided. Every banked-increase figure depends on this. If any increase was served, recompute."
+    }
+  ]
+}

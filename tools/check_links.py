@@ -15,6 +15,9 @@ Exit code 0 = clean, 1 = problems found.
 import json
 import os
 import re
+
+# Generic initial-pair pattern. Catches initials without committing any real one.
+INITIAL_PAIR = re.compile(r"\b[A-Z]\s[A-Z]\b")
 import sys
 from html.parser import HTMLParser
 
@@ -44,6 +47,18 @@ class Collector(HTMLParser):
             self.hrefs.append(a["href"])
             if "src" in (a.get("class") or "").split():
                 self.src_targets.append(a["href"])
+
+def _identifier_tokens():
+    """Exact identifier tokens, loaded only from a git-ignored private file.
+
+    Keeping the tokens out of version control means no personal identifier is
+    published to GitHub Pages, while the check still works for the owner locally.
+    """
+    path = os.path.join(ROOT, "private", "identifiers.txt")
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as handle:
+        return [line.strip() for line in handle if line.strip()]
 
 
 def main():
@@ -148,8 +163,12 @@ def main():
             elif open(src, "rb").read() != open(dst, "rb").read():
                 problems.append("mirror differs: site/dashboard/%s" % rel)
 
-    # identifier exclusion (same tokens the repository's independent audit enforces)
-    banned = ["L O", "V N", "JP", "M T", "E R", "I S"]
+    # identifier exclusion (privacy-preserving)
+    # No real identifier is stored in this repository. Exact tokens are read from an
+    # optional git-ignored file private/identifiers.txt (one per line); when that file
+    # is absent the exact-token check is skipped. The generic initial-pair pattern is
+    # always enforced, so initials are still caught without anyone being named here.
+    banned = _identifier_tokens()
     for dirpath, _dirs, files in os.walk(DOCS):
         for name in files:
             if not name.endswith(".html"):
@@ -157,7 +176,12 @@ def main():
             text = open(os.path.join(dirpath, name), encoding="utf-8").read()
             for token in banned:
                 if token in text:
-                    problems.append("%s: contains a personal identifier token (%s)" % (name, token))
+                    problems.append("%s: contains a personal identifier token" % name)
+                    break
+            hit = INITIAL_PAIR.search(re.sub(r"<[^>]+>", " ", text))
+            if hit:
+                problems.append("%s: initial-pair pattern %r - verify it is a placeholder"
+                                % (name, hit.group(0)))
 
     print("pages checked: %d" % len(PAGES))
     print("mirror parity: site/dashboard/ compared against dashboard/")

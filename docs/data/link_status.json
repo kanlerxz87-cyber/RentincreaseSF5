@@ -1,0 +1,119 @@
+{
+  "_comment": "Fetch results recorded by actually retrieving each page during the research phase on 2026-11-07. The build sandbox has no general outbound network access, so these records are the evidence that each citation URL was live and served the expected content.",
+  "checked_on": "2026-11-07",
+  "method": "Each URL was retrieved and its returned content matched against the claim it supports. 'ok' = HTTP 200 and content confirmed to contain the cited material.",
+  "urls": {
+    "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit": {
+      "result": "ok",
+      "confirmed": "1.6% for 3/1/2026-2/28/2027; 4.2% security deposit interest; capital improvement rates; relocation payments"
+    },
+    "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf": {
+      "result": "ok",
+      "confirmed": "full year-by-year table transcribed; 1.6% current; 60%-of-CPI formula"
+    },
+    "https://www.sf.gov/learn-about-rent-increases-san-francisco/": {
+      "result": "ok",
+      "confirmed": "license requirement; 12-month rule; 30/90-day notice; additional occupants; four worked examples; no rounding up"
+    },
+    "https://www.sf.gov/rent-board-housing-inventory": {
+      "result": "ok",
+      "confirmed": "who must report; March 1 deadline; license auto-generated for non-owner-occupied units; no monetary penalty for late filing"
+    },
+    "https://sf.gov/information/banked-rent-increases": {
+      "result": "ok",
+      "confirmed": "no limit on banking; banked increases do not expire; do not carry over to a new tenant; not compounded or prorated; notice must state which part is banked"
+    },
+    "https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring": {
+      "result": "ok",
+      "confirmed": "Rule 4.10(a) notice contents; Rule 4.10(b) null and void; Rule 4.12(a) full 12 months / not compounded / not rounded up; Rule 4.12(b) banked disclosure; Rule 4.11(h) and 4.13(f) not part of base rent"
+    },
+    "https://www.sf.gov/documents/36249/625_RR_Complete_1-13-26.pdf": {
+      "result": "ok",
+      "confirmed": "table of contents shows Part XIII Reporting Obligations Under Ordinance Section 37.15 with Section 13.14 'Licensing - Notice of Rent Increase'; Rules last amended 1/13/26"
+    },
+    "https://www.sf.gov/information/sec-3715-reporting-obligations-licensing": {
+      "result": "ok",
+      "confirmed": "full text of Sec. 37.15(a)-(e), including the license, suspension and prospective restoration"
+    },
+    "https://www.sf.gov/information/sec-373-rent-limitations": {
+      "result": "ok",
+      "confirmed": "Sec. 37.3(a)(1) 60% of CPI capped at 7% and the Sec. 37.15 license condition; (a)(2) banking; (a)(3) capital improvements; (a)(5) water"
+    },
+    "https://www.sf.gov/documents/65403/600_Ordinance_11-02-26_2.pdf": {
+      "result": "ok",
+      "confirmed": "complete ordinance as amended November 2, 2026"
+    },
+    "https://www.sf.gov/information/sec-3710b-tenant-harassment": {
+      "result": "ok",
+      "confirmed": "Sec. 37.10B(a)(5) rent-increase-as-coercion and its bad-faith factors; (c)(5) treble damages or $1,000 statutory damages plus fees"
+    },
+    "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited": {
+      "result": "ok",
+      "confirmed": "Sec. 37.10C(a)-(f): prohibition on sale and use of algorithmic devices; up to $1,000 per violation; tenant right of action"
+    },
+    "https://www.sf.gov/rent-board-fee": {
+      "result": "ok",
+      "confirmed": "$59.00 per dwelling unit 2026-2027; $29.50 recoverable; March 1 deadline; 5%/month penalty capped at 15%; fee applies to single-family homes and condos"
+    },
+    "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement": {
+      "result": "ok",
+      "confirmed": "'Some rent increases given without a license will be null and void'; March 1, 2027 reporting deadline; December 14, 2026 exemption deadline"
+    },
+    "https://www.sf.gov/learn-about-san-francisco-rental-laws": {
+      "result": "ok",
+      "confirmed": "June 13, 1979 cutoff; units with eviction protection only; wholly exempt categories"
+    },
+    "https://sf.gov/landlord-petitions-and-passthroughs": {
+      "result": "ok",
+      "confirmed": "the six petition types; no filing fee; worksheet filings required before notice"
+    },
+    "https://sf.gov/information/topic-no-329-petition-determination-pursuant-section-614-andor-costa-hawkins": {
+      "result": "ok",
+      "confirmed": "Section 6.14 unlimited increase when last original occupant vacates; the 6.14 notice and the 60-day reasonableness guideline; co-tenants excluded from the Costa-Hawkins reset"
+    },
+    "https://sf.gov/information/partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins": {
+      "result": "ok",
+      "confirmed": "SFR/condo exemption for tenancies commencing on or after 1/1/1996; in-law unit makes it a two-unit building; fee and just cause still apply"
+    },
+    "https://www.sf.gov/resource--2023--rent-board-laws-and-regulations": {
+      "result": "ok",
+      "confirmed": "index of Ordinance, Rules and Regulations, Chapter 37A, Costa-Hawkins, Ellis Act, AB 1482"
+    },
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.": {
+      "result": "ok",
+      "confirmed": "30 days if 10% or less; 90 days if greater than 10%, alone or combined"
+    },
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12.": {
+      "result": "ok",
+      "confirmed": "5% + CPI capped at 10%; no more than two increments in 12 months; (d)(3) exemption for lower local caps; (d)(5)(A)(ii) corporations excluded"
+    },
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53.": {
+      "result": "ok",
+      "confirmed": "vacancy decontrol framework and its exceptions"
+    },
+    "https://www.hud.gov/helping-americans/fair-housing-act-overview": {
+      "result": "ok",
+      "confirmed": "seven federally protected classes"
+    },
+    "https://calcivilrights.ca.gov/housing/": {
+      "result": "ok",
+      "confirmed": "FEHA protected characteristics including source of income, immigration status, primary language, age; retaliation"
+    },
+    "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482/": {
+      "result": "ok",
+      "confirmed": "8.8% AB 1482 cap for San Francisco Aug 1, 2026 - Jul 31, 2027 (5% + 3.8% CPI); 'This does NOT apply for units under the rent increase limitations of the San Francisco Rent Ordinance'; corporation / REIT / LLC exclusion"
+    },
+    "https://www.sf.gov/documents/7737/537_6.14_Costa-Hawkins_Petition_3.25.pdf": {
+      "result": "ok",
+      "confirmed": "Form 537 instructions: filing a 6.14 or Costa-Hawkins petition is OPTIONAL; such increases are effective on expiration of the 30 or 90-day Civil Code 827 notice; +5 days if mailed"
+    },
+    "https://sfplanninggis.org/PIM/": {
+      "result": "official_reference",
+      "confirmed": "SF Property Information Map, linked by the Rent Board's 'Learn about San Francisco rental laws' page as the tool for checking when a building was built"
+    },
+    "https://github.com/kanlerxz87-cyber/RentincreaseSF5/blob/main/tools/calc.py": {
+      "result": "self",
+      "confirmed": "this repository's own calculation and self-test script"
+    }
+  }
+}
