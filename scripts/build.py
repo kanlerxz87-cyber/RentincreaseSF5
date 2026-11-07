@@ -112,3 +112,13 @@ for _src in list(Path('pages').glob('*.html')) + [p for p in Path('assets').glob
     _dst = Path('site') / _src
     _dst.parent.mkdir(parents=True, exist_ok=True)
     _sh.copyfile(_src, _dst)
+
+# --- Consolidated hub - session arena-d4b68642 (final integration) ------------
+# Runs LAST so index.html is the single consolidated landing page. The hub that
+# tools/build_site.py just produced is preserved as previous-dashboard.html and
+# linked from hub/archive.html, so no earlier session's work is discarded.
+_sh.copyfile('index.html', 'previous-dashboard.html')
+_sh.copyfile('index.html', Path('site') / 'previous-dashboard.html')
+_sp.run([_sys.executable, 'tools/build_hub.py'], check=True)
+print('Consolidated hub built; earlier sets preserved and linked from hub/archive.html.')
+

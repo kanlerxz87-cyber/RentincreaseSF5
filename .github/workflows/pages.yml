@@ -1,7 +1,7 @@
 name: Validate research dashboard
 on:
   push:
-    branches: [main, arena/f5ead75b-rentincreasesf5]
+    branches: [main, arena/f5ead75b-rentincreasesf5, arena/d4b68642-rentincreasesf5]
   pull_request:
   workflow_dispatch:
 permissions:
@@ -19,4 +19,22 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python scripts/build.py && python scripts/check.py
+      - name: Build all sets (consolidated hub last)
+        run: python scripts/build.py
+      - name: Earlier sets' checks
+        run: |
+          python scripts/check.py
+          python scripts/independent_audit.py
+          python tools/check_links.py
+      - name: Release gate (blocks a broken or private site)
+        run: python tools/release_gate.py
+      - name: Confirm the build is reproducible
+        run: |
+          python scripts/build.py
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Build produced changes not committed to the branch:"
+            git status --porcelain
+            git diff --stat
+            exit 1
+          fi
+          echo "Build is reproducible - committed artifacts match a fresh build."
