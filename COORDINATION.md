@@ -1,17 +1,23 @@
 # Coordination
 
-Session: arena-05e5d5ab. Started 2026-11-07 UTC. Assigned branch: arena/05e5d5ab-rentincreasesf5 (platform-required; no alternate branches).
+Session: arena-f5ead75b. All work stays on the Arena-assigned branch `arena/f5ead75b-rentincreasesf5` (platform requirement; no session branch created).
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Official-source research, privacy review, site implementation and final integration | in progress | arena-05e5d5ab | COORDINATION.md, README.md, site/**, scripts/**, .github/workflows/** |
+| Official-source research, privacy-safe dashboard, tests and publication integration | in progress | arena-f5ead75b | COORDINATION.md, site/**, scripts/**, .github/workflows/**, README.md |
 
-Repository initially contained only README.md. No other claims existed. Do not publish supplied personal identifiers. Supplied tenancy facts are not officially verified and will not populate verified-value tables.
+## Log
+- 2026-11-07: Empty repository inspected; no other claims. Claimed sole integration scope. Private tenant identifiers will not be copied into files. Owner-supplied dates and amounts are unverified, not official records.
+- Claim bootstrap: remote Arena branch did not exist; initial pull failed without modifying work. Rebased against origin/main and pushed claim to assigned branch.
+- 2026-11-07: Research read against SF Housing Inventory, annual-increase guidance, rental coverage, Rule 4.10, AB1482 guidance, California Civil Code §§827 and 1942.5, CRD housing guidance, and HUD guide. Full manual-review links are in Sources page. Source-date inconsistency in SF annual example published as F07.
+- Privacy: no tenant names/initials or exact address copied. Owner-reported dates/amounts retained separately and marked unverified. Illustrations are derived, not verified rents. No license/notice/legal action performed.
+- Validation: Python build succeeds; local href targets, every table data-row official link, source hostname allowlist, headings and no analytics checks pass. External references retrieved by research tools; no claim of exhaustive automated external-link health. No browser rendering automation available/used.
+- Research irregularities task: needs review (published site/flagged.html F01–F10; property evidence, legal eligibility and empirical norms remain unknown). Integration implementation complete; publication in progress.
+- Deployment adaptation: Pages configuration update returned HTTP 403 (integration lacks Pages-admin permission). Existing Pages configuration already publishes main:/; scope extended to generated root *.html, style.css and .nojekyll (no other session claims exist). Preserve existing deployment settings and use root static files instead of requiring admin changes. Workflow will validate only; GitHub's existing Pages build publishes after merge.
 
-## Integration log · 2026-11-07
-- Claim pull from assigned branch initially failed because the remote branch did not exist; pulled/rebased main, then created only the assigned remote branch by pushing the claim. No conflict or other session found.
-- Integration additionally owns root `index.html` and `.nojekyll`, required by existing Pages root/main configuration.
-- Research: directly read official SF Housing Inventory, rate schedule, general rent guide, §37.3, Part IV rules, and California Civil Code §§827, 1947.12 and 1942.5. Official extracted text reviewed for banking, roommate, CRD, HUD and counsel references. Source register: site/sources.html. Per-row evidence links provided; private facts not officially authenticated.
-- Needs review: site/flagged.html publishes missing tenancy/license records, no historical bank calculation, official example date errors, missing market/industry evidence, privacy re-identification risk and no lawyer review. These are not publication blockers.
-- Verification: Python build completed; 7 pages / 60 body rows have official source links; local navigation/style paths, HTML language/landmark and supplied-initial exclusion pass. External government links were retrieved using research tools, not a blanket HTTP crawl (sandbox outbound restrictions).
-- Deployment adaptation: Pages read API confirmed existing main/root legacy publishing. Changing Pages to workflow mode returned HTTP 403 (integration permission). Preserved legacy deployment instead; no credential changes needed. Workflow is validation-only; root redirect and .nojekyll support existing publisher.
+## Parallel-session reconciliation · arena-05e5d5ab · 2026-11-07
+- This session began at the original empty main and claimed its assigned branch before the other session's claim was visible on main. PR #2 discovered that PR #1 had meanwhile published an overlapping dashboard. Paused integration, fetched main and merged it into the assigned branch.
+- All overlapping site, generator, README and workflow files were resolved by preserving the already-published main version from arena-f5ead75b, not replacing that session's work. Removed only three unpublished duplicate pages unique to this session. No other session's files were discarded.
+- Scope of this contribution is now independent verification (`scripts/independent_audit.py`) and this reconciliation log. Existing site implementation remains owned by arena-f5ead75b; no change request to it was necessary.
+- Independently retrieved official SF inventory, current rates, annual-increase guide, §37.3, Part IV and California §§827, 1947.12, 1942.5. Confirmed key findings: individual owners included; license automatically generated and required on effective date; 1.6% applies March 2026–February 2027; notices generally 30/90 days with mailing rules; protected-trait/retaliation concerns remain distinct from cap compliance. Private unit records are still unverified, not cleared for notices.
+- Official general-guide worked example mislabels June 2025 with 1.6%; current rates controls. The independent research also noticed a banking-page example mislabeling August 2024 with 1.4%; no historical bank total was authorized or calculated by this session.

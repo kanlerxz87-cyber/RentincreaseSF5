@@ -1,21 +1,17 @@
-# SF Rental Review
+# SF Rent Review
 
-Privacy-first, official-source research dashboard for San Francisco rent-controlled housing.
-
-Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF5/
+Privacy-safe, official-source research dashboard. Public site: https://kanlerxz87-cyber.github.io/RentincreaseSF5/
 
 ## Build and validate
 
-Requires Python 3 only; no third-party packages or remote UI assets.
+Requires Python 3, no packages or external assets:
 
-```sh
+```
 python scripts/build.py
 python scripts/check.py
 python -m http.server 8000 --bind 0.0.0.0 --directory site
 ```
 
-Content lives in `scripts/build.py`; generated static pages and stylesheet live in `site/`. GitHub Actions verifies PRs. Existing GitHub Pages legacy publishing serves main from the repository root; the root landing file redirects to `site/`. Source register and Flagged for Review pages document evidence, unresolved facts and official-source irregularities. Verification is dated November 7, 2026; no automatic legal updates are implied.
+Research checked November 7, 2026. All table rows link official rule references; unverified actual property values are blank. Owner-reported dates/amounts are separately labeled, not authenticated. Names/initials, address and personal documents are not stored. Recommendations and hypothetical arithmetic are not official legal determinations. No notices served or inventory reports filed. See the site's Flagged for Review and Sources pages.
 
-No actual tenant names, supplied initials, street address, portal credentials or private lease documents are stored. User-reported dates/rents are explicitly unverified scenario context, not official facts. Verified unit-specific values are intentionally blank. Public dates and rents can still be identifying; this is pseudonymization, not an anonymity guarantee. Do not add private files to this public repository.
-
-Research is not legal advice; no tenant notice or government filing has been made.
+The source-of-truth content is in scripts/build.py; generated HTML is in site/. GitHub Actions validates all pages. Generated files are mirrored to the repository root for the existing main:/ GitHub Pages deployment (Pages-admin API changes are not permitted to this integration). Local link and source-coverage checks do not establish permanent external availability or legal correctness.

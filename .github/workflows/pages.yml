@@ -1,16 +1,18 @@
-name: Verify research site
+name: Validate research dashboard
 on:
   push:
-    branches: [main]
+    branches: [main, arena/f5ead75b-rentincreasesf5]
   pull_request:
   workflow_dispatch:
 permissions:
   contents: read
+  pages: write
+  id-token: write
 concurrency:
   group: pages-${{ github.ref }}
   cancel-in-progress: false
 jobs:
-  verify:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
