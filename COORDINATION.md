@@ -24,11 +24,34 @@
 | T5 | GitHub Pages site: clean dashboard landing + category subpages, tables, analysis, Flagged for Review page | in progress | session-635908db | `index.html`, `pages/*`, `assets/*`, `_config.yml`, `.nojekyll` |
 | T6 | Line-by-line verification, build check, broken-link check, anonymization audit | in progress | session-a00d318d | `scripts/verify.py`, `scripts/tests/*`, `VERIFICATION.md`, `.github/workflows/verify.yml`, `docs/VERIFICATION-CONTRACT.md` |
 | T7 | PR to main, merge, confirm Pages deploy, record PR link + result here | unclaimed | session-635908db | `COORDINATION.md` |
+| T8 | Independent substantive fact-check: official-source evidence register (one row per legal/numeric fact: verbatim excerpt + official URL + retrieval date + verified/unverified flag) and read-only cross-check of other sessions' published outputs; discrepancies logged here and marked `needs review` | in progress | session-a872cd08 | `evidence/**` (new directory; read-only on every other path) |
 
 ## Claims log
 
 - 2026-11-07 — `session-635908db` claimed T1–T5 with the file scopes above. Claim committed and pushed immediately.
 - 2026-11-07 — Repo review result: initial commit `b747350` contained only `README.md` (`# RentincreaseSF5`, no newline). No other files, no site, no data, no COORDINATION.md. Flagged for review: empty repo / no pre-existing findings to verify.
+
+## Session a872cd08 — claim, observed overlaps, requests (added 2026-11-07T20:12Z)
+
+- Session ID: `session-a872cd08`. Platform-fixed branch: `arena/a872cd08-rentincreasesf5` (cannot create/switch to a `session-*` branch). Started from `origin/main` (`b747350`), then fast-forwarded to `a00d318d`'s published board (`77e931e`, which contains `635908db`'s `528c731`) so the earliest published board is preserved. No already-claimed task has been started by this session.
+- **Claim: T8** (row above). Scope is `evidence/**` only; it touches no file named in T1–T7. T8 does not replace `data/SOURCES.md` (T4) or `scripts/verify.py` (T6); it is an independent second-source check. `evidence/register.csv` is offered as a reference table that T6 may consume and the integration session may link from the Sources / Flagged for Review pages. T7 is left as listed (not claimed).
+- Branch/board survey (`git fetch` of `refs/heads/arena/*`, 2026-11-07T20:07Z):
+
+| Session | Branch | Board commit (UTC) | What its board claims |
+|---|---|---|---|
+| 635908db | `arena/635908db-rentincreasesf5` | `528c731` (20:02:16) | T1–T5 research / data / site; lists T6, T7 |
+| 6f06d5b3 | `arena/6f06d5b3-rentincreasesf5` | `5a4d399` (20:04:23) | separate board, not based on 635908db's: `data/findings.csv`, `data/sources.md`, `data/units.csv`, `data/analysis.md`, `pages/*.html`, `index.html`, `css/style.css`, `data/flagged.csv`, plus final integration |
+| a00d318d | `arena/a00d318d-rentincreasesf5` | `77e931e` (20:04:45) | T6 only (built on 635908db's board) |
+| f5ead75b | `arena/f5ead75b-rentincreasesf5` | `ede0e00` (20:05:02) | separate board: `site/**`, `scripts/**`, `.github/workflows/**`, `README.md`, "sole integration scope" |
+
+- Overlaps found (for the owners to resolve; nothing edited by this session):
+  1. Research / data / executive summary / site (T2–T5) is claimed by both `635908db` (earliest, 20:02:16Z) and `6f06d5b3` (20:04:23Z). The protocol says the earliest published claim stands. (`data/SOURCES.md` vs `data/sources.md` would also be two different files on Linux.)
+  2. `f5ead75b`'s `site/**` overlaps T5 (site); its `scripts/**` and `.github/workflows/**` overlap T6 (`a00d318d`).
+  3. Three boards each designate their own session as final integration; four COORDINATION.md files were created independently, so merging to `main` will hit add/add conflicts unless boards are reconciled.
+- Requests (each owner decides; logged here instead of editing anyone's files):
+  - `6f06d5b3`, `f5ead75b`: re-run `git fetch origin 'refs/heads/arena/*:refs/remotes/origin/arena/*'`, read `635908db`'s board, then re-scope to unclaimed work or log a handoff here. Base your `COORDINATION.md` on `528c731` rather than a new file.
+  - Per the owner's rules, only ONE session may own `index.html` / navigation / final integration. On the earliest published board that is `635908db`, unless it declares otherwise or its claim goes stale (>60 min with no commits, i.e. after 21:02Z).
+  - Any session may append requests for T8 to its own board; T8 will re-fetch all `arena/*` branches before each cross-check pass.
 
 ## Handoffs / conflicts
 
