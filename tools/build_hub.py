@@ -1063,7 +1063,15 @@ FLAGS = [
      "Unverified input", ["S1", "S2"], "Gather these before reporting. Best-estimate answers are permitted and are not penalised if given in good faith."),
     ("F13", "Two publication defects found and fixed", "The live landing page contained unsubstituted template tokens, and the coordination file contained unresolved merge-conflict markers.",
      "Fixed in this session", ["S5"], "Both were repository defects rather than legal questions. See the verification page for the checks now guarding against them."),
-    ("F14", "Earlier sets differ in presentation", "Four earlier compilations are preserved on this site. They agree on the verified rules but differ on whether to price unit-specific figures.",
+    ("F15", "Tenant initials were exposed in public source files",
+     "An earlier session's privacy review found literal tenant initials inside two verification scripts. GitHub Pages serves the repository root, so those scripts were publicly readable. They were remediated by moving exact tokens into a git-ignored file, and this session's release gate follows the same pattern.",
+     "Remediated in current files; history not rewritten", ["S1"],
+     "Removing the strings does not remove them from public git history, forks or caches. No identifier is reproduced here. Consider whether a history rewrite or a GitHub removal request is warranted, and note that publishing a dedicated artifact instead of the repository root would reduce the exposure."),
+    ("F16", "A flagged claim in an earlier set is itself incorrect",
+     "One earlier set flagged that a Rent Board worked example applies 1.6% to a 1 May 2026 effective date when 1.4% was in force. Form 571 shows 1.6% in force from 1 March 2026, so 1.6% is correct for that date and the example is not in error on that point.",
+     "Corrected by verification", ["S4", "S5"],
+     "A separate, real labelling slip does exist on the same guidance page: the first example says the rate in effect on 1 June 2025 is 1.6%, when 1.4% applied on that date. The increase in that example takes effect 1 June 2026, where 1.6% is correct, so the arithmetic is right and only the date label is wrong."),
+    ("F14", "Earlier sets differ in presentation", "Five earlier compilations are preserved on this site. They agree on the verified rules but differ on whether to price unit-specific figures.",
      "Reconciled, not deleted", ["S4", "S5"], "This consolidated set prices the options and labels every result computed. The earlier sets remain reachable from the archive page."),
 ]
 
@@ -1123,13 +1131,14 @@ def page_sources():
 
 def page_archive():
     b = head("Earlier research sets",
-             "Four compilations were published to this repository by earlier sessions before this "
+             "Five compilations were published to this repository by earlier sessions before this "
              "consolidated set. They are preserved unchanged and remain reachable here.")
     b += '<section class="panel"><h2>Preserved sets</h2><div class="cards">'
     for href, label, desc in [
         ("../pages/executive-summary.html", "Deep-dive set", "Fifteen pages covering the process, units, laws, notices, owner playbook and tenant review."),
         ("../dashboard/index.html", "Data-driven dashboard", "Ten pages generated from JSON data files, with market context and a findings table."),
         ("../process.html", "First published set", "The original six-page set, deliberately conservative about unit-specific figures."),
+        ("../docs/index.html", "License-focused dashboard", "Twelve pages with a calculator whose self-tests reproduce the Rent Board's published worked examples, plus line-by-line research notes."),
         ("../previous-dashboard.html", "Previous merged hub", "The landing page that previously combined the three sets, kept for reference."),
     ]:
         b += '<a class="card" href="%s"><h3>%s</h3><p>%s</p></a>' % (href, e(label), e(desc))
