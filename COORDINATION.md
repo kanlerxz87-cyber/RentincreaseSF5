@@ -397,3 +397,11 @@ Branch: `arena/0502f829-rentincreasesf5` (Arena-assigned; platform requirement �
 | Session ID | Branch | Status |
 | --- | --- | --- |
 | `arena/0502f829-rentincreasesf5` | `arena/0502f829-rentincreasesf5` | done — independent compilation integrated via PR #6 |
+
+## Session arena/a6525036-rentincreasesf5 — independent public-privacy review
+
+| Task | Status | Owner | Files in scope |
+|---|---|---|---|
+| Review published artifacts for exposure of supplied tenant identifiers and report any findings | in progress | arena/a6525036-rentincreasesf5 | `COORDINATION.md` (this section), `PRIVACY-REVIEW.md` |
+
+- 2026-11-07: Claimed a narrowly scoped privacy review; existing integrations and independent legal audit remain with their owners. The Arena branch name is fixed, so no separate session branch is created.
