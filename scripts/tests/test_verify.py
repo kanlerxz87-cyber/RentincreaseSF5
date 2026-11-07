@@ -185,6 +185,32 @@ class VerifyTests(unittest.TestCase):
         self.assertIn("EXTERNAL_BLOCKED", self.codes(report))
         self.assertFalse(report["passed"])
 
+    def test_css_asset_relative_to_stylesheet(self):
+        (self.root / "assets").mkdir()
+        (self.root / "assets" / "site.css").write_text("body { background: url(images/background.png); }", encoding="utf-8")
+        self.assertIn("CSS_LINK", self.codes(self.audit()))
+        (self.root / "assets" / "images").mkdir()
+        (self.root / "assets" / "images" / "background.png").write_bytes(b"synthetic")
+        self.assertNotIn("CSS_LINK", self.codes(self.audit()))
+
+    def test_duplicate_rendered_record_fails(self):
+        with (self.root / "index.html").open("a") as f:
+            f.write('<table><tr><th>Finding</th><th>Source</th></tr><tr data-row-id="RULE-001"><td>Duplicate</td><td><a href="https://www.sf.gov/">Official</a></td></tr></table>')
+        self.assertIn("DUPLICATE_RENDERED_ROW", self.codes(self.audit()))
+
+    def test_research_markdown_row_source_required(self):
+        (self.root / "research").mkdir()
+        path = self.root / "research" / "finding.md"
+        path.write_text("| Finding | Source |\n| --- | --- |\n| Unsupported | None |\n", encoding="utf-8")
+        self.assertIn("ROW_SOURCE", self.codes(self.audit()))
+        path.write_text("| Finding | Source |\n| --- | --- |\n| Supported | [Agency](https://www.sf.gov/) |\n", encoding="utf-8")
+        self.assertNotIn("ROW_SOURCE", self.codes(self.audit()))
+
+    def test_srcset_asset_checked(self):
+        with (self.root / "index.html").open("a") as f:
+            f.write('<img srcset="missing.png 1x, missing-2x.png 2x" alt="Synthetic">')
+        self.assertIn("LOCAL_LINK", self.codes(self.audit()))
+
     def test_empty_repo_is_not_a_pass(self):
         for path in sorted(self.root.rglob("*"), reverse=True):
             if path.is_file(): path.unlink()

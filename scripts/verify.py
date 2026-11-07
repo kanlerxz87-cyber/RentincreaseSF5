@@ -19,7 +19,7 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
-from collections import Counter
+from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass
 from decimal import Decimal, InvalidOperation, ROUND_CEILING
 from pathlib import Path
@@ -136,6 +136,10 @@ class PageParser(html.parser.HTMLParser):
             self.links.append((a["href"], line))
         if tag in {"script", "img", "iframe", "source", "embed"} and "src" in a:
             self.links.append((a["src"], line))
+        if "srcset" in a:
+            for candidate in a["srcset"].split(","):
+                if candidate.strip():
+                    self.links.append((candidate.strip().split()[0], line))
         if tag == "object" and a.get("data"):
             self.links.append((a["data"], line))
         for style in ([a["style"]] if "style" in a else []):
@@ -235,7 +239,7 @@ class Audit:
         html_files += sorted(p for p in self.site_root.rglob("*.htm") if p not in html_files
                              and not any(part in EXCLUDED_DIRS for part in p.relative_to(self.root).parts))
         external_urls: set[str] = set()
-        rendered_ids: set[str] = set()
+        rendered_ids: Counter = Counter()
         for path in html_files:
             rel = self.rel(path)
             parser = PageParser()
@@ -262,6 +266,9 @@ class Audit:
                 self.issue("WARN", "TABLE_HEADERS", rel, "A table has no th header cells.")
             for url, line in parser.links:
                 scheme = urllib.parse.urlsplit(url).scheme.lower()
+                if url.startswith("//"):
+                    external_urls.add("https:" + urllib.parse.urldefrag(url)[0])
+                    continue
                 if url.strip() in {"#", "javascript:void(0)", "javascript:;"}:
                     self.issue("ERROR", "EMPTY_LINK", f"{rel}:{line}", "Link has no destination.")
                     continue
@@ -285,34 +292,52 @@ class Audit:
                                 self.issue("ERROR", "LOCAL_FRAGMENT", f"{rel}:{line}", f"Missing fragment: {url}")
                 except (ValueError, OSError) as exc:
                     self.issue("ERROR", "LOCAL_LINK", f"{rel}:{line}", str(exc))
-            css_links = []
-            for stylesheet in path.parent.glob("*.css"):
-                css_links.extend(re.findall(r"url\(\s*['\"]?([^)'\"]+)", stylesheet.read_text(encoding="utf-8")))
-            for url in set(css_links):
-                if urllib.parse.urlsplit(url).scheme or url.startswith("data:"):
-                    continue
-                try:
-                    target, _ = self.local_target(path.parent / "placeholder.html", url)
-                    if target is None or not target.is_file():
-                        self.issue("ERROR", "CSS_LINK", rel, f"Missing CSS asset: {url}")
-                except ValueError as exc:
-                    self.issue("ERROR", "CSS_LINK", rel, str(exc))
             for row in parser.rows:
                 if row["header"]:
                     continue
                 self.counts["html_data_rows"] += 1
                 loc = f"{rel}:{row['line']}"
                 if row["id"]:
-                    rendered_ids.add(row["id"])
+                    rendered_ids[row["id"]] += 1
                 if not row["sources"]:
                     self.issue("ERROR", "ROW_SOURCE", loc, "Every data row needs its own official-source hyperlink.")
                 text = " ".join(row["text"]).lower()
                 status = row["status"].lower() or ("unverified" if "unverified" in text else "owner-reported" if "owner-reported" in text else "")
                 if status in {"unverified", "owner-reported"} and not any("flagged" in u.lower() or "review" in u.lower() for u in row["links"]):
                     self.issue("ERROR", "ROW_REVIEW_LINK", loc, "Unverified/owner-reported row must link to Flagged for Review.")
+        for stylesheet in sorted(self.site_root.rglob("*.css")):
+            if any(part in EXCLUDED_DIRS for part in stylesheet.relative_to(self.root).parts):
+                continue
+            try:
+                css = stylesheet.read_text(encoding="utf-8")
+            except (OSError, UnicodeError) as exc:
+                self.issue("ERROR", "CSS_READ", self.rel(stylesheet), str(exc))
+                continue
+            urls = re.findall(r"url\(\s*['\"]?([^)'\"]+)", css)
+            urls += re.findall(r"@import\s+['\"]([^'\"]+)['\"]", css)
+            for url in set(urls):
+                if url.startswith("data:"):
+                    continue
+                if url.startswith("//"):
+                    external_urls.add("https:" + urllib.parse.urldefrag(url)[0])
+                    continue
+                if urllib.parse.urlsplit(url).scheme in {"http", "https"}:
+                    external_urls.add(urllib.parse.urldefrag(url)[0])
+                    continue
+                if urllib.parse.urlsplit(url).scheme:
+                    continue
+                try:
+                    target, _ = self.local_target(stylesheet, url)
+                    if target is None or not target.is_file():
+                        self.issue("ERROR", "CSS_LINK", self.rel(stylesheet), f"Missing CSS asset: {url}")
+                except ValueError as exc:
+                    self.issue("ERROR", "CSS_LINK", self.rel(stylesheet), str(exc))
+        for ident, count in rendered_ids.items():
+            if count > 1:
+                self.issue("ERROR", "DUPLICATE_RENDERED_ROW", "site", f"Data row {ident} rendered {count} times; expected exactly once.")
         if self.records:
-            missing = set(self.records) - rendered_ids
-            unknown = rendered_ids - set(self.records)
+            missing = set(self.records) - set(rendered_ids)
+            unknown = set(rendered_ids) - set(self.records)
             if rendered_ids:
                 for ident in sorted(missing):
                     self.issue("ERROR", "DATA_NOT_RENDERED", "data", f"Record {ident} has no matching HTML data-row-id.")
@@ -323,11 +348,37 @@ class Audit:
         flagged = [p for p in self.pages if "flag" in p.stem.lower() or "review" in p.stem.lower()]
         if not flagged:
             self.issue("ERROR", "FLAG_PAGE", "site", "No clearly named Flagged for Review page found.")
+        self.check_markdown_tables()
+        for _, row in self.records.values():
+            for url in source_urls(row["source_url"]):
+                if urllib.parse.urlsplit(url).scheme in {"http", "https"}:
+                    external_urls.add(urllib.parse.urldefrag(url)[0])
         self.counts["external_unique_urls"] = len(external_urls)
         if self.external:
             self.check_external(sorted(external_urls))
         else:
             self.issue("WARN", "EXTERNAL_UNCHECKED", "site", f"{len(external_urls)} unique external URLs not requested; this is not a release pass.")
+
+    def check_markdown_tables(self) -> None:
+        research = self.root / "research"
+        if not research.is_dir():
+            return
+        for path in sorted(research.rglob("*.md")):
+            lines = path.read_text(encoding="utf-8").splitlines()
+            separator = re.compile(r"^\s*\|?\s*:?-{3,}:?\s*(?:\|\s*:?-{3,}:?\s*)+\|?\s*$")
+            for index in range(1, len(lines)):
+                if not separator.match(lines[index]) or "|" not in lines[index - 1]:
+                    continue
+                j = index + 1
+                while j < len(lines) and "|" in lines[j] and lines[j].strip():
+                    row = lines[j]
+                    self.counts["markdown_data_rows"] += 1
+                    urls = re.findall(r"https?://[^\s)<>]+", row)
+                    if not any(official_source(u.rstrip(".,;")) for u in urls):
+                        self.issue("ERROR", "ROW_SOURCE", f"{self.rel(path)}:{j + 1}", "Research table row lacks an official-source link.")
+                    if re.search(r"unverified|owner-reported", row, re.I) and not re.search(r"\[[^]]*(?:flag|review)[^]]*\]\([^)]*(?:flag|review)[^)]*\)", row, re.I):
+                        self.issue("ERROR", "ROW_REVIEW_LINK", f"{self.rel(path)}:{j + 1}", "Unverified/owner-reported research row needs a Flagged for Review link.")
+                    j += 1
 
     def check_data(self) -> None:
         data_dir = self.root / "data"

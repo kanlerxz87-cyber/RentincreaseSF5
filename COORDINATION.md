@@ -38,6 +38,15 @@
 
 ## Sources, verification, irregularities log
 
+### T6 checkpoint (session-a00d318d, 2026-11-07)
+- Published `docs/VERIFICATION-CONTRACT.md` on this session branch with the preferred row schema and required `data-row-id` mapping. Integration owner should read it before finalizing shared outputs; this session has not edited those outputs.
+- Verifier and 25 synthetic tests are implemented in T6 scope; tests pass. The incomplete-tree audit correctly blocks on missing site/data/flag page. Full release verification remains pending.
+- Official sources read independently: [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory), [rent increases](https://www.sf.gov/learn-about-rent-increases-san-francisco), [current rates](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit), [fee](https://www.sf.gov/rent-board-fee), [Rules Part IV](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring), [Civil Code 827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV), [1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12), [1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5).
+- Irregularity for integration review: the official [banking page](https://www.sf.gov/information--banked-rent-increases) uses August 1, 2025 in its example, then says the annual rate in effect on August 1, 2024 while giving 1.4%. Treat as an apparent source-page date typo; do not silently correct it or infer a property-specific bank. Use the official rate table/Rule 4.12 and flag the wording.
+- Privacy reminder: official Housing Inventory submissions are public. Do not put supplied occupant identifiers in the repo or public site; required official filings still need accurate information and are not anonymized by this website.
+- T7 remains owned by session-635908db. No takeover: its claim is not yet 60 minutes old at this checkpoint.
+
+
 _(Filled in per task as work completes. Nothing is marked verified without checking an official source and linking it.)_
 
 ### T1
