@@ -638,7 +638,7 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
         ("register.html", "Full register", "Every finding in one filterable table with its status and source."),
         ("flagged.html", "Flagged for review", "Open items, conflicts and blanks, published for your review."),
         ("sources.html", "Sources", "All official sources retrieved and read, with what each was used for."),
-        ("archive.html", "Earlier research sets", "The four earlier compilations, preserved unchanged."),
+        ("archive.html", "Earlier research sets", "The earlier compilations, all preserved unchanged."),
     ]:
         b += '<a class="card" href="hub/%s"><h3>%s</h3><p>%s</p></a>' % (href, e(label), e(desc))
     b += '</div></section>'
