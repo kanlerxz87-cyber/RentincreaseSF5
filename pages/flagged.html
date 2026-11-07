@@ -109,11 +109,14 @@
   </div>
 
   <div class="callout warn">
-    <span class="t">Repo review result (no irregularities)</span>
-    The repository contained only an initial commit (README.md) when this session started: no code, no prior data,
-    no prior coordination file — COORDINATION.md was created by this session. GitHub Pages was already configured
-    (public, main branch, root path). No conflicts or irregularities were found; there was no other session’s work
-    to merge.
+    <span class="t">Repo review result — multi-session history (read before relying on this site)</span>
+    <ul style="margin:8px 0 0; padding-left:18px; font-size:13.5px; color:var(--ink-soft);">
+      <li>This session started from what appeared to be an empty repo, but two other sessions had already published work to main the same day: <strong>PR #1</strong> (session <code>arena-f5ead75b</code>: privacy-safe research dashboard, <code>site/</code> + root pages, build/check scripts, CI workflow) and <strong>PR #2</strong> (session <code>arena-05e5d5ab</code>: cross-session reconciliation + independent audit). Both are merged into main.</li>
+      <li><strong>Conflict and resolution:</strong> this session’s branch and main had each created <code>COORDINATION.md</code> and a root <code>index.html</code>. Resolved by <em>merge</em> of origin/main (same method the prior sessions used): both prior sessions’ coordination board and full log preserved verbatim; the prior dashboard preserved intact at <a href="../site/index.html">/site/</a> with its root pages, scripts and CI workflow unchanged; the root landing page is now this session’s dashboard (the owner’s directive to this session specified this structure). Nothing from the prior sessions was deleted.</li>
+      <li><strong>Cross-check of findings (line-by-line):</strong> the two dashboards’ verified findings are <em>consistent</em> on every shared claim (license rule incl. individual owners, auto-generation via Housing Inventory, 1.6% for 2026-03-01→2027-02-28, 1.4% for 2025-26, 30/90-day notice + 5 mailing, no verified market “normal” for 94122).</li>
+      <li><strong>Irregularity noted by the prior independent audit (confirmed here):</strong> the official sf.gov worked examples mislabel their dates (June 2025 shown as 1.6%; banking-page example shows August 2024 as 1.4%). This does not change the math on this site, which follows the official rule “use the percentage in effect on the increase date,” matching the official multi-year example’s rate selection.</li>
+      <li><strong>Difference in scope (not a conflict):</strong> the prior sessions deliberately did not compute banked totals; this session does, with explicit assumptions and owner-data dependencies (F-01…F-03, F-11, F-12 above). The prior session’s <code>scripts/check.py</code> (the CI check) <em>passes</em> on the combined tree; their <code>scripts/independent_audit.py</code> — a one-off audit of their own integration state, not part of CI — now fails only on its root/site artifact-parity assertion, because the root landing page intentionally belongs to this later integration; the prior dashboard remains fully intact at <a href="../site/index.html">/site/</a>. Full log: <a href="../COORDINATION.md">COORDINATION.md</a>.</li>
+    </ul>
   </div>
 </div>
 
