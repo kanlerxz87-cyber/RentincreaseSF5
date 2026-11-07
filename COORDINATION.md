@@ -397,3 +397,23 @@ Branch: `arena/0502f829-rentincreasesf5` (Arena-assigned; platform requirement �
 | Session ID | Branch | Status |
 | --- | --- | --- |
 | `arena/0502f829-rentincreasesf5` | `arena/0502f829-rentincreasesf5` | done — independent compilation integrated via PR #6 |
+
+---
+
+## Final integration session · `arena-703ba4fa` · 2026-11-07
+
+**Branch:** `arena/703ba4fa-rentincreasesf5` (Arena-assigned; platform requirement — no session branch created).
+**Status:** in progress — this is the final integration session described in the brief (merge, re-verify, publish, PR, deploy).
+
+### Claim (written and pushed before any edit, per protocol)
+
+| Task | Status | Owner | Files in scope |
+|---|---|---|---|
+| I1 | Publication-defect fix: landing-page template tokens (`CURRENT_PERIOD`, `A_BASE`, `A_DOLLAR`, `B_BASE`, `B_DOLLAR`) rendered literally on the live home page | in progress | `tools/pages_1.py`, generated `index.html`, `site/index.html` |
+| I2 | Reconcile `COORDINATION.md`: remove the leftover unresolved-conflict marker block (a literal duplicate of the earlier `arena-f5ead75b` section) without deleting any unique text | in progress | `COORDINATION.md` |
+| I3 | Open-PR integration: PR #5 (documentation/polish) and PR #7 (independent verification harness) | in progress | merge only; no rewrite of their files |
+| I4 | Line-by-line re-verification of every published factual claim against the official source | in progress | `pages/**`, `dashboard/**`, `*.html`, `data/**` |
+| I5 | Full rebuild, link/source/privacy checks, PR from this branch to `main`, merge, confirm Pages deploy | in progress | all (integration pass) |
+
+No other session has an active claim on these files (`archived` sessions: `arena-f5ead75b`, `arena-05e5d5ab`,
+`session-c6d53281`, `arena-8b5ad092`, `arena-0502f829`; `arena-a00d318d` is confined to its own new files).
