@@ -397,3 +397,41 @@ Branch: `arena/0502f829-rentincreasesf5` (Arena-assigned; platform requirement �
 | Session ID | Branch | Status |
 | --- | --- | --- |
 | `arena/0502f829-rentincreasesf5` | `arena/0502f829-rentincreasesf5` | done — independent compilation integrated via PR #6 |
+
+---
+
+## FINAL INTEGRATION · session `arena/3b5b37d0-rentincreasesf5` · 2026-11-07 20:43Z
+
+Branch: `arena/3b5b37d0-rentincreasesf5` (Arena-assigned; platform requirement — no session branch created).
+
+Claim: T10 final integration — re-verify the combined data line by line, repair publication defects, merge the
+pending PRs, confirm the site builds with no broken links, publish, and record the PR/merge/deploy result.
+
+### Scope claimed
+
+| ID | Task | Files in scope | Status |
+|---|---|---|---|
+| I1 | Repair unresolved hub placeholders and broken anchors on the live site | `tools/pages_1.py`, `index.html`, `site/index.html`, `pages/{questions,rates,process,review,compilation}.html`, `site/pages/*` | in progress |
+| I2 | Give every data row its own official-source link where it is missing (owner requirement) | `build.py`, `data/*.json`, `dashboard/*`, `data/*.csv` | in progress |
+| I3 | Independently re-verify the licence answer from official sources | `pages/executive-summary.html`, `dashboard/executive-summary.html`, `index.html`, `EXECUTIVE-SUMMARY.md` | in progress |
+| I4 | Merge pending PRs #5, #7, #8; final link check; publish; record result | all | in progress |
+
+### Defects confirmed on `main` at arrival (reproducible, each reproduced before writing)
+
+1. **`index.html:39,41,43` and `site/index.html:39,41,43` render literal placeholders** `CURRENT_PERIOD`,
+   `A_DOLLAR`, `A_BASE`, `B_DOLLAR`, `B_BASE`. Cause: `tools/pages_1.py:50,52,54` emits them as static text while
+   the real constants (`CURRENT_PERIOD`, `UNIT_A_BASE`, `UNIT_B_BASE`) are never substituted into those strings.
+   Reproduced with `scripts/verify.py` (10 `UNRESOLVED_TEMPLATE` errors). **Live on the published landing page.**
+2. **92 anchors per tree lack `href`.** `pages/questions.html` (27), `pages/rates.html` (24),
+   `pages/process.html` (24), `pages/review.html` (12), `pages/compilation.html` (5) are written
+   `<a https://…>text</a>` with no `href` attribute, so they render as inert text and are not links at all.
+   Mirrored under `site/pages/`, 116 occurrences across both trees. Reproduced by grep, not inferred.
+3. **`dashboard/market.html`** distribution tables carry no per-row source link; the only link sits in the prose
+   above each table and in the collapsed query URL.
+4. **`data/units.csv`** (2 rows) and **`data/allowable-increases.csv`** (1 row) fail row-source / unverified-flag checks.
+
+### Handoff note
+
+Sessions `arena/8b5ad092`, `arena/a00d318d` and `arena/9c07e651` each hold an open PR (#5, #7, #8) against `main`.
+None has been merged by this session yet. Their files are preserved, not replaced; where a repair touches a
+file another session owns, the change is logged here first and applied additively.
