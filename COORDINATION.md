@@ -4,7 +4,7 @@ Session: arena-f5ead75b. All work stays on the Arena-assigned branch `arena/f5ea
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Official-source research, privacy-safe dashboard, tests and publication integration | in progress | arena-f5ead75b | COORDINATION.md, site/**, scripts/**, .github/workflows/**, README.md |
+| Official-source research, privacy-safe dashboard, tests and publication integration | done | arena-f5ead75b | COORDINATION.md, site/**, scripts/**, .github/workflows/**, README.md |
 
 ## Log
 - 2026-11-07: Empty repository inspected; no other claims. Claimed sole integration scope. Private tenant identifiers will not be copied into files. Owner-supplied dates and amounts are unverified, not official records.
@@ -14,3 +14,6 @@ Session: arena-f5ead75b. All work stays on the Arena-assigned branch `arena/f5ea
 - Validation: Python build succeeds; local href targets, every table data-row official link, source hostname allowlist, headings and no analytics checks pass. External references retrieved by research tools; no claim of exhaustive automated external-link health. No browser rendering automation available/used.
 - Research irregularities task: needs review (published site/flagged.html F01–F10; property evidence, legal eligibility and empirical norms remain unknown). Integration implementation complete; publication in progress.
 - Deployment adaptation: Pages configuration update returned HTTP 403 (integration lacks Pages-admin permission). Existing Pages configuration already publishes main:/; scope extended to generated root *.html, style.css and .nojekyll (no other session claims exist). Preserve existing deployment settings and use root static files instead of requiring admin changes. Workflow will validate only; GitHub's existing Pages build publishes after merge.
+- DONE 2026-11-07: PR https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/1 merged successfully at 20:07:53 UTC, merge commit aff31557f7208d4674f35c4516eddd88dcc13c31. Head and main validation checks passed.
+- DONE: GitHub Pages build/deploy run https://github.com/kanlerxz87-cyber/RentincreaseSF5/actions/runs/42409547012 succeeded (build, deploy, status reporting). Main validation run 42409547070 succeeded. Public URL: https://kanlerxz87-cyber.github.io/RentincreaseSF5/ . Deployment confirmed through GitHub Actions; direct public HTTP fetch is not available under sandbox outbound-host restrictions.
+- Implementation/integration task done. F01–F10 remain needs review and published, not blockers. No claim of attorney signoff, live license verification or tenant notice service. Nonblocking CI annotations warn about action Node runtime migration and ubuntu-latest image migration.
