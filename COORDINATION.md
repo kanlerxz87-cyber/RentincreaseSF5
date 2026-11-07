@@ -530,3 +530,98 @@ since; per the 60-minute takeover rule the handoff is recorded here.
 
 **No prior session's page, data file or generator is deleted or rewritten.** Earlier sets stay
 byte-for-byte where they are; the new hub links to them.
+
+---
+
+## Final integration record — `arena-d4b68642` · 2026-11-07
+
+### Task board — final status
+
+| ID | Task | Owner | Status |
+| --- | --- | --- | --- |
+| I1 | Repair unresolved merge-conflict markers in `COORDINATION.md` | `arena-d4b68642` | done |
+| I2 | Independent line-by-line re-verification against official sources | `arena-d4b68642` | done |
+| I3 | One consolidated landing page + category subpages | `arena-d4b68642` | done |
+| I4 | Release gates (sourcing, privacy, links, parity, rates, arithmetic) | `arena-d4b68642` | done |
+| I5 | PR → merge → confirm Pages deploy → record | `arena-d4b68642` | done (see record below) |
+| F-flags | Flagged-for-review items F01–F16 | `arena-d4b68642` | needs review (published, non-blocking) |
+
+### Mid-session collision with `main`, and how it was resolved
+
+`main` advanced while this session was building: PRs #9, #10 and #8 merged, including a
+**live PII remediation**. This session's branch would have deleted 6,063 lines of that newer
+work if pushed as-is. Integration was performed instead of replacement:
+
+| Item | Resolution |
+| --- | --- |
+| `tools/rent_calc.py`, `dashboard_build.py`, `dashboard_shell.py`, `dashboard_check_links.py`, `docs/`, `research/` | Kept byte-for-byte from `main`. Nothing removed. |
+| PII remediation in `tools/check_links.py`, `scripts/independent_audit.py` | Kept. Exact tokens now come from git-ignored `private/identifiers.txt`. |
+| `COORDINATION.md` | Conflict resolved by keeping **both** sides verbatim; no session's log discarded. |
+| `README.md` | Auto-merged; combined. |
+| This session's own `tools/release_gate.py` | **Had reintroduced the same leak** (a literal initial list in a publicly served file). Fixed to follow the `main` remediation pattern before merging. Failure messages no longer echo identifiers into CI logs. |
+
+### Link request fulfilled
+
+The `docs/` session logged a request for a link from the root hub rather than editing a file
+it did not own. That request is now fulfilled: `hub/archive.html` links `../docs/index.html`.
+The `docs/` set is no longer orphaned.
+
+### Sources used (all retrieved and read this session)
+
+21 official sources, register S1–S21, published on `hub/sources.html` and listed with full URLs
+in `VERIFICATION.md`. Publishers: SF Rent Board / sf.gov, California Legislative Information,
+California Civil Rights Department, U.S. HUD. No secondary commentary was used for any figure.
+
+### Verification performed
+
+- **Rate table:** every period in `data/allowable-increases.csv` (27 rows), `data/allowance-ledger.csv`
+  (9 rows) and `data/units.json` (8 rates) compared against Form 571 — **0 mismatches**.
+- **Arithmetic:** all 5 scenarios recomputed independently — match to the cent, none rounded up.
+- **Banking conflict resolved:** the Rent Board's worked example runs the 12-month clock from each
+  increase's availability date; the banking page's 24 months is measured from tenancy start. Same
+  instant, different origin. **Both readings agree on both units**, so Unit 1's 3.0% no longer needs
+  the earlier "safe option" discount. Labelled analysis, published as F04.
+- **Release gate:** 14 pages, 298 data rows, 759 links, 0 orphans, 0 unsourced rows, 0 privacy hits,
+  15 mirror pairs identical, 62 register findings. PASS.
+- **Other sessions' checks all pass on the merged tree:** `scripts/check.py`,
+  `scripts/independent_audit.py`, `tools/check_links.py`, `tools/dashboard_check_links.py`,
+  `tools/rent_calc.py` self-tests.
+- **Reproducibility:** a fresh `python3 scripts/build.py` produces **zero** uncommitted drift; CI asserts this.
+- **HTTP:** all 20 published entry points returned 200 from a local server.
+
+### Defects found and fixed this session
+
+1. **Unsubstituted template tokens on the live landing page** (`CURRENT_PERIOD`, `A_DOLLAR`,
+   `A_BASE`, `B_DOLLAR`, `B_BASE`) — visitors saw raw placeholders. Fixed in `tools/pages_1.py`;
+   now guarded by the gate.
+2. **Unresolved merge-conflict markers** in `COORDINATION.md` at lines 175/201 — replaced with an
+   explanatory comment; the enclosed duplicate block preserved verbatim. Now guarded by the gate.
+3. **Orphaned `hub/verification.html`** — no inbound links. Added to nav; gate now fails on orphans.
+4. **This session's own PII leak** in `tools/release_gate.py` — fixed before merge (see above).
+
+### Irregularities published for review (non-blocking)
+
+F01 rent history owner-supplied · F02 build year/coverage unconfirmed · F03 Inventory/licence status
+unknown · F04 banking wording reconciled by analysis · F05 6.14 notice on later co-tenant unknown ·
+F06 post-Feb-2027 rate unpublished (blank) · F07 no federal ceiling found · F08 no uniform-increase
+requirement found · F09 reported 10% banking-cap legislation unconfirmed · F10 no official ZIP-level
+market rent (blank) · F11 serve-by dates assume personal service · F12 bedroom/square-footage needed
+for reporting · F13 two publication defects fixed · F14 earlier sets differ in presentation ·
+**F15 confirmed public PII exposure; current files remediated, git history NOT rewritten** ·
+**F16 a flagged claim in an earlier set was itself incorrect and is corrected**.
+
+### Note on the two stale open PRs
+
+PRs #5 (`arena/8b5ad092`) and #7 (`arena/a00d318d`) remain open and GitHub reports both
+`CONFLICTING` / `DIRTY`. Their content is superseded by the merged sets on `main`. They were
+**not** force-merged and their branches were **not** deleted — that is another session's work.
+Flagged here for the owner to close or rebase.
+
+### PR and deploy record
+
+| Item | Value |
+| --- | --- |
+| Branch | `arena/d4b68642-rentincreasesf5` |
+| Pull request | _recorded after creation_ |
+| Merge result | _recorded after merge_ |
+| Pages deploy | _recorded after deploy_ |
