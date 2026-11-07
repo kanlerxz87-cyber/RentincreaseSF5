@@ -27,9 +27,33 @@ jobs:
         run: python -m unittest discover -s scripts/tests -v
       - name: Audit integrated data, source links, rendering mapping, and publication structure
         run: python scripts/verify.py --root . --base-path /RentincreaseSF5 --external --strict-warnings --json verification-report.json
+      - name: Summarize audit report
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p = Path('verification-report.json')
+          if not p.is_file():
+              print('No audit report was produced.', file=open(os.environ['GITHUB_STEP_SUMMARY'], 'a'))
+              raise SystemExit(0)
+          r = json.loads(p.read_text())
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write('## Independent verification audit\n\n')
+              f.write(f"Passed: **{r['passed']}**\n\n")
+              f.write('```json\n' + json.dumps(r['counts'], indent=2) + '\n```\n\n')
+              issues = r.get('issues', [])
+              f.write(f"Issues: {len(issues)}\n\n")
+              for i in issues[:80]:
+                  f.write(f"- {i['level']} `{i['code']}` {i['path']}: {i['message']}\n")
+              blocked = {u: x for u, x in r.get('external_results', {}).items() if x.get('blocked') or x.get('soft_404') or (x.get('status') or 0) >= 400}
+              f.write(f"\nExternal problems/blocks: {len(blocked)}\n\n")
+              for u, x in list(blocked.items())[:40]:
+                  f.write(f"- {u}: {x.get('status')} {x.get('error', '')}\n")
+          PY
       - name: Upload non-sensitive audit report
         if: always()
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: verification-report
           path: verification-report.json

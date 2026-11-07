@@ -2,7 +2,7 @@
 
 **Session:** `session-a00d318d` / platform branch `arena/a00d318d-rentincreasesf5`  
 **Initial report date:** 2026-11-07 UTC  
-**Release status:** NOT YET VERIFIED — the other session's research/data/site integration is not present on this branch.
+**Release status:** NOT A RELEASE PASS — the published combined site is present, but the independent audit found blocking publication defects. Existing session generators/checks pass; the stricter audit does not.
 
 ## Ownership and repo review
 
@@ -11,11 +11,21 @@ The initial repository contained only `README.md`, line 1: `# RentincreaseSF5`. 
 ## Implemented checks
 
 - `scripts/verify.py`: standard-library-only CSV/JSON, HTML, source-domain, local-link/fragment, row-to-render mapping, privacy-term, optional external-HTTP and arithmetic checks.
-- `scripts/tests/test_verify.py`: 25 synthetic tests, all passing at this checkpoint. No actual tenant identifiers are used in fixtures.
+- `scripts/tests/test_verify.py`: 26 synthetic tests, all passing at this checkpoint. No actual tenant identifiers are used in fixtures.
 - `.github/workflows/verify.yml`: PR/dispatch verification job. Action revisions were checked against the official GitHub repositories and pinned by commit SHA.
 - `docs/VERIFICATION-CONTRACT.md`: integration schema and release criteria, published for the owner of the shared outputs.
 
-The incomplete-tree audit correctly fails with `SITE_MISSING`, `DATA_MISSING`, and `FLAG_PAGE`; this is an integration blocker, not a passed site. CI's exact-private-term audit is deliberately not claimed: that check requires private runtime input and must be run locally before release. CI also does not constitute a lawyer's review.
+The published-tree audit now runs against the combined multi-set site. At the 2026-11-07 checkpoint it scanned 52 HTML pages, 974 HTML data rows and 152 CSV/JSON records. It confirms the existing local-link checks but fails release gates for unresolved hub tokens, row-level source gaps, review-link gaps and legacy provenance gaps. CI's exact-private-term audit is deliberately not claimed: that check requires private runtime input and must be run locally before release. CI also does not constitute a lawyer's review.
+
+### Confirmed publication defects logged to the owning sessions
+
+- `index.html` and `site/index.html` expose `CURRENT_PERIOD`, `A_DOLLAR`, `A_BASE`, `B_DOLLAR`, `B_BASE`; the live Pages hub showed the same unresolved tokens. Generator: `tools/pages_1.py:index()`.
+- `data/units.json` / `dashboard/units.html` describe Unit 1 as one original tenant replaced. The owner supplied three initial occupants and two current occupants with one continuing original: two original occupants left and one new occupant joined. Do not infer a new tenancy or a §6.14 notice.
+- Multiple table rows lack their own official-source hyperlink, including the pending-ordinance row in `pages/units.html`, benchmark/pending rows in `pages/executive-summary.html`, and unit summary rows in `dashboard/executive-summary.html`.
+- `COORDINATION.md` on main contains leftover merge markers at lines 175/201.
+- `dashboard/units.html` states no increase has been imposed since 2019/2025 as a fact; the owner did not supply a complete increase history. Keep calculations conditional.
+
+These were posted to PR #5 and recorded in `COORDINATION.md` as change requests. This session did not edit the owned site/data files.
 
 ## Official-source reading performed for the audit contract
 
@@ -39,7 +49,7 @@ These checks support the verification requirements; they are not a substitute fo
 
 ## Outstanding release gates
 
-1. Obtain the other session's integrated research/data/site without overwriting its work or taking its active claims.
+1. Owning integration sessions resolve the logged publication defects without discarding parallel work.
 2. Read every substantive row against its official source; record mismatches and missing evidence, not just working URLs.
 3. Run the strict external/local-link audit and exact sensitive-term audit with private input that is never committed or echoed.
 4. Inspect the site at desktop/mobile sizes and verify the GitHub Pages base path and live deployment.
