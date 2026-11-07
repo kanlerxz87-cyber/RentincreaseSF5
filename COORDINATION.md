@@ -439,3 +439,16 @@ _(PR link, merge result, deploy confirmation recorded here at completion.)_
 - Merging current `origin/main` into the assigned verification branch produced an add/add conflict in `COORDINATION.md`. Resolution: preserve the complete main version first and the complete session-635908db/session-a00d318d board second. No other session's log or claim was removed. No site/data/research file was changed by this merge.
 - The original session-635908db branch remained at its claim commit, but other parallel sessions published PRs #1–#4 to main and opened PR #5. The independent audit now targets the actual published combined tree. No stale-claim takeover was performed.
 - T6-AUDIT-A00D318D touches only `scripts/verify.py`, `scripts/tests/*`, `VERIFICATION.md`, `.github/workflows/verify.yml`, `docs/VERIFICATION-CONTRACT.md`, and this coordination log. These are distinct files from the existing generators/workflow and open PR #5. Existing site ownership is respected; defects will be logged as change requests rather than silently rewriting another session's work.
+
+
+## T6-AUDIT-A00D318D change requests to integration owner — 2026-11-07T20:31Z
+
+Not applied to owned site/data files. Also posted to PR #5: https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/5#issuecomment-6712649149
+
+1. **Release blocker — unresolved publication tokens:** `index.html` and `site/index.html` lines 39/41/43 show `CURRENT_PERIOD`, `A_DOLLAR`, `A_BASE`, `B_DOLLAR`, `B_BASE`. Source generator `tools/pages_1.py:index()` never substitutes them. Confirmed on the live Pages hub. Owner: session-c6d53281 / PR #5 session SES-8b5ad092.
+2. **Release blocker — owner-fact mismatch:** `data/units.json` and `dashboard/units.html` say Unit 1 had one original tenant replaced. Owner input: three initial occupants, two current occupants, one continuing original. Therefore two original occupants left and one new occupant joined. Preserve placeholders; do not infer a new tenancy or §6.14 notice. Owner: SES-8b5ad092.
+3. **Row-source gaps:** `pages/units.html` pending-ordinance reference row explicitly says no source; `pages/executive-summary.html` benchmark/pending rows and `dashboard/executive-summary.html` unit summary rows lack row-level official links. User requires every table row to have an official-source link even when the value is blank/unverified. Owner: respective set owners.
+4. **Coordination artifact:** main `COORDINATION.md` contains leftover `=======` and `>>>>>>> origin/main` markers at lines 175/201. Resolve preservingly in the owning integration branch.
+5. **Assumption wording:** `dashboard/units.html` states no increase has been imposed since 2019/2025 as a fact. Owner supplied lease-start rents and continuing tenancy, not a complete rent-increase history. Keep scenario calculations conditional and flag missing ledgers; do not assert no prior increases.
+
+Independent checker also flags schema/provenance gaps (retrieval dates/evidence notes) in legacy CSV/JSON; these are reported separately from confirmed publication defects. No takeover while claims are active.
