@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review — SF Rent Increase</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="topnav"><div class="topnav-inner">
+  <div class="brand">SF <span>Rent Increase</span> Dashboard</div>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="executive-summary.html">Executive Summary</a>
+    <a href="process.html">Process</a>
+    <a href="rules.html">Rules &amp; Caps</a>
+    <a href="units.html">Units &amp; Analysis</a>
+    <a href="practice.html">Practice</a>
+    <a href="legal-scrutiny.html">Legal Scrutiny</a>
+    <a href="flagged.html" class="active">Flagged for Review</a>
+  </nav>
+</div></div>
+
+<div class="wrap">
+  <div class="crumbs"><a href="../index.html">Home</a> / Flagged for Review</div>
+  <div class="page-head">
+    <h1>Flagged for Review</h1>
+    <p class="sub">Items that could <strong>not</strong> be confirmed from an official source, need owner data, or are business judgments. Nothing here blocks the site; review after go-live and request changes if needed. Raw copy: <a href="../data/flagged.csv">data/flagged.csv</a>.</p>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>ID</th><th>Topic</th><th>Description</th><th>Status</th><th>Reference / source</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>F-01</td><td>Unit 1 rent history</td>
+          <td>Rent before the 2025-02-01 lease is not documented. Unit 1’s exact anniversary date and banked-increase total cannot be computed without it (two scenarios shown on the <a href="units.html">Units page</a>).</td>
+          <td><span class="badge bad">needs owner data</span></td>
+          <td class="src">Owner records (rent ledger since 2019)</td>
+        </tr>
+        <tr>
+          <td>F-02</td><td>Unit 2 no-increase assumption</td>
+          <td>Analysis assumes no increases between 2019-06-01 and 2026-11-07 (owner statement). Any unrecorded increase reduces the 12.1% banked total for a 2026-06-01 increase.</td>
+          <td><span class="badge bad">needs owner data</span></td>
+          <td class="src">Owner records (payment history)</td>
+        </tr>
+        <tr>
+          <td>F-03</td><td>Unit 1 tenant substitution</td>
+          <td>Vacate/move-in dates for Tenants U1-B/U1-C/U1-D are undocumented. Initial Tenant U1-A remained, so this is a <em>continuing tenancy</em> — the unit may not have been re-priced as a “new tenancy” at the 2025-02-01 lease (initial-rent freedom requires no prior tenant remaining). Verify the lease documents the substitution correctly.</td>
+          <td><span class="badge warn">review</span></td>
+          <td class="src"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12">Civ. Code §1947.12(b)</a> · <a href="https://www.sf.gov/learn-about-rent-increases-san-francisco">sf.gov rent increase page</a></td>
+        </tr>
+        <tr>
+          <td>F-04</td><td>Certificate of occupancy</td>
+          <td>“Built 1940” is owner-stated. Rent-control coverage (and thus the 1.6% cap) turns on a CO on or before 1979-06-13. Verify the actual CO date before relying on rent-control status.</td>
+          <td><span class="badge bad">needs verification</span></td>
+          <td class="src"><a href="https://www.sfassessor.org/property-information/homeowners/property-search-tool">SF Assessor-Recorder Property Information Map (official tool)</a> · <a href="https://www.sf.gov/learn-about-san-francisco-rental-laws/">sf.gov rental laws</a></td>
+        </tr>
+        <tr>
+          <td>F-05</td><td>Bedroom counts</td>
+          <td>Not provided. Not needed for the increase math, but required in the annual Housing Inventory report.</td>
+          <td><span class="badge bad">needs owner data</span></td>
+          <td class="src"><a href="https://www.sf.gov/rent-board-housing-inventory">sf.gov Housing Inventory</a></td>
+        </tr>
+        <tr>
+          <td>F-06</td><td>O&amp;M passthrough cap (7%)</td>
+          <td>Commonly stated as 7% of base rent per 12 months, but confirmed only by two secondary sources this session (SF Tenants Union; CondoControl). Not confirmed on an official Rent Board page — check Rent Board Rules &amp; Regulations Part 6 / the official petitions page before relying on it.</td>
+          <td><span class="badge bad">unverified</span></td>
+          <td class="src"><a href="https://sftu.org/rent-control/">sftu.org</a> · <a href="https://www.condocontrol.com/blog/how-much-can-landlords-raise-rent/">condocontrol.com</a> · official page: <a href="https://sf.gov/landlord-petitions-and-passthroughs">sf.gov petitions</a> (fetch failed this session)</td>
+        </tr>
+        <tr>
+          <td>F-07</td><td>Neighborhood label</td>
+          <td>94122 = “Outer Sunset” confirmed only via secondary ZIP directories, not an official USPS citation this session.</td>
+          <td><span class="badge warn">secondary</span></td>
+          <td class="src"><a href="https://smart.columbus.gov/columbus-news/san-francisco-ca-zip-codes-complete-list-1764798172">ZIP directory (secondary)</a></td>
+        </tr>
+        <tr>
+          <td>F-08</td><td>2026-27 rate methodology</td>
+          <td>The 1.6% figure for 2026-03-01→2027-02-28 is official. The explanation that the Rent Board used a geometric-mean workaround for the unpublished October 2025 CPI is a third-party summary, not an official statement obtained here.</td>
+          <td><span class="badge warn">secondary (methodology only)</span></td>
+          <td class="src">Rate: <a href="https://www.sf.gov/news--annual-rent-increase-3126-22827-announced">sf.gov</a> · Methodology: <a href="https://www.relisto.com/2026-01-14/san-francisco-rent-increase-2026-the-1-6-limit-relisto/">relisto.com (secondary)</a></td>
+        </tr>
+        <tr>
+          <td>F-09</td><td>2027-28 rate</td>
+          <td>Not yet announced as of 2026-11-07. Needed for increases effective after 2027-02-28 (announced ~Nov/Dec 2026 per the usual cycle).</td>
+          <td><span class="badge info">pending publication</span></td>
+          <td class="src">Pattern: <a href="https://www.sf.gov/news--annual-rent-increase-3126-22827-announced">sf.gov announcements</a></td>
+        </tr>
+        <tr>
+          <td>F-10</td><td>Personal information</td>
+          <td>Tenant identities are anonymized (U1-A…U1-D, U2-A, U2-B). The placeholder→identity mapping is held by the owner only and is intentionally not stored in this repo or on this site. Dates and amounts are unchanged.</td>
+          <td><span class="badge info">by design</span></td>
+          <td class="src">README.md (privacy policy)</td>
+        </tr>
+        <tr>
+          <td>F-11</td><td>2025-02-01 Unit 1 lease</td>
+          <td>Confirm whether the 2025-02-01 lease changed the base rent. If it did, that increase must itself have been licensed (inventory reporting in force for 1–9 unit buildings since 2023-03-01), noticed (30/90-day rule), and within the cap then in effect (1.7% for 2024-03-01→2025-02-28 + banked).</td>
+          <td><span class="badge warn">review</span></td>
+          <td class="src"><a href="https://www.sf.gov/learn-about-rent-increases-san-francisco">sf.gov</a> · <a href="https://www.sf.gov/news--annual-rent-increase-3124-22825-announced">1.7% announcement</a> · <a href="https://www.sf.gov/rent-board-housing-inventory">Housing Inventory</a></td>
+        </tr>
+        <tr>
+          <td>F-12</td><td>Unit 2 banked-jump size</td>
+          <td>A one-time 12.1% increase after ~7.5 years of no increases is lawful (banked increases add; the notice should identify the banked portions/years — official worked example) but is conspicuous after such a long gap. Phasing (e.g., 1.6% now, rest banked) is a business judgment, not a legal requirement.</td>
+          <td><span class="badge info">business judgment</span></td>
+          <td class="src"><a href="https://www.sf.gov/learn-about-rent-increases-san-francisco">sf.gov (banked-increase examples)</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout warn">
+    <span class="t">Repo review result (no irregularities)</span>
+    The repository contained only an initial commit (README.md) when this session started: no code, no prior data,
+    no prior coordination file — COORDINATION.md was created by this session. GitHub Pages was already configured
+    (public, main branch, root path). No conflicts or irregularities were found; there was no other session’s work
+    to merge.
+  </div>
+</div>
+
+<footer><div class="inner">SF Rent Increase Compliance &amp; Analysis · not legal advice · prepared 2026-11-07 · <a href="../data/sources.md">sources register</a>.</div></footer>
+</body>
+</html>
