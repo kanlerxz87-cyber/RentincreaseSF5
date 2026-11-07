@@ -1,3 +1,16 @@
+# Never commit real tenant identities.
+PRIVATE.md
+private/
+
+# Python
 __pycache__/
 *.pyc
+*.py[cod]
+.venv/
+
+# OS / editor
 .DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
