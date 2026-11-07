@@ -1,0 +1,10 @@
+unit,date_available,rate_pct,rate_period,status,source_url
+Unit B,6/1/2020,1.8,3/1/2020-2/28/2021,banked,https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf
+Unit B,6/1/2021,0.7,3/1/2021-2/28/2022,banked,https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf
+Unit B,6/1/2022,2.3,3/1/2022-2/28/2023,banked,https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf
+Unit B,6/1/2023,3.6,3/1/2023-2/29/2024,banked,https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf
+Unit B,6/1/2024,1.7,3/1/2024-2/28/2025,banked,https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf
+Unit B,6/1/2025,1.4,3/1/2025-2/28/2026,banked,https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf
+Unit B,6/1/2026,1.6,3/1/2026-2/28/2027,banked,https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf
+Unit A,2/1/2026,1.4,3/1/2025-2/28/2026,not imposed; banked if 12 months elapse,https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf
+Unit A,2/1/2027,1.6,3/1/2026-2/28/2027,annual increase in effect on that date,https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf
