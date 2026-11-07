@@ -671,7 +671,15 @@ def units_body():
         explain = []
         for c in item["calc"]:
             sc = c["sc"]
-            if sc.get("rates"):
+            if sc.get("manual_total_pct") is not None:
+                avail = sum(RATES[k]["pct"] for k in sc["rates"])
+                parts = (
+                    "%s available (%s) but held to %s by choice"
+                    % (pct(avail),
+                       " + ".join(pct(RATES[k]["pct"]) for k in sc["rates"]),
+                       pct(c["pct"]))
+                )
+            elif sc.get("rates"):
                 parts = " + ".join(
                     "%s (%s)" % (pct(RATES[k]["pct"]), RATES[k]["period"]) for k in sc["rates"]
                 )

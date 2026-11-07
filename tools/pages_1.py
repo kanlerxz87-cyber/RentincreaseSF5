@@ -23,7 +23,7 @@ def index():
         "Rental increase compliance dashboard",
         "Two rent-controlled units in a 1940 two-unit building, Outer Sunset, San Francisco "
         "(ZIP 94122). Every table row links to the official SF.gov / Rent Board, California Legislative "
-        "Information, California Civil Rights Department or HUD page its value came from. The site holds two "
+        "Information, California Civil Rights Department or HUD page its value came from. The site holds three "
         "independently compiled research sets, grouped separately below.")
 
     b += """

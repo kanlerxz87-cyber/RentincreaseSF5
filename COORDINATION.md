@@ -365,4 +365,29 @@ None blocks the merge; all are published with sources for manual review.
 
 ## Deployment record
 
-Filled in after the merge and Pages verification.
+| Item | Result |
+| --- | --- |
+| Pull request | [#4](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/4) — `main` ← `arena/8b5ad092-rentincreasesf5` |
+| First merge attempt | **rejected**: "merge commit cannot be cleanly created" — caused by three sessions publishing to `main` during this session's research (recorded above, not hidden) |
+| Resolution | fetched `main`, merged it into the branch, resolved `README.md`, `COORDINATION.md`, `.gitignore` by combining; all other sessions' pages preserved byte-for-byte |
+| Merge | **MERGED** 2026-11-07T20:20:33Z, merge commit `a6672cc08926d29f1a95cb5bc875e7ad7e8cef3e` |
+| Pages configuration | unchanged — source `main`, path `/`, legacy builder (this session has no Pages-admin need and did not touch it) |
+| Pages build | status **built** after the merge |
+| Live verification | site root 200 · `/dashboard/` 200 · `/dashboard/units.html` 200 · `/dashboard/flagged.html` 200 · earlier `pages/*` and root sets 200 and unchanged |
+| CDN note | the first request after deploy served the previous cached hub; a cache-busted request served the new one. Not a deploy failure. |
+| Checks at merge | `scripts/build.py` 0 broken links · `scripts/check.py` PASS · `scripts/independent_audit.py` PASS · `tools/check_links.py` 10 pages / 342 internal links / 0 problems · `tools/build_site.py` 13 files / 0 broken |
+| Follow-up record | PR #5 publishes this deployment record and `PR-LOG.md` |
+
+### What the owner should look at first, after the site is live
+
+1. `dashboard/flagged.html` — 14 items, three of which change a dollar figure (FL-01, FL-03, FL-05).
+2. `dashboard/units.html` — the notice planner dates, especially Unit 2: a 13.1% increase needs
+   service by **2026-11-30** (or 2026-11-25 if mailed) to take effect by 2027-02-28 at the verified 1.6% rate.
+3. `dashboard/executive-summary.html` — the licence question, answered first.
+
+### Change requests logged rather than made
+
+None outstanding. The two additive touches to other sessions' files (`tools/pages_1.py` hub section,
+`scripts/build.py` build step) were made by this session in its integration role and are recorded
+above; if the owning session returns, both are single blocks that can be moved without touching
+anything else.
