@@ -1,0 +1,90 @@
+{
+  "disclaimer": "Dollar figures are computed by build.py from the officially published percentages. Percentages come from Rent Board Form 571 (S01). The two inputs that cannot be verified from an official source without the property address are the base-rent history and the year built - they are flagged, not asserted. This is a research work product, not legal advice.",
+  "privacy_note": "Tenant names are replaced with letters. No address, no initials, no contact details are stored in this repository.",
+  "rates": [
+    { "key": "2026-27", "period": "Mar 1, 2026 - Feb 28, 2027", "pct": 1.6, "source": "S01" },
+    { "key": "2025-26", "period": "Mar 1, 2025 - Feb 28, 2026", "pct": 1.4, "source": "S01" },
+    { "key": "2024-25", "period": "Mar 1, 2024 - Feb 28, 2025", "pct": 1.7, "source": "S01" },
+    { "key": "2023-24", "period": "Mar 1, 2023 - Feb 29, 2024", "pct": 3.6, "source": "S01" },
+    { "key": "2022-23", "period": "Mar 1, 2022 - Feb 28, 2023", "pct": 2.3, "source": "S01" },
+    { "key": "2021-22", "period": "Mar 1, 2021 - Feb 28, 2022", "pct": 0.7, "source": "S01" },
+    { "key": "2020-21", "period": "Mar 1, 2020 - Feb 28, 2021", "pct": 1.8, "source": "S01" },
+    { "key": "2019-20", "period": "Mar 1, 2019 - Feb 29, 2020", "pct": 2.6, "source": "S01" }
+  ],
+  "units": [
+    {
+      "id": "unit-1",
+      "label": "Unit 1",
+      "base_rent": 3995.00,
+      "base_rent_as_of": "2026-04-01",
+      "lease_start": "2025-02-01",
+      "tenants_initial": "Tenant A, Tenant B, Tenant C",
+      "tenants_current": "Tenant A, Tenant D",
+      "occupancy_change": "One original tenant was replaced by a new co-tenant; one original tenant (Tenant A) has remained continuously in occupancy since 2025-02-01.",
+      "anniversary": "February 1",
+      "first_eligible_increase": "2026-02-01",
+      "last_increase_date": null,
+      "last_increase_note": "No increase has been imposed since the tenancy began; rent is unchanged at the 2025-02-01 figure.",
+      "target_effective_date": "2027-02-01",
+      "target_rationale": "The next February 1 anniversary, and it falls inside the window in which 1.6% is the published rate (through 2027-02-28).",
+      "scenarios": [
+        {
+          "id": "U1-A",
+          "name": "Current-year annual increase only",
+          "rates": ["2026-27"],
+          "note": "Most conservative option. Uses only the rate published for the effective date and ignores the skipped 2026 anniversary.",
+          "recommendation_score": "safest"
+        },
+        {
+          "id": "U1-B",
+          "name": "Annual increase + the skipped 2026 anniversary (banked)",
+          "rates": ["2025-26", "2026-27"],
+          "note": "Treats the missed February 1, 2026 increase as banked under SF Admin Code §37.3(a)(2). See flagged item FL-03: sf.gov's banking page describes a 24-month condition that the ordinance text does not contain, so this option should be confirmed with a Rent Board counsellor before a notice is served.",
+          "recommendation_score": "needs confirmation"
+        }
+      ],
+      "flags": ["FL-01", "FL-02", "FL-03", "FL-05", "FL-06"]
+    },
+    {
+      "id": "unit-2",
+      "label": "Unit 2",
+      "base_rent": 3150.00,
+      "base_rent_as_of": "2019-06-01",
+      "lease_start": "2019-06-01",
+      "tenants_initial": "Tenant E, Tenant F",
+      "tenants_current": "Tenant E, Tenant F",
+      "occupancy_change": "No change reported.",
+      "anniversary": "June 1",
+      "first_eligible_increase": "2020-06-01",
+      "last_increase_date": null,
+      "last_increase_note": "No increase has been imposed since 2019-06-01.",
+      "target_effective_date": "2027-02-28",
+      "target_rationale": "Keeps the increase inside the window where the 1.6% rate is published AND still allows a 90-day notice to be served in time for an increase above 10%. Any effective date after 2027-02-28 needs the rate that will not be published until March 1, 2027.",
+      "scenarios": [
+        {
+          "id": "U2-A",
+          "name": "Current-year annual increase only",
+          "rates": ["2026-27"],
+          "note": "Lowest-risk option; leaves roughly six years of banked increases unused. Notice period: 30 days.",
+          "recommendation_score": "safest"
+        },
+        {
+          "id": "U2-B",
+          "name": "All skipped years (2020-2025) plus the current annual increase",
+          "rates": ["2020-21", "2021-22", "2022-23", "2023-24", "2024-25", "2025-26", "2026-27"],
+          "note": "Legally available under §37.3(a)(2) and the Rent Board's multiple-years guidance, but the total exceeds 10%, which triggers a 90-day notice, and a six-year catch-up is the classic trigger for a tenant petition. Licensed and permitted, but the highest-scrutiny option.",
+          "recommendation_score": "highest scrutiny"
+        },
+        {
+          "id": "U2-C",
+          "name": "Banked + annual, held to a 10% total",
+          "rates": ["2026-27"],
+          "manual_total_pct": 10.0,
+          "note": "A policy choice, not a legal requirement: 10% is the notice-period threshold in Civil Code §827 and the emergency price-gouging ceiling in Penal Code §396, so staying at or under it keeps the increase in the 30-day notice band and below the gouging line if an emergency were declared.",
+          "recommendation_score": "balanced"
+        }
+      ],
+      "flags": ["FL-01", "FL-02", "FL-03", "FL-04"]
+    }
+  ]
+}
