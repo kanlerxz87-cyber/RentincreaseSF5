@@ -26,6 +26,7 @@ from decimal import Decimal, ROUND_DOWN
 from pathlib import Path
 from urllib.parse import urlsplit
 
+sys.dont_write_bytecode = True
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import data  # noqa: E402
