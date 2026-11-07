@@ -95,3 +95,15 @@ print(f'Built {len(nav)} pages / {sum(len(x[2]) for x in P.values())} finding ro
 # Mirror public artifacts to existing GitHub Pages main:/ configuration.
 for artifact in Path("site").iterdir():
  if artifact.is_file(): Path(artifact.name).write_bytes(artifact.read_bytes())
+
+# --- Integrated build · added by session-c6d53281 · 2026-11-07 -------------------
+# A second, deeper research set lives in tools/ and publishes pages/, assets/ and a consolidated
+# landing page that links both sets. Run it last so the published home page is the merged hub, then
+# mirror its artifacts into site/ so the two trees stay identical (the independent audit checks parity).
+import subprocess as _sp, shutil as _sh, sys as _sys
+_sp.run([_sys.executable, 'tools/build_site.py'], check=True)
+_sh.copyfile('index.html', Path('site') / 'index.html')
+for _src in list(Path('pages').glob('*.html')) + [p for p in Path('assets').glob('*') if p.is_file()]:
+    _dst = Path('site') / _src
+    _dst.parent.mkdir(parents=True, exist_ok=True)
+    _sh.copyfile(_src, _dst)
