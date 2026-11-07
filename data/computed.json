@@ -1,0 +1,478 @@
+{
+  "generated": "2026-11-07",
+  "self_tests": [
+    {
+      "check": "Rent Board example: 2023-06-01 start, increase 2026-06-01, total %",
+      "expected": 4.7,
+      "got": 4.7,
+      "pass": true
+    },
+    {
+      "check": "Rent Board example: same, increase amount",
+      "expected": 47.0,
+      "got": 47.0,
+      "pass": true
+    },
+    {
+      "check": "Rent Board example: same, new base rent",
+      "expected": 1047.0,
+      "got": 1047.0,
+      "pass": true
+    },
+    {
+      "check": "Banked page example: 2022-08-01 start, increase 2025-08-01, total %",
+      "expected": 6.7,
+      "got": 6.7,
+      "pass": true
+    },
+    {
+      "check": "Banked page example: same, increase amount",
+      "expected": 87.1,
+      "got": 87.1,
+      "pass": true
+    },
+    {
+      "check": "Rent Board example: 2025-06-01 start, increase 2026-07-01, total %",
+      "expected": 1.6,
+      "got": 1.6,
+      "pass": true
+    },
+    {
+      "check": "Rent Board example: same, new base rent",
+      "expected": 1016.0,
+      "got": 1016.0,
+      "pass": true
+    },
+    {
+      "check": "Notice: 3.0% increase -> 30 days",
+      "expected": 30,
+      "got": 30,
+      "pass": true
+    },
+    {
+      "check": "Notice: banked component alone >10% at 2027-06-01 -> 90 days",
+      "expected": 90,
+      "got": 90,
+      "pass": true
+    },
+    {
+      "check": "Rate on 2027-02-01 (Unit A next anniversary)",
+      "expected": 1.6,
+      "got": 1.6,
+      "pass": true
+    },
+    {
+      "check": "Rate on 2026-02-01 (Unit A skipped anniversary)",
+      "expected": 1.4,
+      "got": 1.4,
+      "pass": true
+    },
+    {
+      "check": "Rate on 2020-06-01 (Unit B first anniversary)",
+      "expected": 1.8,
+      "got": 1.8,
+      "pass": true
+    },
+    {
+      "check": "Rate on 2026-11-07 (analysis date)",
+      "expected": 1.6,
+      "got": 1.6,
+      "pass": true
+    },
+    {
+      "check": "Rate on 2027-06-01 is NOT published yet -> None",
+      "expected": "None",
+      "got": "None",
+      "pass": true
+    },
+    {
+      "check": "Publication horizon is 2027-02-28",
+      "expected": "2027-02-28",
+      "got": "2027-02-28",
+      "pass": true
+    },
+    {
+      "check": "Unit B banked total under Rule 4.12 (12-month test)",
+      "expected": 13.1,
+      "got": 13.1,
+      "pass": true
+    },
+    {
+      "check": "Unit B banked total under the 24-month reading",
+      "expected": 11.5,
+      "got": 11.5,
+      "pass": true
+    },
+    {
+      "check": "Unit B banked year-by-year rates",
+      "expected": "[1.8, 0.7, 2.3, 3.6, 1.7, 1.4, 1.6]",
+      "got": "[1.8, 0.7, 2.3, 3.6, 1.7, 1.4, 1.6]",
+      "pass": true
+    },
+    {
+      "check": "Unit A total under Rule 4.12 (1.4% banked + 1.6% annual)",
+      "expected": 3.0,
+      "got": 3.0,
+      "pass": true
+    },
+    {
+      "check": "Unit A increase amount",
+      "expected": 119.85,
+      "got": 119.85,
+      "pass": true
+    },
+    {
+      "check": "Unit A new base rent",
+      "expected": 4114.85,
+      "got": 4114.85,
+      "pass": true
+    }
+  ],
+  "self_tests_passed": 21,
+  "self_tests_total": 21,
+  "units": [
+    {
+      "unit_id": "A",
+      "public_label": "Unit A",
+      "tenancy_start": "2025-02-01",
+      "current_base_rent": 3995.0,
+      "anniversary_date": "02/01",
+      "next_effective_date": "2027-02-01",
+      "anniversary_schedule": [
+        "2026-02-01",
+        "2027-02-01"
+      ],
+      "scenarios": [
+        {
+          "effective_date": "2027-02-01",
+          "base_rent": 3995.0,
+          "banked_months_rule": 12,
+          "annual": {
+            "effective": "2027-02-01",
+            "percent": 1.6,
+            "published": true,
+            "rate_period": "2026-03-01 - 2027-02-28",
+            "note": null,
+            "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+          },
+          "banked": [],
+          "banked_percent": 0,
+          "total_percent": 1.6,
+          "total_percent_published": true,
+          "increase_amount": 63.92,
+          "new_base_rent": 4058.92,
+          "notice_days_required": 30,
+          "notice_reason": "Civil Code 827(b)(2): increase is 10% or less -> 30 days",
+          "serve_by_delivered": "2027-01-02",
+          "serve_by_mailed": "2026-12-28",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "key": "conservative",
+          "label": "Current-year annual increase only"
+        },
+        {
+          "effective_date": "2027-02-01",
+          "base_rent": 3995.0,
+          "banked_months_rule": 12,
+          "annual": {
+            "effective": "2027-02-01",
+            "percent": 1.6,
+            "published": true,
+            "rate_period": "2026-03-01 - 2027-02-28",
+            "note": null,
+            "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+          },
+          "banked": [
+            {
+              "anniversary": "2026-02-01",
+              "percent": 1.4,
+              "rate_period": "2025-03-01 - 2026-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            }
+          ],
+          "banked_percent": 1.4,
+          "total_percent": 3.0,
+          "total_percent_published": true,
+          "increase_amount": 119.85,
+          "new_base_rent": 4114.85,
+          "notice_days_required": 30,
+          "notice_reason": "Civil Code 827(b)(2): increase is 10% or less -> 30 days",
+          "serve_by_delivered": "2027-01-02",
+          "serve_by_mailed": "2026-12-28",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "key": "moderate",
+          "label": "Current-year annual increase + the most recent banked year"
+        },
+        {
+          "effective_date": "2027-02-01",
+          "base_rent": 3995.0,
+          "banked_months_rule": 12,
+          "annual": {
+            "effective": "2027-02-01",
+            "percent": 1.6,
+            "published": true,
+            "rate_period": "2026-03-01 - 2027-02-28",
+            "note": null,
+            "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+          },
+          "banked": [
+            {
+              "anniversary": "2026-02-01",
+              "percent": 1.4,
+              "rate_period": "2025-03-01 - 2026-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            }
+          ],
+          "banked_percent": 1.4,
+          "total_percent": 3.0,
+          "total_percent_published": true,
+          "increase_amount": 119.85,
+          "new_base_rent": 4114.85,
+          "notice_days_required": 30,
+          "notice_reason": "Civil Code 827(b)(2): increase is 10% or less -> 30 days",
+          "serve_by_delivered": "2027-01-02",
+          "serve_by_mailed": "2026-12-28",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "key": "maximum_rule_4_12",
+          "label": "Maximum lawful under Rule 4.12 (12-month banking test)"
+        },
+        {
+          "effective_date": "2027-02-01",
+          "base_rent": 3995.0,
+          "banked_months_rule": 24,
+          "annual": {
+            "effective": "2027-02-01",
+            "percent": 1.6,
+            "published": true,
+            "rate_period": "2026-03-01 - 2027-02-28",
+            "note": null,
+            "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+          },
+          "banked": [],
+          "banked_percent": 0,
+          "total_percent": 1.6,
+          "total_percent_published": true,
+          "increase_amount": 63.92,
+          "new_base_rent": 4058.92,
+          "notice_days_required": 30,
+          "notice_reason": "Civil Code 827(b)(2): increase is 10% or less -> 30 days",
+          "serve_by_delivered": "2027-01-02",
+          "serve_by_mailed": "2026-12-28",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "key": "maximum_24_month_reading",
+          "label": "Maximum lawful under the 24-month sentence on the sf.gov 'Banked rent increases' page (conflicts with Rule 4.12 - see Flagged)"
+        }
+      ]
+    },
+    {
+      "unit_id": "B",
+      "public_label": "Unit B",
+      "tenancy_start": "2019-06-01",
+      "current_base_rent": 3150.0,
+      "anniversary_date": "06/01",
+      "next_effective_date": "2027-06-01",
+      "anniversary_schedule": [
+        "2020-06-01",
+        "2021-06-01",
+        "2022-06-01",
+        "2023-06-01",
+        "2024-06-01",
+        "2025-06-01",
+        "2026-06-01",
+        "2027-06-01"
+      ],
+      "scenarios": [
+        {
+          "effective_date": "2027-06-01",
+          "base_rent": 3150.0,
+          "banked_months_rule": 12,
+          "annual": {
+            "effective": "2027-06-01",
+            "percent": null,
+            "published": false,
+            "rate_period": null,
+            "note": "The Rent Board has not yet published the allowable increase for the period containing 2027-06-01. The Board publishes it on or about January 1, effective March 1. Left blank deliberately - no official source exists for this figure yet.",
+            "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+          },
+          "banked": [],
+          "banked_percent": 0,
+          "total_percent": null,
+          "total_percent_published": false,
+          "increase_amount": null,
+          "new_base_rent": null,
+          "notice_days_required": 30,
+          "notice_reason": "Civil Code 827(b)(2): banked component is 0% and the annual component is capped at 7% by Sec. 37.3(a)(1), so the total cannot exceed 10% -> 30 days",
+          "serve_by_delivered": "2027-05-02",
+          "serve_by_mailed": "2027-04-27",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "key": "conservative",
+          "label": "Current-year annual increase only"
+        },
+        {
+          "effective_date": "2027-06-01",
+          "base_rent": 3150.0,
+          "banked_months_rule": 12,
+          "annual": {
+            "effective": "2027-06-01",
+            "percent": null,
+            "published": false,
+            "rate_period": null,
+            "note": "The Rent Board has not yet published the allowable increase for the period containing 2027-06-01. The Board publishes it on or about January 1, effective March 1. Left blank deliberately - no official source exists for this figure yet.",
+            "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+          },
+          "banked": [
+            {
+              "anniversary": "2026-06-01",
+              "percent": 1.6,
+              "rate_period": "2026-03-01 - 2027-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            }
+          ],
+          "banked_percent": 1.6,
+          "total_percent": null,
+          "total_percent_published": false,
+          "increase_amount": null,
+          "new_base_rent": null,
+          "notice_days_required": 30,
+          "notice_reason": "Civil Code 827(b)(2): banked component is 1.6% and the annual component is capped at 7% by Sec. 37.3(a)(1), so the total cannot exceed 10% -> 30 days",
+          "serve_by_delivered": "2027-05-02",
+          "serve_by_mailed": "2027-04-27",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "key": "moderate",
+          "label": "Current-year annual increase + the most recent banked year"
+        },
+        {
+          "effective_date": "2027-06-01",
+          "base_rent": 3150.0,
+          "banked_months_rule": 12,
+          "annual": {
+            "effective": "2027-06-01",
+            "percent": null,
+            "published": false,
+            "rate_period": null,
+            "note": "The Rent Board has not yet published the allowable increase for the period containing 2027-06-01. The Board publishes it on or about January 1, effective March 1. Left blank deliberately - no official source exists for this figure yet.",
+            "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+          },
+          "banked": [
+            {
+              "anniversary": "2020-06-01",
+              "percent": 1.8,
+              "rate_period": "2020-03-01 - 2021-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2021-06-01",
+              "percent": 0.7,
+              "rate_period": "2021-03-01 - 2022-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2022-06-01",
+              "percent": 2.3,
+              "rate_period": "2022-03-01 - 2023-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2023-06-01",
+              "percent": 3.6,
+              "rate_period": "2023-03-01 - 2024-02-29",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2024-06-01",
+              "percent": 1.7,
+              "rate_period": "2024-03-01 - 2025-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2025-06-01",
+              "percent": 1.4,
+              "rate_period": "2025-03-01 - 2026-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2026-06-01",
+              "percent": 1.6,
+              "rate_period": "2026-03-01 - 2027-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            }
+          ],
+          "banked_percent": 13.1,
+          "total_percent": null,
+          "total_percent_published": false,
+          "increase_amount": null,
+          "new_base_rent": null,
+          "notice_days_required": 90,
+          "notice_reason": "Civil Code 827(b)(3)(A): the banked component alone (13.1%) is greater than 10%, so 90 days is required whatever the annual component turns out to be",
+          "serve_by_delivered": "2027-03-03",
+          "serve_by_mailed": "2027-02-26",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "key": "maximum_rule_4_12",
+          "label": "Maximum lawful under Rule 4.12 (12-month banking test)"
+        },
+        {
+          "effective_date": "2027-06-01",
+          "base_rent": 3150.0,
+          "banked_months_rule": 24,
+          "annual": {
+            "effective": "2027-06-01",
+            "percent": null,
+            "published": false,
+            "rate_period": null,
+            "note": "The Rent Board has not yet published the allowable increase for the period containing 2027-06-01. The Board publishes it on or about January 1, effective March 1. Left blank deliberately - no official source exists for this figure yet.",
+            "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+          },
+          "banked": [
+            {
+              "anniversary": "2020-06-01",
+              "percent": 1.8,
+              "rate_period": "2020-03-01 - 2021-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2021-06-01",
+              "percent": 0.7,
+              "rate_period": "2021-03-01 - 2022-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2022-06-01",
+              "percent": 2.3,
+              "rate_period": "2022-03-01 - 2023-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2023-06-01",
+              "percent": 3.6,
+              "rate_period": "2023-03-01 - 2024-02-29",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2024-06-01",
+              "percent": 1.7,
+              "rate_period": "2024-03-01 - 2025-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            },
+            {
+              "anniversary": "2025-06-01",
+              "percent": 1.4,
+              "rate_period": "2025-03-01 - 2026-02-28",
+              "source_url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf"
+            }
+          ],
+          "banked_percent": 11.5,
+          "total_percent": null,
+          "total_percent_published": false,
+          "increase_amount": null,
+          "new_base_rent": null,
+          "notice_days_required": 90,
+          "notice_reason": "Civil Code 827(b)(3)(A): the banked component alone (11.5%) is greater than 10%, so 90 days is required whatever the annual component turns out to be",
+          "serve_by_delivered": "2027-03-03",
+          "serve_by_mailed": "2027-02-26",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "key": "maximum_24_month_reading",
+          "label": "Maximum lawful under the 24-month sentence on the sf.gov 'Banked rent increases' page (conflicts with Rule 4.12 - see Flagged)"
+        }
+      ]
+    }
+  ]
+}
