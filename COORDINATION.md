@@ -366,3 +366,34 @@ None blocks the merge; all are published with sources for manual review.
 ## Deployment record
 
 Filled in after the merge and Pages verification.
+
+---
+
+## Session: arena/0502f829-rentincreasesf5 · independent compilation (2026-11-07)
+
+Branch: `arena/0502f829-rentincreasesf5` (Arena-assigned; platform requirement — no session branch created). Work committed directly on this branch; pull request #6 opened from it to `main`.
+
+| Task | Status | Owner | Files in scope |
+|---|---|---|---|
+| Research & verify rent-increase rules from official sources (SF Rent Ordinance §§37.3/37.15, Housing Inventory, AB 1482, Civ. Code §827, Fair Housing Act) | done | arena/0502f829-rentincreasesf5 | COORDINATION.md (this section) |
+| Executive summary (license question forefront) | done | arena/0502f829-rentincreasesf5 | `pages/compilation.html` |
+| Step-by-step Rent Board process | done | arena/0502f829-rentincreasesf5 | `pages/process.html` |
+| Allowable increase rates (Form 571 history) | done | arena/0502f829-rentincreasesf5 | `pages/rates.html` |
+| Q&A (reasonable increases, corporations vs individuals, one vs both units, tenant-lawyer review) | done | arena/0502f829-rentincreasesf5 | `pages/questions.html` |
+| Flagged for Review (irregularities & unverified items) | done | arena/0502f829-rentincreasesf5 | `pages/review.html` |
+| Site verification tooling | done | arena/0502f829-rentincreasesf5 | `tools/verify_site.py`, `assets/rent-dashboard.css` |
+| Integration & publication | done | arena/0502f829-rentincreasesf5 | PR #6 → merge → GitHub Pages |
+
+### Log
+
+- Research verified against official sources: SF Admin Code §37.15 (rent increase license, Ord. 265-20), §37.3(a)(1) (60% of CPI, 7% cap), Housing Inventory pages, sf.gov annual-increase announcement (1.6% for 3/1/26–2/28/27), Form 571 history, banked-increase rules, landlord petitions page, CA Civ. Code §827(b) (30/90-day notice), CA Civ. Code §1947.12 (AB 1482 exemption for locally rent-controlled units), CA Gov. Code §12955 (FEHA), 42 U.S.C. §3604 (Fair Housing Act), sf.gov AB 1482 page, Rent Board fee page.
+- Privacy: no real names, initials, or address stored. Tenants are `Tenant A/B/C/D/E` placeholders. Dates and dollar amounts preserved. Owner-supplied facts labeled "Per owner" and flagged where unverifiable.
+- Merge reconciliation: PR #6 merged `origin/main` (other sessions' published sets) into this branch. Conflicting files (`index.html`, `README.md`, `COORDINATION.md`, `assets/style.css`, `pages/notices.html`, `pages/sources.html`, `pages/units.html`) resolved by **preserving the already-published main versions**; this session's landing page became `pages/compilation.html` and the four unique subpages (`process.html`, `rates.html`, `questions.html`, `review.html`) were added with their own CSS (`assets/rent-dashboard.css`) and **direct absolute links to the official source pages** (every table row links to an official site). No other session's work was discarded or edited.
+- Flagged for review (this session, `pages/review.html`): Unit 1 rent unchanged 2025-02-01 → 2026-04-01 (first-increase timing); Unit 1 April 1, 2026 renewal/anniversary ambiguity; Unit 2 rent unchanged since 2019 (banked-amount dependency); Housing Inventory reporting status unknown; coverage confirmation; no official ZIP-level market rate (left blank); AB 1482 8.8% reference-only.
+- Verification: tag-balance, relative-link, and anchor checks pass (`tools/verify_site.py`); all pages served 200 locally; PR #6 merged; GitHub Pages deployment verified.
+
+### Session registry update
+
+| Session ID | Branch | Status |
+| --- | --- | --- |
+| `arena/0502f829-rentincreasesf5` | `arena/0502f829-rentincreasesf5` | done — independent compilation integrated via PR #6 |

@@ -87,3 +87,7 @@ public and made under penalty of perjury — use truthful data in the official R
 Research only. No licence was obtained, no inventory report filed, and no notice served or approved by this
 repository. Recommendations and hypothetical arithmetic are not official determinations. The controlling text is
 on the official pages linked throughout; the Rent Board counsellor line is 415-252-4600.
+
+## Independent compilation (session arena/0502f829-rentincreasesf5)
+
+A fourth, independently verified compilation is also published here and linked from the hub: `pages/compilation.html` (executive summary — the licence answer first), `pages/process.html` (step-by-step Rent Board process), `pages/rates.html` (Form 571 allowable-increase history), `pages/questions.html` (owner Q&A) and `pages/review.html` (flagged items). It uses its own stylesheet (`assets/rent-dashboard.css`) and links every table row directly to the official source page. Where this compilation and the deep-dive set differ, the difference is one of approach, not of law. Its open items are listed on its own flagged page.
