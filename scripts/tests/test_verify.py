@@ -211,6 +211,13 @@ class VerifyTests(unittest.TestCase):
             f.write('<img srcset="missing.png 1x, missing-2x.png 2x" alt="Synthetic">')
         self.assertIn("LOCAL_LINK", self.codes(self.audit()))
 
+    def test_unresolved_publication_token_fails(self):
+        with (self.root / "index.html").open("a") as f:
+            f.write('<p>A_DOLLAR on A_BASE</p>')
+        report = self.audit()
+        self.assertIn("UNRESOLVED_TEMPLATE", self.codes(report))
+        self.assertFalse(report["passed"])
+
     def test_empty_repo_is_not_a_pass(self):
         for path in sorted(self.root.rglob("*"), reverse=True):
             if path.is_file(): path.unlink()

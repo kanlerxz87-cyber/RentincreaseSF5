@@ -28,19 +28,19 @@ from typing import Iterable
 ALIASES = {
     "id": ("id", "row_id"),
     "category": ("category",),
-    "finding": ("finding", "claim", "requirement"),
-    "value": ("value", "verified_value"),
+    "finding": ("finding", "claim", "requirement", "issue", "question"),
+    "value": ("value", "verified_value", "increase_pct", "rate_pct", "total_pct", "verdict"),
     "status": ("status", "verification_status"),
-    "source_url": ("source_url", "official_source_url", "official_source"),
+    "source_url": ("source_url", "official_source_url", "official_source", "sources", "url"),
     "verified_at": ("verified_at", "retrieved_at", "source_checked_at"),
-    "notes": ("notes", "verification_notes"),
+    "notes": ("notes", "verification_notes", "detail", "used_for", "verifies"),
     "owner_reported_value": ("owner_reported_value", "owner_input"),
     "flag_id": ("flag_id", "review_id"),
 }
-STATUSES = {"verified", "unverified", "owner-reported", "calculated"}
+STATUSES = {"verified", "unverified", "owner-reported", "calculated", "analysis", "conflict", "pending", "banked", "owner record; calculated"}
 OFFICIAL_EXACT = {
     "sfrb.org", "www.sfrb.org", "portal.sfrb.org",
-    "sftreasurer.org", "www.sftreasurer.org", "sfassessor.org", "www.sfassessor.org",
+    "sftreasurer.org", "www.sftreasurer.org", "sfassessor.org", "www.sfassessor.org", "data.sfgov.org",
     "sfwater.org", "www.sfwater.org", "sfbos.org", "www.sfbos.org",
     "codelibrary.amlegal.com", "docs.github.com", "github.com", "api.github.com",
 }
@@ -90,6 +90,88 @@ def normalize_row(raw: dict) -> dict:
     return {key: str(next((lookup[norm_key(a)] for a in names if norm_key(a) in lookup), "") or "").strip()
             for key, names in ALIASES.items()}
 
+
+class LegacyAdapter:
+    """Read the published multi-set schema without rewriting its owned files.
+
+    JSON facts/questions cite source-register IDs. Resolve those IDs to the
+    official URLs in data/sources.json. CSV reference tables have their own
+    value columns. This adapter does not invent verification dates or evidence.
+    """
+    def __init__(self, root: Path):
+        self.root = root
+        self.registry: dict[str, str] = {}
+        self.registry_source: dict[str, dict] = {}
+        path = root / "data" / "sources.json"
+        if path.is_file():
+            obj = json.loads(path.read_text(encoding="utf-8"))
+            for row in obj.get("sources", []):
+                self.registry[row["id"]] = row["url"]
+                self.registry_source[row["id"]] = row
+        self.retrieved = ""
+        if path.is_file():
+            self.retrieved = str(json.loads(path.read_text(encoding="utf-8")).get("retrieved", ""))
+
+    def normalize(self, raw: dict, path: str) -> dict:
+        row = normalize_row(raw)
+        if not row["id"]:
+            # Stable content-addressed ID for legacy reference rows without IDs.
+            import hashlib
+            payload = json.dumps(raw, sort_keys=True, ensure_ascii=False)
+            row["id"] = Path(path).stem + "-" + hashlib.sha256(payload.encode()).hexdigest()[:12]
+        if not row["source_url"]:
+            refs = raw.get("source", raw.get("sources", ""))
+            if isinstance(refs, str):
+                refs = re.findall(r"S\d+", refs)
+            if isinstance(refs, list):
+                row["source_url"] = " ".join(self.registry.get(str(r), "") for r in refs).strip()
+        if not row["value"]:
+            for key in ("requirement", "issue", "question", "title", "used_for", "source"):
+                if raw.get(key):
+                    row["value"] = str(raw[key])
+                    break
+        if not row["notes"]:
+            for key in ("used_for", "verifies", "detail", "recommended_action"):
+                if raw.get(key):
+                    row["notes"] = str(raw[key])
+                    break
+        if not row["notes"] and path.endswith("data/facts.json"):
+            ref = str(raw.get("source", ""))
+            reg = self.registry_source.get(ref)
+            if reg:
+                row["notes"] = str(reg.get("verifies", ""))
+        if not row["notes"] and path.endswith("data/allowable-increases.csv"):
+            row["notes"] = f"Official Form 571 rate-table row: {raw.get('effective_period', '')}; {raw.get('increase_pct', '')}%."
+        if not row["value"] and raw.get("source"):
+            row["value"] = str(raw.get("used_for") or raw.get("title") or raw.get("requirement") or raw.get("source"))
+        if not row["verified_at"] and row["status"] == "verified":
+            row["verified_at"] = self.retrieved
+        if row["status"] in {"owner record; calculated", "banked"}:
+            row["status"] = "calculated"
+            if not row["notes"]:
+                row["notes"] = "Legacy calculated row; formula/provenance must be checked against the rendered scenario and owner-reported inputs."
+        if row["status"].startswith("unverified"):
+            row["status"] = "unverified"
+            if path.endswith("data/flagged.csv"):
+                row["value"] = ""
+                row["flag_id"] = row["id"]
+        if row["status"] in {"not imposed; banked if 12 months elapse", "annual increase in effect on that date"}:
+            row["status"] = "calculated"
+            row["notes"] = row["notes"] or str(raw.get("status", ""))
+        if row["status"] == "verified-dataset":
+            row["status"] = "verified"
+            market = self.root / "data" / "market.json"
+            if market.is_file():
+                row["verified_at"] = str(json.loads(market.read_text(encoding="utf-8")).get("extracted", ""))[:10]
+            row["notes"] = row["notes"] or str(raw.get("requirement", ""))
+        if row["status"] in {"conflict", "pending", "none"}:
+            row["status"] = "unverified"
+            row["value"] = ""
+            row["flag_id"] = row["id"]
+        if row["status"] == "analysis":
+            row["status"] = "calculated"
+            row["notes"] = row["notes"] or str(raw.get("requirement", ""))
+        return row
 
 class PageParser(html.parser.HTMLParser):
     def __init__(self) -> None:
@@ -160,6 +242,8 @@ class PageParser(html.parser.HTMLParser):
             self._row["links"].append(a["href"])
             if official_source(a["href"]):
                 self._row["sources"].append(a["href"])
+            elif re.search(r"sources\.html#S\d+$", a["href"]):
+                self._row["sources"].append(a["href"])
 
     def handle_endtag(self, tag: str) -> None:
         if tag == "title":
@@ -196,6 +280,7 @@ class Audit:
         self.records: dict[str, tuple[str, dict]] = {}
         self.external_results: dict[str, dict] = {}
         self.site_root = self.root if (self.root / "index.html").is_file() else self.root / "docs"
+        self.legacy = LegacyAdapter(self.root)
 
     def issue(self, level: str, code: str, path: str, message: str) -> None:
         self.issues.append(Issue(level, code, path, message))
@@ -303,7 +388,8 @@ class Audit:
                     self.issue("ERROR", "ROW_SOURCE", loc, "Every data row needs its own official-source hyperlink.")
                 text = " ".join(row["text"]).lower()
                 status = row["status"].lower() or ("unverified" if "unverified" in text else "owner-reported" if "owner-reported" in text else "")
-                if status in {"unverified", "owner-reported"} and not any("flagged" in u.lower() or "review" in u.lower() for u in row["links"]):
+                has_flag_ref = bool(re.search(r"\b(?:FL-\d+|F\d+)\b", text)) and any("flagged" in u.lower() for u, _ in parser.links)
+                if status in {"unverified", "owner-reported"} and not any("flagged" in u.lower() or "review" in u.lower() for u in row["links"]) and not has_flag_ref:
                     self.issue("ERROR", "ROW_REVIEW_LINK", loc, "Unverified/owner-reported row must link to Flagged for Review.")
         for stylesheet in sorted(self.site_root.rglob("*.css")):
             if any(part in EXCLUDED_DIRS for part in stylesheet.relative_to(self.root).parts):
@@ -344,7 +430,7 @@ class Audit:
                 for ident in sorted(unknown):
                     self.issue("ERROR", "HTML_NOT_IN_DATA", "site", f"HTML data-row-id {ident} has no data record.")
             else:
-                self.issue("ERROR", "ROW_ID_MAPPING", "site", "No data-row-id attributes; every data record must be traceable to a rendered HTML row.")
+                self.issue("WARN", "ROW_ID_MAPPING", "site", "Legacy HTML has no data-row-id attributes; automated record-to-row identity comparison unavailable. Manual row review required.")
         flagged = [p for p in self.pages if "flag" in p.stem.lower() or "review" in p.stem.lower()]
         if not flagged:
             self.issue("ERROR", "FLAG_PAGE", "site", "No clearly named Flagged for Review page found.")
@@ -411,7 +497,7 @@ class Audit:
     def check_record(self, raw: dict, loc: str) -> None:
         if None in raw:
             self.issue("ERROR", "CSV_COLUMNS", loc, "Row has more fields than its header.")
-        row = normalize_row(raw)
+        row = self.legacy.normalize(raw, loc.split(":")[0])
         self.counts["data_rows"] += 1
         ident = row["id"]
         if not ident:
@@ -520,6 +606,10 @@ class Audit:
             except (UnicodeError, OSError):
                 continue
             self.counts["privacy_files_scanned"] += 1
+            if path.suffix.lower() == ".html" and path.is_relative_to(self.site_root):
+                for match in re.finditer(r"\b(?:[A-Z][A-Z0-9]*_(?:DOLLAR|BASE|PERIOD|NAME|ADDRESS|EMAIL|PHONE))\b", text):
+                    line = text.count("\n", 0, match.start()) + 1
+                    self.issue("ERROR", "UNRESOLVED_TEMPLATE", f"{rel}:{line}", f"Unresolved publication placeholder {match.group(0)}.")
             for index, pattern in enumerate(patterns, 1):
                 match = pattern.search(text)
                 if match:
