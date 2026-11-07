@@ -479,6 +479,7 @@ NAV = [
     ("register.html", "Full register"),
     ("flagged.html", "Flagged for review"),
     ("sources.html", "Sources"),
+    ("verification.html", "Verification"),
     ("archive.html", "Earlier research sets"),
 ]
 
@@ -646,7 +647,7 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
     b += ('<section class="panel"><h2>Verification status</h2><p class="small">'
           '%d findings in the register: %d verified against an official source, %d owner-supplied or '
           'computed, and %d left blank or recorded as no-authority-found. '
-          'Nothing is inferred. <a href="hub/register.html">Open the full register &rarr;</a></p>'
+          'Nothing is inferred. <a href="hub/register.html">Open the full register &rarr;</a> &middot; <a href="hub/verification.html">What was checked and how &rarr;</a></p>'
           '<p class="note">Privacy: no tenant name, initial or street address appears anywhere on this site. '
           'Occupants are described by role only. Dates and dollar amounts are preserved exactly as supplied.</p>'
           '</section>' % (len(R), nver,
@@ -1065,25 +1066,6 @@ FLAGS = [
     ("F14", "Earlier sets differ in presentation", "Four earlier compilations are preserved on this site. They agree on the verified rules but differ on whether to price unit-specific figures.",
      "Reconciled, not deleted", ["S4", "S5"], "This consolidated set prices the options and labels every result computed. The earlier sets remain reachable from the archive page."),
 ]
-
-
-def page_flagged():
-    b = head("Flagged for review",
-             "Open items, conflicts and deliberate blanks. None of these blocks publication; they are "
-             "here so you can review them and ask for changes.")
-    b += '<section class="panel">'
-    rows = []
-    for fid, title, desc, kind, s, action in FLAGS:
-        rows.append([e(fid), "<strong>%s</strong><div class=\"note\">%s</div>" % (e(title), e(desc)),
-                     e(kind), e(action), src(*s)])
-    b += table("Every flagged item with its source and the action that would close it",
-               ["Ref", "Item", "Type", "What would resolve it", "Official source"], rows)
-    b += '</section>'
-    b += '<section class="panel"><h2>Rows left blank on purpose</h2>'
-    b += reg_table(None, "")
-    b = b.replace('<div class="tw"><table><caption></caption>', '<div class="tw"><table><caption>Only unverified and no-authority rows</caption>')
-    b += '</section>'
-    return layout("Flagged for review", b, "flagged.html")
 
 
 def page_flagged_blank():

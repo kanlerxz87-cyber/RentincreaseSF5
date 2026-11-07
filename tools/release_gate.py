@@ -189,6 +189,25 @@ def check_pages():
     stats["links"] = total_links
 
 
+def check_orphans():
+    """Every published page must be reachable from the landing page or the nav."""
+    pages = published_pages()
+    inbound = {p: 0 for p in pages}
+    for p in pages:
+        text = p.read_text(encoding="utf-8")
+        for href in re.findall(r'href="([^"]+)"', text):
+            u = urlsplit(href)
+            if u.scheme or not u.path:
+                continue
+            target = (p.parent / unquote(u.path)).resolve()
+            if target in inbound and target != p.resolve():
+                inbound[target] += 1
+    for p, n in inbound.items():
+        if n == 0 and p.name != "index.html":
+            fail("orphan", "%s has no inbound internal link" % p.relative_to(ROOT))
+    stats["orphans"] = sum(1 for p, n in inbound.items() if n == 0 and p.name != "index.html")
+
+
 def check_merge_markers():
     exts = {".md", ".py", ".html", ".css", ".json", ".csv", ".yml", ".yaml"}
     n = 0
@@ -273,6 +292,7 @@ def check_rates_and_arithmetic():
 
 def main():
     check_pages()
+    check_orphans()
     check_merge_markers()
     check_parity()
     check_rates_and_arithmetic()
