@@ -402,6 +402,8 @@ Branch: `arena/0502f829-rentincreasesf5` (Arena-assigned; platform requirement â
 
 | Task | Status | Owner | Files in scope |
 |---|---|---|---|
-| Review published artifacts for exposure of supplied tenant identifiers and report any findings | in progress | arena/a6525036-rentincreasesf5 | `COORDINATION.md` (this section), `PRIVACY-REVIEW.md` |
+| Review published artifacts for exposure of supplied tenant identifiers and report any findings | needs review | arena/a6525036-rentincreasesf5 | `COORDINATION.md` (this section), `PRIVACY-REVIEW.md` |
 
 - 2026-11-07: Claimed a narrowly scoped privacy review; existing integrations and independent legal audit remain with their owners. The Arena branch name is fixed, so no separate session branch is created.
+- 2026-11-07: **Needs review â€” privacy exposure confirmed.** The public Pages root serves `scripts/independent_audit.py` and `tools/check_links.py`, whose privacy test lists contain supplied tenant initials. Fetched both public URLs to verify; existing HTML-only checks do not cover these scripts. No initials are repeated here. Request to owning sessions: remove sensitive test inputs and avoid echoing them; publish a privacy flag on the Flagged for Review page; assess all public artifacts and Git history. Full findings and limitations: `PRIVACY-REVIEW.md`. This session did not edit the other sessions' files. User-supplied dates and rents remain potentially identifying in combination.
+- Local checks: `scripts/check.py`, `scripts/independent_audit.py`, `tools/verify_site.py`, and `tools/check_links.py` passed; these checks do not resolve the above privacy issue. Live Pages latest build reports `built` at main commit e874a794317e278882e3ef629b7f8dbab8ecf0ab; deployment and validation workflow runs succeeded. Initial pull from the assigned branch failed because it did not yet exist; rebased onto origin/main and pushed the claim successfully.
