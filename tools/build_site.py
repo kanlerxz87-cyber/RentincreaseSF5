@@ -90,7 +90,8 @@ def build_csv():
 
     # flagged
     rows = [[f[0], re.sub("<[^>]+>", "", f[1]), re.sub("<[^>]+>", "", f[2]), re.sub("<[^>]+>", "", f[3]),
-             re.sub("<[^>]+>", "", f[4]), f[5], " ".join(L.SRC[s]["url"] for s in f[6])] for f in P2.FLAGS]
+             re.sub("<[^>]+>", "", f[4]), f[5], " ".join(L.SRC[s]["url"] for s in f[6])]
+            for f in sorted(P2.FLAGS, key=lambda x: x[0])]
     write_csv("data/flagged.csv",
               ["id", "issue", "detail", "what_it_affects", "recommended_action", "status", "sources"], rows)
 

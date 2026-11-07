@@ -250,7 +250,7 @@ def notices():
         "Each of these is a reason a tenant petition succeeds",
         [("Defect", False), ("Why it fails", False), ("Source", False)],
         [
-            ["Percentage above the allowance without a petition", "Void as to the excess; only a certified petition authorises more.", "[[S5]] [[S19]]"],
+            ["Percentage above the allowance without a petition", "Null and void &mdash; the Rules void the <em>entire</em> increase, not only the excess; only a certified petition authorises more.", "[[S5]] [[S19]] [[S9]]"],
             ["No licence on the effective date", "The increase is unenforceable; the tenant is not obligated to pay during a suspension.", "[[S4]] [[S3]]"],
             ["Rounding up", "The increase is calculated on base rent and may not be rounded up; banked amounts may not be rounded up either.", "[[S1]] [[S9]]"],
             ["Compounding banked years", "Banked percentages are added, not compounded.", "[[S9]] [[S11]]"],
@@ -261,10 +261,13 @@ def notices():
         ])
     b += """
   <p class="small">The ordinance's own words are blunt: &ldquo;Any rent increase which does not conform with the
-  provisions of this section shall be null and void&rdquo; [[S5]]. Rule 4.10(b) adds a narrow good-faith
-  tolerance &mdash; where the increase does not exceed the allowance by more than half of one percent of the prior
-  base rent, an Administrative Law Judge adjusts the base rent rather than voiding everything [[S9]]. Do not plan
-  around that tolerance.</p>
+  provisions of this section shall be null and void&rdquo; [[S5]], and Rule 4.10(b) says a non-conforming increase
+  &ldquo;shall render the entire rent increase null and void&rdquo; [[S9]]. The Rules then carve out a narrow
+  good-faith adjustment: where an increase given in a good-faith effort to comply with the ordinance and rules
+  does not exceed the limitations by more than one-half of one percent of the prior base rent, an Administrative
+  Law Judge readjusts the base rent to the proper percentage instead of voiding it; Rule 4.12 contains a parallel
+  provision for banked amounts [[S9]]. That is a drafting-error margin, not a safe harbour &mdash; do not plan
+  around it.</p>
 </section>
 
 <section class="panel">
@@ -384,7 +387,7 @@ def owner_practices():
             ["Rents for comparable units", "Lawful only via petition", "Rent Board petition", "[[S19]]"],
             ["Adding an occupant or roommate", "Not lawful", "No increase is permitted, even if the lease says otherwise", "[[S5]]"],
             ["&ldquo;Market rate&rdquo; while the tenancy continues", "Not lawful", "The allowance is the ceiling; market rate is available only at a new tenancy", "[[S1]] [[S17]]"],
-            ["A general inflation or insurance-cost figure above the allowance", "Not lawful without a petition", "Void as to the excess", "[[S5]]"],
+            ["A general inflation or insurance-cost figure above the allowance", "Not lawful without a petition", "Null and void &mdash; the Rules void the entire increase, not only the excess", "[[S5]] [[S9]]"],
             ["To encourage a tenant to leave", "Unlawful", "Harassment under &sect;37.10B(a)(5)", "[[S21]]"],
         ])
     b += """
@@ -559,7 +562,7 @@ FLAS_DIRECT = [
      "increases&rdquo; page say a full 12 months must elapse [[S9]] [[S1]].",
      "Unit A's 2026-02-01 allowance and any future skipped year.",
      "Ask the Rent Board counsellor which is current, and whether the 1/13/26 rule amendments changed Rule 4.12. Until then, treat the earlier year as at risk if the anniversary date is moved.",
-     "pending", ["S11", "S9", "S1", "S10"]),
+     "conflict", ["S11", "S9", "S1", "S10"]),
     ("F2", "Ordinance 261015 (10% cap on banked and capital-improvement increases) &mdash; status unknown",
      "A bill introduced 15&ndash;18 September 2026 would cap banked plus capital-improvement increases at 10% per "
      "year for three years. Secondary reporting says a Board vote was expected in November or December 2026, but no "
@@ -594,6 +597,15 @@ FLAS_DIRECT = [
      "Procedural and tenant-relations risk, not an identified legal bar.",
      "Pay the fee by 1 March and keep the receipt. Recorded as an absence-of-authority finding rather than assumed to be a requirement.",
      "none", ["S4", "S7", "S8"]),
+    ("F8", "Unit A: the 2026-04-01 entry is an assumption, not a fact",
+     "The owner's record shows a lease start of 2025-02-01 at $3,995.00, then a &ldquo;continuing tenancy&rdquo; "
+     "dated 2026-04-01 at the same rent for two occupants, one of whom was an original lessee. This site reads that "
+     "as a partial change of occupants within one continuing tenancy, because a new tenancy for rent purposes "
+     "requires the <em>last</em> original occupant to vacate or cease permanently residing in the unit [[S24]] "
+     "[[S5]].",
+     "If it was in fact a wholly new lease with no original occupant remaining, Unit A's anniversary date is 1 April, not 1 February, and the available allowance and effective date change.",
+     "Confirm from the signed documents whether Tenant A1 has been in continuous occupancy since 2025-02-01 and whether a new lease was signed in April 2026. If a new tenancy began, recompute: the first increase would be available 2027-04-01.",
+     "unverified", ["S24", "S5", "S1"]),
     ("F7", "No provision requires the same increase across units",
      "Chapter 37 and the Rules were reviewed for an equal-treatment requirement across tenancies [[S18]] [[S5]]. None "
      "was found. Discrimination law operates on reason and effect, not on identical percentages [[S25]].",
@@ -608,7 +620,7 @@ FLAGS = FLAS_DIRECT  # name used by build_site.py
 def flagged():
     b = page_head(
         "Flagged for review",
-        "Seven items where the record is incomplete or two official sources disagree. Nothing here blocks "
+        "Eight items where the record is incomplete or two official sources disagree. Nothing here blocks "
         "publication; all of it needs a human decision or a phone call.",
         crumb="Dashboard / Flagged for review")
 
@@ -620,11 +632,12 @@ def flagged():
     <div class="tile"><div class="k">Pending legislation</div><div class="v">1</div><div class="n">F2 &mdash; Ordinance 261015, 10% cap</div></div>
     <div class="tile"><div class="k">Unverified facts</div><div class="v">3</div><div class="n">F3, F4, F5</div></div>
     <div class="tile"><div class="k">Absence-of-authority findings</div><div class="v">2</div><div class="n">F6, F7</div></div>
+    <div class="tile"><div class="k">Documented assumption</div><div class="v">1</div><div class="n">F8 &mdash; Unit A anniversary date</div></div>
   </div>
 </section>
 """
 
-    for fid, title, detail, impact, action, kind, srcs in FLAS_DIRECT:
+    for fid, title, detail, impact, action, kind, srcs in sorted(FLAS_DIRECT, key=lambda f: f[0]):
         b += "<section class=\"panel\">\n<h2>%s &nbsp;%s</h2>\n" % (fid, badge(kind))
         b += "<p><strong>%s</strong></p>\n<p>%s</p>\n" % (title, detail)
         b += "<p class=\"small\"><strong>What it affects:</strong> %s</p>\n" % impact

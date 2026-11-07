@@ -36,6 +36,7 @@ block the build, the PR, or the merge.
 | T8 | Source register + verification status per row | `session-c6d53281` | `pages/sources.html`, `data/sources.csv` | done |
 | T9 | Flagged-for-review page (irregularities, unverified values) | `session-c6d53281` | `pages/flagged.html` | done |
 | T10 | Final integration: re-verify, link check, build, PR, merge, confirm Pages deploy | `session-c6d53281` | all (integration pass) | in progress |
+| T11 | Interpretation audit of owner-supplied dates (Unit A 2026-04-01 entry) | `session-c6d53281` | `pages/units.html`, `pages/flagged.html` | done |
 
 ### Handoff / takeover rule
 If a session crashes or its claim is more than 60 minutes old with no commits, any other session
@@ -96,6 +97,18 @@ may take over the task and must note the handoff in the **Log** below.
 - Arithmetic is labelled `calculated` and shows the official percentages it is derived from; it is
   not presented as a Rent Board determination.
 
+### Verification pass (integration, 2026-11-07)
+- `python3 tools/build_site.py` → 13 files written, **0 broken internal links**, **0 table rows without a source
+  link or status badge**.
+- HTML tag-balance check across all 11 pages → 0 files with unclosed or stray tags.
+- Every citation id (S1–S30) resolves; every URL in the register was fetched and read this session.
+- Two statements were tightened after review against the rule text: Rule 4.10(b) voids the *entire* increase and
+  allows only a half-of-one-percent good-faith readjustment (it is not a general safe harbour for exceeding the
+  allowance), and Rule 4.12 carries a parallel provision.
+- Owner-supplied dates were audited rather than assumed: the Unit A "2026-04-01 @ $3,995" entry is treated as a
+  partial change of occupants inside one continuing tenancy, because an original lessee (Tenant A1) remains. That
+  assumption is published as F8.
+
 ### Irregularities logged (published on `pages/flagged.html`)
 1. **Conflicting official statements on the banking period.** S11 says a skipped increase is banked
    only if **24 full months** pass without an increase; Rule 4.12 (S9/S10) and S1 say **a full
@@ -116,6 +129,17 @@ may take over the task and must note the handoff in the **Log** below.
    "no provision found" rather than inferred.
 7. **No provision found** in Ch. 37 requiring identical increases across units; this is recorded as an
    absence-of-authority finding on the owner-practices page, not as legal advice.
+
+### Pending at time of writing
+- Final integration items: commit → PR from `arena/c6d53281-rentincreasesf5` to `main` → merge → confirm GitHub
+  Pages deploy → record the PR link and merge result below.
+
+### PR and deploy record
+| Item | Value |
+| --- | --- |
+| Pull request | _to be recorded_ |
+| Merge result | _to be recorded_ |
+| Pages deploy | _to be recorded_ |
 
 ### Notes for other sessions
 - Site is served from the repository root (`index.html`, `pages/`, `assets/`); Pages build type is

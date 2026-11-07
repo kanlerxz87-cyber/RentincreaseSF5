@@ -122,6 +122,7 @@ BADGE = {
     "calculated": '<span class="badge calc">calculated</span>',
     "owner": '<span class="badge neutral">owner record</span>',
     "none": '<span class="badge neutral">no provision found</span>',
+    "conflict": '<span class="badge warn">official sources conflict</span>',
 }
 
 
@@ -129,7 +130,7 @@ def badge(kind, text=None):
     if text:
         return '<span class="badge %s">%s</span>' % (
             {"verified": "ok", "unverified": "bad", "pending": "warn", "calculated": "calc",
-             "owner": "neutral", "none": "neutral"}[kind], text)
+             "owner": "neutral", "none": "neutral", "conflict": "warn"}[kind], text)
     return BADGE[kind]
 
 

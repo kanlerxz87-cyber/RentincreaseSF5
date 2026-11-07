@@ -31,18 +31,24 @@ Placeholders used across the repo: `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenan
 
 ## Calendar once the strategy is chosen
 
-| Date | Action |
-| --- | --- |
-| 2026-12-28 | Last day to mail Unit A's 30-day notice for a 2027-02-01 effective date (or 2027-01-02 if hand-delivered). |
-| 2027-01-02 | Last day for personal service of Unit A's notice. |
-| 2027-02-01 | Unit A effective date (3.0% → $4,114.85). New anniversary date if the increase is later than this. |
-| 2027-03-01 | Rent Board fee due ($118 for two units) **and** Housing Inventory update due. |
-| 2027-11-17 | Last day for personal service of Unit B's 90-day notice for a 2027-02-15 effective date (or 2027-11-12 if mailed). |
-| 2027-02-15 | Unit B alternative effective date (13.1% → $3,562.65); anniversary moves here. |
-| 2027-03-03 | Last day for personal service of Unit B's 90-day notice for a 2027-06-01 effective date if the anniversary date is kept (2027-02-26 if mailed). |
-| 2027-06-01 | Unit B anniversary-date effective date (13.1% plus the 2027-28 rate once published). |
+Dates assume the notice is drafted in November 2026. Recompute from the actual service date.
 
-*Recompute these dates from the actual service date — the table assumes the drafting dates shown.*
+| Service / effective date | Action |
+| --- | --- |
+| 2026-11-12 | **Deadline pressure:** last day to *mail* Unit B's 90-day notice for a 2027-02-15 effective date. |
+| 2026-11-17 | Last day to *personally serve* Unit B's 90-day notice for a 2027-02-15 effective date. |
+| 2026-12-28 | Last day to *mail* Unit A's 30-day notice for a 2027-02-01 effective date. |
+| 2027-01-02 | Last day to *personally serve* Unit A's 30-day notice for a 2027-02-01 effective date. |
+| 2027-02-01 | Unit A effective date (3.0% → $4,114.85). If served later than this, the anniversary date moves. |
+| 2027-02-15 | Unit B alternative effective date (13.1% → $3,562.65); anniversary moves to 15 February. |
+| 2027-02-26 | Last day to *mail* Unit B's 90-day notice for a 2027-06-01 effective date (anniversary kept). |
+| 2027-03-01 | Rent Board fee due ($118 for two units) **and** Housing Inventory update due. |
+| 2027-03-03 | Last day to *personally serve* Unit B's 90-day notice for a 2027-06-01 effective date. |
+| 2027-06-01 | Unit B anniversary-date effective date (13.1% plus the 2027-28 rate, once published). |
+
+The 2027-02-15 route for Unit B needs a notice served in the next ten days. If that is not realistic, keep the
+1 June anniversary date and serve by 3 March 2027 — the computed total is the same 13.1% either way, and the
+1 June route also picks up the 2027-28 allowance.
 
 ## Decision still open
 

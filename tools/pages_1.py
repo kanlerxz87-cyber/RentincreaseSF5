@@ -76,7 +76,7 @@ def index():
     <a class="card" href="pages/tenant-review.html"><h3>Tenant-lawyer test</h3>
       <p>The fifteen questions a tenant-side review will ask, and the evidence that answers each one.</p></a>
     <a class="card" href="pages/flagged.html"><h3>Flagged for review</h3>
-      <p>Seven open items: one conflicting pair of official statements, one pending ordinance, five fact gaps.</p></a>
+      <p>Eight open items: one conflicting pair of official statements, one pending ordinance, three unverified facts, two absence-of-authority findings, one interpretation assumption.</p></a>
   </div>
 </section>
 
@@ -91,7 +91,7 @@ def index():
             ["Sources fetched and read in full this session", "30", badge("verified")],
             ["Table rows carrying an official source link", "all", badge("verified")],
             ["Values left blank because no official source could confirm them", "3", badge("unverified")],
-            ["Irregularities published for manual review", "7", badge("pending")],
+            ["Irregularities published for manual review", "8", badge("pending")],
         ])
     b += legend()
     b += """
@@ -161,7 +161,7 @@ def executive_summary():
             ["6", "There is no cap today on how much banked increase may be imposed at once &mdash; which is why Unit B carries 13.1%.", "[[S11]]", badge("verified")],
             ["7", "An increase of more than 10% needs 90 days' written notice; 10% or less needs 30 days; add 5 days if mailed.", "[[S1]] [[S16]]", badge("verified")],
             ["8", "The notice must break out the annual portion and the banked portion, and state the dollar amount, the percentage and the effective date.", "[[S5]] [[S9]] [[S11]]", badge("verified")],
-            ["9", "An increase that does not conform is <strong>null and void</strong> (a 0.5% good-faith overage may be corrected by the judge).", "[[S5]] [[S9]]", badge("verified")],
+            ["9", "An increase that does not conform is <strong>null and void</strong>; the Rules allow only a narrow half-of-one-percent good-faith readjustment.", "[[S5]] [[S9]]", badge("verified")],
             ["10", "AB 1482's 8.8% cap does <strong>not</strong> apply to units already limited by the Rent Ordinance.", "[[S14]] [[S15]]", badge("verified")],
             ["11", "There is no federal rent cap. Federal law enters only through fair housing: a rent increase used to discriminate on a protected characteristic is unlawful.", "[[S25]] [[S26]]", badge("verified")],
             ["12", "A cap of 10% per year on banked and capital-improvement increases has been <em>introduced</em> (Ordinance 261015). Its outcome is not confirmed, and it would directly affect Unit B.", "&mdash;", badge("pending")],
@@ -203,7 +203,10 @@ def executive_summary():
     on 2025-02-01 at the start of a new tenancy. That is lawful only if the unit was genuinely vacant and the
     prior tenancy ended voluntarily &mdash; the ordinance withdraws the reset for five years after a no-fault
     termination [[S5]]. Tenant A2 is also a continuing occupant rather than an original lessee, so whether a
-    &sect;6.14 or Costa-Hawkins notice was ever served matters [[S24]]. Both facts are unverified.</div>
+    &sect;6.14 or Costa-Hawkins notice was ever served matters [[S24]]. Both facts are unverified. This site also
+    assumes the tenancy beginning 2025-02-01 is still the same tenancy, because an original lessee (Tenant A1)
+    remains in occupancy; the 2026-04-01 entry is read as a record of a partial change of occupants at an unchanged
+    rent, not as a new lease. If that is wrong, Unit A's anniversary date becomes 1 April (item F8).</div>
   </div>
 </section>
 
@@ -438,6 +441,16 @@ def units():
   Dates and dollar amounts are preserved exactly, because the arithmetic depends on them. No street address,
   parcel number or owner name appears anywhere in this repository.</p>
 </section>
+
+<div class="callout"><strong>Interpretation note &mdash; how the Unit A dates were read.</strong> The owner's
+  record gives a lease start of <strong>2025-02-01</strong> at $3,995.00 for three original lessees, then a
+  &ldquo;continuing tenancy&rdquo; entry dated <strong>2026-04-01</strong> at the same $3,995.00 for two current
+  occupants, one of whom (Tenant A1) was an original lessee. This site therefore treats the tenancy that began
+  2025-02-01 as <em>continuing</em>, with 1 February as the anniversary date, because a new tenancy for rent
+  purposes arises only when the <strong>last</strong> original occupant vacates or no longer permanently resides in
+  the unit [[S24]] [[S5]], and Tenant A1 has not. If that reading is wrong &mdash; for example if a wholly new
+  lease was signed on 2026-04-01 with no original occupant remaining &mdash; the anniversary date becomes 1 April
+  and the arithmetic changes. That is item F8 on <a href="flagged.html">Flagged for review</a>.</div>
 
 <section class="panel">
   <h2>The two tenancies</h2>
