@@ -375,8 +375,9 @@ def main():
         # Alternative reading published on the sf.gov "Banked rent increases" page.
         alt = compute_scenario(u, rates, eff, 24)
         alt["key"] = "maximum_24_month_reading"
-        alt["label"] = ("Maximum lawful under the 24-month sentence on the sf.gov "
-                        "'Banked rent increases' page (conflicts with Rule 4.12 - see Flagged)")
+        alt["label"] = ("Conservative lower bound - the most restrictive reading possible "
+                        "(24 months measured from each skipped anniversary). Not stated in "
+                        "any official source; shown only as a floor.")
         scenarios.append(alt)
 
         sched = anniversary_schedule(start, eff)

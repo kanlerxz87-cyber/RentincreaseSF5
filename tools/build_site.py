@@ -175,6 +175,11 @@ increases from years you skipped, or a Rent Board&ndash;approved petition. {}</p
 </tr>
 </tbody></table>
 </div>
+<p class="small muted"><b>Caveat on Unit A's banked 1.4%:</b> it is valid under Rent
+Board Rule 4.12 and under the 24-month wording on the Rent Board's banking page. Under
+the most restrictive construction anyone could argue — which appears in no official
+source — the banked portion would drop away and the total would be 1.6% ($4,058.92).
+<a href="flagged.html">Full analysis &rarr;</a></p>
 <p class="small muted">Unit B's annual percentage is left <b>blank on purpose</b>. The
 Rent Board has not yet published the rate for the period containing June 1, 2027; it
 publishes on or about January 1, effective March 1. There is no official source for that
@@ -1225,9 +1230,13 @@ recommended plan:</p>
   <td><span class="pill ok">Yes</span> 1.6% annual + 1.4% banked</td>
   <td><span class="pill ok">Yes</span> the published rate, nothing more</td></tr>
 <tr><td>Is the banking valid?</td>
-  <td><span class="pill ok">Yes</span> 24 months elapsed &mdash; clears even the
-  stricter reading</td>
-  <td><span class="pill ok">Yes</span> nothing banked is being taken</td></tr>
+  <td><span class="pill ok">Yes</span> under Rule 4.12: a full 12 months elapsed after the
+  Feb 1, 2026 anniversary. The stricter 24-month wording passes too, measured from the
+  start of the tenancy. {}
+  <span class="small muted">Under the most restrictive construction possible the banked
+  1.4% would drop away and the total would be 1.6% ($4,058.92).</span></td>
+  <td><span class="pill ok">Yes</span> nothing banked is being taken &mdash; the most
+  conservative option available</td></tr>
 <tr><td>Is the notice period right?</td>
   <td><span class="pill ok">Yes</span> 30 days, well under 10%</td>
   <td><span class="pill ok">Yes</span> 30 days</td></tr>
@@ -1279,6 +1288,7 @@ maximises both the tenant-relations cost and the legal surface area. {} {}</p>
 """.format(
         src("HUD-FHA"), src("CRD-HOUSING"), src("CRD-HOUSING"), src("HUD-FHA"),
         src("SFRB-BANKED"), src("SF-ORD-3710B"),
+        src("SFRB-RR-PART4"),
         src("SF-ORD-3710B"), src("SF-ORD-3710B"),
         src("CRD-HOUSING"),
     )
@@ -1393,34 +1403,50 @@ def build_flagged():
   any notice is served.
 </div>
 
-<h2>1. Banking window &mdash; two official sources disagree</h2>
+<h2>1. Banking window &mdash; three possible readings</h2>
 <div class="card">
+<p>Three different tests can be constructed from the official material. Two of them come
+from official text and <b>they agree with each other</b>. The third is a deliberately
+over-cautious reading that appears in no official source; it is shown only as a floor.</p>
 <div class="tw"><table>
-<thead><tr><th>Source</th><th>Says</th><th>Effect on Unit B</th></tr></thead>
+<thead><tr><th>Reading</th><th>The test</th><th>Unit A banked</th><th>Unit B banked</th>
+<th class="src">Source</th></tr></thead>
 <tbody>
-<tr><td>Rent Board <b>Rule 4.12(a)</b> (the regulation itself)</td>
-  <td>&ldquo;A full 12 months must have elapsed from the date that an annual rent
-  increase, or a portion thereof, could have been imposed before this banking section
-  becomes applicable.&rdquo;</td>
-  <td>Banked = <b>{b12}</b></td></tr>
-<tr><td>sf.gov <b>&ldquo;Banked rent increases&rdquo;</b> information page</td>
-  <td>&ldquo;A skipped increase is only banked if at least 24 full months pass without
-  any rent increase.&rdquo;</td>
-  <td>Banked = <b>{b24}</b></td></tr>
-<tr><td>Rent Board's own <b>worked examples</b> on &ldquo;Learn about rent
-  increases&rdquo;</td>
-  <td>Two separate examples bank an increase after only 12 months have elapsed.</td>
-  <td>Consistent with Rule 4.12</td></tr>
+<tr><td><b>R1 &mdash; the regulation</b><br><span class="pill ok">official</span></td>
+  <td>12 months from the date the skipped increase could have been imposed.
+  &ldquo;A full 12 months must have elapsed from the date that an annual rent increase&hellip;
+  could have been imposed before this banking section becomes applicable.&rdquo;</td>
+  <td><b>1.4%</b> (12 months elapsed)</td><td><b>{b12}</b></td>
+  <td class="src">{rr}</td></tr>
+<tr><td><b>R2 &mdash; the information page</b><br><span class="pill ok">official</span></td>
+  <td>24 months must pass <i>without any rent increase</i> &mdash; i.e. measured from the
+  last increase, or from the start of the tenancy if there has never been one.
+  &ldquo;A skipped increase is only banked if at least 24 full months pass without any
+  rent increase.&rdquo;</td>
+  <td><b>1.4%</b> (24 months since the tenancy began)</td>
+  <td><b>{b12}</b> (96 months since the tenancy began)</td>
+  <td class="src">{banked}</td></tr>
+<tr><td><b>R3 &mdash; strictest construction</b><br><span class="pill warn">not in any source</span></td>
+  <td>24 months measured from <i>each individual skipped anniversary</i>. This is the most
+  conservative reading possible and is printed nowhere officially; it is included here
+  purely so you can see the downside case.</td>
+  <td><b>0%</b> &rarr; total 1.6% ($4,058.92)</td><td><b>{b24}</b> &rarr; total {b24} + annual</td>
+  <td class="src">&mdash;</td></tr>
 </tbody></table></div>
-<p><b>How this dashboard handles it.</b> The calculation engine uses Rule 4.12 (the
-regulation, and the reading consistent with the Rent Board's own worked examples). But
-the difference is real money: {b12} vs {b24} on a ${base:,.0f} base rent. Before
-serving any large banked increase on Unit B, confirm the treatment with a Rent Board
-counselor, or file a petition for a determination.</p>
-<p class="src">{} {} {}</p>
-<p class="small muted">Note that Unit A is unaffected in practice: its one skipped
-increase is 24 months old by February 1, 2027, so it qualifies under <b>both</b>
-readings. {}</p>
+<p><b>The two official readings agree for both units</b>, which is why this dashboard
+uses {b12} for Unit B and 1.4% for Unit A. The Rent Board's own worked examples on
+&ldquo;Learn about rent increases&rdquo; also bank increases after 12 months, twice,
+which is consistent with R1.</p>
+<p><b>Residual uncertainty.</b> One worked example on that same page is inconsistent with
+all of the above: it declines to bank an increase only 11 months after it became
+available, which is correct under R1, but it applies <b>1.6%</b> to an increase effective
+May 1, 2026 when the rate in effect on that date was 1.4% (see flagged item 5). The
+example's rate choice is the anomaly, not its banking logic.</p>
+<p><b>Recommendation.</b> Before serving a large banked increase on Unit B, call a Rent
+Board counselor (415-252-4600) and confirm the treatment, or file a petition for a
+determination. The spread between the official reading and the floor is real money:
+{b12} vs {b24} on a ${base:,.0f} base rent.</p>
+<p class="src">{rr} {banked} {learn}</p>
 </div>
 
 <h2>2. Property type not verified</h2>
@@ -1499,10 +1525,7 @@ the kind of thing to raise with a counselor if you ever move an anniversary date
   rather than estimated.</td></tr>
 </tbody></table></div>
 """.format(
-        # item 1
-        src("SFRB-RR-PART4"), src("SFRB-BANKED"), src("SFRB-LEARN-RENT-INCREASES"),
-        src("SFRB-571"),
-        # item 2
+        # item 2 (item 1 uses named citations only)
         src("SFRB-COSTA-HAWKINS-SFR"), src("SFRB-RENTAL-LAWS"),
         # item 3
         src("SFRB-BANKED"),
@@ -1510,6 +1533,8 @@ the kind of thing to raise with a counselor if you ever move an anniversary date
         src("SFRB-HOUSING-INVENTORY"), src("SFRB-FEE"), src("SFRB-2027-NOTICE"),
         # item 5
         src("SFRB-LEARN-RENT-INCREASES"), src("SFRB-571"),
+        rr=src("SFRB-RR-PART4"), banked=src("SFRB-BANKED"),
+        learn=src("SFRB-LEARN-RENT-INCREASES"),
         b12=pct(ub_max["banked_percent"]), b24=pct(ub_24["banked_percent"]),
         base=ub["current_base_rent"])
     return page("Flagged for review", "flagged.html", body,

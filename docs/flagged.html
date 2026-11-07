@@ -41,34 +41,50 @@
   any notice is served.
 </div>
 
-<h2>1. Banking window &mdash; two official sources disagree</h2>
+<h2>1. Banking window &mdash; three possible readings</h2>
 <div class="card">
+<p>Three different tests can be constructed from the official material. Two of them come
+from official text and <b>they agree with each other</b>. The third is a deliberately
+over-cautious reading that appears in no official source; it is shown only as a floor.</p>
 <div class="tw"><table>
-<thead><tr><th>Source</th><th>Says</th><th>Effect on Unit B</th></tr></thead>
+<thead><tr><th>Reading</th><th>The test</th><th>Unit A banked</th><th>Unit B banked</th>
+<th class="src">Source</th></tr></thead>
 <tbody>
-<tr><td>Rent Board <b>Rule 4.12(a)</b> (the regulation itself)</td>
-  <td>&ldquo;A full 12 months must have elapsed from the date that an annual rent
-  increase, or a portion thereof, could have been imposed before this banking section
-  becomes applicable.&rdquo;</td>
-  <td>Banked = <b>13.1%</b></td></tr>
-<tr><td>sf.gov <b>&ldquo;Banked rent increases&rdquo;</b> information page</td>
-  <td>&ldquo;A skipped increase is only banked if at least 24 full months pass without
-  any rent increase.&rdquo;</td>
-  <td>Banked = <b>11.5%</b></td></tr>
-<tr><td>Rent Board's own <b>worked examples</b> on &ldquo;Learn about rent
-  increases&rdquo;</td>
-  <td>Two separate examples bank an increase after only 12 months have elapsed.</td>
-  <td>Consistent with Rule 4.12</td></tr>
+<tr><td><b>R1 &mdash; the regulation</b><br><span class="pill ok">official</span></td>
+  <td>12 months from the date the skipped increase could have been imposed.
+  &ldquo;A full 12 months must have elapsed from the date that an annual rent increase&hellip;
+  could have been imposed before this banking section becomes applicable.&rdquo;</td>
+  <td><b>1.4%</b> (12 months elapsed)</td><td><b>13.1%</b></td>
+  <td class="src"><span class="src"><a href="https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring" target="_blank" rel="noopener" title="Rent Board Rules and Regulations, Part IV - Rent Increases Not Requiring Approval (Section 4.10 Notice; Section 4.12 Banking)">San Francisco Rent Board &#8599;</a></span></td></tr>
+<tr><td><b>R2 &mdash; the information page</b><br><span class="pill ok">official</span></td>
+  <td>24 months must pass <i>without any rent increase</i> &mdash; i.e. measured from the
+  last increase, or from the start of the tenancy if there has never been one.
+  &ldquo;A skipped increase is only banked if at least 24 full months pass without any
+  rent increase.&rdquo;</td>
+  <td><b>1.4%</b> (24 months since the tenancy began)</td>
+  <td><b>13.1%</b> (96 months since the tenancy began)</td>
+  <td class="src"><span class="src"><a href="https://sf.gov/information/banked-rent-increases" target="_blank" rel="noopener" title="Banked rent increases">San Francisco Rent Board &#8599;</a></span></td></tr>
+<tr><td><b>R3 &mdash; strictest construction</b><br><span class="pill warn">not in any source</span></td>
+  <td>24 months measured from <i>each individual skipped anniversary</i>. This is the most
+  conservative reading possible and is printed nowhere officially; it is included here
+  purely so you can see the downside case.</td>
+  <td><b>0%</b> &rarr; total 1.6% ($4,058.92)</td><td><b>11.5%</b> &rarr; total 11.5% + annual</td>
+  <td class="src">&mdash;</td></tr>
 </tbody></table></div>
-<p><b>How this dashboard handles it.</b> The calculation engine uses Rule 4.12 (the
-regulation, and the reading consistent with the Rent Board's own worked examples). But
-the difference is real money: 13.1% vs 11.5% on a $3,150 base rent. Before
-serving any large banked increase on Unit B, confirm the treatment with a Rent Board
-counselor, or file a petition for a determination.</p>
+<p><b>The two official readings agree for both units</b>, which is why this dashboard
+uses 13.1% for Unit B and 1.4% for Unit A. The Rent Board's own worked examples on
+&ldquo;Learn about rent increases&rdquo; also bank increases after 12 months, twice,
+which is consistent with R1.</p>
+<p><b>Residual uncertainty.</b> One worked example on that same page is inconsistent with
+all of the above: it declines to bank an increase only 11 months after it became
+available, which is correct under R1, but it applies <b>1.6%</b> to an increase effective
+May 1, 2026 when the rate in effect on that date was 1.4% (see flagged item 5). The
+example's rate choice is the anomaly, not its banking logic.</p>
+<p><b>Recommendation.</b> Before serving a large banked increase on Unit B, call a Rent
+Board counselor (415-252-4600) and confirm the treatment, or file a petition for a
+determination. The spread between the official reading and the floor is real money:
+13.1% vs 11.5% on a $3,150 base rent.</p>
 <p class="src"><span class="src"><a href="https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring" target="_blank" rel="noopener" title="Rent Board Rules and Regulations, Part IV - Rent Increases Not Requiring Approval (Section 4.10 Notice; Section 4.12 Banking)">San Francisco Rent Board &#8599;</a></span> <span class="src"><a href="https://sf.gov/information/banked-rent-increases" target="_blank" rel="noopener" title="Banked rent increases">San Francisco Rent Board &#8599;</a></span> <span class="src"><a href="https://www.sf.gov/learn-about-rent-increases-san-francisco/" target="_blank" rel="noopener" title="Learn about rent increases in San Francisco">San Francisco Rent Board &#8599;</a></span></p>
-<p class="small muted">Note that Unit A is unaffected in practice: its one skipped
-increase is 24 months old by February 1, 2027, so it qualifies under <b>both</b>
-readings. <span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span></p>
 </div>
 
 <h2>2. Property type not verified</h2>
