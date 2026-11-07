@@ -91,3 +91,7 @@ for key in [*P,'sources']:
  Path('site',key+'.html').write_text(html)
 Path('site/.nojekyll').touch()
 print(f'Built {len(nav)} pages / {sum(len(x[2]) for x in P.values())} finding rows')
+
+# Mirror public artifacts to existing GitHub Pages main:/ configuration.
+for artifact in Path("site").iterdir():
+ if artifact.is_file(): Path(artifact.name).write_bytes(artifact.read_bytes())

@@ -1,4 +1,4 @@
-name: Build and deploy research dashboard
+name: Validate research dashboard
 on:
   push:
     branches: [main, arena/f5ead75b-rentincreasesf5]
@@ -20,18 +20,3 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/build.py && python scripts/check.py
-      - uses: actions/upload-pages-artifact@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          path: site
-  deploy:
-    if: github.ref == 'refs/heads/main'
-    needs: validate
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
