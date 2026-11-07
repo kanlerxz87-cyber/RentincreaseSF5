@@ -1,0 +1,128 @@
+{
+  "dataset": "S24",
+  "dataset_name": "Rent Board Housing Inventory (data.sfgov.org, gdc7-dmcn)",
+  "publisher": "City and County of San Francisco - SF Open Data",
+  "dataset_url": "https://data.sfgov.org/Housing-and-Buildings/Rent-Board-Housing-Inventory/gdc7-dmcn",
+  "extracted": "2026-11-07",
+  "filters": "analysis_neighborhood = 'Sunset/Parkside', submission_year = '2026', occupancy_type = 'Occupied by non-owner'",
+  "geography_note": "ZIP 94122 is not a field in this dataset. 'Sunset/Parkside' is the City's published analysis neighbourhood covering the Outer Sunset/Parkside area; it is a proxy for 94122, not an exact boundary match (flagged FL-04).",
+  "caveats": [
+    "Base rent is self-reported by owners and entered in $250 bands, so this is a distribution of bands, not exact rents.",
+    "The dataset covers rent-controlled and other reportable units; it is not a market-rent survey and does not track asking rents.",
+    "Records with '$0 (no rent paid by the occupant)' and nominal bands are retained in the raw counts and excluded from the median calculation, because they are not market rents."
+  ],
+  "counts_by_bedrooms_2026": [
+    { "bedrooms": "Studio", "count": 216 },
+    { "bedrooms": "One-Bedroom", "count": 1313 },
+    { "bedrooms": "Two-Bedroom", "count": 1427 },
+    { "bedrooms": "Three-Bedroom", "count": 481 },
+    { "bedrooms": "Four-Bedroom", "count": 112 },
+    { "bedrooms": "5+", "count": 30 },
+    { "bedrooms": "not reported", "count": 586 }
+  ],
+  "distributions": [
+    {
+      "bedrooms": "One-Bedroom",
+      "query_url": "https://data.sfgov.org/resource/gdc7-dmcn.json?%24group=monthly_rent&%24limit=200&%24order=monthly_rent&%24select=monthly_rent%2Ccount%28%2A%29&%24where=analysis_neighborhood%3D%27Sunset%2FParkside%27%20AND%20submission_year%3D%272026%27%20AND%20bedroom_count%3D%27One-Bedroom%27%20AND%20occupancy_type%3D%27Occupied%20by%20non-owner%27",
+      "bands": [
+        { "label": "$0 (no rent paid by the occupant)", "lo": 0, "count": 6, "exclude": true },
+        { "label": "$251-$500", "lo": 251, "count": 2 },
+        { "label": "$501-$750", "lo": 501, "count": 10 },
+        { "label": "$751-$1000", "lo": 751, "count": 70 },
+        { "label": "$1001-$1250", "lo": 1001, "count": 101 },
+        { "label": "$1251-$1500", "lo": 1251, "count": 109 },
+        { "label": "$1501-$1750", "lo": 1501, "count": 120 },
+        { "label": "$1751-$2000", "lo": 1751, "count": 140 },
+        { "label": "$2001-$2250", "lo": 2001, "count": 159 },
+        { "label": "$2251-$2500", "lo": 2251, "count": 250 },
+        { "label": "$2501-$2750", "lo": 2501, "count": 159 },
+        { "label": "$2751-$3000", "lo": 2751, "count": 93 },
+        { "label": "$3001-$3250", "lo": 3001, "count": 37 },
+        { "label": "$3251-$3500", "lo": 3251, "count": 12 },
+        { "label": "$3501-$3750", "lo": 3501, "count": 5 },
+        { "label": "$3751-$4000", "lo": 3751, "count": 5 },
+        { "label": "$5001-$5250", "lo": 5001, "count": 5 }
+      ]
+    },
+    {
+      "bedrooms": "Two-Bedroom",
+      "query_url": "https://data.sfgov.org/resource/gdc7-dmcn.json?%24group=monthly_rent&%24limit=200&%24order=monthly_rent&%24select=monthly_rent%2Ccount%28%2A%29&%24where=analysis_neighborhood%3D%27Sunset%2FParkside%27%20AND%20submission_year%3D%272026%27%20AND%20bedroom_count%3D%27Two-Bedroom%27%20AND%20occupancy_type%3D%27Occupied%20by%20non-owner%27",
+      "bands": [
+        { "label": "$0 (no rent paid by the occupant)", "lo": 0, "count": 15, "exclude": true },
+        { "label": "$1-$250", "lo": 1, "count": 2, "exclude": true },
+        { "label": "$251-$500", "lo": 251, "count": 2 },
+        { "label": "$501-$750", "lo": 501, "count": 9 },
+        { "label": "$751-$1000", "lo": 751, "count": 14 },
+        { "label": "$1001-$1250", "lo": 1001, "count": 34 },
+        { "label": "$1251-$1500", "lo": 1251, "count": 75 },
+        { "label": "$1501-$1750", "lo": 1501, "count": 42 },
+        { "label": "$1751-$2000", "lo": 1751, "count": 81 },
+        { "label": "$2001-$2250", "lo": 2001, "count": 74 },
+        { "label": "$2251-$2500", "lo": 2251, "count": 101 },
+        { "label": "$2501-$2750", "lo": 2501, "count": 107 },
+        { "label": "$2751-$3000", "lo": 2751, "count": 198 },
+        { "label": "$3001-$3250", "lo": 3001, "count": 129 },
+        { "label": "$3251-$3500", "lo": 3251, "count": 176 },
+        { "label": "$3501-$3750", "lo": 3501, "count": 97 },
+        { "label": "$3751-$4000", "lo": 3751, "count": 86 },
+        { "label": "$4001-$4250", "lo": 4001, "count": 62 },
+        { "label": "$4251-$4500", "lo": 4251, "count": 48 },
+        { "label": "$4501-$4750", "lo": 4501, "count": 9 },
+        { "label": "$4751-$5000", "lo": 4751, "count": 17 },
+        { "label": "$5001-$5250", "lo": 5001, "count": 4 },
+        { "label": "$5251-$5500", "lo": 5251, "count": 3 },
+        { "label": "$5501-$5750", "lo": 5501, "count": 2 },
+        { "label": "$5751-$6000", "lo": 5751, "count": 3 },
+        { "label": "$6251-$6500", "lo": 6251, "count": 1 },
+        { "label": "$7000+", "lo": 7000, "count": 1 }
+      ]
+    },
+    {
+      "bedrooms": "Three-Bedroom",
+      "query_url": "https://data.sfgov.org/resource/gdc7-dmcn.json?%24group=monthly_rent&%24limit=200&%24order=monthly_rent&%24select=monthly_rent%2Ccount%28%2A%29&%24where=analysis_neighborhood%3D%27Sunset%2FParkside%27%20AND%20submission_year%3D%272026%27%20AND%20bedroom_count%3D%27Three-Bedroom%27%20AND%20occupancy_type%3D%27Occupied%20by%20non-owner%27",
+      "bands": [
+        { "label": "$0 (no rent paid by the occupant)", "lo": 0, "count": 4, "exclude": true },
+        { "label": "$1-$250", "lo": 1, "count": 2, "exclude": true },
+        { "label": "$251-$500", "lo": 251, "count": 2 },
+        { "label": "$501-$750", "lo": 501, "count": 2 },
+        { "label": "$751-$1000", "lo": 751, "count": 3 },
+        { "label": "$1001-$1250", "lo": 1001, "count": 4 },
+        { "label": "$1251-$1500", "lo": 1251, "count": 6 },
+        { "label": "$1501-$1750", "lo": 1501, "count": 5 },
+        { "label": "$1751-$2000", "lo": 1751, "count": 15 },
+        { "label": "$2001-$2250", "lo": 2001, "count": 5 },
+        { "label": "$2251-$2500", "lo": 2251, "count": 10 },
+        { "label": "$2501-$2750", "lo": 2501, "count": 17 },
+        { "label": "$2751-$3000", "lo": 2751, "count": 25 },
+        { "label": "$3001-$3250", "lo": 3001, "count": 17 },
+        { "label": "$3251-$3500", "lo": 3251, "count": 28 },
+        { "label": "$3501-$3750", "lo": 3501, "count": 33 },
+        { "label": "$3751-$4000", "lo": 3751, "count": 55 },
+        { "label": "$4001-$4250", "lo": 4001, "count": 39 },
+        { "label": "$4251-$4500", "lo": 4251, "count": 64 },
+        { "label": "$4501-$4750", "lo": 4501, "count": 23 },
+        { "label": "$4751-$5000", "lo": 4751, "count": 42 },
+        { "label": "$5001-$5250", "lo": 5001, "count": 24 },
+        { "label": "$5251-$5500", "lo": 5251, "count": 13 },
+        { "label": "$5501-$5750", "lo": 5751, "count": 12 },
+        { "label": "$5751-$6000", "lo": 5751, "count": 7 },
+        { "label": "$6001-$6250", "lo": 6001, "count": 2 },
+        { "label": "$6251-$6500", "lo": 6251, "count": 5 },
+        { "label": "$6501-$6750", "lo": 6501, "count": 3 },
+        { "label": "$6751-$7000", "lo": 6751, "count": 1 }
+      ]
+    }
+  ],
+  "benchmarks": [
+    {
+      "unit": "Unit 1",
+      "rent": 3995.0,
+      "note": "Bedroom count for Unit 1 was not supplied, so the rent is compared against all three published distributions."
+    },
+    {
+      "unit": "Unit 2",
+      "rent": 3150.0,
+      "note": "Bedroom count for Unit 2 was not supplied, so the rent is compared against all three published distributions."
+    }
+  ]
+}

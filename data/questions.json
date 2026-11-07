@@ -1,0 +1,102 @@
+{
+  "intro": "Each answer below states what the official sources actually say, then separates it from our reasoning. Answers labelled 'analysis' are judgement calls, not law.",
+  "questions": [
+    {
+      "id": "Q0",
+      "question": "Do I, an individual owner (not a corporation), need a rent increase licence and do I have to inform the Rent Board before notifying tenants?",
+      "verdict": "YES to the licence. NO separate application and no advance notification letter to the Rent Board. The licence is generated automatically when you report the unit in the Rent Board Housing Inventory, and it must already exist on the date the increase takes effect.",
+      "status": "verified",
+      "points": [
+        "The ordinance does not distinguish between corporate and individual owners. SF Admin Code §37.15(a) applies to 'owners of residential dwelling units subject to this Chapter 37'.",
+        "Reporting into the Housing Inventory is what produces the licence: 'once you have reported into the Housing Inventory, a rent increase license will be automatically generated for non-owner occupied units'.",
+        "Timing: 'A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect.' The licence does not have to be attached to the notice.",
+        "If the owner has not substantially complied, the licence is suspended for the period of noncompliance and 'a tenant shall not be obligated to pay the increased rent for months during the period of suspension'.",
+        "There is no penalty for filing the inventory late - but a notice served while unlicensed is not enforceable, so the practical rule is: report first, then serve.",
+        "The annual Rent Board fee is a separate obligation ($59 per dwelling unit for 2026-2027, due March 1). A fee exemption does not satisfy the inventory requirement, and an inventory report does not exempt the fee."
+      ],
+      "sources": ["S05", "S06", "S16", "S09"]
+    },
+    {
+      "id": "Q1",
+      "question": "What is a reasonable and normal rent increase for these two units in the Outer Sunset (94122) under local, state and federal law?",
+      "verdict": "32 words or fewer: 1.6% of base rent is the maximum automatic annual increase for the 2026-27 rate year. Anything above that needs either a banked amount from a skipped year or a Rent Board petition.",
+      "status": "verified",
+      "points": [
+        "Local (binding): 1.6% for increases effective March 1, 2026 - February 28, 2027. The formula is 60% of the Bay Area CPI increase, and the ordinance caps any annual increase at 7% no matter what CPI does.",
+        "Local (add-on): banked increases from years in which no increase was imposed may be added; percentages are summed, never compounded. No Rent Board petition is needed for a banked annual increase.",
+        "Local (never automatic): capital improvement, operating-and-maintenance, comparable-rent and utility passthroughs each require a Rent Board petition or worksheet filed before the notice is served.",
+        "State: AB 1482's 5% + CPI / 10% cap does not displace San Francisco's lower cap, because §1947.12(d)(3) excludes housing whose local ordinance restricts increases below the AB 1482 level.",
+        "State: above 10% in a 12-month period, the notice period becomes 90 days instead of 30 (Civil Code §827). This is about notice, not permission - San Francisco allows banked increases that exceed 10% as long as the notice is right.",
+        "State: during a declared emergency, Penal Code §396(b) makes it unlawful to raise housing costs more than 10% above the pre-emergency price for 30 days after the declaration.",
+        "Federal: no federal rent ceiling applies to a private unit. The federal statutes that touch this situation are anti-discrimination (Fair Housing Act) and subsidy programme rules, not price caps.",
+        "Market context: in the Rent Board's own 2026 inventory data for Sunset/Parkside, the two-bedroom band with the most units is $2,751-$3,000 and the three-bedroom band with the most units is $4,251-$4,500 (see the Market Context page for the full distributions)."
+      ],
+      "sources": ["S01", "S02", "S09", "S11", "S10", "S15", "S14", "S24"]
+    },
+    {
+      "id": "Q2",
+      "question": "How do big real estate corporations handle rent increases, and how do individual owners handle them in San Francisco?",
+      "verdict": "There is no separate rulebook for large owners. The same §37.3 percentage, §37.15 licence and §827 notice apply to a two-unit building and to a 200-unit portfolio. What does differ is documented: San Francisco bans the revenue-management software large operators used to set rents, and vacancy decontrol is where large owners historically reset rents.",
+      "status": "verified",
+      "points": [
+        "Same rules: the licence, rate and notice provisions in §37.3 and §37.15 are written for 'owners', with no size threshold and no corporate carve-out.",
+        "What large operators can no longer do in San Francisco: §37.10C (effective October 14, 2024) makes it unlawful to sell or use an algorithmic device that recommends rents or occupancy levels from non-public competitor data ('revenue management software'). Penalties up to $1,000 per violation, per unit, per month; tenants and tenant organisations can sue.",
+        "Statewide, AB 325 (2025, Ch. 338) adds Business and Professions Code §§16729 and 16756.1 to the Cartwright Act, targeting use or distribution of a common pricing algorithm as a restraint of trade.",
+        "Where the big reset has come from historically is vacancy, not annual increases: an owner may set any initial rent for a genuinely vacant unit, and Costa-Hawkins permits a market-rate increase only when the original occupants no longer permanently reside in the unit.",
+        "Market context for an individual owner: the Rent Board's public inventory is itself the comparison tool. Because every owner reports base rent in $250 bands, an individual owner can see what comparable units in the same neighbourhood actually rent for, without any subscription data.",
+        "Process discipline is what professional operators actually do: report in the inventory by March 1, keep the licence current, use the rate published for the effective date, serve within the 30/90-day window, and keep a copy of the notice and proof of service."
+      ],
+      "sources": ["S20", "S26", "S12", "S02", "S05", "S24"],
+      "analysis_note": "How any particular company runs its internal rent-setting process is not documented in an official source, and this project does not speculate about it. The rows above are the documented constraints and the documented data source."
+    },
+    {
+      "id": "Q3",
+      "question": "What is the correct way to inform tenants about a rent increase, and what are reasonable reasons for it?",
+      "verdict": "In writing, served personally or by mail, at least 30 days ahead (90 days if the increase exceeds 10% in a 12-month period, plus 5 days if mailed), stating the dollar amount, the percentage, the effective date, and which portion is annual vs banked. No official source requires a reason for an annual or banked increase.",
+      "status": "verified",
+      "points": [
+        "Content required by ordinance §37.3(b): which portion reflects the annual and/or banked increase, which portion reflects O&M / comparable rents / certified capital improvements, which portion is a utility or bond passthrough, which portion is RAP loan amortisation.",
+        "Content the Rent Board tells owners to include: dollar amount, percentage amount, effective date, and which part is banked. Use the percentage in effect on the effective date, not the date of service.",
+        "Service: personally, or by mail under CCP §1013 (which adds 5 days). 30 days for 10% or less; 90 days for more than 10%, counting any other increase in the prior 12 months.",
+        "No rounding up to the nearest dollar; calculate on base rent only, excluding temporary passthroughs.",
+        "A nonconforming increase is null and void under §37.3(b)(5) - which is why the notice content matters as much as the arithmetic.",
+        "Reasons: none of the reviewed official sources requires a stated reason for an annual allowable or banked increase. The lawful 'reason' is the entitlement created by §37.3(a)(1)-(2) plus the licence.",
+        "Reasons that would be unlawful or dangerous: a rent increase used to influence a tenant to vacate is bad-faith harassment under §37.10B(a)(5); a rent increase motivated by a protected characteristic violates FEHA §12955 and §37.10B(a)(9); an increase based on a new roommate is prohibited by §37.3(a)(11)."
+      ],
+      "sources": ["S09", "S07", "S10", "S02", "S23", "S19", "S13"],
+      "analysis_note": "In practice a short cover sentence ('this is the annual allowable increase permitted by the San Francisco Rent Ordinance') costs nothing and pre-empts the 'why me' question, but it is a communication choice, not a legal requirement."
+    },
+    {
+      "id": "Q4",
+      "question": "Would these increases survive review by a San Francisco tenant lawyer or the Rent Board?",
+      "verdict": "The review test is not whether the increase feels reasonable. It is whether four objective things are true: covered-unit classification, current licence on the effective date, arithmetic at or under the published percentage, and a conforming notice served in time. If all four hold, there is nothing for a tenant petition to overturn - the Rent Board can only void increases that break those rules.",
+      "status": "analysis",
+      "points": [
+        "What a tenant can attack (verified): Form 516C unlawful rent increase petition - no filing fee, no time limit - or Form 518 summary petition where the notice is clearly unlawful on its face. Staff contact the landlord and a corrected notice is usually issued, and the corrected date resets the anniversary date.",
+        "What the Rent Board can void (verified): a nonconforming increase under §37.3(b)(5); an increase imposed while the licence was suspended under §37.15(e); an over-allowable amount without a petition under §37.3(a)(8).",
+        "What creates real exposure (verified): §37.10B bad-faith harassment, where 'the rent increase was substantially in excess of market rates for comparable units' is expressly listed as evidence of bad faith, with treble damages or $1,000 statutory damages plus attorney fees.",
+        "Where the 'market rates' comparison now comes from (verified): the Rent Board's own housing inventory data, which is public and reports base rent in $250 bands by neighbourhood - a tenant or their advocate can pull the same numbers in minutes.",
+        "What free legal help does and does not cover (verified): the Tenant Right to Counsel programme provides free representation for eviction notices and unlawful detainer lawsuits, not for a rent-increase notice by itself. Rent Board petition hearings are designed for unrepresented parties.",
+        "Where the genuine risk sits in this file: the six-year catch-up on Unit 2 (13.1%) is lawful but is the single item most likely to draw a petition and a bad-faith argument, because it is the only number in the file that is far from a single year's rate."
+      ],
+      "sources": ["S17", "S18", "S09", "S06", "S19", "S27", "S24"],
+      "analysis_note": "We cannot promise how any particular lawyer or ALJ would react. What we can verify is that a compliant increase gives them no legal hook, and that the file's main soft spot is the size of the Unit 2 catch-up rather than any arithmetic error."
+    },
+    {
+      "id": "Q5",
+      "question": "Is it OK to raise rent on one unit only, or should both units be raised to avoid a discrimination claim?",
+      "verdict": "Raising one unit and not the other is lawful on its face: no reviewed rule requires uniform treatment. Discrimination law prohibits different treatment because of a protected characteristic, not different treatment because two tenancies are in different positions. The stronger reason not to raise both identically is that the two units are not in the same position.",
+      "status": "analysis",
+      "points": [
+        "No uniformity rule found (verified absence, documented): the reviewed federal, state and local sources constrain amount, timing, notice and licensing. None requires an owner to increase every unit, or to increase them equally.",
+        "What is actually prohibited (verified): FEHA §12955(a) - discrimination or harassment because of race, color, religion, sex, gender identity/expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran status or genetic information; the federal Fair Housing Act covers race, color, national origin, religion, sex, familial status and disability; §37.10B(a)(9) makes violating those laws bad-faith harassment with treble damages.",
+        "Why 'raise both to be safe' is the weaker strategy here (analysis): Unit 1's tenancy is 21 months old with a February anniversary; Unit 2's is 7.5 years old with a June anniversary and six banked years. Forcing them into one timetable would either impose a catch-up on Unit 1 that it is not entitled to, or abandon Unit 2's banked entitlement. Both are worse positions than treating each tenancy on its own anniversary.",
+        "The real discrimination question is comparability, not simultaneity (analysis): the exposure is if two tenants who are alike in every protected respect are treated differently for no documented rental reason, or if the increase is aimed at a tenant because of who they are.",
+        "Documentation is the practical defence (analysis): a one-page file note per unit recording the anniversary date, the published rate, the licence check, and the notice service date converts 'why did you raise mine and not theirs' into an answerable question.",
+        "Tenants do talk to each other (analysis): the appearance of unfairness is a communications risk even when it is not a legal one, so if only one unit is increased, the notice for that unit is likely to be read closely - which is another reason to make it textbook-conforming."
+      ],
+      "sources": ["S13", "S14", "S19", "S09", "S02"],
+      "analysis_note": "This is the question in your list where the legal answer and the risk-management answer genuinely diverge, and where we would get a Rent Board counsellor's view and, if you want certainty, a landlord-tenant attorney's written opinion before serving notice."
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "headline": "The order matters more than the arithmetic. Report first, verify the licence, calculate, then serve. An increase served out of order is void even when the percentage is correct.",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Confirm the units are actually covered",
+      "detail": "Coverage needs two facts: the building was first built on or before June 13, 1979, and the unit is not a separately alienable single-family home or condominium with a tenancy that began on or after January 1, 1996. Substantially rehabilitated units and units rent-regulated by another agency are also outside the cap. Check the parcel on the City's Property Information Map; if classification is unclear the Rent Board directs owners to a counsellor.",
+      "timing": "Before anything else.",
+      "sources": ["S03", "S31", "S32"]
+    },
+    {
+      "n": 2,
+      "title": "Report both units into the Rent Board Housing Inventory",
+      "detail": "Create an account in the Rent Board Portal (portal.sfrb.org) and submit each unit: owner/manager contact, approximate square footage, bedrooms, bathrooms, date current occupancy began, and base rent in $250 increments with which utilities are included. The report is made under penalty of perjury and the information becomes public. Reporting is free.",
+      "timing": "Annually by March 1. Can be filed late, but see step 3.",
+      "sources": ["S05", "S06"]
+    },
+    {
+      "n": 3,
+      "title": "Confirm the rent increase licence exists - and exists on the effective date",
+      "detail": "The licence is generated automatically for non-owner-occupied units once the inventory submission is in. There is no separate application. What matters is the date: the licence must be current on the date the increase takes effect, not merely by the time the notice is written. If reporting was not substantially complied with, the licence is suspended for the noncompliance period and the tenant is not obligated to pay the increased rent for those months. Tenants can check licence status themselves in the Portal.",
+      "timing": "Before the notice takes effect. Verify in the Portal, not from memory.",
+      "sources": ["S05", "S06"]
+    },
+    {
+      "n": 4,
+      "title": "Establish base rent correctly",
+      "detail": "Base rent is the rent charged on initial occupancy plus lawful increases. It excludes certified capital-improvement increases, utility passthroughs, water revenue bond and general obligation bond passthroughs. Parking and storage supplied with the unit are generally part of base rent. Do not round up.",
+      "timing": "Before calculating.",
+      "sources": ["S09", "S02"]
+    },
+    {
+      "n": 5,
+      "title": "Fix the anniversary date and test the 12-month rule",
+      "detail": "The first annual increase can take effect 12 months after the lease began; after that, no more than once in any 12-month period. If you increase later than the anniversary, the effective date becomes the new anniversary date for future years.",
+      "timing": "Per tenancy.",
+      "sources": ["S02"]
+    },
+    {
+      "n": 6,
+      "title": "Pick the percentage in effect on the effective date, then add any banked percentages",
+      "detail": "Use the Rent Board's published rate for the effective date (1.6% for March 1, 2026 - February 28, 2027). Add the percentages of any years in which no increase was imposed: percentages are summed, never compounded, and the rate never exceeds 7%. No Rent Board petition is required for an annual or banked increase.",
+      "timing": "At the time you choose the effective date.",
+      "sources": ["S01", "S02", "S07", "S08", "S09"]
+    },
+    {
+      "n": 6.5,
+      "title": "If you want MORE than the cap, the petition comes first",
+      "detail": "Capital improvement, operating-and-maintenance, comparable-rent, Prop I history, utility passthrough and §1.21 increases all require a Rent Board petition or worksheet filed before the notice is served. Filing is free, tenants do not pay until approval, and an approved increase is retroactive to the effective date in a valid notice.",
+      "timing": "Before service, never after.",
+      "sources": ["S22", "S09"]
+    },
+    {
+      "n": 7,
+      "title": "Choose the notice period",
+      "detail": "30 days for an increase of 10% or less of the lowest rent charged in the 12 months before the effective date; 90 days for more than 10%, counting other increases in that period. Add 5 days if served by mail. Both the state statute and the Rent Board state the same thresholds.",
+      "timing": "Determined by the calculated percentage.",
+      "sources": ["S10", "S02", "S07"]
+    },
+    {
+      "n": 8,
+      "title": "Draft the notice with every required element",
+      "detail": "Include the dollar amount, the percentage, the effective date, which portion is the annual increase and which is banked, and - where applicable - which portion is an O&M, comparable-rent, capital-improvement or passthrough amount. A rent increase that does not conform with §37.3 is null and void.",
+      "timing": "Before service.",
+      "sources": ["S09", "S07"]
+    },
+    {
+      "n": 9,
+      "title": "Serve it, and prove you served it",
+      "detail": "Deliver a copy personally, or serve by mail under CCP §1013 (which adds 5 days to the notice period). Keep the served copy, the proof of service, the licence screenshot dated on or before the effective date, and the calculation worksheet.",
+      "timing": "On or before the latest service date for the intended effective date.",
+      "sources": ["S10", "S02"]
+    },
+    {
+      "n": 10,
+      "title": "Keep the file current afterwards",
+      "detail": "Update the inventory when occupancy changes and within 30 days of any change of owner/manager business contact; pay the Rent Board fee by March 1 ($59 per dwelling unit for 2026-2027, half recoverable from a tenant in occupancy on November 1); and if a tenant files a petition, respond - the hearing is before a Rent Board Administrative Law Judge and no lawyer is required.",
+      "timing": "Annually, and on any change.",
+      "sources": ["S05", "S16", "S17"]
+    }
+  ],
+  "notice_checklist": [
+    "Dollar amount of the increase (no rounding up)",
+    "Percentage amount of the increase",
+    "Effective date",
+    "Which portion is the annual allowable increase",
+    "Which portion is banked (if any)",
+    "Which portion is a passthrough, capital improvement, O&M or comparable-rent amount (if any)",
+    "Served at least 30 days ahead - 90 days if the increase exceeds 10% in the 12-month period",
+    "Five extra days if served by mail",
+    "Licence confirmed in the Portal for the effective date",
+    "Copy of the served notice and proof of service retained"
+  ],
+  "never_do": [
+    "Never serve a notice before the inventory report is in and the licence shows in the Portal.",
+    "Never charge extra rent because a roommate or family member moved in (§37.3(a)(11)).",
+    "Never fold a passthrough into base rent (§37.2(a)).",
+    "Never assume an empty unit's rent can be reset for a partial change of occupancy - Costa-Hawkins §1954.53(d)(3) requires that no original occupant remains.",
+    "Never use a rent increase to pressure a tenant to leave: §37.10B(a)(5) treats an increase substantially above comparable market rents as evidence of bad faith.",
+    "Never let software recommend the rent from non-public competitor data (§37.10C)."
+  ]
+}

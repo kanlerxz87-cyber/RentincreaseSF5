@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Method &middot; SF Rent Increase Compliance Dashboard</title>
+<meta name="description" content="Verified San Francisco rent-increase requirements for two rent-controlled Outer Sunset units, with official source links.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap"><div class="brand">SF Rent Increase Compliance Dashboard<span>Verification protocol and limits</span></div></div></header>
+<nav class="main"><div class="wrap"><a href="index.html">Dashboard</a><a href="executive-summary.html">Executive Summary</a><a href="process.html">Licence &amp; Process</a><a href="units.html">Unit Analysis</a><a href="market.html">Market Context</a><a href="findings.html">Findings</a><a href="questions.html">Questions</a><a href="sources.html">Sources</a><a href="flagged.html">Flagged for Review</a><a href="method.html" class="on">Method</a></div></nav>
+<main>
+
+<p class="kicker">Method</p>
+<h1>How this was built, and what it cannot do</h1>
+
+<h2>Verification protocol</h2>
+<ol>
+<li><strong>Primary sources only.</strong> City ordinance text and Rent Board publications, California statutes on leginfo, HUD pages, and the City's open-data API. Secondary commentary was used only to generate questions, never to answer them.</li>
+<li><strong>Read the text, not the summary.</strong> Where a page summarised a rule, the underlying section was pulled. Example: the 1.6% figure comes from Form 571 and is corroborated by §37.3(a)(1); the banking rule came from §37.3(a)(2) in the ordinance PDF, which is where the conflict with the website text showed up.</li>
+<li><strong>Row-level citation.</strong> Every row carries a tag that resolves to the exact document on the Sources page, with a note stating what that document verifies.</li>
+<li><strong>No fill-ins.</strong> If a value could not be confirmed it was left out of the tables. It is on the Flagged for Review page instead. That includes the federal rent ceiling question, the ACS median, and the HUD FMR figures.</li>
+<li><strong>Arithmetic is generated, not typed.</strong> Percentages live in data/units.json with their Form 571 source; build.py multiplies them against the base rents. There is no hand-entered dollar figure in the data files.</li>
+</ol>
+
+<h2>Verification counts</h2>
+<div class="wrap-table"><table class=""><thead><tr><th>Layer</th><th class="num">Rows verified</th><th>Notes</th></tr></thead><tbody><tr><td>Local (San Francisco)</td><td class="num">39</td><td>Rent Ordinance Chapter 37, Rent Board forms and pages, SF Open Data</td></tr><tr><td>State (California)</td><td class="num">10</td><td>Civil Code, Government Code, Penal Code, chaptered bills on leginfo</td></tr><tr><td>Federal</td><td class="num">3</td><td>HUD Fair Housing Act overview; HUD FMR page reviewed but values unretrievable</td></tr><tr><td>Analysis rows</td><td class="num">4</td><td>Labelled reasoning, excluded from the verified count</td></tr></tbody></table></div>
+<p class="muted">"Analysis" rows are reasoning steps - for example that no reviewed source requires uniform increases. They are labelled, never mixed into the verified count.</p>
+
+<h2>Privacy handling</h2>
+<ul>
+<li>This repository is public, so personal information is not stored in it. Tenant names are replaced with letters (Tenant A-F). No address, no initials, no dates of birth, no contact details.</li>
+<li>Dates and amounts are kept exactly as supplied, because they carry the legal meaning.</li>
+<li>Nothing in this project was published to any third-party service; the site is static files served by GitHub Pages.</li>
+</ul>
+
+<h2>Known limits</h2>
+<ul>
+<li><strong>Coverage is assumed, not proven.</strong> The 1940 build year and the unit count are your inputs (FL-02). If either unit is a single-family home or condominium, the local cap does not apply at all.</li>
+<li><strong>Base rents are your inputs</strong> (FL-01). Every dollar figure inherits any error in them.</li>
+<li><strong>Banking has an unresolved conflict</strong> inside official guidance (FL-03).</li>
+<li><strong>Market context is neighbourhood-level and self-reported</strong>, not ZIP-level and not asking rents (FL-04).</li>
+<li><strong>This is not legal advice</strong> and no attorney-client relationship exists. The Rent Board counsellor line (415-252-4600) answers these questions for free; a landlord-tenant attorney should review anything before a notice is served.</li>
+</ul>
+
+<h2>Reproducing the build</h2>
+<p>Static site, no dependencies: <code>python3 build.py</code> writes <code>docs/</code> from <code>data/*.json</code>. <code>python3 tools/check_links.py</code> verifies every internal link and every external row URL.</p>
+
+</main>
+<footer><div class="wrap">
+<p><strong>Research work product, not legal advice.</strong> Prepared November 7, 2026 from primary government sources only. Dollar figures are our arithmetic on officially published percentages. Personal identifiers are withheld by design; tenant names are replaced with letters and dates and amounts are unchanged.</p>
+<p>Every factual row links to its official source on the <a href="sources.html">Sources</a> page. Anything that could not be confirmed is on the <a href="flagged.html">Flagged for Review</a> page rather than in the tables.</p>
+</div></footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
