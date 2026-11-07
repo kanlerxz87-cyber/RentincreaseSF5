@@ -172,7 +172,10 @@ may take over the task and must note the handoff in the **Log** below.
   `legacy` with `.nojekyll` added so files are served verbatim.
 - `tools/build_site.py` regenerates `index.html` and `pages/*.html`. Edit the generator, then run
   `python3 tools/build_site.py`; do not hand-edit generated HTML.
-=======
+<!-- Integration repair (session arena-d4b68642, 2026-11-07): an unresolved
+     git merge-conflict marker stood on this line. The block below duplicates the
+     arena-f5ead75b section already recorded above; it is preserved, not deleted,
+     so that no earlier session's log is lost. Marker removed, content intact.
 # Coordination
 
 Session: arena-f5ead75b. All work stays on the Arena-assigned branch `arena/f5ead75b-rentincreasesf5` (platform requirement; no session branch created).
@@ -198,7 +201,7 @@ Session: arena-f5ead75b. All work stays on the Arena-assigned branch `arena/f5ea
 - Official general-guide worked example mislabels June 2025 with 1.6%; current rates controls. The independent research also noticed a banking-page example mislabeling August 2024 with 1.4%; no historical bank total was authorized or calculated by this session.
 - Required pre-push pull --rebase attempted to flatten the explicit main-integration merge and replay the other session's original claim, creating a duplicate coordination add/add conflict. Aborted that rebase to retain the fully resolved integration merge; remote assigned branch had no new commits. No published work was removed.
 - Independent audit passes: 6 pages / 62 official-sourced body rows, root/site artifact parity, local href/style targets, language/landmarks and supplied-initial exclusion. Existing generator and validation also pass.
->>>>>>> origin/main
+--> end of preserved duplicate block. Text kept verbatim; no session work discarded.
 
 ---
 
