@@ -1,0 +1,384 @@
+[
+  {
+    "id": "R01",
+    "topic": "Coverage",
+    "value": "Confirm the unit is covered by SF rent control before doing anything else",
+    "detail": "Units built on or before June 13, 1979 and not used as a single-family dwelling 'may have both' rent control and eviction protection. Verify the build date on the official Property Information Map and confirm no exemption (condo, substantial rehabilitation, newly constructed, government-regulated).",
+    "sources": [
+      "S18",
+      "S36"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R02",
+    "topic": "Reporting",
+    "value": "Report annually into the Rent Board Housing Inventory",
+    "detail": "Due March 1 each year. Required of residential property owners even if they are not landlords. Report under penalty of perjury.",
+    "sources": [
+      "S05",
+      "S07"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R03",
+    "topic": "Reporting",
+    "value": "Report base rent in $250 increments, occupancy status/date, 12-month occupancy history, unit size, bedrooms/bathrooms, owner or manager business contact, business registration number, and whether utilities are included",
+    "detail": "Sec. 37.15(b)(2)(A)-(G). Owner contact information is public. Update owner/manager contact changes within 30 days.",
+    "sources": [
+      "S07",
+      "S05"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R04",
+    "topic": "License",
+    "value": "Hold a current Rent Increase License for the unit",
+    "detail": "Automatically generated for non-owner-occupied units once reporting is complete. No separate application for annual/banked increases.",
+    "sources": [
+      "S05",
+      "S07"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R05",
+    "topic": "License",
+    "value": "The license must be in effect on the EFFECTIVE DATE of the increase",
+    "detail": "Rule 13.14 uses the effective date, not the date of service, to test compliance.",
+    "sources": [
+      "S08",
+      "S06"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R06",
+    "topic": "License",
+    "value": "Check license status in the Rent Board Portal for the relevant year",
+    "detail": "Search by address or APN; check multiple years for all relevant effective dates.",
+    "sources": [
+      "S06",
+      "S37"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R07",
+    "topic": "Fee",
+    "value": "Pay the annual Rent Board fee ($59.00 per dwelling unit, 2026-2027) by March 1",
+    "detail": "Separate obligation. Fee-exemption requests do not satisfy Housing Inventory reporting. 50% recoverable from qualifying tenants.",
+    "sources": [
+      "S21",
+      "S05"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R08",
+    "topic": "Frequency",
+    "value": "Only ONE rent increase per 12 months for a tenancy",
+    "detail": "First increase no earlier than 12 months after the lease began; after an increase, its effective date becomes the anniversary date.",
+    "sources": [
+      "S01",
+      "S12",
+      "S15"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R09",
+    "topic": "Anniversary",
+    "value": "Use the tenant's anniversary date; a later effective date creates a NEW anniversary date",
+    "detail": "If the increase is imposed more than 12 months later, the effective date becomes the new anniversary date and the owner must wait another 12 months. Moving the date earlier can permanently lose an available increase.",
+    "sources": [
+      "S01",
+      "S12"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R10",
+    "topic": "Amount",
+    "value": "Use the allowable percentage in effect on the effective date (currently 1.6%)",
+    "detail": "Not the percentage in effect on the date the notice is served.",
+    "sources": [
+      "S01",
+      "S02",
+      "S04"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R11",
+    "topic": "Amount",
+    "value": "Calculate on BASE RENT only",
+    "detail": "Base rent includes housing services such as parking/storage but excludes capital improvement increases (37.7), utility passthroughs, water revenue bond passthroughs, and general obligation bond passthroughs.",
+    "sources": [
+      "S01",
+      "S14",
+      "S11"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R12",
+    "topic": "Amount",
+    "value": "Never round up to the nearest dollar",
+    "detail": "Stated on sf.gov and in Rule 4.12(a) for banked increases.",
+    "sources": [
+      "S01",
+      "S15",
+      "S11"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R13",
+    "topic": "Banking",
+    "value": "Add skipped percentages together; do NOT compound or prorate",
+    "detail": "Banked increases need no Rent Board approval but must be calculated correctly. No cap on total banked; they do not expire during a tenancy; they do NOT carry over to a new tenant; only increases available on/after April 1, 1982 count.",
+    "sources": [
+      "S10",
+      "S15",
+      "S11"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R14",
+    "topic": "Banking",
+    "value": "",
+    "detail": "CONFLICT between two official sources: Rule 4.12(a) says 'A full 12 months must have elapsed'; the current sf.gov Banked rent increases page says 'at least 24 full months pass without any rent increase'. The value is intentionally left blank because the eligibility window cannot be confirmed. Flagged for review - do not rely on either without a Rent Board counselor or attorney.",
+    "sources": [
+      "S15",
+      "S10",
+      "S12"
+    ],
+    "status": "unverified"
+  },
+  {
+    "id": "R15",
+    "topic": "Notice - timing",
+    "value": "30 days' written notice for an increase of 10% or less; 90 days if the increase alone or combined in 12 months exceeds 10%",
+    "detail": "California Civil Code 827(b)(2)-(3) and sf.gov. Add 5 days if the notice is served by mail (sf.gov; 35 days for a 30-day notice).",
+    "sources": [
+      "S30",
+      "S01",
+      "S10",
+      "S11"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R16",
+    "topic": "Notice - content",
+    "value": "State the dollar amount, the percentage, the effective date, and (if applicable) which part is banked",
+    "detail": "sf.gov notice checklist. Sec. 37.3(b)(1) and Rule 4.10(a)(1) require breaking out the annual and/or banked portion; Rule 4.12(b) requires the dates on which the banked amount is based.",
+    "sources": [
+      "S01",
+      "S10",
+      "S13",
+      "S15"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R17",
+    "topic": "Notice - content",
+    "value": "For passthroughs, break out capital improvement / O&M / utility / RAP loan portions and explain the charges",
+    "detail": "Sec. 37.3(b)(2)-(4) and Rule 4.10(a)(2)-(4). Nonconforming notices render the increase null and void (37.3(b)(5)), subject to a narrow good-faith tolerance in Rule 4.10(b).",
+    "sources": [
+      "S13",
+      "S15"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R18",
+    "topic": "Notice - form",
+    "value": "The license does NOT need to be attached to the tenant's notice",
+    "detail": "Explicitly stated on the official Housing Inventory page.",
+    "sources": [
+      "S05"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R19",
+    "topic": "Petition",
+    "value": "A landlord petition is NOT required for annual or banked increases",
+    "detail": "Form 571 and sf.gov multi-year page. Six exception categories DO require a petition BEFORE the notice is served.",
+    "sources": [
+      "S03",
+      "S11",
+      "S17"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R20",
+    "topic": "Petition",
+    "value": "Petition BEFORE serving notice for: capital improvements; O&M expense increase; special circumstances/comparable rents; Proposition I past rent history; utility passthrough; Rule 1.21 tenant-in-occupancy",
+    "detail": "All petitions must use Rent Board forms with supporting documentation. Tenants need not pay until approved; approval is retroactive to the effective date in a valid notice. No filing charge.",
+    "sources": [
+      "S17",
+      "S13"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R21",
+    "topic": "Petition",
+    "value": "O&M petition requires actual costs, proof of payment, and only tenants resident in the base year may be assessed",
+    "detail": "Rule 6.10(a)-(b). An increase may be denied if ordinary repairs requested by the tenant were not performed (Rule 6.12(a)).",
+    "sources": [
+      "S16"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R22",
+    "topic": "Prohibition",
+    "value": "No rent increase solely because a new or additional occupant/roommate moved in",
+    "detail": "Sec. 37.3(a)(11)(A), Rule 6.13, sf.gov. Any lease clause or agreement to pay more is void and unenforceable.",
+    "sources": [
+      "S13",
+      "S16",
+      "S19",
+      "S01"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R23",
+    "topic": "Prohibition",
+    "value": "No market-rate reset while any original occupant still resides in the unit",
+    "detail": "Sec. 37.3(d)(2)(B): the Costa-Hawkins/6.14 provisions do not apply to a partial change in occupancy where one or more original occupants remain. Rule 6.14 requires ALL original occupants to have vacated plus a timely written 6.14 notice.",
+    "sources": [
+      "S13",
+      "S16",
+      "S20"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R24",
+    "topic": "Prohibition",
+    "value": "Rent control continues for a new tenancy created after a 1946.1 termination or a 827 change-of-terms notice",
+    "detail": "Sec. 37.3(d)(1)(A)(ii): 'the rent increase limitation provisions of Chapter 37 shall continue to apply for the duration of the new tenancy in that dwelling or unit.' State Costa-Hawkins 1954.53(a)(1) is consistent.",
+    "sources": [
+      "S13",
+      "S32"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R25",
+    "topic": "Anti-discrimination",
+    "value": "Do not select or size an increase because of a protected characteristic or in retaliation",
+    "detail": "Federal Fair Housing Act 42 USC 3604(b); CA Government Code 12955(a),(f); SF Human Rights Commission handles discrimination/retaliation complaints; the Rent Board explicitly does not.",
+    "sources": [
+      "S35",
+      "S33",
+      "S29",
+      "S28",
+      "S34"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R26",
+    "topic": "Records",
+    "value": "Retain the lease, all rent increase notices, proof of service, license confirmations, and the calculation sheet",
+    "detail": "Tenants may file an unlawful rent increase petition with NO TIME LIMIT, and a petition asks for documents showing dates and amounts of rent increases. No official retention period was located; the specific retention period is left blank.",
+    "sources": [
+      "S22",
+      "S06"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R27",
+    "topic": "Records",
+    "value": "",
+    "detail": "Official record-retention period (years) for rent increase documents: no official source located that specifies a retention period. Value intentionally left blank and flagged unverified.",
+    "sources": [
+      "S22",
+      "S38"
+    ],
+    "status": "unverified"
+  },
+  {
+    "id": "R28",
+    "topic": "Challenge rights",
+    "value": "Tenant may file: Tenant Petition for Unlawful Rent Increase (free, no time limit) or Tenant Summary Petition (clearly unlawful notice)",
+    "detail": "Hearings before an Administrative Law Judge with evidence and cross-examination; written decision; appeal to the Rent Board Commission. Tenants have free legal-help and counseling resources.",
+    "sources": [
+      "S22",
+      "S23",
+      "S24",
+      "S25",
+      "S41"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R29",
+    "topic": "Zip code",
+    "value": "San Francisco rent control rates are citywide - no 94122-specific rate exists in official sources",
+    "detail": "The Rent Board publishes one allowable annual increase for all covered units in the City. No official 94122-specific cap or market-rent figure was located. Any zip-specific market figure is left blank and flagged.",
+    "sources": [
+      "S02",
+      "S18",
+      "S01"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R30",
+    "topic": "Zip code",
+    "value": "",
+    "detail": "Official 94122-specific 'reasonable/normal market rent increase' figure: not published by any official source consulted. Value intentionally left blank.",
+    "sources": [
+      "S18",
+      "S36"
+    ],
+    "status": "unverified"
+  },
+  {
+    "id": "R31",
+    "topic": "State law",
+    "value": "AB 1482 state cap does NOT apply to units already subject to SF's more restrictive rent increase limits",
+    "detail": "Civil Code 1947.12(d)(3) exempts housing subject to a local rent control ordinance that caps annual increases below 5% + CPI; the SF Rent Board states plainly: 'This does NOT apply for units under the rent increase limitations of the San Francisco Rent Ordinance.'",
+    "sources": [
+      "S31",
+      "S27"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R32",
+    "topic": "State law",
+    "value": "Civil Code 827 notice periods apply in addition to local rules",
+    "detail": "30 days / 90 days; service by mail subject to Code of Civil Procedure 1013. Civil Code 1947.12(e) also cross-references 827.",
+    "sources": [
+      "S30",
+      "S31"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "R33",
+    "topic": "Federal law",
+    "value": "",
+    "detail": "Federal numeric rent-increase cap for private, unsubsidized rental housing: no official source located. Value intentionally left blank and flagged unverified. Federal law that DOES apply is the Fair Housing Act's prohibition on discriminatory terms (see Legal Framework).",
+    "sources": [
+      "S34",
+      "S35"
+    ],
+    "status": "unverified"
+  }
+]

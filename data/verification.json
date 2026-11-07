@@ -1,0 +1,267 @@
+[
+  {
+    "id": "V01",
+    "check": "Current allowable annual increase is 1.6% for 3/1/2026-2/28/2027",
+    "method": "Read the SF Rent Board Current Rates page, the 2026 announcement, and Form 571; all three agree.",
+    "result": "Verified - 1.6%",
+    "sources": [
+      "S02",
+      "S04",
+      "S03",
+      "S45"
+    ]
+  },
+  {
+    "id": "V02",
+    "check": "Prior rates 1.4% (2025-26) and 1.7% (2024-25)",
+    "method": "Compared the Current Rates table with the Form 571 historical table.",
+    "result": "Verified",
+    "sources": [
+      "S02",
+      "S03"
+    ]
+  },
+  {
+    "id": "V03",
+    "check": "All 46 historical rate rows on the Rates page",
+    "method": "Transcribed the official Form 571 (1982-2027) table row by row, including its 1992-93 caution.",
+    "result": "Verified against Form 571",
+    "sources": [
+      "S03",
+      "S02"
+    ]
+  },
+  {
+    "id": "V04",
+    "check": "Rent Increase License is required for an individual owner of a small building",
+    "method": "Read Sec. 37.15(a),(c),(e), Sec. 37.2(h), the Housing Inventory page and Ord. 265-20 announcement.",
+    "result": "Verified - no entity-type exemption; <10-unit buildings covered since 3/1/2023",
+    "sources": [
+      "S07",
+      "S14",
+      "S05",
+      "S09"
+    ]
+  },
+  {
+    "id": "V05",
+    "check": "The license is automatically generated, not separately applied for",
+    "method": "Read the exact sentence on the official Housing Inventory page.",
+    "result": "Verified",
+    "sources": [
+      "S05",
+      "S07"
+    ]
+  },
+  {
+    "id": "V06",
+    "check": "The license must be current on the EFFECTIVE DATE, not the notice date",
+    "method": "Read Rule 13.14 and the Notice of Owner Noncompliance page.",
+    "result": "Verified",
+    "sources": [
+      "S08",
+      "S06"
+    ]
+  },
+  {
+    "id": "V07",
+    "check": "No petition/notice to the Rent Board is needed for annual or banked increases",
+    "method": "Read Form 571, the multi-year page and the Landlord Petitions page (six exceptions).",
+    "result": "Verified",
+    "sources": [
+      "S03",
+      "S11",
+      "S17"
+    ]
+  },
+  {
+    "id": "V08",
+    "check": "A license does not prevent a tenant challenge",
+    "method": "Read the unlawful-rent-increase and Tenant Summary Petition pages.",
+    "result": "Verified - free petition, no time limit",
+    "sources": [
+      "S22",
+      "S23"
+    ]
+  },
+  {
+    "id": "V09",
+    "check": "Notice periods are 30 days (<=10%) and 90 days (>10%), +5 days if mailed",
+    "method": "Read Civil Code 827(b)(2)-(3), sf.gov rent increases, the banked increases page and the multi-year page.",
+    "result": "Verified",
+    "sources": [
+      "S30",
+      "S01",
+      "S10",
+      "S11"
+    ]
+  },
+  {
+    "id": "V10",
+    "check": "Notice must break out annual/banked/passthrough portions and banked dates",
+    "method": "Read Sec. 37.3(b), Rule 4.10(a) and Rule 4.12(b).",
+    "result": "Verified",
+    "sources": [
+      "S13",
+      "S15",
+      "S10"
+    ]
+  },
+  {
+    "id": "V11",
+    "check": "Banking: percentages added, not compounded; no cap; no expiry during tenancy; no carryover to a new tenant; back to 4/1/1982",
+    "method": "Read the sf.gov banked increases page, Rule 4.12, Sec. 37.3(a)(2), the multi-year page and Form 571.",
+    "result": "Verified",
+    "sources": [
+      "S10",
+      "S15",
+      "S13",
+      "S11",
+      "S03"
+    ]
+  },
+  {
+    "id": "V12",
+    "check": "Banking eligibility window (12 vs 24 months)",
+    "method": "Compared Rule 4.12(a) with the current sf.gov banked increases page and the worked examples.",
+    "result": "CONFLICT - both official; flagged, no value filled in",
+    "sources": [
+      "S15",
+      "S10",
+      "S01",
+      "S12"
+    ]
+  },
+  {
+    "id": "V13",
+    "check": "Unit 1 occupant change does not allow a market-rate reset or an extra charge",
+    "method": "Read Sec. 37.3(a)(11)(A), Sec. 37.3(d)(2)(B), Rules 6.13/6.14, sf.gov roommates page and the 6.14/Costa-Hawkins page.",
+    "result": "Verified",
+    "sources": [
+      "S13",
+      "S16",
+      "S19",
+      "S20"
+    ]
+  },
+  {
+    "id": "V14",
+    "check": "A new lease after a 1946.1 / 827 termination does not remove rent control",
+    "method": "Read Sec. 37.3(d)(1)(A)(ii) and Civil Code 1954.53(a)(1).",
+    "result": "Verified",
+    "sources": [
+      "S13",
+      "S32"
+    ]
+  },
+  {
+    "id": "V15",
+    "check": "AB 1482 cap does not apply to SF rent-controlled units",
+    "method": "Read Civil Code 1947.12(d)(3) and the SF Rent Board's AB 1482 page.",
+    "result": "Verified",
+    "sources": [
+      "S31",
+      "S27"
+    ]
+  },
+  {
+    "id": "V16",
+    "check": "Federal Fair Housing Act prohibits discriminatory rental terms",
+    "method": "Read 42 USC 3604(b) on govinfo and HUD's Fair Housing Act overview.",
+    "result": "Verified",
+    "sources": [
+      "S35",
+      "S34"
+    ]
+  },
+  {
+    "id": "V17",
+    "check": "Federal numeric rent cap for private unsubsidized housing",
+    "method": "Searched official HUD/DOJ/US Code sources; none located that impose one.",
+    "result": "BLANK - unverified, flagged; no inference made",
+    "sources": [
+      "S34",
+      "S35",
+      "S47"
+    ]
+  },
+  {
+    "id": "V18",
+    "check": "Official 94122-specific market rent / reasonable-increase benchmark",
+    "method": "Checked the Rent Board's rate pages and the City's coverage page; rates are citywide.",
+    "result": "BLANK - unverified, flagged",
+    "sources": [
+      "S02",
+      "S18",
+      "S36"
+    ]
+  },
+  {
+    "id": "V19",
+    "check": "2027-2028 allowable increase rate",
+    "method": "Checked the Current Rates page, Form 571 and the Rent Board's CPI-methodology memo/minutes.",
+    "result": "BLANK - not published, flagged",
+    "sources": [
+      "S02",
+      "S42",
+      "S46"
+    ]
+  },
+  {
+    "id": "V20",
+    "check": "Free tenant lawyers and tenant advocacy resources",
+    "method": "Read sf.gov Tenant and Landlord Resources, the Rent Board Referral Listing, the official 1007 notice and MOHCD's Housing Trust Fund report.",
+    "result": "Verified",
+    "sources": [
+      "S24",
+      "S25",
+      "S44",
+      "S41",
+      "S51"
+    ]
+  },
+  {
+    "id": "V21",
+    "check": "Corporations and individuals are treated the same under Chapter 37",
+    "method": "Read Sec. 37.2(h), Sec. 37.15, the Housing Inventory page and Civil Code 1947.12(d)(5)(A).",
+    "result": "Verified; internal corporate practices BLANK/unverified",
+    "sources": [
+      "S14",
+      "S07",
+      "S05",
+      "S31"
+    ]
+  },
+  {
+    "id": "V22",
+    "check": "Anonymization audit",
+    "method": "Automated scan of all generated HTML and repository data for the owner-supplied tenant identifiers; none are present. Dates and amounts preserved.",
+    "result": "Passed - placeholders Occupant A-F only",
+    "sources": [
+      "S49",
+      "S05"
+    ]
+  },
+  {
+    "id": "V23",
+    "check": "Every table row carries an official-source link",
+    "method": "Automated parse of generated HTML: each data <tr> must contain at least one <a> whose href is on the official-source allowlist.",
+    "result": "Checked by scripts/verify.py",
+    "sources": [
+      "S03",
+      "S07",
+      "S30",
+      "S34"
+    ]
+  },
+  {
+    "id": "V24",
+    "check": "All internal links resolve and the site builds",
+    "method": "Automated crawl of generated HTML files for href/src targets; run on every build.",
+    "result": "Checked by scripts/verify.py",
+    "sources": [
+      "S50",
+      "S49"
+    ]
+  }
+]

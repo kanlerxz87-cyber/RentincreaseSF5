@@ -1,0 +1,123 @@
+[
+  {
+    "id": "D01",
+    "topic": "Is it lawful to raise rent on only one of the two units?",
+    "value": "YES as a general matter - the Rent Ordinance regulates each tenancy separately",
+    "detail": "Official sources key the allowable increase to the individual tenant's lease start / anniversary date, base rent, and banked increases, not to the building as a whole. Unit 1 and Unit 2 have different start dates and different eligibility, so different amounts are a normal consequence of the rules.",
+    "sources": [
+      "S01",
+      "S12",
+      "S10",
+      "S13",
+      "S14"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "D02",
+    "topic": "Objective reasons why the two units legitimately differ",
+    "value": "Different lease start dates (Feb 1, 2025 / June 1, 2019); different base rents ($3,995 / $3,150); different anniversary dates; different skipped-year (banked) history; one unit had a partial change of occupants",
+    "detail": "Banked increases 'do not carry over to a new tenant'; an owner may impose less than the maximum; a landlord may combine a banked increase with a regular annual increase. These are all official, unit-specific factors.",
+    "sources": [
+      "S10",
+      "S12",
+      "S01",
+      "S13"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "D03",
+    "topic": "Is raising BOTH units required to avoid a discrimination claim?",
+    "value": "",
+    "detail": "No official source states that a landlord must increase all units simultaneously, or that doing so defeats a discrimination claim. Value intentionally left blank and flagged unverified. Any such statement would be an inference, and this project does not infer.",
+    "sources": [
+      "S33",
+      "S35",
+      "S29",
+      "S28"
+    ],
+    "status": "unverified"
+  },
+  {
+    "id": "D04",
+    "topic": "What IS unlawful",
+    "value": "Selecting which unit to increase, or setting different amounts, because of a protected characteristic or as retaliation",
+    "detail": "42 USC 3604(b) (race, color, religion, sex, familial status, national origin; 3604(f)(2) disability); Government Code 12955(a) adds a longer list of protected classes including source of income; 12955(f) prohibits retaliation. The Rent Board refers discrimination/retaliation complaints to the SF Human Rights Commission.",
+    "sources": [
+      "S35",
+      "S34",
+      "S33",
+      "S29",
+      "S28",
+      "S48"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "D05",
+    "topic": "Recommended approach",
+    "value": "Adopt ONE written, uniformly applied, unit-neutral policy and document the objective, verifiable reason for each separate amount",
+    "detail": "ANALYSIS - editorial recommendation, not an official rule. Example policy: 'Apply the allowable annual increase published by the Rent Board at each unit's anniversary date, on base rent only, once every 12 months, after confirming the license is current.' Document the calculation for each unit. Do not reference occupant identity, family status, or any protected characteristic.",
+    "sources": [
+      "S01",
+      "S02",
+      "S06",
+      "S10",
+      "S33",
+      "S35"
+    ],
+    "status": "analysis"
+  },
+  {
+    "id": "D06",
+    "topic": "Practical consequence of raising both units",
+    "value": "Uniformity is easy to explain, but it does not cure a defective amount, a missing license, or a defective notice",
+    "detail": "ANALYSIS: a nonconforming increase is null and void and an unlicensed increase is null and void regardless of how many units receive it. The compliance checklist, not symmetry, is what the Rent Board tests.",
+    "sources": [
+      "S13",
+      "S15",
+      "S08",
+      "S06"
+    ],
+    "status": "analysis"
+  },
+  {
+    "id": "D07",
+    "topic": "Unit 1-specific risk",
+    "value": "An increase tied to the April 1, 2026 occupant change would be unlawful",
+    "detail": "Sec. 37.3(a)(11)(A) and Rule 6.13 prohibit increases solely because an occupant was added; Sec. 37.3(d)(2)(B) and Rule 6.14 bar a market-rate reset while an original occupant remains; sf.gov says a new roommate cannot be charged more 'no matter what the lease itself says'.",
+    "sources": [
+      "S13",
+      "S19",
+      "S16",
+      "S20"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "D08",
+    "topic": "Challenge route",
+    "value": "A tenant who believes the selection or amount was discriminatory can petition the Rent Board on the rent increase AND complain to the SF Human Rights Commission / HUD on discrimination",
+    "detail": "Rent Board: free unlawful-rent-increase petition, no time limit; HRC: housing discrimination complaints; HUD: Fair Housing Act complaints. The Rent Board expressly does not adjudicate discrimination or retaliation.",
+    "sources": [
+      "S22",
+      "S28",
+      "S29",
+      "S34",
+      "S51"
+    ],
+    "status": "verified"
+  },
+  {
+    "id": "D09",
+    "topic": "Official statement on discrimination risk when only one unit is increased",
+    "value": "",
+    "detail": "No official source located that specifically addresses a two-unit owner increasing one unit but not the other. Value intentionally left blank and flagged unverified. This is a case-specific legal question for a California attorney.",
+    "sources": [
+      "S25",
+      "S26"
+    ],
+    "status": "unverified"
+  }
+]
