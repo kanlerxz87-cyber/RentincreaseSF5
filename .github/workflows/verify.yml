@@ -50,6 +50,13 @@ jobs:
               f.write(f"\nExternal problems/blocks: {len(blocked)}\n\n")
               for u, x in list(blocked.items())[:40]:
                   f.write(f"- {u}: {x.get('status')} {x.get('error', '')}\n")
+          # GitHub annotations remain readable through the Checks API even when
+          # blob log downloads are unavailable in the agent sandbox.
+          print(f"::notice title=Audit counts::{json.dumps(r['counts'])}")
+          for u, x in list(blocked.items())[:20]:
+              print(f"::warning title=External source problem::{u} status={x.get('status')} {x.get('error', '')}")
+          from collections import Counter
+          print(f"::error title=Audit issue counts::{json.dumps(dict(Counter(i['code'] for i in issues)))}")
           PY
       - name: Upload non-sensitive audit report
         if: always()

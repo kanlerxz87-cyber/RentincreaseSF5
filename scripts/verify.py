@@ -41,7 +41,7 @@ STATUSES = {"verified", "unverified", "owner-reported", "calculated", "analysis"
 OFFICIAL_EXACT = {
     "sfrb.org", "www.sfrb.org", "portal.sfrb.org",
     "sftreasurer.org", "www.sftreasurer.org", "sfassessor.org", "www.sfassessor.org", "data.sfgov.org",
-    "sfwater.org", "www.sfwater.org", "sfbos.org", "www.sfbos.org",
+    "sfwater.org", "www.sfwater.org", "sfbos.org", "www.sfbos.org", "sfplanninggis.org", "www.sfplanninggis.org",
     "codelibrary.amlegal.com", "docs.github.com", "github.com", "api.github.com",
 }
 # Primary organizational sources may support statements about their own services,
