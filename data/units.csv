@@ -1,0 +1,7 @@
+unit,tenant_placeholder,role,tenancy_facts,base_rent_monthly_usd,notes,source
+U1,Tenant U1-A,initial + current,"Last lease start 2025-02-01; continuing tenancy from 2026-04-01",3995,"One of the initial lease tenants; still in the unit",Owner-provided data (internal)
+U1,Tenant U1-B,initial (vacated),"Listed as initial lease tenant; vacated before 2026-04-01",3995,"Vacate date not provided — flagged F-03",Owner-provided data (internal)
+U1,Tenant U1-C,initial (vacated),"Listed as initial lease tenant; vacated before 2026-04-01",3995,"Vacate date not provided — flagged F-03",Owner-provided data (internal)
+U1,Tenant U1-D,current,"Current tenant as of 2026-04-01; added to the tenancy",3995,"Move-in date not provided — flagged F-03",Owner-provided data (internal)
+U2,Tenant U2-A,continuing,"Lease start 2019-06-01; rent $3,150 with no increase documented since",3150,"Anniversary date June 1 (lease start); no increases recorded 2019–2026 per owner",Owner-provided data (internal)
+U2,Tenant U2-B,continuing,"Lease start 2019-06-01; rent $3,150 with no increase documented since",3150,"Same tenancy as Tenant U2-A",Owner-provided data (internal)
