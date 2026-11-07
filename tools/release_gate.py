@@ -36,8 +36,22 @@ ALLOWED_HOSTS = {
     "www.hud.gov",
 }
 
-# Initials supplied by the owner. These must never reach a published file.
-PRIVATE_TOKENS = ["L O", "V N", "J P", "M T", "E R", "I S"]
+# Privacy: no personal identifier is committed to this repository. GitHub Pages
+# serves this file from the repository root, so a literal token list here would
+# itself be a public disclosure. Exact tokens are read from a git-ignored file;
+# when it is absent the generic initial-pair pattern below is still enforced.
+# This follows the remediation merged in PR #8.
+INITIAL_PAIR = re.compile(r"\b[A-Z]\s[A-Z]\b")
+
+
+def _identifier_tokens():
+    path = ROOT / "private" / "identifiers.txt"
+    if not path.exists():
+        return []
+    return [ln.strip() for ln in path.read_text(encoding="utf-8").splitlines() if ln.strip()]
+
+
+PRIVATE_TOKENS = _identifier_tokens()
 
 # Tokens that indicate a generator emitted a placeholder instead of a value.
 TEMPLATE_TOKENS = [
@@ -169,7 +183,12 @@ def check_pages():
 
         for tok in PRIVATE_TOKENS:
             if tok in text:
-                fail("privacy", "%s contains supplied initials %r" % (rel, tok))
+                # Do not echo the identifier into CI logs either.
+                fail("privacy", "%s contains a supplied identifier token" % rel)
+        prose_only = re.sub(r"<[^>]+>", " ", text)
+        m = INITIAL_PAIR.search(prose_only)
+        if m:
+            fail("privacy", "%s contains an initial-shaped pair; verify it is not a person" % rel)
         # Scan prose only: inline script legitimately contains braces and % ops.
         prose = re.sub(r"<script\b.*?</script>", "", text, flags=re.S)
         for tok in TEMPLATE_TOKENS:
