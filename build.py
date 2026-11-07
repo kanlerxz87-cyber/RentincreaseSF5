@@ -17,7 +17,8 @@ from datetime import date, timedelta
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(ROOT, "data")
-DOCS = os.path.join(ROOT, "docs")
+DOCS = os.path.join(ROOT, "dashboard")
+MIRROR = os.path.join(ROOT, "site", "dashboard")  # keep the published root and site/ mirror identical
 
 TODAY = date(2026, 11, 7)          # research date for this session
 PCT_WINDOW_END = date(2027, 2, 28)  # last day of the published 1.6% rate window
@@ -160,6 +161,7 @@ FLAGGED_BY_ID = {f["id"]: f for f in FLAGGED["items"]}
 # ---------------------------------------------------------------- layout
 
 NAV = [
+    ("../index.html", "&larr; Main hub"),
     ("index.html", "Dashboard"),
     ("executive-summary.html", "Executive Summary"),
     ("process.html", "Licence &amp; Process"),
@@ -1154,7 +1156,11 @@ def main():
     with open(write_md, "w", encoding="utf-8") as fh:
         fh.write("\n".join(md))
 
-    print("Built %d pages into docs/" % len(pages))
+    # mirror into site/ so the repository's published root and its mirror stay identical
+    if os.path.isdir(MIRROR):
+        shutil.rmtree(MIRROR)
+    shutil.copytree(DOCS, MIRROR)
+    print("Built %d pages into dashboard/ and mirrored to site/dashboard/" % len(pages))
     print("Verified rows: %d | analysis rows: %d | sources: %d | flagged: %d"
           % (N_VERIFIED, N_ANALYSIS, N_SOURCES, N_FLAGS))
     for item in UNITS:

@@ -19,7 +19,7 @@ import sys
 from html.parser import HTMLParser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOCS = os.path.join(ROOT, "docs")
+DOCS = os.path.join(ROOT, "dashboard")
 DATA = os.path.join(ROOT, "data")
 
 PAGES = [
@@ -136,7 +136,31 @@ def main():
             if fid not in fl_page.ids:
                 problems.append("flagged.html: missing anchor for %s" % fid)
 
+    # mirror parity: dashboard/ is the published tree, site/dashboard/ is the repository mirror
+    mirror = os.path.join(ROOT, "site", "dashboard")
+    for dirpath, _dirs, files in os.walk(DOCS):
+        for name in files:
+            src = os.path.join(dirpath, name)
+            rel = os.path.relpath(src, DOCS)
+            dst = os.path.join(mirror, rel)
+            if not os.path.exists(dst):
+                problems.append("mirror missing: site/dashboard/%s" % rel)
+            elif open(src, "rb").read() != open(dst, "rb").read():
+                problems.append("mirror differs: site/dashboard/%s" % rel)
+
+    # identifier exclusion (same tokens the repository's independent audit enforces)
+    banned = ["L O", "V N", "JP", "M T", "E R", "I S"]
+    for dirpath, _dirs, files in os.walk(DOCS):
+        for name in files:
+            if not name.endswith(".html"):
+                continue
+            text = open(os.path.join(dirpath, name), encoding="utf-8").read()
+            for token in banned:
+                if token in text:
+                    problems.append("%s: contains a personal identifier token (%s)" % (name, token))
+
     print("pages checked: %d" % len(PAGES))
+    print("mirror parity: site/dashboard/ compared against dashboard/")
     print("internal links: %d | external links: %d" % (internal_links, external_links))
     print("data rows: %d facts, %d questions, %d flagged, %d source tags"
           % (len(facts), len(questions), len(flagged), len(src)))
