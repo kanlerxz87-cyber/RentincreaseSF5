@@ -397,3 +397,34 @@ Branch: `arena/0502f829-rentincreasesf5` (Arena-assigned; platform requirement �
 | Session ID | Branch | Status |
 | --- | --- | --- |
 | `arena/0502f829-rentincreasesf5` | `arena/0502f829-rentincreasesf5` | done — independent compilation integrated via PR #6 |
+
+
+---
+
+# Session `arena-d4b68642` · branch `arena/d4b68642-rentincreasesf5` · 2026-11-07
+
+## Registry
+
+| Session ID | Branch | Worktree | Started (UTC) | Status |
+| --- | --- | --- | --- | --- |
+| `arena-d4b68642` | `arena/d4b68642-rentincreasesf5` | repo root | 2026-11-07 | active — final consolidation + independent re-verification |
+
+## Claim (written before any other file was touched)
+
+Prior sessions (`arena-f5ead75b`, `arena-05e5d5ab`, `session-c6d53281`, `SES-8b5ad092`,
+`arena/0502f829`) have all merged to `main` (PRs #1, #2, #3, #4, #6). Their claims are therefore
+**released, not active**: no `in progress` row on the board names a session that is still working,
+and the last commit on `main` is the PR #6 merge. This session takes the **final integration**
+task, which the task board still shows as `in progress` under `session-c6d53281` with no commits
+since; per the 60-minute takeover rule the handoff is recorded here.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| I1 | Repair unresolved merge-conflict markers left in `COORDINATION.md` | `arena-d4b68642` | `COORDINATION.md` | in progress |
+| I2 | Independent line-by-line re-verification of the controlling rules against official sources | `arena-d4b68642` | `data/verified-register.csv`, `VERIFICATION.md` | in progress |
+| I3 | One consolidated landing page + category subpages (prior sets preserved and linked) | `arena-d4b68642` | `hub/**`, `index.html` (regenerated), `site/index.html` (mirror) | in progress |
+| I4 | Release gates: build, internal links, privacy scan, official-source-per-row | `arena-d4b68642` | `tools/release_gate.py` | in progress |
+| I5 | PR -> merge -> confirm GitHub Pages deploy -> record result | `arena-d4b68642` | `COORDINATION.md` | in progress |
+
+**No prior session's page, data file or generator is deleted or rewritten.** Earlier sets stay
+byte-for-byte where they are; the new hub links to them.
