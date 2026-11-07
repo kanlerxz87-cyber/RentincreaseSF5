@@ -1,0 +1,3 @@
+unit,occupants_placeholder,base_rent_effective,base_rent,first_allowance_date,banked_pct,current_annual_pct,total_pct,dollar_increase,new_base_rent,notice_period,status
+Unit A,"Tenant A1 (original lessee), Tenant A2 (continuing occupant)",2025-02-01,3995.00,2026-02-01,1.4,1.6,3.0,119.85,4114.85,30 days,owner record; calculated
+Unit B,"Tenant B1, Tenant B2",2019-06-01,3150.00,2020-06-01,11.5 (six years),1.6,13.1,412.65,3562.65,90 days,owner record; calculated

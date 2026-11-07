@@ -1,8 +1,10 @@
 # Never commit real tenant identities.
 PRIVATE.md
+private/
 
 # Python
 __pycache__/
+*.pyc
 *.py[cod]
 .venv/
 

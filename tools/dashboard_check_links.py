@@ -22,6 +22,10 @@ import os
 import re
 import sys
 
+# Generic initial-pair pattern. Catches initials without committing any real one,
+# so this check can live in a file that is itself published to GitHub Pages.
+INITIAL_PAIR = re.compile(r"\b[A-Z]\s[A-Z]\b")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 DATA = os.path.join(ROOT, "docs", "data")
@@ -35,6 +39,15 @@ ALLOWLIST = {
     "https://www.sf.gov/documents/7737/537_6.14_Costa-Hawkins_Petition_3.25.pdf": "Rent Board Form 537 (official form, fetched and confirmed)",
     "https://github.com/kanlerxz87-cyber/RentincreaseSF5/blob/main/tools/calc.py": "this repository's own source code",
 }
+
+
+def _identifier_tokens():
+    """Exact identifier tokens, read only from a git-ignored private file."""
+    path = os.path.join(ROOT, "private", "identifiers.txt")
+    if not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as handle:
+        return [line.strip() for line in handle if line.strip()]
 
 
 def main():
@@ -92,6 +105,21 @@ def main():
     for key, s in sources.items():
         if s["url"] not in all_html:
             problems.append("registry source {} is never linked on any page".format(key))
+
+    # 6. PRIVACY - no personal identifier may reach a published page.
+    #    Exact tokens load only from private/identifiers.txt, which .gitignore
+    #    excludes. The generic initial-pair pattern is always enforced.
+    banned = _identifier_tokens()
+    for page in pages:
+        text = open(os.path.join(DOCS, page), encoding="utf-8").read()
+        visible = re.sub(r"<[^>]+>", " ", text)
+        for token in banned:
+            if token in visible:
+                problems.append("{}: contains a personal identifier token".format(page))
+        hit = INITIAL_PAIR.search(visible)
+        if hit:
+            problems.append("{}: initial-pair pattern {!r} - confirm it is a placeholder"
+                            .format(page, hit.group(0)))
 
     print("pages checked        : {}".format(len(pages)))
     print("internal links       : {}".format(used_internal))
