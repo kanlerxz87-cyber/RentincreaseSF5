@@ -154,6 +154,13 @@ def index():
   <a href="pages/flagged.html">Flagged for review</a>.</p>
 </section>
 """
+    # Integration fix (session arena-d4b68642): these five tokens were emitted verbatim
+    # into the published landing page because no substitution step existed for them.
+    b = (b.replace("CURRENT_PERIOD", CURRENT_PERIOD)
+          .replace("A_DOLLAR", money(round(UNIT_A_BASE * 0.030, 2)))
+          .replace("A_BASE", money(UNIT_A_BASE))
+          .replace("B_DOLLAR", money(round(UNIT_B_BASE * 0.131, 2)))
+          .replace("B_BASE", money(UNIT_B_BASE)))
     return layout("Dashboard", resolve(b), active="index.html")
 
 
