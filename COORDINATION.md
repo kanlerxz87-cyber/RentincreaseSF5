@@ -622,6 +622,10 @@ Flagged here for the owner to close or rebase.
 | Item | Value |
 | --- | --- |
 | Branch | `arena/d4b68642-rentincreasesf5` |
-| Pull request | _recorded after creation_ |
-| Merge result | _recorded after merge_ |
-| Pages deploy | _recorded after deploy_ |
+| Pull request | [#11](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/11) |
+| CI on PR | `validate` **pass** (build, all checkers, release gate, reproducibility) |
+| Merge result | **MERGED** 2026-11-07 21:10:30 UTC, merge commit `ff41db204485ab1b14d8004f4a6297e9acbc708e` |
+| Validate on `main` | **success** (run 42414586533) |
+| Pages build/deploy | **success** (run 42414586035); Pages API status `built` |
+| Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
+| Live verification | Landing page and `hub/flagged.html` retrieved from the deployed URL and read: consolidated hub is live, F01-F16 render with source links. Direct `curl` from the sandbox returns `000` because github.io is not on the sandbox egress allowlist - that is an network restriction, not a site fault; verification was done with the page-fetch tool. |
