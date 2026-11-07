@@ -248,3 +248,121 @@ owner is not left with two contradictory impressions.
 | Pull request | #3 |
 | Merge result | recorded after merge (see below) |
 | Pages deploy | recorded after deploy (see below) |
+
+---
+
+# Session `SES-8b5ad092` · branch `arena/8b5ad092-rentincreasesf5` · 2026-11-07
+
+## Registry
+
+| Session ID | Branch | Worktree | Started (UTC) | Status |
+| --- | --- | --- | --- | --- |
+| `SES-8b5ad092` | `arena/8b5ad092-rentincreasesf5` | repo root | 2026-11-07 | active — integration of the third research set |
+
+## Claims log — and a timing collision to record honestly
+
+- **20:01Z** — Read the repository: `README.md` only, `main` at `b747350`, **no `COORDINATION.md`, no
+  other claims visible**. Claimed T1–T10 in a single non-overlapping scope and began research.
+- **20:0x–20:2xZ** — Research and build proceeded offline of the board. This was the error: the
+  board was read once at the start and not re-read before pushing. In that window, sessions
+  `arena-f5ead75b`, `arena-05e5d5ab` and `session-c6d53281` published the root set, the deep-dive
+  set in `pages/`, the hub and a Pages workflow to `main` (PRs #1–#3). I first saw this when
+  `gh pr merge 4` refused with *"merge commit cannot be cleanly created"*.
+- **20:2xZ** — Stopped, fetched `main`, inspected the other sessions' work, and integrated rather
+  than replaced. All of their files and all of their published pages are preserved byte-for-byte;
+  see "Conflict resolution" below.
+- No other session's task was taken over or duplicated. No session branch was switched, created or
+  pushed to; all work stayed on the assigned Arena branch.
+
+## Task board — this set
+
+| ID | Task | Files in scope (this set only) | Status |
+| --- | --- | --- | --- |
+| D1 | Source register, official publishers only | `data/sources.json` | done |
+| D2 | Requirement table, local/state/federal | `data/facts.json` (56 rows) | done |
+| D3 | Licence + notice process | `data/process.json` | done |
+| D4 | Unit scenarios and notice deadlines | `data/units.json` | done |
+| D5 | Outer Sunset market context from SF Open Data | `data/market.json` | done |
+| D6 | Owner questions answered with sources | `data/questions.json` | done |
+| D7 | Flagged register | `data/flagged.json` (14 items) | needs review (published, does not block) |
+| D8 | Dashboard generator + link checker | `build.py`, `tools/check_links.py` | done |
+| D9 | Executive summary (licence answer first) | `dashboard/executive-summary.html`, `EXECUTIVE-SUMMARY.md` | done |
+| D10 | Integration: merge `main`, publish alongside the other sets, checks, PR, deploy | `COORDINATION.md`, `README.md`, `tools/pages_1.py` (hub section, additive), `scripts/build.py` (build step, additive) | done |
+
+## Sources used (33, all government publishers)
+
+SF Rent Board / sf.gov: Form 571 rate table · rent-increase guidance · rental-law coverage ·
+current rates · Housing Inventory · §37.15 · banked increases · multiple-year increases · Chapter 37
+ordinance PDF (Ord. 6-2-23) · §37.10B · §37.10C · §6.14 / Costa-Hawkins guidance · Form 516C page ·
+Tenant Summary Petitions · Failure to Repair and Maintain Petitions (Form 516B) · Rent Board Fee ·
+Forms Center · Form 1007 · covered/exempt units · landlord petitions and passthroughs ·
+additional-occupants prohibition · index of landlord/tenant information · counsellor page.
+
+California Legislative Information: Civil Code §§827, 1947.12, 1954.53 · Government Code §12955 ·
+Penal Code §396 · AB 325 (2025), Ch. 338.
+
+Federal: HUD Fair Housing Act overview · HUD USER FY2026 FMR documentation system (values would not
+render → no figure published). SF Open Data: dataset `gdc7-dmcn`, live SoQL queries with the exact
+query URLs stored in `data/market.json`. SF Planning: Property Information Map (link only).
+
+## Verification performed
+
+- **52 of 56 requirement rows verified** against a cited official document; the other 4 are labelled
+  `analysis` and excluded from the verified count.
+- Ordinance language read in the Chapter 37 PDF itself, not in a summary — this is how the banking
+  conflict (below) was found.
+- Dollar figures are **generated** by `build.py` from `data/units.json` percentages; no amount is
+  hand-entered. Recomputed and matched by hand: 3995×1.6% = 63.92; 3995×3.0% = 119.85;
+  3150×13.1% = 412.65; 3150×10% = 315.00.
+- Two source URLs failed or were doubtful on first check and were corrected before publication:
+  the Forms Center path (`/information/rent-board-forms-forms-center` → 404;
+  `/rent-board-forms-forms-center` → 200) and the Form 1007 PDF (re-opened and confirmed).
+- `tools/check_links.py`: 10 pages, 342 internal links, 36 external links, every anchor and source
+  tag resolves, `dashboard/` and `site/dashboard/` are byte-identical, and no personal-identifier
+  token appears. **No problems.**
+- The other sessions' checks still pass after integration: `scripts/check.py`,
+  `scripts/independent_audit.py`, `tools/build_site.py` (0 broken links, 0 unsourced rows).
+
+## Conflict resolution during the merge of `main`
+
+| File | Conflict | Resolution |
+| --- | --- | --- |
+| `.gitignore` | add/add | Union: kept their three patterns, added `__pycache__`, `.venv/`, `node_modules/` equivalents already present |
+| `README.md` | content | Kept their README as the base and extended it: three-set table, safe-option rows in the numbers table, dashboard build commands, layout rows |
+| `COORDINATION.md` | add/add | Kept their full board and log as the canonical document and appended this section; nothing of theirs was edited or removed |
+
+Integration changes to files owned by other sessions — all additive, all logged here as the
+instruction requires:
+
+1. `tools/pages_1.py` — added one `<section>` to the hub listing the third set with links to
+   `dashboard/`. No other line touched; the rest of the hub is regenerated unchanged.
+2. `scripts/build.py` — added two lines that run `build.py` **before** the existing hub build, so
+   the hub's link check can see `dashboard/`. The existing pipeline is untouched otherwise.
+
+## Cross-session discrepancy (published, not silently harmonised)
+
+The deep-dive set presents Unit A's available increase as **3.0% / $119.85** ("computed maximum").
+This set does not contradict the arithmetic but declines to call it safe: **sf.gov**'s banking page
+states a skipped increase is banked only if **24 full months** pass without any rent increase, while
+**S.F. Admin Code §37.3(a)(2)** contains no such condition and the Rent Board's own worked examples
+bank after 12 months. This set therefore prices **1.6% / $63.92** as the safe option and 3.0% as
+**needing confirmation** (FL-03), and both the hub section and the README say so. No opinion is
+offered on which reading the Rent Board would adopt; the point is that a written answer from a
+Rent Board counsellor is cheap and the difference is $55.93/month.
+
+## Irregularities (14, published on `dashboard/flagged.html`)
+
+FL-01 base rents owner-supplied · FL-02 build year/unit count unverified (coverage assumed) ·
+**FL-03 banking 24-month conflict** · FL-04 ZIP 94122 vs Sunset/Parkside proxy · FL-05 whether a
+§6.14 notice was served on Unit 1's new co-tenant · FL-06 bedroom counts unknown · FL-07 notice
+deadlines assume personal service · FL-08 HUD FMR unretrievable · FL-09 Census API key required ·
+FL-10 "no federal rent cap" is absence-of-evidence · FL-11 10% threshold moves with other charges ·
+FL-12 the licence "application" claim is wrong · FL-13 AB 325 operative date unconfirmed ·
+FL-14 the "open violation" claim corrected on verification → the real mechanism is a **Form 516B
+deferral** filed within 60 days of the notice.
+
+None blocks the merge; all are published with sources for manual review.
+
+## Deployment record
+
+Filled in after the merge and Pages verification.

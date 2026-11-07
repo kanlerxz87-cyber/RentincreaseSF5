@@ -101,6 +101,11 @@ for artifact in Path("site").iterdir():
 # landing page that links both sets. Run it last so the published home page is the merged hub, then
 # mirror its artifacts into site/ so the two trees stay identical (the independent audit checks parity).
 import subprocess as _sp, shutil as _sh, sys as _sys
+# --- Dashboard set · added by session SES-8b5ad092 · 2026-11-07 -------------------
+# A third research set (dashboard/) is generated from data/*.json by build.py and mirrored into
+# site/dashboard/. It runs before the hub build so the hub's link check can see the files.
+# Additive only: nothing above is regenerated or replaced by it.
+_sp.run([_sys.executable, 'build.py'], check=True)
 _sp.run([_sys.executable, 'tools/build_site.py'], check=True)
 _sh.copyfile('index.html', Path('site') / 'index.html')
 for _src in list(Path('pages').glob('*.html')) + [p for p in Path('assets').glob('*') if p.is_file()]:

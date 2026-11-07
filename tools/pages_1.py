@@ -104,6 +104,34 @@ def index():
 </section>
 
 <section class="panel">
+  <h2>Independent verified dashboard &mdash; third research set</h2>
+  <p class="small">A third set was compiled independently (session <code>SES-8b5ad092</code>) and is published at
+  <a href="dashboard/index.html"><strong>dashboard/</strong></a> with its own data files (<code>data/*.json</code>),
+  its own generator (<code>build.py</code>) and its own link checker (<code>tools/check_links.py</code>). It covers
+  the same law with a stricter verification protocol: 56 requirement rows, of which 52 are verified against a cited
+  official document and 4 are labelled analysis, plus 33 official sources and 14 flagged items. All of its dollar
+  figures are generated from the published Rent Board percentages rather than typed. Where it differs from the deep
+  dive above it is on one point of characterisation, not of arithmetic: it treats the 24-month wording on
+  sf.gov&rsquo;s banking page as an unresolved conflict with S.F. Admin Code &sect;37.3(a)(2) and therefore prices
+  Unit&nbsp;A at 1.6% as the safe option and 3.0% as needing confirmation. See
+  <a href="dashboard/flagged.html#FL-03">FL-03</a>.</p>
+  <div class="grid">
+    <a class="card" href="dashboard/executive-summary.html"><h3>Executive summary</h3>
+      <p>Licence answer first, then the numbers, the conflict, the discrimination question and the review test.</p></a>
+    <a class="card" href="dashboard/process.html"><h3>Licence &amp; process</h3>
+      <p>Eleven steps, the notice checklist, and the six moves that void an increase.</p></a>
+    <a class="card" href="dashboard/units.html"><h3>Unit analysis</h3>
+      <p>Scenario pricing with computed notice deadlines, including the 90-day problem on Unit&nbsp;B.</p></a>
+    <a class="card" href="dashboard/market.html"><h3>Market context</h3>
+      <p>Live Rent Board inventory distributions for Sunset/Parkside, with the queries used.</p></a>
+    <a class="card" href="dashboard/findings.html"><h3>Findings</h3>
+      <p>All 56 requirement rows in one filterable table, each with its layer, authority and source.</p></a>
+    <a class="card" href="dashboard/flagged.html"><h3>Flagged for review</h3>
+      <p>14 items, including the banking conflict and the repair-deferral rule (Form 516B).</p></a>
+  </div>
+</section>
+
+<section class="panel">
   <h2>Verification status</h2>
 """
 
