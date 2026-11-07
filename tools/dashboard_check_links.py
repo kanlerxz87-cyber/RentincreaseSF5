@@ -24,7 +24,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
-DATA = os.path.join(ROOT, "data")
+DATA = os.path.join(ROOT, "docs", "data")
 
 HREF_RE = re.compile(r'href="([^"]+)"')
 

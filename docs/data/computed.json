@@ -259,7 +259,7 @@
           "serve_by_mailed": "2026-12-28",
           "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
           "key": "maximum_24_month_reading",
-          "label": "Maximum lawful under the 24-month sentence on the sf.gov 'Banked rent increases' page (conflicts with Rule 4.12 - see Flagged)"
+          "label": "Conservative lower bound - the most restrictive reading possible (24 months measured from each skipped anniversary). Not stated in any official source; shown only as a floor."
         }
       ]
     },
@@ -470,7 +470,7 @@
           "serve_by_mailed": "2027-02-26",
           "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
           "key": "maximum_24_month_reading",
-          "label": "Maximum lawful under the 24-month sentence on the sf.gov 'Banked rent increases' page (conflicts with Rule 4.12 - see Flagged)"
+          "label": "Conservative lower bound - the most restrictive reading possible (24 months measured from each skipped anniversary). Not stated in any official source; shown only as a floor."
         }
       ]
     }

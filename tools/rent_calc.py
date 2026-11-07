@@ -25,7 +25,7 @@ from datetime import date, timedelta
 from decimal import Decimal, ROUND_DOWN
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data")
+DATA = os.path.join(ROOT, "docs", "data")
 
 
 # --------------------------------------------------------------------------- #

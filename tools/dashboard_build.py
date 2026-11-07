@@ -10,11 +10,11 @@ import json
 import os
 from datetime import date
 
-from site_shell import page, write, CSS
+from dashboard_shell import page, write, CSS
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
-DATA = os.path.join(ROOT, "data")
+DATA = os.path.join(ROOT, "docs", "data")
 
 with open(os.path.join(DATA, "sources.json")) as f:
     SOURCES = json.load(f)["sources"]
