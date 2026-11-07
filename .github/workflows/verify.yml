@@ -26,7 +26,24 @@ jobs:
       - name: Test verifier with synthetic fixtures
         run: python -m unittest discover -s scripts/tests -v
       - name: Audit integrated data, source links, rendering mapping, and publication structure
-        run: python scripts/verify.py --root . --base-path /RentincreaseSF5 --external --strict-warnings --json verification-report.json
+        run: |
+          python - <<'PY'
+          import json, subprocess, sys
+          from pathlib import Path
+          cmd = [sys.executable, 'scripts/verify.py', '--root', '.', '--base-path', '/RentincreaseSF5', '--external', '--strict-warnings', '--json', 'verification-report.json']
+          p = subprocess.run(cmd, capture_output=True, text=True)
+          # Bounded annotations keep diagnostics readable when blob log downloads
+          # are unavailable. The verifier never echoes private stdin terms.
+          for line in (p.stdout + '\n' + p.stderr).splitlines()[-60:]:
+              print('::notice title=Verifier output::' + line.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          if not Path('verification-report.json').is_file():
+              Path('verification-report.json').write_text(json.dumps({
+                  'tool': 'rent-increase-static-verifier/1', 'passed': False,
+                  'counts': {}, 'issues': [{'level':'ERROR','code':'CI_VERIFIER_NO_REPORT','path':'.github/workflows/verify.yml','message':f'Verifier exited {p.returncode} without writing a report; see bounded annotations.'}],
+                  'external_results': {}
+              }, indent=2) + '\n')
+          raise SystemExit(p.returncode)
+          PY
       - name: Summarize audit report
         if: always()
         run: |
