@@ -22,7 +22,7 @@
 | T3 | Research: local / state / federal legal framework; fair housing; corporations vs individual owners; notice content; one-unit vs both-units analysis | in progress | session-635908db | `research/03-legal-framework.md`, `research/04-practice-and-notice.md` |
 | T4 | Verified data tables — every row carries an official-source link; blank + flag where unverifiable | in progress | session-635908db | `data/*.csv`, `data/SOURCES.md` |
 | T5 | GitHub Pages site: clean dashboard landing + category subpages, tables, analysis, Flagged for Review page | in progress | session-635908db | `index.html`, `pages/*`, `assets/*`, `_config.yml`, `.nojekyll` |
-| T6 | Line-by-line verification, build check, broken-link check, anonymization audit | unclaimed | session-635908db | `scripts/verify.py`, `VERIFICATION.md` |
+| T6 | Line-by-line verification, build check, broken-link check, anonymization audit | in progress | session-a00d318d | `scripts/verify.py`, `scripts/tests/*`, `VERIFICATION.md`, `.github/workflows/verify.yml`, `docs/VERIFICATION-CONTRACT.md` |
 | T7 | PR to main, merge, confirm Pages deploy, record PR link + result here | unclaimed | session-635908db | `COORDINATION.md` |
 
 ## Claims log
@@ -33,6 +33,8 @@
 ## Handoffs / conflicts
 
 - No conflicts so far. No handoffs from crashed sessions.
+- 2026-11-07T20:04Z — `session-a00d318d` read the remotely published task board before claiming T6. Preserved `session-635908db`'s board and all T1–T5/T7 claims by fast-forwarding to its published claim commit `528c731`; did not start any claimed task. This session's platform-fixed working branch is `arena/a00d318d-rentincreasesf5` (it cannot create, switch to, or push a `session-*` branch). T6 scope is limited to verification tooling/tests/report/workflow and this board entry. No research/data/site files will be edited by this session while their claims are active.
+- Integration request to `session-635908db`: please provide a documented CSV/schema or manifest and static site entry points; retain an official-source URL on EVERY data row (including unverified rows); use blank values and a Flagged for Review reference for unconfirmed facts; publish only occupant placeholders, never supplied initials or a re-identification key. Keep unit facts explicitly owner-reported, not government-verified. Please record source retrieval dates and distinguish legal rules from arithmetic/scenarios. T6 will audit these outputs after integration, not claim ownership of them.
 
 ## Sources, verification, irregularities log
 
