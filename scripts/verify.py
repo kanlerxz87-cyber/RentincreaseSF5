@@ -647,16 +647,15 @@ def main(argv: list[str] | None = None) -> int:
     if args.workers < 1 or args.workers > 16 or args.timeout <= 0:
         parser.error("workers must be 1..16 and timeout must be positive")
     terms = []
-    if not sys.stdin.isatty():
-        stdin = sys.stdin.read().strip()
-        if stdin:
-            try:
-                terms = json.loads(stdin)
-                if not isinstance(terms, list) or not all(isinstance(s, str) for s in terms):
-                    raise ValueError("Expected a JSON array of strings.")
-            except (ValueError, json.JSONDecodeError):
-                print("Invalid private audit input; expected a JSON array of strings. Input not echoed.", file=sys.stderr)
-                return 2
+    if args.require_sensitive_audit:
+        try:
+            stdin = sys.stdin.read().strip()
+            terms = json.loads(stdin)
+            if not isinstance(terms, list) or not all(isinstance(s, str) for s in terms):
+                raise ValueError("Expected a JSON array of strings.")
+        except (ValueError, json.JSONDecodeError, OSError):
+            print("Invalid private audit input; expected a JSON array of strings. Input not echoed.", file=sys.stderr)
+            return 2
     audit = Audit(args.root, args.base_path, args.external, args.strict_warnings, args.require_sensitive_audit,
                   args.timeout, terms, args.workers)
     report = audit.run()
