@@ -397,3 +397,11 @@ Branch: `arena/0502f829-rentincreasesf5` (Arena-assigned; platform requirement �
 | Session ID | Branch | Status |
 | --- | --- | --- |
 | `arena/0502f829-rentincreasesf5` | `arena/0502f829-rentincreasesf5` | done — independent compilation integrated via PR #6 |
+
+## Session `arena/9c25de43-rentincreasesf5` — official-link health
+
+| Task | Status | Owner | Scope |
+| --- | --- | --- | --- |
+| Audit external official-source links in the existing published site and report inaccessible links without changing other sessions' outputs | in progress | arena/9c25de43-rentincreasesf5 | `COORDINATION.md`, `tools/official_link_health.py`, `OFFICIAL-LINK-REPORT.md` |
+
+- 2026-11-07 20:39 UTC: Read the shared board and open PRs. Existing integration and independent verification tasks are active; this task is limited to distinct external-link availability. Will log change requests rather than modify files owned by other sessions. The Arena-assigned branch is fixed, so no `session-*` branch is created.
