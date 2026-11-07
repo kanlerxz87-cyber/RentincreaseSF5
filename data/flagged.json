@@ -8,7 +8,10 @@
       "detail": "Every dollar figure on this site is computed from two base rents: $3,995.00 from 2025-02-01 (Unit 1) and $3,150.00 from 2019-06-01 (Unit 2). Both were supplied by the owner. The Rent Board does not publish tenancy-level rent history, and the public inventory reports rent only in $250 bands.",
       "why_it_matters": "If either base rent is wrong - for example if a passthrough was folded into rent, or a prior increase was imposed but not recorded - every downstream number is wrong, and an over-allowable increase is void under §37.3(b)(5).",
       "action": "Reconcile against original leases, cancelled cheques or bank records for the first month of each tenancy before serving notice. Note that base rent excludes temporary passthroughs (§37.2(a)).",
-      "sources": ["S09", "S24"]
+      "sources": [
+        "S09",
+        "S24"
+      ]
     },
     {
       "id": "FL-02",
@@ -17,7 +20,11 @@
       "detail": "Rent control turns on the building being built on or before June 13, 1979 and not being a single-family home or condo under Costa-Hawkins. The date 1940 came from the owner. No address was supplied to this project, so the build year and unit count could not be checked on the City's Property Information Map.",
       "why_it_matters": "If either unit is a separately alienable single-family home or condominium, the local cap does not apply at all and the entire analysis changes direction.",
       "action": "Look up the parcel on SF Planning's Property Information Map (S32) and, if the classification is unclear, ask a Rent Board counsellor - the Rent Board explicitly directs owners to a counsellor where classification is uncertain.",
-      "sources": ["S03", "S32", "S12"]
+      "sources": [
+        "S03",
+        "S32",
+        "S12"
+      ]
     },
     {
       "id": "FL-03",
@@ -26,7 +33,11 @@
       "detail": "sf.gov's 'Banked rent increases' page states: 'A skipped increase is only banked if at least 24 full months pass without any rent increase. If less than 24 months pass, the skipped increase is lost.' SF Admin Code §37.3(a)(2) contains no 24-month condition: 'A landlord who refrains from imposing an annual rent increase or any portion thereof may accumulate said increase and ... impose that amount on the tenant's subsequent rent increase anniversary dates.' The Rent Board's own worked examples bank an increase after 12 months (e.g. a tenant who moved in 2023 banks 1.7% + 1.4% and adds 1.6% in 2026).",
       "why_it_matters": "It decides whether Unit 1 can add the skipped February 1, 2026 increase to the 2027 increase (3.0% total instead of 1.6%). Under the ordinance text, banking appears available; under the website sentence, Unit 1 would need 24 months without an increase, i.e. February 1, 2027 before the 2026 amount is banked - which is exactly the date being targeted, so the two readings converge only awkwardly.",
       "action": "Put the question to a Rent Board counsellor in writing (415-252-4600) and keep the answer. Until then, treat option U1-B as 'needs confirmation' and option U1-A as the safe default.",
-      "sources": ["S07", "S09", "S02"]
+      "sources": [
+        "S07",
+        "S09",
+        "S02"
+      ]
     },
     {
       "id": "FL-04",
@@ -35,7 +46,9 @@
       "detail": "The public dataset publishes City 'analysis neighbourhoods', not ZIP codes. The ZIP 94122 area is reported as part of Sunset/Parkside (15,721 inventory records in total across all years, 3,000+ in the 2026 submission year).",
       "why_it_matters": "Neighbourhood medians are close to, but not identical with, a 94122-only median. Rows are labelled as Sunset/Parkside throughout, never as 94122.",
       "action": "If a ZIP-level figure is needed, request the ZIP extract from the Rent Board or use the underlying parcel addresses in the dataset to filter by ZIP.",
-      "sources": ["S24"]
+      "sources": [
+        "S24"
+      ]
     },
     {
       "id": "FL-05",
@@ -44,7 +57,11 @@
       "detail": "Unit 1 began with three tenants on 2025-02-01. It is now held by one of those original tenants plus a new co-tenant (from about April 2026). Two separate rules apply, and neither permits a market-rate increase now: Costa-Hawkins §1954.53(d)(3) excludes partial changes of occupancy where an original occupant remains, and §6.14 requires an unlimited increase to be supported by a written 6.14 notice served on the subsequent occupant within a reasonable time (generally 60 days) of learning of the occupancy.",
       "why_it_matters": "If no 6.14 notice was served on the new co-tenant when they moved in, the future 'last original occupant vacates' reset may not be available for that person under §6.14 - that is a potentially large amount of foregone rent. Nothing can be asserted either way without the tenancy file.",
       "action": "Check the file for a served 6.14 notice. If none was served, get advice promptly on whether one can still be served; do not attempt to back-date anything. Also confirm no additional charge was made for the new occupant - §37.3(a)(11) prohibits it even where a lease allows it.",
-      "sources": ["S21", "S12", "S23"]
+      "sources": [
+        "S21",
+        "S12",
+        "S23"
+      ]
     },
     {
       "id": "FL-06",
@@ -53,7 +70,10 @@
       "detail": "The market comparison on this site shows one-, two- and three-bedroom distributions because neither unit's bedroom count was provided. The inventory reporting requirement itself asks the owner for bedroom and bathroom counts.",
       "why_it_matters": "Which distribution applies changes the comparison materially: at $3,995 Unit 1 would be in the top band of one-bedrooms, mid-distribution for two-bedrooms and below median for three-bedrooms.",
       "action": "Confirm each unit's bedroom count and read the matching distribution on the Market Context page.",
-      "sources": ["S24", "S05"]
+      "sources": [
+        "S24",
+        "S05"
+      ]
     },
     {
       "id": "FL-07",
@@ -62,7 +82,10 @@
       "detail": "The computed 'latest service date' figures assume personal delivery. If a notice is mailed under CCP §1013, five additional days are required, so the latest service date moves five days earlier.",
       "why_it_matters": "Serving one day late on a 90-day notice restarts the clock and pushes the effective date past the rate window, which would require the 2027-28 rate that is not published until March 1, 2027.",
       "action": "Decide the service method first, then pick the effective date from the Notice Planner on the Unit Analysis page.",
-      "sources": ["S10", "S02"]
+      "sources": [
+        "S10",
+        "S02"
+      ]
     },
     {
       "id": "FL-08",
@@ -71,7 +94,9 @@
       "detail": "The HUD USER FY2026 FMR documentation page for the San Francisco HUD Metro FMR Area loaded, but the bedroom-size table rendered with no values in this environment. No HUD dollar figure is printed anywhere on this site.",
       "why_it_matters": "A federal benchmark would be useful context for 'reasonable and normal', but publishing a remembered figure would be a hallucination risk.",
       "action": "Open the HUD link manually and, if wanted, add the two-bedroom FY2026 FMR as a fourth benchmark with its own source row.",
-      "sources": ["S28"]
+      "sources": [
+        "S28"
+      ]
     },
     {
       "id": "FL-09",
@@ -80,7 +105,9 @@
       "detail": "api.census.gov returned 'Missing Key'. Table B25064 (median gross rent) for ZCTA 94122 is the right series, but it cannot be pulled without a key, and the interactive site cannot be scraped reliably here.",
       "why_it_matters": "An ACS median would give an independent federal cross-check on the City's self-reported inventory bands.",
       "action": "Either request a free Census API key or read B25064 for ZCTA 94122 in data.census.gov manually and add it as a benchmark.",
-      "sources": ["S24"]
+      "sources": [
+        "S24"
+      ]
     },
     {
       "id": "FL-10",
@@ -89,7 +116,9 @@
       "detail": "No federal statute imposing a rent cap on private units was located in the sources reviewed, and HUD's Fair Housing Act page addresses discrimination rather than price. That is different from a source that says 'the federal government does not control rents'.",
       "why_it_matters": "The practical conclusion is safe - nobody is going to be prosecuted federally for a lawful 1.6% increase - but the row is labelled analysis rather than verified for exactly this reason.",
       "action": "If a citable negative is required, ask counsel; otherwise treat the federal layer as 'no constraint identified'.",
-      "sources": ["S14"]
+      "sources": [
+        "S14"
+      ]
     },
     {
       "id": "FL-11",
@@ -98,7 +127,10 @@
       "detail": "Civil Code §827 measures 10% against the lowest rent charged at any time during the 12 months before the effective date, counting other increases in that period as combined. Both units have had no change, so the base is simply the current rent - but a passthrough, a fee change or a re-notice inside the window would shift the threshold and possibly the notice period.",
       "why_it_matters": "A 90-day notice served as a 30-day notice is a defective notice, and a defective notice means the increase is not effective on the intended date.",
       "action": "Before serving, list every charge change in the preceding 12 months for each unit and add them to the increase percentage when testing the 10% line.",
-      "sources": ["S10", "S07"]
+      "sources": [
+        "S10",
+        "S07"
+      ]
     },
     {
       "id": "FL-12",
@@ -107,7 +139,10 @@
       "detail": "Several non-official sites describe applying for, or being approved for, a rent increase licence, and one describes the notice as coming before the application. The official sources say the licence is generated automatically on inventory reporting and does not need to accompany the notice.",
       "why_it_matters": "Acting on the wrong sequence wastes weeks and, worse, invites an owner to believe a licence exists when the unit was never reported accurately.",
       "action": "Use only the Rent Board Portal (portal.sfrb.org) and the official pages linked on this site when checking licence status.",
-      "sources": ["S05", "S06"]
+      "sources": [
+        "S05",
+        "S06"
+      ]
     },
     {
       "id": "FL-13",
@@ -116,16 +151,22 @@
       "detail": "AB 325 was chaptered on October 6, 2025 and adds Business and Professions Code §§16729 and 16756.1. The chaptered text reviewed here did not state an operative date in the portion read, and the ordinary January 1 operation of a non-urgency statute was not confirmed from an official source.",
       "why_it_matters": "Only affects a background sentence about statewide pricing-algorithm law; San Francisco's own §37.10C has a confirmed effective date of October 14, 2024 and is the operative local rule.",
       "action": "No action required for these two units. Correct the date on the Questions page if a definitive source is found.",
-      "sources": ["S26", "S20"]
+      "sources": [
+        "S26",
+        "S20"
+      ]
     },
     {
       "id": "FL-14",
-      "title": "Whether an outstanding building violation blocks a rent increase was NOT verified",
-      "category": "Open question",
-      "detail": "Commentary found in search results asserts that no rent increase may be imposed while a Department of Building Inspection notice of violation has been outstanding for 35 days. That specific rule was not located in the ordinance text or the Rent Board pages reviewed, so it is not asserted anywhere on this site.",
-      "why_it_matters": "If such a rule exists in Rent Board rules and regulations, serving a notice with an open violation could make it void.",
-      "action": "Ask the Rent Board directly, and separately confirm there are no open permits or violations on the building before serving notice.",
-      "sources": ["S09", "S19"]
+      "title": "The \"no rent increase with an open violation\" claim is partly right, and was corrected",
+      "category": "Corrected by verification",
+      "detail": "Commentary claims an absolute bar on rent increases while a Department of Building Inspection notice of violation has been outstanding for 35 days. That specific 35-day bar was not located in the ordinance or the Rent Board pages reviewed. What the Rent Board does publish is a deferral mechanism (Form 516B): a tenant who has asked for repairs required by law and not received them may petition to defer the annual increase, filing within 60 days of receiving the rent notice; if granted, the increase is postponed until the repairs are done and any increase already paid is refunded. FL-08 originally described this as an unverified open question and has been corrected.",
+      "why_it_matters": "It is the one tenant challenge that has nothing to do with the percentage: a perfectly calculated 1.6% increase can be deferred indefinitely by an unrepaired habitability defect that the landlord knew about and was required to fix.",
+      "action": "Before serving notice: confirm there are no open code violations or outstanding repair requests, and that any requested repairs required by law are complete. Keep the written repair history.",
+      "sources": [
+        "S33",
+        "S09"
+      ]
     }
   ]
 }

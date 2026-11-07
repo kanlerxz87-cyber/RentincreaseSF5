@@ -49,6 +49,6 @@ No reviewed source requires raising both units or raising them equally. What is 
 - **FL-11** The 10% notice threshold moves if anything else changed in the last 12 months (Calculation sensitivity)
 - **FL-12** Widely repeated online claim that there is a licence 'application' is wrong (Source-quality note)
 - **FL-13** AB 325 operative date not confirmed (Unverified detail)
-- **FL-14** Whether an outstanding building violation blocks a rent increase was NOT verified (Open question)
+- **FL-14** The "no rent increase with an open violation" claim is partly right, and was corrected (Corrected by verification)
 
 Full detail, with sources, on the published site's Flagged for Review page.

@@ -229,10 +229,10 @@
     {
       "id": "S29",
       "publisher": "SF Rent Board (sf.gov)",
-      "title": "Rent Board forms (Forms Center)",
+      "title": "Rent Board Forms Center",
       "type": "Agency forms index",
-      "url": "https://www.sf.gov/information/rent-board-forms-forms-center",
-      "verifies": "Form numbers used in this project: 516C (unlawful rent increase), 518 (tenant summary petition), 537 (§6.14 / Costa-Hawkins landlord petition), 571 (rates), 577 (all rates)."
+      "url": "https://www.sf.gov/rent-board-forms-forms-center",
+      "verifies": "Verified on 2026-11-07: catalogue of every Rent Board form, including 516B (failure to repair and maintain), 516C (unlawful rent increase), 518 (tenant summary petition), 537 (§6.14 / Costa-Hawkins landlord petition), 571 (rates), 577 (all rates)."
     },
     {
       "id": "S30",
@@ -257,6 +257,14 @@
       "type": "City mapping tool",
       "url": "https://sfplanninggis.org/PIM/",
       "verifies": "The tool the Rent Board tells owners to use to confirm when a building was built and how many units it has — the two facts that decide coverage."
+    },
+    {
+      "id": "S33",
+      "publisher": "SF Rent Board (sf.gov)",
+      "title": "Failure to Repair and Maintain Petitions (Form 516B)",
+      "type": "Agency guidance page",
+      "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions/",
+      "verifies": "A tenant may petition to DEFER an annual rent increase where the landlord has not made repairs required by state or local law; the petition must be filed no later than 60 days after receipt of the rent increase notice; if granted the increase is deferred until repairs are made and the landlord must refund any increase paid since the effective date; the petition will not be granted if repairs were completed before the effective date; the anniversary date is unaffected."
     }
   ]
 }
