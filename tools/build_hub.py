@@ -107,7 +107,12 @@ RATES = [
 
 def _d(s):
     m, d, y = (int(x) for x in s.split("/"))
-    return date(y + 2000 if y < 100 else y, m, d)
+    if y < 100:
+        # The Form 571 table runs from 1982 to the current period, so a two-digit
+        # year is 19xx up to 99 and 20xx only from 00 onward. Mapping every
+        # two-digit year to 20xx printed the 1982-1999 rows as 2082-2099.
+        y += 1900 if y >= 82 else 2000
+    return date(y, m, d)
 
 
 def rate_on(d):
@@ -820,7 +825,9 @@ def page_exec():
           "increase <em>is</em> the norm: <strong>1.6%%</strong> for effective dates from 1 March 2026 "
           "through 28 February 2027, once every 12 months, on base rent only, never rounded up. %s "
           "The statewide 8.8%% figure does not replace a stricter applicable local cap. Coverage of these "
-          "particular units remains unverified. No official ZIP-level customary increase was established. %s</p>" % (src("S4", "S5"), src("S9", "S10")))
+          "particular units remains unverified. No official ZIP-level customary increase was established, "
+          "and no federal statute caps rent in private, unsubsidised housing in the sources reviewed, so "
+          "none is estimated here. %s %s</p>" % (src("S4", "S5"), src("S9", "S10"), src("S19")))
     rows = []
     for unit, name, base, pct, eff, note in SCENARIOS:
         inc = round(base * pct / 100, 2)
@@ -1023,7 +1030,7 @@ def page_rates():
     b += '<section class="panel"><h2>Official rate table</h2>'
     rows = [[e("%s - %s" % (_d(a).isoformat(), _d(bb).isoformat())), "%.1f%%" % r,
              badge(VERIFIED) + " " + src("S4")] for a, bb, r in RATES]
-    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026. "
+    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026 and re-read on 8 November 2026. "
                "Only one of the two 1992-1993 increases may be imposed, based on the tenant's anniversary date.",
                ["Effective period", "Allowable increase", "Status and source"], rows)
     b += ('<p class="note">The 12/8/1992 - 2/28/1993 and 3/1/1992 - 12/7/1992 rows overlap by design; '
@@ -1344,6 +1351,15 @@ def page_verification():
          e("Defect found in the previous landing page and fixed; now guarded."), badge(VERIFIED) + " " + src("S5")],
         ["Merge markers", e("Scan for unresolved conflict markers in tracked files."),
          e("Markers found in the coordination file and repaired; now guarded."), badge(VERIFIED) + " " + src("S5")],
+        ["Rate table years", e("Every effective period re-read from Form 571 on 8 November 2026 and the two-digit years re-checked."),
+         e("Defect found: 1982-1999 printed as 2082-2099 (F19). Fixed, table re-checked row by row; gate now rejects any year outside 1982-2027."),
+         badge(VERIFIED) + " " + src("S4")],
+        ["Independent re-verification", e("Section 37.15, section 37.3, Form 571, the rent increase and banking pages, Rules 4.10 and 4.12, Civil Code sections 827, 1942.5 and 1947.12, the AB 1482 page, the Rent Board fee page, Form 516C and Form 1007 re-fetched and re-read on 8 November 2026."),
+         e("All published values matched. The 1.6% rate, the licence rule, the notice periods and the AB 1482 exemption are unchanged."),
+         badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S12", "S20", "S21")],
+        ["Arithmetic re-check", e("Both units' five scenarios recomputed from the base rents and the published percentages."),
+         e("Unit 1: 1.6% = $63.92 and 3.0% = $119.85. Unit 2: 1.6% = $50.40, 13.1% = $412.65 and 10.0% = $315.00. All match to the cent, none rounded up."),
+         badge(COMPUTED) + " " + src("S4", "S8")],
     ]
     b += table("Verification performed in this session", ["Check", "Method", "Result", "Status and source"], rows)
     b += '</section>'

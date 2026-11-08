@@ -107,10 +107,13 @@ Generated HTML is written to the repository root (GitHub Pages publishes `main:/
 
 ## Privacy
 
-No tenant names, initials, addresses, parcel numbers or personal documents are stored in this repository, its
-history or the site. The record uses `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenant B2`, `Unit A` and `Unit B`.
+No tenant names, initials, addresses, parcel numbers or personal documents are stored in the current files
+or current site. The record uses `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenant B2`, `Unit A` and `Unit B`.
 Dates and dollar amounts are preserved because the arithmetic depends on them. Housing Inventory submissions are
 public and made under penalty of perjury — use truthful data in the official Rent Board portal, never placeholders.
+An earlier public revision exposed tenant initials in verification scripts; those literals were removed, but shared
+Git history was not rewritten. See F15 on the Flagged for Review page. Do not treat current-file remediation as
+historical erasure.
 
 ## Not legal advice
 
