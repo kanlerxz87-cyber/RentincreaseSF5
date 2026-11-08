@@ -629,3 +629,18 @@ Flagged here for the owner to close or rebase.
 | Pages build/deploy | **success** (run 42414586035); Pages API status `built` |
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Landing page and `hub/flagged.html` retrieved from the deployed URL and read: consolidated hub is live, F01-F16 render with source links. Direct `curl` from the sandbox returns `000` because github.io is not on the sandbox egress allowlist - that is an network restriction, not a site fault; verification was done with the page-fetch tool. |
+
+---
+
+# Session `arena/3a6f02e5-rentincreasesf5` · 2026-11-08 · independent final audit
+
+All earlier integration tasks on the board are recorded as done; no active task is taken over.
+Arena requires this session to remain on its fixed branch, so no additional session branch is created.
+
+| Task | Status | Owner | File scope |
+| --- | --- | --- | --- |
+| Re-read controlling official sources and audit published rules, calculations, privacy, and links | in progress | `arena/3a6f02e5-rentincreasesf5` | `COORDINATION.md`, `AUDIT-2026-11-08.md` |
+| Repair any defects found, rebuild, open PR to main, merge, and confirm Pages | in progress | `arena/3a6f02e5-rentincreasesf5` | Defect-specific files logged here before editing |
+
+No personal identifiers will be copied into the audit. Dates and amounts supplied by the owner remain
+unverified records, not official facts. No Inventory filing, licence request, or tenant notice will be performed.
