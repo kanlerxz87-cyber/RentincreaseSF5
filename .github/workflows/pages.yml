@@ -28,6 +28,8 @@ jobs:
           python tools/check_links.py
       - name: Release gate (blocks a broken or private site)
         run: python tools/release_gate.py
+      - name: Follow-up disclosures and summary regression checks
+        run: python tools/followup_audit.py
       - name: Confirm the build is reproducible
         run: |
           python scripts/build.py
