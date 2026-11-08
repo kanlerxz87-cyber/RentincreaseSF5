@@ -20,7 +20,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TODAY = date(2026, 11, 7)
+TODAY = date(2026, 11, 8)
 
 # ---------------------------------------------------------------------------
 # OFFICIAL SOURCES - every one retrieved and read during this session.
@@ -68,6 +68,10 @@ SOURCES = {
             "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/"),
     "S21": ("Form 1007 - Notice to Tenant / Tenant Right to Counsel", "SF Rent Board",
             "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag[74].pdf"),
+    "S22": ("Annual rent increase for multiple years", "SF Rent Board",
+            "https://www.sf.gov/information--annual-rent-increase-multiple-years"),
+    "S23": ("The Rent Ordinance (Chapter 37 index)", "SF Rent Board",
+            "https://www.sf.gov/reports--rent-ordinance/"),
 }
 
 # ---------------------------------------------------------------------------
@@ -518,7 +522,7 @@ def layout(title, body, active, root=False, desc=None):
 <body>
 <header class="top"><div class="top-in">
 <div class="brand"><a href="%s" style="text-decoration:none;color:inherit">SF rent increase dashboard</a>
-<small>Outer Sunset 94122 &middot; anonymised &middot; sources checked 7 Nov 2026</small></div>
+<small>Outer Sunset 94122 &middot; anonymised &middot; sources rechecked 8 Nov 2026</small></div>
 <nav class="main">%s</nav>
 </div></header>
 <main id="main"><div class="wrap">%s</div></main>
@@ -863,7 +867,7 @@ def page_units():
         rows.append([e(unit), e(name), "%.1f%%" % pct, money(inc), money(round(base + inc, 2)),
                      "%d days" % notice_days(pct), eff.isoformat(), serve_by(eff, pct).isoformat(),
                      badge(COMPUTED) + " " + src("S4", "S8")])
-    b += table("Serve-by dates assume personal service and are computed from today, 7 November 2026.",
+    b += table("Serve-by dates assume personal service and are computed from 8 November 2026, the date of this verification pass.",
                ["Unit", "Option", "Total", "Increase", "New rent", "Notice", "Effective", "Serve by", "Status and source"],
                rows, numeric=(2, 3, 4))
     b += '</section>'
@@ -880,7 +884,7 @@ def page_rates():
     b += '<section class="panel"><h2>Official rate table</h2>'
     rows = [[e("%s - %s" % (_d(a).isoformat(), _d(bb).isoformat())), "%.1f%%" % r,
              badge(VERIFIED) + " " + src("S4")] for a, bb, r in RATES]
-    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026. "
+    b += table("Transcribed from Rent Board Form 571, retrieved and re-checked line by line on 8 November 2026. "
                "Only one of the two 1992-1993 increases may be imposed, based on the tenant's anniversary date.",
                ["Effective period", "Allowable increase", "Status and source"], rows)
     b += ('<p class="note">The 12/8/1992 - 2/28/1993 and 3/1/1992 - 12/7/1992 rows overlap by design; '
@@ -1089,7 +1093,18 @@ FLAGS = [
      "The user supplied a 2019 starting rent for Unit 2, not a complete intervening ledger. Full-bank examples assume no intervening increases and unchanged lawful base rent; they are not verified entitlements. Earlier archived sets may describe that assumption as owner-supplied.",
      "Unverified input; conditional arithmetic only", ["S5", "S6", "S20"],
      "Authenticate leases, receipts, every prior increase and concessions before using any illustrated total. No increase is cleared for notice or certified to pass a lawyer's review."),
-
+    ("F19", "Rent Board worked example that appears to apply two annual increases a year apart",
+     "The multiple-year guidance example (tenants from 2016, increase on 1 September 2020) adds 2.2% + 1.6% + 2.6% + 1.8% = 8.2%. Read literally, that 1.6% is the rate for 1 March 2018-28 February 2019, while a 1 September 2019 anniversary would fall under the 2.6% period. The published total is therefore queried, not adopted. Every rate on this site is taken from Form 571, which is unambiguous.",
+     "Official page wording queried; no site figure depends on it", ["S4", "S22"],
+     "Ask a Rent Board counsellor to confirm which annual rate applies to a September anniversary in this pattern. Nothing published here uses the 8.2% figure."),
+    ("F20", "The licence must be current on the effective date, not necessarily at service",
+     "Section 37.15(e) and the Inventory page tie the licence to the increase taking effect. Neither source states that the licence must already exist when the notice is served. Obtaining it before service is the recommended safer workflow, not a rule quoted from the ordinance.",
+     "Wording precision, no figure affected", ["S1", "S2", "S5"],
+     "Treat 'licence current before service' as prudent practice; treat 'licence current on the effective date' as the documented requirement."),
+    ("F21", "Two-lineage layout: the site is served from the repository root",
+     "GitHub Pages publishes the whole repository root, so files such as this one and the internal working notes are publicly readable. The earlier internal note's claim that it is not published was incorrect and has been corrected. No tenant name, initial, address or parcel is in any current file.",
+     "Publication-surface limitation", ["S1", "S2"],
+     "If the repository is made private, confirm Pages access settings before serving notices. Do not store personal data anywhere in this repository."),
 ]
 
 
