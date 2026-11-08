@@ -6,7 +6,7 @@ two-unit building** in San Francisco's Outer Sunset (ZIP 94122).
 **Public site:** https://kanlerxz87-cyber.github.io/RentincreaseSF5/
 
 The site now has **one consolidated landing page** with category subpages in `hub/`, built from a single
-62-row verification register. Four earlier independently compiled sets are preserved unchanged and
+64-row verification register. Four earlier independently compiled sets are preserved unchanged and
 linked from `hub/archive.html`:
 
 | Set | Pages | Character |
@@ -98,7 +98,7 @@ Generated HTML is written to the repository root (GitHub Pages publishes `main:/
 - Values are never inferred. If an official source could not confirm a value, the cell is blank and the gap is
   listed on the *Flagged for review* page.
 - Arithmetic is labelled `calculated` and shows the official percentages it derives from.
-- Research date: **7 November 2026**. Statutes, rules and rates change; re-check before acting.
+- Research date: **8 November 2026** (re-verified; see [VERIFICATION.md](VERIFICATION.md)). Statutes, rules and rates change; re-check before acting.
 
 ## Privacy
 

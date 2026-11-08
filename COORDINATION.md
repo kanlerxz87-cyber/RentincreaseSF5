@@ -665,3 +665,70 @@ I make the minimum safe edit and log it.
   `scripts/independent_audit.py` and `tools/release_gate.py` all pass on the untouched tree
   (14 pages, 298 data rows, 759 links, 0 orphans, 0 unsourced rows). Beginning independent
   re-verification (Z2) against the official sources themselves, not against the repo's own claims.
+
+## Task board — `arena-847d013c` — final status
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| Z1 | Board kept current; claim recorded | `arena-847d013c` | `COORDINATION.md` | done |
+| Z2 | Independent line-by-line re-verification of every register row, rate and arithmetic | `arena-847d013c` | `VERIFICATION.md`, `data/verified-register.csv`, `tools/build_hub.py` (register) | done |
+| Z3 | Privacy audit of the whole published tree, not just HTML | `arena-847d013c` | `PRIVACY-REVIEW.md` (no change needed; new findings logged here), `internal/notes.md` | done |
+| Z4 | Site quality pass: dashboard entry point, category subpages, every row sourced, no broken links | `arena-847d013c` | `index.html`, `hub/**` | done |
+| Z5 | Build + gates + PR → merge → confirm Pages deploy → record | `arena-847d013c` | `COORDINATION.md` | in progress |
+| Z-flags | Flagged items F01–F18 | `arena-847d013c` | `hub/flagged.html` | needs review (published, non-blocking) |
+
+### Sources re-retrieved and read on 2026-11-08
+
+SF Rent Board / sf.gov: Housing Inventory · §37.15 · §37.3 · §37.10B · §37.10C · Form 571 (full
+table) · Learn about rent increases · Banked rent increases · Annual increase for multiple years ·
+Rule 6.14 / Costa-Hawkins · Rent Board Fee · AB 1482 · Learn about SF rental laws · Rules &
+Regulations Part IV (§4.10, §4.12) · Form 1007 · Tenant Petition 516C page · **Tenant Financial
+Hardship Applications (S22, new)** · **Annual Rent Increase announcement 14 Jan 2026 (S23, new)** ·
+Rent Board department page.
+California Legislative Information: Civil Code §§827, 1947.12, 1942.5. California Civil Rights
+Department: housing discrimination. U.S. HUD: Fair Housing Act overview.
+
+### Verification performed (detail in `VERIFICATION.md`)
+
+- **Rates:** 46 Form 571 periods compared programmatically against `data/allowable-increases.csv` —
+  **0 mismatches**, no official period missing, the unpublished 2027–28 row still blank.
+- **Arithmetic:** five scenarios recomputed from scratch to the cent — all match. Bank chain
+  1.8+0.7+2.3+3.6+1.7+1.4 = 11.5% (+1.6% = 13.1%); the 2019–20 rate is correctly excluded because
+  it expired before this tenancy's first eligibility date on 1 June 2020.
+- **Notice dates:** 2027-02-01 − 30 days = 2027-01-02; 2027-02-28 − 90 days = 2026-11-30. Mail
+  extension stated separately, not folded in.
+- **Law:** §827(b)(2)–(3) 30/90-day wording, Rule 4.10(b) null-and-void consequence, §1947.12(d)(3)
+  local-control exemption, §1942.5(a)/(d) retaliation bars — all re-read verbatim and confirmed as
+  the site states them.
+- **Register grew 62 → 64** with two rows quoted directly from S22; no previously verified row
+  changed value. Register now 55 verified / 5 owner-supplied or computed / 4 blank or no-authority.
+- **Link audit:** all 57 published HTML files checked for local-reference breakage — **0 broken**.
+  Tag balance across the 14 hub pages — 0 problems. No template tokens, no analytics, `lang`,
+  viewport and table captions present on every page.
+- **Reproducibility:** a fresh `python3 scripts/build.py` leaves the tree clean.
+
+### Defects found and fixed
+
+1. **`internal/notes.md` was publicly readable and said it was not.** Pages serves the repository
+   root, so the note is served at `/internal/notes.md`. Its header claimed Pages serves only
+   `index.html`, `pages/` and `assets/` — factually wrong. Rewritten with a correct header; disclosed
+   publicly as **F18**. The file contained no personal information.
+2. **Flag F09 rewritten.** The reported 10% cap on banked increases is now described precisely and
+   labelled *secondary reporting only*. No official legislative record page could be retrieved, so it
+   is still **not** asserted as law; the effect on Unit 2's full-bank option is noted.
+3. **Missing mechanism added.** Hardship *deferral* is unavailable for annual and banked increases
+   (S22); the register previously had no row on it. Added as R63/R64.
+
+### Privacy — outcome of the whole-tree audit
+
+No tenant name, initial, address or parcel number appears in any tracked file **or in any commit**.
+`PRIVACY-REVIEW.md`'s earlier exposure (initials inside two verification scripts) is remediated in the
+current files, but the history is not rewritten — that decision stays with the owner, as recorded in
+F15. Two standing cautions for the owner: `internal/` is not private, and git history is not private,
+because Pages publishes the root.
+
+### Not changed, deliberately
+
+No earlier session's page, data file, generator or log entry was deleted or rewritten. The four
+earlier research sets remain byte-for-byte and are still linked from `hub/archive.html`. Earlier
+sessions' open PRs #5 and #7 are left open; they are superseded by `main` and belong to other owners.
