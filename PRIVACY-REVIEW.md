@@ -45,7 +45,7 @@ history (53 commits, not the 2-commit shallow clone) was scanned.
 2. **Publication surface.** Pages is `main:/`, so every tracked file is public, not just the HTML
    pages. Confirmed by fetching `/internal/notes.md` and `/COORDINATION.md` from the deployed URL:
    both returned 200. The note in `internal/notes.md` that claimed it was unpublished was wrong and
-   has been corrected in this pass. Published as F21.
+   has been corrected in this pass. Published as F20.
 
 ### Recommended owner actions (not performed here)
 

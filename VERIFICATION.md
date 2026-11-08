@@ -238,14 +238,14 @@ Nothing below is taken from another session's notes: every value was re-read fro
 ## Defects found and fixed this pass
 
 1. **`internal/notes.md` stated it was not published.** It is: Pages serves `main:/`, and the file
-   returns 200 at the live URL. Corrected, with the exposure explained (F21).
+   returns 200 at the live URL. Corrected, with the exposure explained (F20).
 2. **The site's verification stamp said 7 November** while the governing pages had been re-read on
    8 November. Changed to "sources rechecked 8 Nov 2026", and `TODAY` moved to 2026-11-08 so the
    serve-by arithmetic and the "computed from" caption are consistent.
 3. **Two sources cited in prose but absent from the register** (the multiple-year guidance page and
    the Rent Ordinance index) were added as S22 and S23.
 
-## Queried, not adopted (published as F19–F21)
+## Queried, not adopted (published as F19–F20)
 
 - The multiple-year guidance example's 8.2% total appears to use the 2018-19 rate for a September
   2019 anniversary. No figure on this site depends on it; every rate comes from Form 571.
@@ -261,3 +261,11 @@ Housing Inventory, the lawful base rent and complete rent history (owner-supplie
 construction date, whether a §6.14 notice was served on the later occupant, the 3/1/2027 rate, and
 any ZIP-level market rent. No notice, filing or lawyer review was performed, and no amount here is
 certified to pass a tenant-side challenge. Research, not legal advice.
+
+## A candidate flag was withdrawn after re-derivation
+
+An earlier draft of this pass added a flag suggesting the multiple-year guidance example
+("tenants from 2016, increase on 1 September 2020, total 8.2% = 2.2 + 1.6 + 2.6 + 1.8") used a
+mis-indexed year. Re-derived against Form 571 anniversary by anniversary: 1 Sep 2017 → 2.2%,
+1 Sep 2018 → 1.6%, 1 Sep 2019 → 2.6%, 1 Sep 2020 → 1.8%. **The example is correct**, so the flag was
+wrong and has been removed before publication. It is recorded here rather than quietly dropped.
