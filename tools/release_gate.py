@@ -15,7 +15,7 @@ Checks
   8. root / site mirror parity
   9. HTML tag balance
  10. the rate table matches the officially published Form 571 values and every
-     effective period falls inside 1982-2027 (guards the F17 century defect)
+     effective period falls inside 1982-2027 (guards the F19 century defect)
  11. scenario arithmetic recomputes to the cent and is never rounded up
 
 Usage: python3 tools/release_gate.py
@@ -279,7 +279,7 @@ def check_rates_and_arithmetic():
 
     # Form 571 covers 1 April 1982 to 28 February 2027 and nothing else. This
     # range check is what catches a two-digit-year parsing error: the defect
-    # recorded as F17 printed the 1982-1999 rows as 2082-2099.
+    # recorded as F19 printed the 1982-1999 rows as 2082-2099.
     for a, b, _pct in H.RATES:
         for label in (a, b):
             y = H._d(label).year

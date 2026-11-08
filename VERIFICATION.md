@@ -234,16 +234,14 @@ rounded up. Serve-by dates re-derived from the effective dates (30 or 90 days, p
 
 ## C. Defects found and repaired
 
-1. **F17 — rate-table years were published in the wrong century.** `_d()` in `tools/build_hub.py`
+1. **F19 — rate-table years were published in the wrong century.** `_d()` in `tools/build_hub.py`
    mapped every two-digit year to 20xx, so the Form 571 rows for 1982-1999 were printed as
    2082-2099 (e.g. "2082-04-01 - 2083-02-28"). Percentages were correct; years were not. Fixed,
    the whole table re-read against Form 571 (46 rows), and the release gate now fails if any
    effective period falls outside 1982-2027.
-2. **F18 — an unsourced descriptive sentence.** The owner-practices page described large-operator
-   practice without saying it was an observation. Now labelled `Analysis` with an explicit note.
-3. Stale "today" wording removed from the serve-by note; the dates are derived from the effective
+2. Stale "today" wording removed from the serve-by note; the dates are derived from the effective
    date, not from the day the page was built.
-4. Research date refreshed to 8 November 2026 on the consolidated hub only. Earlier sets keep their
+3. Research date refreshed to 8 November 2026 on the consolidated hub only. Earlier sets keep their
    own dates, which remain true for them.
 
 ## D. Release gates re-run after the repairs
@@ -251,7 +249,7 @@ rounded up. Serve-by dates re-derived from the effective dates (30 or 90 days, p
 `python3 scripts/build.py` (16 files), `scripts/check.py`, `scripts/independent_audit.py`,
 `tools/check_links.py`, `tools/dashboard_check_links.py`, `tools/release_gate.py` — all pass:
 14 pages, 303 table data rows, 777 links, 0 orphans, 0 unsourced rows, 15 mirror pairs, 5 scenarios
-recomputed, 62 register findings, 18 flagged items (F01-F18).
+recomputed, 62 register findings, 19 flagged items (F01-F19).
 
 ## E. What is still not verified
 
