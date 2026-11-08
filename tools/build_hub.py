@@ -253,7 +253,7 @@ row("banking", "Reconciliation of the two wordings",
     ANALYSIS, ["S5", "S6", "S7"],
     "Interpretation, not a quoted rule. See the Flagged page. It does not change either unit's number.")
 row("banking", "Does the conflict change the numbers for these two units?",
-    "No. Unit 1 reaches 24 months on 2/1/2027; Unit 2 has had no increase since 2019. "
+    "Conditionally: Unit 1 reaches 24 months on 2/1/2027; Unit 2 calculations assume no intervening increases since 2019, which is unconfirmed. "
     "Both readings produce the same result for both units.", ANALYSIS, ["S5", "S6", "S7"])
 row("banking", "Compounding and rounding of banked amounts",
     "Banked increases are added, not compounded, and may not be rounded up. An administrative law "
@@ -427,7 +427,7 @@ UNITS = [
          tenants="Three original occupants; one original occupant remains, one later co-tenant added.",
          change="Occupant change reported 2026-04-01; rent unchanged at $3,995.00."),
     dict(label="Unit 2", base=3150.00, start=date(2019, 6, 1), anniversary="June 1",
-         tenants="Two occupants, unchanged.", change="No change reported; no increase since 2019-06-01."),
+         tenants="Two occupants, unchanged.", change="No occupant change reported; intervening rent history unconfirmed."),
 ]
 
 U1_BANK = rate_on(date(2026, 2, 1))      # 1.4 - skipped, banks 2027-02-01
@@ -594,6 +594,12 @@ def nav_html(active, root=False):
 
 
 def layout(title, body, active, root=False, desc=None):
+    flag_link = "hub/flagged.html" if root else "flagged.html"
+    body = ('<section class="panel"><p><strong>Conditional research, not an approved increase.</strong> '
+            'Coverage, lawful base rents, complete rent history and current licences are unverified. '
+            'Banked examples assume no intervening increases; that history was not established for Unit 2. '
+            'No amount is cleared for service or guaranteed to pass legal review. '
+            '<a href="' + flag_link + '">Review the limitations (including F17–F18)</a>.</p></section>') + body
     css = "hub/hub.css" if root else "hub.css"
     home = "index.html" if root else "../index.html"
     d = desc or ("Source-linked research on lawful rent increases for two rent-controlled units "
@@ -801,7 +807,9 @@ def page_exec():
           "Board Housing Inventory; a rent increase licence is generated automatically for a "
           "tenant-occupied unit. It must be current on the effective date of the increase. Individual "
           "owners are covered exactly as corporations are. %s</p>" % src("S1", "S2"))
-    b += ("<p>No petition or prior approval is needed for an annual or banked increase. %s</p>"
+    b += ("<p>No petition or prior approval is needed for an ordinary annual or properly calculated banked increase. "
+          "Reporting is required before the effective date, not approval of the proposed notice. Recommended "
+          "workflow: confirm the licence before serving. A licence is not immunity from a tenant challenge. %s</p>"
           % src("S3", "S13"))
     b += '</div>'
     b += reg_table("licence", "Licence and reporting - every requirement, with its source")
@@ -811,8 +819,8 @@ def page_exec():
     b += ("<p class=\"small\">For a rent-controlled unit there is no market test. The lawful annual "
           "increase <em>is</em> the norm: <strong>1.6%%</strong> for effective dates from 1 March 2026 "
           "through 28 February 2027, once every 12 months, on base rent only, never rounded up. %s "
-          "The statewide 8.8%% figure does not apply to these units because they are already under a "
-          "stricter local ordinance. %s</p>" % (src("S4", "S5"), src("S9", "S10")))
+          "The statewide 8.8%% figure does not replace a stricter applicable local cap. Coverage of these "
+          "particular units remains unverified. No official ZIP-level customary increase was established. %s</p>" % (src("S4", "S5"), src("S9", "S10")))
     rows = []
     for unit, name, base, pct, eff, note in SCENARIOS:
         inc = round(base * pct / 100, 2)
@@ -1066,17 +1074,17 @@ def page_laws():
     b += '<section class="panel"><h2>Which layer governs what</h2>'
     rows = [
         ["Local - SF Rent Ordinance", e("Sets the allowable percentage, banking, the licence and coverage."),
-         e("Governs the size of the increase for these units."), badge(VERIFIED) + " " + src("S3", "S2", "S11")],
+         e("Governs if local rent-control coverage is confirmed."), badge(VERIFIED) + " " + src("S3", "S2", "S11")],
         ["State - Civil Code sec. 827", e("Sets the 30 and 90 day notice periods and the service methods."),
          e("Governs how the increase is communicated."), badge(VERIFIED) + " " + src("S8")],
         ["State - AB 1482 rent cap", e("5% plus CPI, maximum 10%; 8.8% in San Francisco for 2026-2027."),
-         e("Does not apply: these units are under a stricter local ordinance."), badge(VERIFIED) + " " + src("S9", "S10")],
+         e("Does not replace stricter applicable local limits; property coverage remains unverified."), badge(VERIFIED) + " " + src("S9", "S10")],
         ["State - Civil Code sec. 1942.5", e("Prohibits retaliatory rent increases."),
          e("Governs the purpose and timing, not the amount."), badge(VERIFIED) + " " + src("S17")],
         ["State - FEHA", e("Prohibits housing discrimination on a broad list of characteristics."),
          e("Governs who is treated differently and why."), badge(VERIFIED) + " " + src("S18")],
         ["Federal - Fair Housing Act", e("Prohibits discrimination on seven protected classes."),
-         e("No federal rent ceiling was identified in the sources reviewed."), badge(VERIFIED) + " " + src("S19")],
+         e("No federal rent ceiling was identified in the sources reviewed; subsidy status is unknown."), badge(ANALYSIS) + " " + src("S19")],
     ]
     b += table("Layer by layer", ["Layer", "What it does", "Effect on these units", "Status and source"], rows)
     b += '</section>'
@@ -1093,10 +1101,10 @@ def page_practices():
     b += '<section class="panel"><h2>Corporations versus individual owners</h2>'
     b += ("<p class=\"small\">The rent cap does not distinguish between them. Section 37.3 applies to "
           "'landlords', and section 37.15 applies to 'owners', with no portfolio threshold. %s "
-          "The practical difference is process, not permission: larger operators run a written annual "
-          "review cycle, keep a rent ledger per unit and serve on a fixed anniversary. That is exactly "
-          "the discipline an individual owner should copy, because it is what produces the evidence a "
-          "tenant-side review asks for. %s</p>" % (src("S3", "S2"), src("S20")))
+          "No official empirical comparison of corporate and individual-owner practices was confirmed. "
+          "Recommendation for either owner type: use an annual compliance calendar, preserve a unit-specific "
+          "rent ledger, and document calculations and service. This is a suggested workflow, not a "
+          "verified description of industry practice. %s</p>" % (src("S3", "S2"), src("S20")))
     b += ("<p class=\"small\">One tool commonly associated with large operators is specifically unlawful "
           "here: section 37.10C prohibits using algorithmic revenue-management devices that draw on "
           "non-public competitor data to set rents, with each month and each unit a separate violation "
@@ -1179,7 +1187,7 @@ rows[i].textContent.toLowerCase().indexOf(q)>-1?'':'none';}});})();
 
 
 FLAGS = [
-    ("F01", "Owner-supplied rent history", "Both base rents, the tenancy start dates and the statement that no increase has been imposed come from the owner. None can be confirmed from an official source without the lease and rent ledger.",
+    ("F01", "Owner-supplied rent history", "The owner supplied dates and amounts, not an authenticated complete ledger. In particular, no intervening Unit 2 increases is an assumption used for illustrations, not an expressly supplied or verified fact. Lawful base rents and unused banking remain unconfirmed.",
      "Unverified input", ["S20"], "Produce the lease and the rent ledger before serving. A tenant petition can reach the whole rent history with no time limit."),
     ("F02", "Construction year and coverage", "The 1940 build year and the two-unit count are owner-supplied. Coverage follows from them, so coverage itself is unconfirmed.",
      "Unverified input", ["S11"], "Check the Property Information Map and, if unclear, ask a Rent Board counsellor."),
