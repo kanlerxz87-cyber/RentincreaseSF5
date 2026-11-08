@@ -629,3 +629,39 @@ Flagged here for the owner to close or rebase.
 | Pages build/deploy | **success** (run 42414586035); Pages API status `built` |
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Landing page and `hub/flagged.html` retrieved from the deployed URL and read: consolidated hub is live, F01-F16 render with source links. Direct `curl` from the sandbox returns `000` because github.io is not on the sandbox egress allowlist - that is an network restriction, not a site fault; verification was done with the page-fetch tool. |
+
+---
+
+# Session `arena/bcfbbb8d-rentincreasesf5` · final integration + independent re-verification · 2026-11-08
+
+Platform rule: every session works on its Arena-assigned branch. For this session that branch is
+`arena/bcfbbb8d-rentincreasesf5` (no `session-<id>/<task>` branch is created; creating one would detach the
+work from the session). Worktree = repository root.
+
+## Claim (written before any edit, pushed immediately)
+
+On arrival: `main` = `04d683e`, the consolidated site from PR #11/#12 is live, all earlier boards show
+`done` except `T10` (final integration, owned by `session-c6d53281`, whose PR #11 was merged and whose
+Pages build succeeded). No session has touched the tree since 2026-11-07 21:13Z, so nothing is in flight
+and nothing of another session's is being edited concurrently. I take over `T10` per the 60-minute
+takeover rule and claim the following non-overlapping scope.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| V1 | Independent line-by-line re-verification of every load-bearing value against the official page; verbatim quotes recorded | `arena/bcfbbb8d` | `AUDIT-2026-11-08.md` (new) | in progress |
+| V2 | Third-party audit check script (fails the build if a quoted value drifts from the register) | `arena/bcfbbb8d` | `tools/audit_2026_11_08.py` (new) | in progress |
+| V3 | Landing page + hub polish: decision-first hero, next-action timeline, one-vs-both answer, archive labelled | `arena/bcfbbb8d` | `tools/build_hub.py`, `index.html`, `hub/*.html`, `hub/hub.css` | in progress |
+| V4 | Publish new irregularities found by this re-verification | `arena/bcfbbb8d` | `tools/build_hub.py` (register rows), `hub/flagged.html` | in progress |
+| V5 | Integration/publication: PR to `main`, merge, confirm Pages deploy, record result | `arena/bcfbbb8d` | `COORDINATION.md`, `README.md`, `VERIFICATION.md` | in progress |
+
+Not in scope for this session (owned by other sessions, left byte-for-byte): `pages/`, `dashboard/`,
+`docs/`, `site/`, `data/*.json`, `scripts/*`, `build.py`, `tools/pages_*.py`, `tools/dashboard_*.py`,
+`tools/release_gate.py`. No change requests are outstanding against them.
+
+## Log
+
+- 2026-11-08: Claimed. Read the whole tree, ran the existing pipeline before editing anything:
+  `scripts/build.py` → 16 files, 0 broken internal links, 0 unsourced rows; `tools/release_gate.py` →
+  PASS (14 pages, 298 data rows, 759 links, 0 orphans, 5 scenarios recomputed, 62 register findings);
+  `scripts/check.py` → PASS; `scripts/independent_audit.py` → PASS; `tools/check_links.py` → no problems.
+  So the baseline is green and any failure I see next is mine.
