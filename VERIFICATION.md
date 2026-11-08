@@ -267,16 +267,20 @@ compared with the value the site publishes. The full point-by-point table is gen
    conflict is published as a conflict. It still does not change either unit's figure: Unit 1 hits twelve
    months after its skipped increase and twenty-four months after the tenancy began on the same date,
    2027-02-01.
-2. **F17 added.** The units page previously asserted that the 2026-04-01 occupant change *did not* create a
+2. **F19 added.** The units page previously asserted that the 2026-04-01 occupant change *did not* create a
    new tenancy. That fact was never supplied. The page now sets out both branches and the different
    effective dates each produces.
-3. **F19 added.** The complete Rules and Regulations compilation (document 625, amended 13 January 2026)
+3. **F20 added.** The complete Rules and Regulations compilation (document 625, amended 13 January 2026)
    was linked but not read end to end; Part IV and Part X were read in full text on sf.gov.
 4. **Notice kit added.** The notice-content duties are split across §37.3(b), Rule 4.10(a) and Rule 4.12(b),
    which is where a compliant increase most often fails. The kit sets out the elements, a model notice, a
    pre-service checklist and the four ways a notice fails.
-5. **Four new register rows** and **three new flags** were published; the register now holds 71 findings,
-   57 of them verified against an official source.
+5. **Nine new register rows** and **two new flags** were published; the register now holds 71 findings,
+   57 of them verified against an official source. Flags F17 and F18 belong to the parallel session
+   `arena-75594f57`, whose follow-up audit was merged into this branch before publication. Its F17 (no
+   official empirical norm for corporate practice or customary increases) and F18 (banked scenarios assume
+   an unprovided rent history) are kept exactly as published, and this session's flags were numbered F19
+   and F20 to avoid a collision.
 
 ## Limits of this pass
 

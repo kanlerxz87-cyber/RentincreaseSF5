@@ -424,7 +424,7 @@ row("units", "Unit 2: which years are banked",
 # ---------------------------------------------------------------------------
 UNITS = [
     dict(label="Unit 1", base=3995.00, start=date(2025, 2, 1), anniversary="February 1",
-         tenants="Three original occupants; one original occupant remains, one later co-tenant added.",
+         tenants="Original occupants reported at the start; by 2026-04-01 a later co-tenant appears. Whether any original occupant remained is unconfirmed (F19).",
          change="Occupant change reported 2026-04-01; rent unchanged at $3,995.00."),
     dict(label="Unit 2", base=3150.00, start=date(2019, 6, 1), anniversary="June 1",
          tenants="Two occupants, unchanged.", change="No occupant change reported; intervening rent history unconfirmed."),
@@ -599,7 +599,7 @@ def layout(title, body, active, root=False, desc=None):
             'Coverage, lawful base rents, complete rent history and current licences are unverified. '
             'Banked examples assume no intervening increases; that history was not established for Unit 2. '
             'No amount is cleared for service or guaranteed to pass legal review. '
-            '<a href="' + flag_link + '">Review the limitations (including F17–F18)</a>.</p></section>') + body
+            '<a href="' + flag_link + '">Review the limitations (including F17–F20)</a>.</p></section>') + body
     css = "hub/hub.css" if root else "hub.css"
     home = "index.html" if root else "../index.html"
     d = desc or ("Source-linked research on lawful rent increases for two rent-controlled units "
@@ -697,9 +697,9 @@ Board's own rate sheet says it may be imposed <strong>without filing a petition<
     b += '<div class="grid">'
     for k, v, n in [
         ("Allowable annual increase", "1.6%", "1 Mar 2026 - 28 Feb 2027 " + src("S4", "S5")),
-        ("Unit 1 from 1 Feb 2027", "%.1f%%" % U1_TOTAL,
+        ("Unit 1 conditional scenario, 1 Feb 2027", "%.1f%%" % U1_TOTAL,
          "%s on %s " % (money(round(3995 * U1_TOTAL / 100, 2)), money(3995)) + src("S4", "S7")),
-        ("Unit 2, full bank", "%.1f%%" % U2_TOTAL,
+        ("Unit 2 conditional full-bank scenario", "%.1f%%" % U2_TOTAL,
          "%s on %s " % (money(round(3150 * U2_TOTAL / 100, 2)), money(3150)) + src("S4", "S7")),
         ("Notice above 10%", "90 days", "30 days at or below 10% " + src("S8")),
     ]:
@@ -760,7 +760,7 @@ Board's own rate sheet says it may be imposed <strong>without filing a petition<
                 "Effective", "Serve by", "Status and source"], rows, numeric=(2, 3, 4, 5))
     b += ('<p class="note">Base rents and tenancy dates are owner-supplied and cannot be confirmed from an '
           'official source; they are flagged, not asserted. The percentages and notice periods are verified. '
-          'Unit 1 has a second branch if no original lessee remained after the 2026 occupant change - see F17. '
+          'Unit 1 has a second branch if no original lessee remained after the 2026 occupant change - see F19. '
           '<a href="hub/units.html">See the line-by-line arithmetic &rarr;</a></p></section>')
 
     b += '<section class="panel"><h2>Browse by category</h2><div class="cards">'
@@ -800,8 +800,8 @@ Board's own rate sheet says it may be imposed <strong>without filing a petition<
 
 def page_exec():
     b = head("Executive summary",
-             "Prepared 7 November 2026; every official source re-read on 8 November 2026. The licence "
-             "question is answered first because nothing else can be done safely until it is settled.")
+             "Compiled 7 November 2026; the controlling rules were re-read on 8 November 2026. The "
+             "licence question comes first because nothing else can be done safely until it is settled.")
     b += '<section class="panel"><h2>1. The licence question</h2><div class="answer">'
     b += ("<p><strong>You must be licensed, but you do not apply.</strong> Report each unit into the Rent "
           "Board Housing Inventory; a rent increase licence is generated automatically for a "
@@ -840,10 +840,11 @@ def page_exec():
           "the rent increase page a 1.4%% increase is permanently lost eleven months after it became "
           "available, even though 35 months had passed since the tenant moved in. %s %s</p>"
           % (src("S6", "S7"), src("S5")))
-    b += ("<p class=\"small\"><strong>Practical effect for you: none.</strong> Unit 1 reaches twelve months "
-          "after its skipped increase, and twenty-four months after the tenancy began, on the same date: "
-          "1 February 2027. Unit 2 has had no increase since 2019. Both readings therefore give the same "
-          "answer for both units, so the 3.0% figure does not depend on resolving the wording. The conflict "
+    b += ("<p class=\"small\"><strong>Conditional illustration only.</strong> Assuming no intervening "
+          "increases (F18), Unit 1 reaches twelve months after its skipped increase, and twenty-four months "
+          "after the tenancy began, on the same date: 1 February 2027. Unit 2's no-increase history was not "
+          "authenticated, so its banked figure is conditional too. Both readings of the wording therefore "
+          "give the same answer, and the 3.0% figure for Unit 1 does not depend on resolving it. The conflict "
           "is published as F04 on the flagged page; ask a counsellor in writing if you want it closed.</p>")
     b += '</section>'
 
@@ -970,7 +971,7 @@ def page_units():
           'left and a new tenancy began on 2026-04-01, the anniversary is 1 April, no banked amount from '
           'the earlier tenancy survives, and the first increase is available on 2027-04-01 at the rate the '
           'Board publishes on 2027-03-01. Charging more because a roommate moved in is unlawful in either '
-          'case. ' + src("S5", "S6", "S14") + ' <a href="flagged.html">See F17 &rarr;</a></p></section>')
+          'case. ' + src("S5", "S6", "S14") + ' <a href="flagged.html">See F19 &rarr;</a></p></section>')
 
     b += '<section class="panel"><h2>Unit 2 - the banked ledger</h2>'
     rows = []
@@ -1196,7 +1197,7 @@ FLAGS = [
     ("F04", "Banking wording: 12 versus 24 months",
      "The banking page says a skipped increase is banked only if at least 24 full months pass without any rent increase. Rule 4.12 says a full 12 months must have elapsed from the date the increase could have been imposed, and two official worked examples run the clock from the date each increase became available.",
      "Conflicting official wording - time-stamped examples read as controlling", ["S5", "S6", "S7"],
-     "For Unit 1 both tests land on 2027-02-01: 12 months after the 1.4% became available and 24 months after the tenancy began. The figure does not depend on resolving the wording. Ask a counsellor in writing if you want the point closed."),
+     "The time-stamped examples and Rule 4.12 are treated as controlling, so the conflict does not change the arithmetic. Conditional on no intervening increases (F18), Unit 1 reaches 12 months after the skipped increase and 24 months after the tenancy began on the same date, 2027-02-01. Obtain written counselling and authenticate the rent ledger before relying on any banked amount."),
     ("F05", "Rule 6.14 notice on the later co-tenant", "Whether a 6.14 notice was served on the occupant added to Unit 1 around 2026-04-01 is unknown. Generally 60 days is considered reasonable.",
      "Missing fact with future consequences", ["S14"],
      "If it was not served, an unlimited increase when the last original occupant leaves may not be available under Rule 6.14. This does not affect the current annual or banked increase."),
@@ -1226,15 +1227,19 @@ FLAGS = [
      "A separate, real labelling slip does exist on the same guidance page: the first example says the rate in effect on 1 June 2025 is 1.6%, when 1.4% applied on that date. The increase in that example takes effect 1 June 2026, where 1.6% is correct, so the arithmetic is right and only the date label is wrong."),
     ("F14", "Earlier sets differ in presentation", "Five earlier compilations are preserved on this site. They agree on the verified rules but differ on whether to price unit-specific figures.",
      "Reconciled, not deleted", ["S4", "S5"], "This consolidated set prices the options and labels every result computed. The earlier sets remain reachable from the archive page."),
-    ("F17", "Unit 1: the anniversary date depends on a fact not supplied",
+    ("F19", "Unit 1: the anniversary date depends on a fact not supplied",
      "The record shows a continuing tenancy from 2025-02-01 at $3,995.00 and a later occupant by 2026-04-01 with the rent unchanged. If any original lessee remained, the tenancy continues and the anniversary stays 1 February. If every original lessee left, a new tenancy may have begun on 2026-04-01.",
      "Unverified input with a two-branch answer", ["S5", "S6"],
      "Branch A (continuing): the increases available on 2026-02-01 (1.4%) and 2027-02-01 (1.6%) give 3.0% from 2027-02-01. Branch B (new tenancy): the anniversary is 1 April, no banked amount survives the new tenancy, and the first increase is available 2027-04-01 at the rate published 2027-03-01. Whether an unlimited reset is available at all depends on Rule 6.14 or Costa-Hawkins, on whether the later occupant is a co-tenant or a subtenant, and on a 6.14 notice having been served within a reasonable time - generally 60 days (F05). Establish which branch applies before serving anything."),
-    ("F18", "No official source describes how large operators set rents",
-     "Nothing in the official material reviewed documents corporate rent-setting practice, and no official statistics on it were found. What the sources establish is that the cap, the licence and the notice rules apply identically to every owner, and that algorithmic pricing on non-public competitor data is prohibited.",
-     "Absence of evidence, not a quoted rule", ["S2", "S3", "S16"],
-     "Treat any statement that corporations raise rents by a particular amount as unverified unless it cites a government source."),
-    ("F19", "The complete Rules and Regulations were not read end to end",
+    ("F17", "No official empirical norm for corporate practice or customary increases",
+     "No official comparison of corporate and individual-owner conduct, and no official customary-increase figure for ZIP 94122, was established. The published legal allowance is not evidence of observed market practice.",
+     "Absence of evidence, not a quoted rule", ["S3", "S5"],
+     "Use the compliance workflow as a recommendation only; treat any claim that corporations raise rents by a particular amount as unverified unless it cites a government source."),
+    ("F18", "Banked scenarios assume a rent history that was not provided",
+     "The owner supplied a 2019 starting rent for Unit 2, not a complete intervening ledger. The full-bank examples assume no intervening increases and an unchanged lawful base rent. They are conditional arithmetic, not verified entitlements.",
+     "Unverified input; conditional arithmetic only", ["S5", "S6", "S20"],
+     "Authenticate leases, receipts and every prior increase before using any illustrated total."),
+    ("F20", "The complete Rules and Regulations were not read end to end",
      "Part IV and Part X were read in full text on sf.gov. The complete Rules and Regulations compilation (document 625, amended 13 January 2026) was linked but not read in full, so an amendment outside those Parts could exist.",
      "Method limitation", ["S24", "S7", "S23"],
      "Search the complete compilation before relying on a mechanical point, or ask a counsellor."),
@@ -1457,10 +1462,10 @@ def page_audit():
         "reconciled; on a closer read the 24-month sentence cannot be squared with either worked "
         "example, so the time-stamped examples and Rule 4.12 are treated as controlling and the "
         "conflict is published rather than smoothed over.",
-        "The Unit 1 anniversary fork was added as F17. The answer changes if no original lessee "
+        "The Unit 1 anniversary fork was added as F19. The answer changes if no original lessee "
         "remained after the 2026 occupant change, and that fact was not supplied.",
         "A second limit was added: the complete Rules and Regulations compilation was linked but not "
-        "read end to end (F19).",
+        "read end to end (F20).",
         "The rent notice kit was added, because the notice content rules are spread across three "
         "documents and are easy to get wrong in practice.",
     ]:
@@ -1563,7 +1568,7 @@ Served by: [personal delivery / first-class mail] on [date]"""
     b += '<section class="panel"><h2>Before you serve: the checklist</h2><ul class="tick">'
     for item in [
         "Both units are reported in the Housing Inventory for the current reporting year, and the licence shows in the Rent Board Portal.",
-        "The anniversary date is confirmed from the rent ledger - for Unit 1 that turns on whether any original lessee remained (F17).",
+        "The anniversary date is confirmed from the rent ledger - for Unit 1 that turns on whether any original lessee remained (F19).",
         "At least 12 months have passed since the last increase on that tenancy.",
         "The percentage used is the one in effect on the effective date: 1.6% for any effective date up to 28 February 2027.",
         "Only properly banked amounts are added, nothing is compounded, and nothing is rounded up.",
@@ -1643,6 +1648,12 @@ def build():
                         " | ".join(SOURCES[s][2] for s in r["sources"])])
     written.append("data/verified-register.csv")
 
+    # Keep the standalone summary in step with this build. The summary and its
+    # regression checks live in tools/followup_audit.py (session arena-75594f57).
+    from followup_audit import write_summary
+    write_summary(ROOT)
+    written.append("EXECUTIVE-SUMMARY.md")
+
     # Repository record of the audit, generated from the same data as hub/audit.html
     # so the two can never drift apart.
     md = ["# Independent audit - 8 November 2026", "",
@@ -1659,9 +1670,9 @@ def build():
     md += ["", "## Findings that changed this pass", "",
            "- F04 rewritten: the banking page's 24-month sentence cannot be squared with either official "
            "worked example, so the time-stamped examples and Rule 4.12 are treated as controlling.",
-           "- F17 added: Unit 1's anniversary date depends on whether any original lessee remained after "
+           "- F19 added: Unit 1's anniversary date depends on whether any original lessee remained after "
            "the 2026 occupant change.",
-           "- F19 added: the complete Rules and Regulations compilation was linked but not read end to end.",
+           "- F20 added: the complete Rules and Regulations compilation was linked but not read end to end.",
            "- Notice kit added: the notice-content duties are split across section 37.3(b), Rule 4.10(a) "
            "and Rule 4.12(b), which is where a compliant increase most often fails.",
            "", "## Register totals", "",
