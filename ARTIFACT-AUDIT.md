@@ -44,3 +44,7 @@ python3 tools/followup_audit.py
 ```
 
 For the exact-token scan, keep the six literal tokens outside Git and pipe them through stdin; never paste them into a public file, command transcript or report. `tools/repository_audit.py --identifiers-stdin --history-ref origin/main` records only counts/paths, not values. A later CI run without tokens preserves the last exact/history result as explicitly labeled prior evidence, not a fresh CI scan.
+
+## Live release verification
+
+PR #24 merged as `7eb39fb`; validation and Pages deployment succeeded. Cache-busted live fetches confirmed the audit page, repaired docs mirror target and audit script are served from `main:/`. Live review caught and this follow-up corrects a generated-page count-rendering defect (raw list representations instead of integer counts); the corrected page is compact and responsive. Historical privacy exposure remains unresolved and disclosed.

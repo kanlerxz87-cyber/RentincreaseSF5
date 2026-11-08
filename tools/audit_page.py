@@ -26,6 +26,10 @@ TEMPLATE = r'''<!DOCTYPE html>
 '''
 
 
+def count(value) -> int:
+    return len(value) if isinstance(value, (list, tuple, set, dict)) else int(value or 0)
+
+
 def render(result: dict) -> str:
     last_exact = result.get("last_exact_scan") or {}
     last_history = result.get("last_history_scan") or {}
@@ -42,14 +46,14 @@ def render(result: dict) -> str:
         "STATUS_CLASS": "bad" if failures else "good",
         "STATUS": "Not a clean release pass." if failures else "Mechanical checks pass; review warnings remain.",
         "TRACKED": str(result["tracked_files"]), "HTML": str(result["html_files"]),
-        "ROWS": f"{result['table_rows']['total']:,}", "UNTRACEABLE": str(result["untraceable_rows"]),
+        "ROWS": f"{result['table_rows']['total']:,}", "UNTRACEABLE": str(count(result["untraceable_rows"])),
         "EXACT_FILES": str(len(result.get("current_exact_match_files") or [])),
         "EXACT_MODE": escape(str(exact_mode)),
         "HIST_COMMITS": str(hist.get("commits_with_matches", 0)),
         "HIST_PATHS": str(len(hist.get("affected_paths", []))),
         "FAIL_COUNT": str(len(failures)), "WARN_COUNT": str(len(result.get("warnings") or [])),
         "DIRECT": str(result["table_rows"]["direct"]),
-        "INDIRECT": str(result.get("indirect_only_rows", 0)), "FAILURES": items,
+        "INDIRECT": str(count(result.get("indirect_only_rows", 0))), "FAILURES": items,
     }
     page = TEMPLATE
     for key, value in values.items():
