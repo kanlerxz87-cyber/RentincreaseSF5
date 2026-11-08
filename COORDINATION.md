@@ -629,3 +629,41 @@ Flagged here for the owner to close or rebase.
 | Pages build/deploy | **success** (run 42414586035); Pages API status `built` |
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Landing page and `hub/flagged.html` retrieved from the deployed URL and read: consolidated hub is live, F01-F16 render with source links. Direct `curl` from the sandbox returns `000` because github.io is not on the sandbox egress allowlist - that is an network restriction, not a site fault; verification was done with the page-fetch tool. |
+
+---
+
+# Session `arena-fcb4d524` · branch `arena/fcb4d524-rentincreasesf5` · 2026-11-08
+
+## Registry
+
+| Session ID | Branch | Worktree | Started (UTC) | Status |
+| --- | --- | --- | --- | --- |
+| `arena-fcb4d524` | `arena/fcb4d524-rentincreasesf5` | repo root | 2026-11-08 | active — independent re-verification + publication |
+
+## Claim (written before any other file was touched)
+
+`main` is at `04d683e` (PR #12 merged). The prior final-integration session (`arena-d4b68642`)
+completed and merged; its claim is released. No other branch has commits newer than `main`, and no
+`in progress` row names a session with recent commits, so this session takes the final
+re-verification and publication task. Nothing published by an earlier session is deleted.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| V1 | Re-read the controlling official pages and re-verify the 62-row register line by line | `arena-fcb4d524` | `data/verified-register.csv`, `VERIFICATION.md` | in progress |
+| V2 | Correct the banking analysis (F04 / R26 / R28 / R29 and every page that repeats it) | `arena-fcb4d524` | `tools/build_hub.py`, `hub/**`, `index.html`, `site/hub/**`, `site/index.html` | in progress |
+| V3 | Release gates, PR, merge, confirm Pages deploy, record the result | `arena-fcb4d524` | `COORDINATION.md`, `README.md` | in progress |
+
+Not in scope: the earlier sets (`pages/`, `dashboard/`, `docs/`, root `process.html`/`amounts.html`/
+`protections.html`/`flagged.html`/`sources.html`) stay byte-for-byte unless a change is required to
+avoid publishing a wrong figure. Where an earlier set carries the superseded banking reading, this
+session records it on the consolidated Flagged page instead of rewriting another session's set.
+
+## Log
+
+- 2026-11-08: Claim written and pushed before any content file was edited.
+- Sources re-read this session (fetched and read in full, not summarised from memory): sf.gov
+  "Learn about rent increases" (S5), Form 571 rate table PDF (S4), "Banked rent increases" (S6),
+  Rules & Regulations Part IV §4.10/§4.12 (S7), Housing Inventory (S1), Admin Code §37.15 (S2),
+  §37.3 (S3), §37.10B (S15), §37.10C (S16), Rent Board Fee (S12), "Learn about San Francisco rental
+  laws" (S11), AB 1482 guidance (S10), Civil Code §§827 and 1947.12 (S8/S9), Tenant Petition page
+  (S20), Rule 6.14/Costa-Hawkins page (S14), Form 1007 (S21).
