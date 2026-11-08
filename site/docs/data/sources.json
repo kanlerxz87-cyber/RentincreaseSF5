@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "project": "Rental increase SF - Outer Sunset (ZIP 94122)",
+    "compiled": "2026-11-07",
+    "rule": "Every data row on the published site links to one of these sources. Rows that cannot be tied to an official source are marked unverified and moved to the Flagged for Review page."
+  },
+  "sources": {
+    "SFRB-CURRENT-RATES": {
+      "title": "Current Rates, including Rent Increase, Relocation, Sec. Deposit",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit",
+      "supports": "1.6% allowable increase for 3/1/2026-2/28/2027; 4.2% security deposit interest; capital improvement imputed interest rates; relocation payments."
+    },
+    "SFRB-571": {
+      "title": "Form 571 - Allowable Annual Rent Increases (2026-27)",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf",
+      "supports": "Full year-by-year history of allowable annual increases back to 4/1/1982; the 1.6% figure and the 60%-of-CPI formula."
+    },
+    "SFRB-LEARN-RENT-INCREASES": {
+      "title": "Learn about rent increases in San Francisco",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco/",
+      "supports": "Rent increase license requirement; 12-month rule; anniversary date; base-rent-only calculation; no rounding up; 30/90-day notice; additional-occupant rule; four Rent Board worked examples."
+    },
+    "SFRB-HOUSING-INVENTORY": {
+      "title": "The Rent Board Housing Inventory",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/rent-board-housing-inventory",
+      "supports": "Who must report; March 1 annual deadline; what to report; rent increase license is auto-generated; license must be current on the effective date."
+    },
+    "SFRB-BANKED": {
+      "title": "Banked rent increases",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://sf.gov/information/banked-rent-increases",
+      "supports": "Banking definitions; no limit on amount banked; banked increases do not expire; do not carry over to a new tenant; cannot be compounded or prorated; notice content. NOTE: contains a 24-month sentence that conflicts with Rule 4.12 - see Flagged page."
+    },
+    "SFRB-RR-PART4": {
+      "title": "Rent Board Rules and Regulations, Part IV - Rent Increases Not Requiring Approval (Section 4.10 Notice; Section 4.12 Banking)",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
+      "supports": "Rule 4.12: banking requires a full 12 months; banked increases are not compounded and not rounded up; Rule 4.10(a): required contents of the rent increase notice; Rule 4.10(b): non-conforming increase is null and void."
+    },
+    "SFRB-RR-COMPLETE": {
+      "title": "625 - Complete San Francisco Rent Board Rules and Regulations (last amended 1/13/26)",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/documents/36249/625_RR_Complete_1-13-26.pdf",
+      "supports": "Full text of the Rules and Regulations, including Section 6.14 (unlimited increase on remaining occupants when the last original occupant vacates)."
+    },
+    "SF-ORD-3715": {
+      "title": "Sec. 37.15 - Reporting Obligations; Licensing",
+      "publisher": "San Francisco Rent Ordinance (sf.gov)",
+      "url": "https://www.sf.gov/information/sec-3715-reporting-obligations-licensing",
+      "supports": "The 'license to impose rent increases'; substantial compliance; suspension during noncompliance; tenant not obligated to pay for months during suspension."
+    },
+    "SF-ORD-373": {
+      "title": "Sec. 37.3 - Rent Limitations",
+      "publisher": "San Francisco Rent Ordinance (sf.gov)",
+      "url": "https://www.sf.gov/information/sec-373-rent-limitations",
+      "supports": "Annual rent increase = 60% of published CPI change, capped at 7%; banking; capital improvement / O&M / utility passthrough framework."
+    },
+    "SF-ORD-COMPLETE": {
+      "title": "600 - Complete San Francisco Rent Ordinance (as amended 11/2/26)",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/documents/65403/600_Ordinance_11-02-26_2.pdf",
+      "supports": "Full ordinance text; official publisher is American Legal (codelibrary.amlegal.com)."
+    },
+    "SF-ORD-3710B": {
+      "title": "Sec. 37.10B - Tenant Harassment",
+      "publisher": "San Francisco Rent Ordinance (sf.gov)",
+      "url": "https://www.sf.gov/information/sec-3710b-tenant-harassment",
+      "supports": "Sec. 37.10B(a)(5): using a rent increase to influence a tenant to vacate is harassment; evidence of bad faith may include an increase substantially in excess of market rates for comparable units, or an increase within six months after an attempt to recover possession. Treble damages and attorney's fees."
+    },
+    "SF-ORD-3710C": {
+      "title": "Sec. 37.10C - Use and Sale of Algorithmic Devices Prohibited",
+      "publisher": "San Francisco Rent Ordinance (sf.gov)",
+      "url": "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited",
+      "supports": "Bans revenue-management / algorithmic rent-setting software in San Francisco (relevant to how large corporate owners set rents)."
+    },
+    "SFRB-FEE": {
+      "title": "The Rent Board Fee",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/rent-board-fee",
+      "supports": "$59.00 per dwelling unit for tax year 2026-2027; 50% ($29.50) recoverable from tenants; March 1 deadline; 5%/month late penalty capped at 15%."
+    },
+    "SFRB-2027-NOTICE": {
+      "title": "Notification of Rent Board Fee and Housing Inventory Requirements (2027 Informational Notice)",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement",
+      "supports": "'Some rent increases given without a license will be null and void'; reporting deadline March 1, 2027; 2027 fee exemption deadline Monday, December 14, 2026."
+    },
+    "SFRB-RENTAL-LAWS": {
+      "title": "Learn about San Francisco rental laws",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws",
+      "supports": "June 13, 1979 coverage cutoff; units with eviction protection only; units entirely exempt from the Ordinance."
+    },
+    "SFRB-PETITIONS": {
+      "title": "Landlord Petitions and Passthroughs",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://sf.gov/landlord-petitions-and-passthroughs",
+      "supports": "The six rent increases that require a petition BEFORE serving notice; no filing fee; worksheets that must be filed before noticing."
+    },
+    "SFRB-TOPIC-329": {
+      "title": "Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://sf.gov/information/topic-no-329-petition-determination-pursuant-section-614-andor-costa-hawkins",
+      "supports": "Roommate / replacement-occupant rules; the 6.14 notice; co-tenants vs subtenants; Costa-Hawkins 1954.53(d) limits."
+    },
+    "SFRB-COSTA-HAWKINS-SFR": {
+      "title": "Partial Exemption for Certain Single-Family Homes and Condominiums Under Costa-Hawkins",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://sf.gov/information/partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins",
+      "supports": "Costa-Hawkins removes rent-increase limits (not just-cause) for SFR/condo tenancies that commenced on or after 1/1/1996; two-unit buildings are not exempt."
+    },
+    "SFRB-LAWS-REGS": {
+      "title": "Rent Board Laws and Regulations",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/resource--2023--rent-board-laws-and-regulations",
+      "supports": "Index of the Ordinance, Rules and Regulations, Chapter 37A (fee), Costa-Hawkins, Ellis Act, AB 1482."
+    },
+    "CA-CIV-827": {
+      "title": "California Civil Code Section 827 - notice of change of terms of lease",
+      "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+      "supports": "30 days' written notice for increases of 10% or less; 90 days for increases greater than 10% (alone or combined with other increases in the prior 12 months)."
+    },
+    "CA-CIV-1947-12": {
+      "title": "California Civil Code Section 1947.12 - AB 1482 statewide rent cap",
+      "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12.",
+      "supports": "5% + CPI (max 10%) cap; no more than two increments in 12 months; (d)(3) exemption for housing already under a lower local rent cap; (d)(5)(A)(ii) corporations cannot use the single-family/condo exemption."
+    },
+    "CA-CIV-1954-53": {
+      "title": "California Civil Code Section 1954.53 - Costa-Hawkins vacancy decontrol",
+      "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53.",
+      "supports": "Owner may set the initial rental rate for a new tenancy, subject to the listed exceptions (e.g. prior tenancy terminated by the owner)."
+    },
+    "HUD-FHA": {
+      "title": "Housing Discrimination Under the Fair Housing Act",
+      "publisher": "U.S. Department of Housing and Urban Development (hud.gov)",
+      "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
+      "supports": "Federal protected classes: race, color, national origin, religion, sex, familial status, disability."
+    },
+    "CRD-HOUSING": {
+      "title": "Housing Discrimination (California Civil Rights Department)",
+      "publisher": "State of California, Civil Rights Department (calcivilrights.ca.gov)",
+      "url": "https://calcivilrights.ca.gov/housing/",
+      "supports": "FEHA protected characteristics (broader than federal, includes source of income, immigration status, primary language, age, retaliation); applies to landlords."
+    },
+    "SFRB-AB1482": {
+      "title": "The California Tenant Protection Act of 2019 (AB 1482)",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482/",
+      "supports": "Official confirmation that the AB 1482 cap for San Francisco is 8.8% (5% + 3.8% CPI) for Aug 1, 2026 - Jul 31, 2027, AND that 'This does NOT apply for units under the rent increase limitations of the San Francisco Rent Ordinance.' Also lists the corporation / REIT / LLC-with-corporate-member exclusion from the single-family exemption."
+    },
+    "SFRB-RR-1314": {
+      "title": "Rent Board Rules and Regulations, Part XIII - Reporting Obligations Under Rent Ordinance Section 37.15 (incl. Section 13.14 Licensing - Notice of Rent Increase)",
+      "publisher": "San Francisco Rent Board (sf.gov)",
+      "url": "https://www.sf.gov/documents/36249/625_RR_Complete_1-13-26.pdf",
+      "supports": "Part XIII implements Ordinance Sec. 37.15. Section 13.14 is titled 'Licensing - Notice of Rent Increase'; Section 13.13 covers inadvertent failure to report information that is unknown and otherwise unobtainable. Confirmed from the official PDF table of contents and amendment list (Rules last amended 1/13/26)."
+    }
+  }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unit ledgers &amp; scenarios &middot; SF Rent Increase Research</title>
+<meta name="description" content="San Francisco rent increase research dashboard: Rent Board license, allowable increases, notice rules and unit-by-unit calculations, each row sourced to an official government page.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+<nav class="side">
+<div class="brand"><b>Rent Increase &mdash; SF</b><span>Outer Sunset &middot; ZIP 94122 &middot; research dashboard</span></div>
+<div class="sec">Overview</div>
+<a href="index.html">Executive summary</a>
+<div class="sec">The license question</div>
+<a href="license.html">Do I need the Rent Board license?</a>
+<a href="steps.html">Step-by-step checklist</a>
+<div class="sec">The numbers</div>
+<a href="allowable.html">Allowable increase rates</a>
+<a href="units.html" class="active">Unit ledgers &amp; scenarios</a>
+<a href="notice.html">How to notify tenants</a>
+<div class="sec">Going further</div>
+<a href="passthroughs.html">Petitions &amp; passthroughs</a>
+<a href="owners.html">Corporate vs. individual owners</a>
+<a href="fair-housing.html">Discrimination risk: one or both?</a>
+<div class="sec">Reference</div>
+<a href="laws.html">Federal / state / local law</a>
+<a href="flagged.html">Flagged for review</a>
+<a href="sources.html">Source registry</a>
+</nav>
+<main>
+<h1>Unit ledgers &amp; scenarios</h1>
+<p class="lede">Anonymized unit-by-unit calculations. Every percentage traces back to Rent Board Form 571.</p>
+<div class="topnav"><a href="index.html">Overview</a> <a href="license.html">License</a> <a href="steps.html">Checklist</a> <a href="allowable.html">Rates</a> <a href="units.html">Units</a> <a href="notice.html">Notice</a> <a href="flagged.html">Flagged</a> <a href="sources.html">Sources</a></div>
+<div class="note">
+  <b>Anonymization</b>
+  Tenant names and initials are replaced with occupant codes throughout. Dates and
+  dollar amounts are unchanged, as requested. The mapping from codes to real people
+  exists only in a local file that is not committed to this repository.
+</div>
+
+
+<h2>Unit A</h2>
+<div class="grid g4">
+  <div class="kpi"><div class="k">Tenancy start</div>
+    <div class="v" style="font-size:17px">Feb 1, 2025</div>
+    <div class="s">Lease commencement</div></div>
+  <div class="kpi"><div class="k">Base rent</div><div class="v">$3,995.00</div>
+    <div class="s">Unchanged since move-in</div></div>
+  <div class="kpi"><div class="k">Anniversary</div>
+    <div class="v" style="font-size:19px">02/01</div>
+    <div class="s">Once every 12 months</div></div>
+  <div class="kpi"><div class="k">Next lawful date</div>
+    <div class="v" style="font-size:17px">Feb 1, 2027</div>
+    <div class="s">Keeps the anniversary intact</div></div>
+</div>
+
+<h3>Current occupants <span class="small muted">(anonymized)</span></h3>
+<div class="tw"><table>
+<thead><tr><th>Occupant</th><th>Role</th><th>Status</th><th>Since</th></tr></thead>
+<tbody><tr><td>Occupant A-1</td><td>Original occupant</td><td>Continuing</td><td class='nowrap'>Feb 1, 2025</td></tr><tr><td>Occupant A-4</td><td>Replacement occupant (moved in after the original lease)</td><td>Continuing</td><td class='nowrap'>Apr 1, 2026</td></tr></tbody></table></div>
+
+<h3>Banked increases available &mdash; verified line by line</h3>
+<div class="tw"><table>
+<thead><tr><th>Anniversary skipped</th><th class="num">Rate that year</th>
+<th>Rate period</th><th class="src">Source</th></tr></thead>
+<tbody><tr><td class='nowrap'>Feb 1, 2026</td><td class='num'>1.4%</td><td>2025-03-01 - 2026-02-28</td><td class='src'><span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span></td></tr></tbody></table></div>
+<p class="small muted">Assumes no increase has ever been served on this tenancy.
+<b>Unconfirmed &mdash; see <a href="flagged.html">flagged item 3</a>.</b></p>
+
+<h3>Scenarios at Feb 1, 2027</h3>
+<div class="tw"><table>
+<thead><tr><th>Scenario</th><th class="num">Banked</th><th class="num">Annual</th>
+<th class="num">Total</th><th class="num">Increase</th><th class="num">New base rent</th>
+<th>Notice</th></tr></thead>
+<tbody><tr><td><b>Current-year annual increase only</b></td><td class='num'>0%</td><td class='num'>1.6%</td><td class='num'>1.6%</td><td class='num'>$63.92</td><td class='num'>$4,058.92</td><td class='nowrap'>30 days<br><span class='small muted'>by Jan 2, 2027</span></td></tr>
+<tr><td><b>Current-year annual increase + the most recent banked year</b></td><td class='num'>1.4%</td><td class='num'>1.6%</td><td class='num'>3%</td><td class='num'>$119.85</td><td class='num'>$4,114.85</td><td class='nowrap'>30 days<br><span class='small muted'>by Jan 2, 2027</span></td></tr>
+<tr><td><b>Maximum lawful under Rule 4.12 (12-month banking test)</b></td><td class='num'>1.4%</td><td class='num'>1.6%</td><td class='num'>3%</td><td class='num'>$119.85</td><td class='num'>$4,114.85</td><td class='nowrap'>30 days<br><span class='small muted'>by Jan 2, 2027</span></td></tr></tbody></table></div>
+<p class="src">Banking rule: <span class="src"><a href="https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring" target="_blank" rel="noopener" title="Rent Board Rules and Regulations, Part IV - Rent Increases Not Requiring Approval (Section 4.10 Notice; Section 4.12 Banking)">San Francisco Rent Board &#8599;</a></span> &middot; Notice rule: <span class="src"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827." target="_blank" rel="noopener" title="California Civil Code Section 827 - notice of change of terms of lease">California Legislative Information &#8599;</a></span> &middot; Rates: <span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span>
+&middot; Base rent &amp; no rounding-up: <span class="src"><a href="https://www.sf.gov/learn-about-rent-increases-san-francisco/" target="_blank" rel="noopener" title="Learn about rent increases in San Francisco">San Francisco Rent Board &#8599;</a></span></p>
+
+<h2>Unit B</h2>
+<div class="grid g4">
+  <div class="kpi"><div class="k">Tenancy start</div>
+    <div class="v" style="font-size:17px">Jun 1, 2019</div>
+    <div class="s">Lease commencement</div></div>
+  <div class="kpi"><div class="k">Base rent</div><div class="v">$3,150.00</div>
+    <div class="s">Unchanged since move-in</div></div>
+  <div class="kpi"><div class="k">Anniversary</div>
+    <div class="v" style="font-size:19px">06/01</div>
+    <div class="s">Once every 12 months</div></div>
+  <div class="kpi"><div class="k">Next lawful date</div>
+    <div class="v" style="font-size:17px">Jun 1, 2027</div>
+    <div class="s">Keeps the anniversary intact</div></div>
+</div>
+
+<h3>Current occupants <span class="small muted">(anonymized)</span></h3>
+<div class="tw"><table>
+<thead><tr><th>Occupant</th><th>Role</th><th>Status</th><th>Since</th></tr></thead>
+<tbody><tr><td>Occupant B-1</td><td>Original occupant</td><td>Continuing</td><td class='nowrap'>Jun 1, 2019</td></tr><tr><td>Occupant B-2</td><td>Original occupant</td><td>Continuing</td><td class='nowrap'>Jun 1, 2019</td></tr></tbody></table></div>
+
+<h3>Banked increases available &mdash; verified line by line</h3>
+<div class="tw"><table>
+<thead><tr><th>Anniversary skipped</th><th class="num">Rate that year</th>
+<th>Rate period</th><th class="src">Source</th></tr></thead>
+<tbody><tr><td class='nowrap'>Jun 1, 2020</td><td class='num'>1.8%</td><td>2020-03-01 - 2021-02-28</td><td class='src'><span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span></td></tr><tr><td class='nowrap'>Jun 1, 2021</td><td class='num'>0.7%</td><td>2021-03-01 - 2022-02-28</td><td class='src'><span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span></td></tr><tr><td class='nowrap'>Jun 1, 2022</td><td class='num'>2.3%</td><td>2022-03-01 - 2023-02-28</td><td class='src'><span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span></td></tr><tr><td class='nowrap'>Jun 1, 2023</td><td class='num'>3.6%</td><td>2023-03-01 - 2024-02-29</td><td class='src'><span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span></td></tr><tr><td class='nowrap'>Jun 1, 2024</td><td class='num'>1.7%</td><td>2024-03-01 - 2025-02-28</td><td class='src'><span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span></td></tr><tr><td class='nowrap'>Jun 1, 2025</td><td class='num'>1.4%</td><td>2025-03-01 - 2026-02-28</td><td class='src'><span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span></td></tr><tr><td class='nowrap'>Jun 1, 2026</td><td class='num'>1.6%</td><td>2026-03-01 - 2027-02-28</td><td class='src'><span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span></td></tr></tbody></table></div>
+<p class="small muted">Assumes no increase has ever been served on this tenancy.
+<b>Unconfirmed &mdash; see <a href="flagged.html">flagged item 3</a>.</b></p>
+
+<h3>Scenarios at Jun 1, 2027</h3>
+<div class="tw"><table>
+<thead><tr><th>Scenario</th><th class="num">Banked</th><th class="num">Annual</th>
+<th class="num">Total</th><th class="num">Increase</th><th class="num">New base rent</th>
+<th>Notice</th></tr></thead>
+<tbody><tr><td><b>Current-year annual increase only</b></td><td class='num'>0%</td><td class='num'>&mdash;</td><td class='num'>&mdash;</td><td class='num'>&mdash;</td><td class='num'>&mdash;</td><td class='nowrap'>30 days<br><span class='small muted'>by May 2, 2027</span></td></tr>
+<tr><td><b>Current-year annual increase + the most recent banked year</b></td><td class='num'>1.6%</td><td class='num'>&mdash;</td><td class='num'>&mdash;</td><td class='num'>&mdash;</td><td class='num'>&mdash;</td><td class='nowrap'>30 days<br><span class='small muted'>by May 2, 2027</span></td></tr>
+<tr><td><b>Maximum lawful under Rule 4.12 (12-month banking test)</b></td><td class='num'>13.1%</td><td class='num'>&mdash;</td><td class='num'>&mdash;</td><td class='num'>&mdash;</td><td class='num'>&mdash;</td><td class='nowrap'>90 days<br><span class='small muted'>by Mar 3, 2027</span></td></tr></tbody></table></div>
+<p class="src">Banking rule: <span class="src"><a href="https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring" target="_blank" rel="noopener" title="Rent Board Rules and Regulations, Part IV - Rent Increases Not Requiring Approval (Section 4.10 Notice; Section 4.12 Banking)">San Francisco Rent Board &#8599;</a></span> &middot; Notice rule: <span class="src"><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827." target="_blank" rel="noopener" title="California Civil Code Section 827 - notice of change of terms of lease">California Legislative Information &#8599;</a></span> &middot; Rates: <span class="src"><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener" title="Form 571 - Allowable Annual Rent Increases (2026-27)">San Francisco Rent Board &#8599;</a></span>
+&middot; Base rent &amp; no rounding-up: <span class="src"><a href="https://www.sf.gov/learn-about-rent-increases-san-francisco/" target="_blank" rel="noopener" title="Learn about rent increases in San Francisco">San Francisco Rent Board &#8599;</a></span></p>
+
+
+<div class="note warn">
+  <b>Unit B &mdash; two numbers are deliberately blank</b>
+  The Rent Board has not published the allowable increase for the period containing
+  June 1, 2027, so the annual component and every total that depends on it are shown
+  blank. What <i>is</i> verified is the banked component: <b>13.1%</b> under Rent Board
+  Rule 4.12. Because that already exceeds 10% on its own, a 90-day notice is required if
+  you take it. <span class="src"><a href="https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring" target="_blank" rel="noopener" title="Rent Board Rules and Regulations, Part IV - Rent Increases Not Requiring Approval (Section 4.10 Notice; Section 4.12 Banking)">San Francisco Rent Board &#8599;</a></span>
+</div>
+
+<h2>Banking: the one rule that changes everything for Unit B</h2>
+<div class="tw"><table>
+<thead><tr><th>Question</th><th>Official answer</th><th class="src">Source</th></tr></thead>
+<tbody>
+<tr><td>How long before a skipped increase can be banked?</td>
+  <td><b>A full 12 months</b> &mdash; Rule 4.12(a): &ldquo;A full 12 months must have
+  elapsed from the date that an annual rent increase, or a portion thereof, could have
+  been imposed before this banking section becomes applicable.&rdquo;</td>
+  <td class="src"><span class="src"><a href="https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring" target="_blank" rel="noopener" title="Rent Board Rules and Regulations, Part IV - Rent Increases Not Requiring Approval (Section 4.10 Notice; Section 4.12 Banking)">San Francisco Rent Board &#8599;</a></span></td></tr>
+<tr><td>Is there a limit on how much can be banked?</td>
+  <td><b>No.</b> &ldquo;There is no limit on how much can be banked&rdquo; (back to
+  April 1, 1982).</td><td class="src"><span class="src"><a href="https://sf.gov/information/banked-rent-increases" target="_blank" rel="noopener" title="Banked rent increases">San Francisco Rent Board &#8599;</a></span></td></tr>
+<tr><td>Do banked increases expire?</td>
+  <td><b>No</b> &mdash; not during a tenancy. But they <b>do not carry over to a new
+  tenant</b>.</td><td class="src"><span class="src"><a href="https://sf.gov/information/banked-rent-increases" target="_blank" rel="noopener" title="Banked rent increases">San Francisco Rent Board &#8599;</a></span></td></tr>
+<tr><td>Can I compound them?</td>
+  <td><b>No.</b> &ldquo;Banked increases shall not be compounded and shall not be
+  rounded up.&rdquo; Add the percentages, then apply the total to the current base
+  rent.</td><td class="src"><span class="src"><a href="https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring" target="_blank" rel="noopener" title="Rent Board Rules and Regulations, Part IV - Rent Increases Not Requiring Approval (Section 4.10 Notice; Section 4.12 Banking)">San Francisco Rent Board &#8599;</a></span></td></tr>
+<tr><td>Can I take only part of the banked amount?</td>
+  <td>Yes. &ldquo;If only part of the allowable increase is used, the rest is banked.
+  The remaining portion may be imposed at a later time, after at least 12 months have
+  passed.&rdquo;</td><td class="src"><span class="src"><a href="https://sf.gov/information/banked-rent-increases" target="_blank" rel="noopener" title="Banked rent increases">San Francisco Rent Board &#8599;</a></span></td></tr>
+<tr><td>Does a new owner inherit them?</td>
+  <td>Yes &mdash; &ldquo;New owners may use banked increases from prior owners.&rdquo;</td>
+  <td class="src"><span class="src"><a href="https://sf.gov/information/banked-rent-increases" target="_blank" rel="noopener" title="Banked rent increases">San Francisco Rent Board &#8599;</a></span></td></tr>
+</tbody></table>
+</div>
+
+<h2>Unit A &mdash; the replacement occupant matters</h2>
+<div class="card">
+<p>Unit A's original lease had three occupants; today it has one of the originals plus a
+replacement occupant. Three rules govern that, and they point in different directions:</p>
+<ul class="tight">
+  <li><b>You cannot charge more because someone new moved in.</b> &ldquo;A landlord
+  cannot charge additional rent simply because a new (or additional) roommate has moved
+  into a unit with the existing tenant. This is an unlawful rent increase, even if the
+  lease or rental agreement provides for the additional charge.&rdquo; <span class="src"><a href="https://www.sf.gov/learn-about-rent-increases-san-francisco/" target="_blank" rel="noopener" title="Learn about rent increases in San Francisco">San Francisco Rent Board &#8599;</a></span></li>
+  <li><b>Costa-Hawkins does not help you here.</b> The market-rate reset under Civil
+  Code &sect;1954.53(d) applies to <i>subtenants and assignees</i> who moved in after
+  January 1, 1996. Per the Rent Board, &ldquo;any co-tenant who moved in after the
+  original occupant is not subject to such a rent increase, regardless of when the
+  co-tenant moved in.&rdquo; <span class="src"><a href="https://sf.gov/information/topic-no-329-petition-determination-pursuant-section-614-andor-costa-hawkins" target="_blank" rel="noopener" title="Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins">San Francisco Rent Board &#8599;</a></span></li>
+  <li><b>But Rules &amp; Regulations &sect;6.14 might, later.</b> &sect;6.14 allows an
+  unlimited increase on remaining occupants when the <b>last original occupant
+  vacates</b> &mdash; <i>but only if</i> you served each subsequent occupant a written
+  &ldquo;6.14 notice&rdquo; within a reasonable time (generally 60 days) of learning
+  about the occupancy. <span class="src"><a href="https://sf.gov/information/topic-no-329-petition-determination-pursuant-section-614-andor-costa-hawkins" target="_blank" rel="noopener" title="Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins">San Francisco Rent Board &#8599;</a></span></li>
+</ul>
+<div class="note ok">
+  <b>Action item &mdash; free, and time-sensitive</b>
+  An original occupant is still in Unit A, so no &sect;6.14 or Costa-Hawkins reset is
+  available today. But if you have <b>not</b> already served a written 6.14 notice on the
+  replacement occupant, serve one now. If you wait until the last original occupant
+  leaves, it is too late &mdash; the option is lost permanently. The Rent Board
+  recommends getting legal advice before relying on &sect;6.14.
+  <span class="src"><a href="https://sf.gov/information/topic-no-329-petition-determination-pursuant-section-614-andor-costa-hawkins" target="_blank" rel="noopener" title="Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins">San Francisco Rent Board &#8599;</a></span> <a href="https://www.sf.gov/documents/7737/537_6.14_Costa-Hawkins_Petition_3.25.pdf"
+  target="_blank" rel="noopener">Form 537 (6.14 / Costa-Hawkins petition) &#8599;</a>
+</div>
+</div>
+
+<footer>
+  <p><b>Every figure on this site is tied to an official government source.</b>
+  Anything that could not be confirmed from an official source is left blank and
+  listed on the <a href="flagged.html">Flagged for review</a> page.</p>
+  <p class="small">Tenant names and all personal details are anonymized. Dates and
+  dollar amounts are unchanged. This is research, not legal advice &mdash; confirm
+  with a San Francisco Rent Board counselor (415-252-4600, weekdays 9am&ndash;12pm
+  and 1&ndash;4pm) before serving any notice.</p>
+</footer>
+</main>
+</div>
+</body>
+</html>

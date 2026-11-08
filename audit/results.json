@@ -2,14 +2,7 @@
   "current_exact_match_files": [],
   "exact_identifier_check": "not-run",
   "exact_identifier_count": 0,
-  "failures": [
-    {
-      "detail": "Missing local target: ../docs/index.html",
-      "kind": "local-target",
-      "line": null,
-      "path": "site/hub/archive.html"
-    }
-  ],
+  "failures": [],
   "generic_initial_match_files": [],
   "history": null,
   "html_files": 103,

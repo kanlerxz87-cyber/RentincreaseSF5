@@ -5,7 +5,7 @@ path,bytes,lines,sha256,text_scanned,exact_identifier_check
 ARTIFACT-AUDIT.md,4678,46,bddcd56a7816e7464bb20211f7dc2101bd975590c7857db1b4a8fcbe5521270f,True,not-run
 AUDIT-2026-11-08.md,8445,93,50d848d804cc33505897d0c1b18d598ef0e2bbc3ee69ca38f96f15581a762fd9,True,not-run
 BUILD-REPORT.md,1941,66,22c350d91d6a38c9e626eff77fdf49719f28c571b9f526c15fe46ff779d3de95,True,not-run
-COORDINATION.md,79730,923,cf03c47f619bbfad801a2c2f79ebe73d926f7489dd796313f84a233a17565011,True,not-run
+COORDINATION.md,80547,927,9c6cf94bb4541224bfab5dc1a2071cad0d810d1ba308578a55b9bef9a77bba83,True,not-run
 EXECUTIVE-SUMMARY.md,9229,54,b258b14d587af4ee259c10d9679b8620654180d86de616ea75442ac46273ca91,True,not-run
 PRIVACY-REVIEW.md,4912,58,330fdcb06d89e545f3131a321eeb500e1144566e47a6e0bf0f3b5aeed919bd18,True,not-run
 README.md,10867,156,f0885bb266ec41a93ed2e4768f699446b7cfc9ba33a8a47a13e05695f0680fc8,True,not-run
@@ -13,10 +13,10 @@ VERIFICATION.md,27640,341,4ecd36edb339d76945fb77283ca11f06098b6377516199636f4679
 amounts.html,7670,1,46df2b000233d3e77bce4817a15349fd57ed66ea59cc8e75291fc2d211104298,True,not-run
 assets/rent-dashboard.css,5709,229,45bee4e046db4ec4826f40331cfa2a5bfd8d7692121afa3c1ccb004fec6f7fe0,True,not-run
 assets/style.css,5979,95,7efa49ca457eacd759028600a32a65df3a75374060c84c0a3691dd39cdbc999c,True,not-run
-audit/artifact-manifest.csv,19130,175,c438fb849e663e214af05a0c2869e97dd05413689aa8ca3cce2c85055755b5af,True,not-run
-audit/index.html,50407,21,29165b82bb526c48573b7f65f803134c602400c1e6d7b638e3bd296c81fc1b18,True,not-run
+audit/artifact-manifest.csv,19448,178,b8c4991080b6667c51f0be5f8e7f0f78dda992cc1850aad28c7d05364bf7f227,True,not-run
+audit/index.html,50407,21,8a70d6b744c26594b0a9d97aa7fdb7f976be0967f55acb0e48d818ff4fbba015,True,not-run
 audit/register-line-review.csv,15880,63,3e45812cbd8e1a49083cf80dc120caf24391d0e2540d12e158cc12040222370c,True,not-run
-audit/results.json,97798,4151,898472edc5afbb7a15f55df7566146bf51bbcae60ad52e585b11595aa0508715,True,not-run
+audit/results.json,97798,4151,92b99063f61aa4421556d6674ff28ecd3f293eff584dbc896196c608a3047bdc,True,not-run
 audit/source-review.json,10053,39,bae3ce6970fc229bdf3bb31881151a5f1ec4a4fd5c83aead327de6d8fb05eccd,True,not-run
 build.py,67176,1174,8b9fba0ec08af7bd0d2518852517774830e5669ec712cea647ba3bdbf7023efc,True,not-run
 dashboard/.nojekyll,0,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,True,not-run
@@ -102,7 +102,7 @@ protections.html,7533,1,4f3491bf4223b2f8b59f2679cbe322c9988913f77160f480dc5c4d5c
 research/01-license-and-rent-board.md,5532,109,470a6bbf288ca13d4aa94df7083975a9aa7bcf6dae206d280d39252643034476,True,not-run
 research/02-allowable-increases.md,3497,71,3efaa5b1503de00d3e4b1b11e866a66c7fafb6f3c644b99dfbdb300a8996a708,True,not-run
 research/03-state-and-federal.md,6588,125,c9c89f63935c3672ec185b4ca7cfb05edaa7c105592aee34ec1133c231ca6b9a,True,not-run
-scripts/build.py,21514,124,8b2a36a7387fe8be6b24d7c058f2c6371ea31070f571ddc1565e61ab401c2ca8,True,not-run
+scripts/build.py,21818,128,c062f6e47163f68dbf9aa592243d17fa2f328766e232fc16af3d6c5ea379aebc,True,not-run
 scripts/check.py,1224,27,9b77a8cd0dabb5304f6975c10be38fbc0cae42ce62f5afef271563bf03591731,True,not-run
 scripts/independent_audit.py,2554,52,07ca4291323ef1517c9242a3ecf1c96f60f408bf0a93411bb8a875228f5af450,True,not-run
 site/.nojekyll,0,0,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,True,not-run
