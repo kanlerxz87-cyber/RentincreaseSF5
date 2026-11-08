@@ -269,3 +269,18 @@ site prices only the first reading and now flags the second. The lease and rent 
 Unchanged from the previous record: no lease, rent ledger, parcel record, portal record or attorney
 opinion was available, so nothing here certifies that a particular increase on a particular unit is
 lawful. External links are validated for publisher and shape, not for perpetual availability.
+
+## 6. Addendum — remaining sources re-read (2026-11-08)
+
+| Source | What it confirmed |
+| --- | --- |
+| [Annual rent increase for multiple years](https://www.sf.gov/information--annual-rent-increase-multiple-years) | Increases are added, not compounded; no petition is required; no rounding up; at least 30 days' notice, 35 if mailed; base rent only. Supports R11, R30 and R37. |
+| [HUD — Fair Housing Act overview](https://www.hud.gov/helping-americans/fair-housing-act-overview) | Federal protected classes: race, colour, national origin, religion, sex, familial status, disability. No federal rent ceiling is stated. Supports R46 and R47. |
+| [Landlord Petitions and Passthroughs](https://www.sf.gov/landlord-petitions-and-passthroughs) | Six increase types require a petition **before** the notice; an annual or banked increase is not one of them. Added as **S22** and cited on R11 and on the process page. |
+
+## 7. Additions to the published hub
+
+- A "Your questions, answered" table on the landing page: the owner's seven questions, each with a
+  short answer, the page that develops it, and the official source for the row.
+- Source **S22** added to the source register and cited where the petition rule is stated.
+- Footer verification date moved to 8 November 2026 for the consolidated set.

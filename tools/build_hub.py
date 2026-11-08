@@ -68,6 +68,8 @@ SOURCES = {
             "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/"),
     "S21": ("Form 1007 - Notice to Tenant / Tenant Right to Counsel", "SF Rent Board",
             "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag[74].pdf"),
+    "S22": ("Landlord Petitions and Passthroughs", "SF Rent Board",
+            "https://www.sf.gov/landlord-petitions-and-passthroughs"),
 }
 
 # ---------------------------------------------------------------------------
@@ -188,7 +190,9 @@ row("licence", "Is the submitted inventory information confidential?",
     "Privacy consequence: do not put tenant names in free-text fields; the portal asks for owner "
     "business contact details, occupancy dates and base rent in $250 increments.")
 row("licence", "Is a Rent Board petition needed for an annual or banked increase?",
-    "No. Annual and banked increases do not require a petition or Board approval.", VERIFIED, ["S3", "S13", "S6"])
+    "No. Annual and banked increases do not require a petition or Board approval. The Rent Board lists "
+    "six increase types that require a petition filed before the notice, and an annual or banked "
+    "increase is not one of them.", VERIFIED, ["S3", "S13", "S6", "S22"])
 row("licence", "Rent Board fee (separate from the Inventory)",
     "$59.00 per dwelling unit for the 2026-2027 tax year, due March 1. "
     "5% monthly late penalty, capped at 15%.", VERIFIED, ["S12"])
@@ -634,6 +638,35 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
           'official source; they are flagged, not asserted. The percentages and notice periods are verified. '
           '<a href="hub/units.html">See the line-by-line arithmetic &rarr;</a></p></section>')
 
+    qrows = [
+        ["Do I have to tell the Rent Board, or apply for a licence, as an individual owner?",
+         e("You must hold the licence, but there is no application. Report each unit into the Housing Inventory; the licence is generated automatically and must be on file on the effective date."),
+         '<a href="hub/process.html">Nine-step process</a>', src("S1", "S2")],
+        ["What increase is reasonable and normal for these units?",
+         e("The published annual allowance: 1.6% for an effective date through 28 February 2027, once every 12 months, on base rent only, never rounded up - plus any banked percentage that satisfies Rule 4.12."),
+         '<a href="hub/rates.html">Rates and history</a>', src("S4", "S5")],
+        ["Does the state 8.8% cap or any federal law apply?",
+         e("No. Units covered by the SF ordinance are exempt from the AB 1482 cap under Civil Code sec. 1947.12(d)(3), and no federal rent ceiling was identified."),
+         '<a href="hub/laws.html">Law and protections</a>', src("S9", "S10", "S19")],
+        ["How do big operators and individual owners differ?",
+         e("Not in the cap - the same 1.6% applies to any landlord. What differs is documentation discipline. Algorithmic rent-setting on non-public competitor data is unlawful in San Francisco."),
+         '<a href="hub/practices.html">Owner practices</a>', src("S3", "S16")],
+        ["How should tenants be told, and what reasons are reasonable?",
+         e("A written notice stating the dollar amount, the percentage, the effective date and any banked portion: 30 days at or below 10% and 90 days above, plus 5 days if mailed. No reason is required, but the reason must not be retaliatory, discriminatory or coercive."),
+         '<a href="hub/notices.html">Notices</a>', src("S8", "S7", "S15")],
+        ["Would this pass a tenant-side lawyer's review?",
+         e("That is the test this site is built for: licence on file, correct percentage, twelve months since the last increase, compliant notice, arithmetic to the cent, and the per-unit reasoning written down."),
+         '<a href="hub/review.html">Tenant-lawyer test</a>', src("S20", "S7")],
+        ["Should I raise one unit or both?",
+         e("No rule requires both or requires equal amounts. A difference explained by tenancy history is a business reason; a difference that tracks a protected characteristic or a complaint is not."),
+         '<a href="hub/practices.html">One unit or both</a>', src("S3", "S18", "S19")],
+    ]
+    b += '<section class="panel"><h2>Your questions, answered</h2>'
+    b += table("Each question with a short answer and the page that develops it",
+               ["Question", "Short answer", "Where it is explained", "Official source"],
+               qrows)
+    b += '</section>'
+
     b += '<section class="panel"><h2>Browse by category</h2><div class="cards">'
     for href, label, desc in [
         ("executive-summary.html", "Executive summary", "The licence answer first, then the numbers, the risks and the decisions."),
@@ -766,7 +799,7 @@ def page_process():
         ("Check whether a petition is needed",
          "For an annual or banked increase, no petition. A petition is required only for the special "
          "types such as certified capital improvements or an operating and maintenance shortfall, and "
-         "those must be filed before the notice.", ["S3", "S13"]),
+         "those must be filed before the notice.", ["S3", "S13", "S22"]),
         ("Work out the notice period",
          "30 days if the increase is 10% or less, 90 days if it is more than 10%, measured against the "
          "rent charged in the previous 12 months and combined with any other increase in that window. "
@@ -1190,7 +1223,7 @@ def page_verification():
          e("Defect found in the previous landing page and fixed; now guarded."), badge(VERIFIED) + " " + src("S5")],
         ["Merge markers", e("Scan for unresolved conflict markers in tracked files."),
          e("Markers found in the coordination file and repaired; now guarded."), badge(VERIFIED) + " " + src("S5")],
-        ["Re-read of every controlling page (8 Nov 2026)", e("Rule 4.12, the banking page, Form 571, sec. 37.15, sec. 37.3, sec. 37.10B, sec. 37.10C, the Housing Inventory, the fee page, the counsellor page, AB 1482 guidance, Civil Code secs. 827, 1942.5 and 1947.12, the petition page, the Rule 6.14 page and Form 1007 opened and read again."),
+        ["Re-read of every controlling page (8 Nov 2026)", e("Rule 4.12, the banking page, Form 571, sec. 37.15, sec. 37.3, sec. 37.10B, sec. 37.10C, the Housing Inventory, the fee page, the counsellor page, AB 1482 guidance, Civil Code secs. 827, 1942.5 and 1947.12, the tenant petition page, the landlord petitions page, the multiple-year increase page, the Rule 6.14 page, the HUD overview and Form 1007 opened and read again."),
          e("Every quoted value reproduced. The 1.6% current rate, the $59.00 fee, the 415-252-4600 counsellor line and hours, the 8.8% state figure, sec. 1947.12(d)(3) and the 12-month Rule 4.12 text all matched."), badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S6", "S7", "S8")],
         ["Banking analysis corrected", e("The previous version said the 24-month and 12-month wordings reconcile because both point at 24 months after tenancy start."),
          e("That reconciliation is not supported. The Board's examples bank an increase 12 months after availability and lose one after 11 months, and the banking page's own example banks at 12 months. The sentence is an unresolved inconsistency; Rule 4.12 is applied and the alternative figures are published."), badge(ANALYSIS) + " " + src("S5", "S6", "S7")],
