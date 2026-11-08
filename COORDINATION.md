@@ -630,6 +630,53 @@ Flagged here for the owner to close or rebase.
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Landing page and `hub/flagged.html` retrieved from the deployed URL and read: consolidated hub is live, F01-F16 render with source links. Direct `curl` from the sandbox returns `000` because github.io is not on the sandbox egress allowlist - that is an network restriction, not a site fault; verification was done with the page-fetch tool. |
 
+---
+
+# Session `arena-0691d955` · branch `arena/0691d955-rentincreasesf5` · 2026-11-08
+
+## Registry
+
+| Session ID | Branch | Worktree | Started (UTC) | Status |
+| --- | --- | --- | --- | --- |
+| `arena-0691d955` | `arena/0691d955-rentincreasesf5` | repo root | 2026-11-08 | active — independent re-verification, defect repair, publish |
+
+## Claim (written before any other file was touched)
+
+Prior sessions' PRs (#1–#4, #6, #8–#11) are merged to `main`; PRs #5 and #7 are stale open
+branches owned by other sessions and are **not touched** here. No row on the board names a session
+still committing, so the 60-minute takeover rule does not need to be invoked: this session takes a
+**new, independent verification task** over the already-published tree rather than a handoff.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| V1 | Re-verify every published figure on `hub/**` against the official source, line by line | `arena-0691d955` | `COORDINATION.md`, `VERIFICATION.md` | in progress |
+| V2 | Repair defects found by V1 (historical rate-table century bug, others as found) | `arena-0691d955` | `tools/build_hub.py`, `hub/**`, `site/hub/**` | in progress |
+| V3 | Independent arithmetic re-check of both units' options | `arena-0691d955` | `VERIFICATION.md`, `hub/units.html` | in progress |
+| V4 | Release gates: build, links, privacy scan, one official source per row | `arena-0691d955` | `tools/release_gate.py` | in progress |
+| V5 | PR → merge → confirm GitHub Pages deploy → record result | `arena-0691d955` | `COORDINATION.md` | in progress |
+| V6 | Publish newly found irregularities on the Flagged for Review page | `arena-0691d955` | `hub/flagged.html`, `data/flagged.csv` | in progress |
+
+No prior session's page, data file or record is deleted. Repair of an incorrect published value is
+recorded in the log and on `hub/flagged.html` rather than done silently.
+
+---
+
+# Session `arena/3a6f02e5-rentincreasesf5` · 2026-11-08 · independent final audit
+
+All earlier integration tasks on the board are recorded as done; no active task is taken over.
+Arena requires this session to remain on its fixed branch, so no additional session branch is created.
+
+| Task | Status | Owner | File scope |
+| --- | --- | --- | --- |
+| Re-read controlling official sources and audit published rules, calculations, privacy, and links | done | `arena/3a6f02e5-rentincreasesf5` | `COORDINATION.md`, `AUDIT-2026-11-08.md` |
+| Repair any defects found, rebuild, open PR to main, merge, and confirm Pages | done | `arena/3a6f02e5-rentincreasesf5` | Defect-specific files logged here before editing |
+
+No personal identifiers will be copied into the audit. Dates and amounts supplied by the owner remain
+unverified records, not official facts. No Inventory filing, licence request, or tenant notice will be performed.
+- 2026-11-08 defect scope extension: correct `README.md`'s inaccurate claim that historical identifier exposure never occurred. Current files are clean; prior public Git history was not rewritten. No identifiers will be reproduced. Also add `AUDIT-2026-11-08.md` to this session's audit scope.
+
+---
+
 ## Session arena-75594f57 — 2026-11-08
 Prior integration is complete (PR #12 at current main). Taking a new, non-overlapping follow-up audit; no active session's work is overwritten. Platform requires the assigned branch rather than a session-named branch.
 
@@ -651,6 +698,17 @@ No personal identifiers will be copied to tracked files. Official sources must b
 - Local validation: reproducible full build; all prior checks and new follow-up audit pass. Consolidated gate checks 14 pages, 300 source-linked rows, 778 links, zero orphans, 15 mirror pairs and 5 recalculated scenarios. This is a structural/source-coverage check, not proof each citation substantiates every archived claim. tools/dashboard_check_links.py prints “sources verified live” but its output must not be treated as fresh external-fetch evidence; fresh retrieval evidence is the source list above.
 - Page-fetch confirmed deployed Flagged for Review contains the new conditional banner and corrected F01; initial landing retrieval returned an older cached version, so deployment evidence is GitHub's successful run rather than that cached landing response. No claim of exhaustive external link availability or legal certification.
 - Final consistency pass also makes F04's resolution conditional on the unverified ledger, matching F18. This and the deployment record are included in the follow-up record PR from the same assigned branch.
+
+- 2026-11-08 collision resolution: PR #16 became conflicting when arena-75594f57 merged PRs #13/#14. Merged `origin/main` into the fixed branch; preserved both coordination sections verbatim, retained the newer conditional-scenario and empirical-practice corrections, and retained this session's README privacy-history correction. No parallel work discarded.
+
+### Final publication record — arena/3a6f02e5-rentincreasesf5
+- Independent audit: `AUDIT-2026-11-08.md`; fresh official-source links and limitations recorded. F17–F18 from the parallel follow-up remain needs review and non-blocking.
+- Combined local gate after preserving the parallel work: 14 consolidated pages, 300 source-linked rows, 778 links, 0 orphans, 15 mirrors, 5 recalculated scenarios; all earlier checks and 21/21 calculation tests pass.
+- PR [#16](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/16) validation run 42532137767: success.
+- PR #16 merged 2026-11-08 22:49:45 UTC; merge commit `ef2869c62ba14c3fe0e7fad2a56880ae7fa4984e`.
+- Main validation run 42532168058: success. Pages build/deploy run 42532167597: success. Pages API latest build is `built` at the PR #16 merge commit.
+- Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF5/. Deployed Flagged page retrieved; its first chunk can be cached and showed the prior F04 wording while F01/banner were current. Deployment evidence is the successful build at the merge commit, not a claim that every CDN cache refreshed simultaneously.
+- Rebase note: the required pre-push `pull --rebase` was attempted after the main-integration merge and tried to replay parallel commits with a coordination conflict. It was aborted to preserve the resolved merge; the remote session branch had not advanced, so the merge commit was pushed without discarding or rewriting parallel work.
 
 ---
 

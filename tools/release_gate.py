@@ -14,7 +14,8 @@ Checks
   7. no unresolved git merge-conflict marker in any tracked text file
   8. root / site mirror parity
   9. HTML tag balance
- 10. the rate table matches the officially published Form 571 values
+ 10. the rate table matches the officially published Form 571 values and every
+     effective period falls inside 1982-2027 (guards the F19 century defect)
  11. scenario arithmetic recomputes to the cent and is never rounded up
 
 Usage: python3 tools/release_gate.py
@@ -275,6 +276,17 @@ def check_rates_and_arithmetic():
             fail("rates", "rate_on(%s) = %s, official %s" % (d, got, want))
     if len(H.RATES) != 46:
         fail("rates", "expected 46 periods from Form 571, found %d" % len(H.RATES))
+
+    # Form 571 covers 1 April 1982 to 28 February 2027 and nothing else. This
+    # range check is what catches a two-digit-year parsing error: the defect
+    # recorded as F19 printed the 1982-1999 rows as 2082-2099.
+    for a, b, _pct in H.RATES:
+        for label in (a, b):
+            y = H._d(label).year
+            if not 1982 <= y <= 2027:
+                fail("rates", "effective date %s parses to year %d, outside 1982-2027" % (label, y))
+    if H._d("3/1/99") != date(1999, 3, 1) or H._d("4/1/82") != date(1982, 4, 1):
+        fail("rates", "two-digit year parsing is wrong for 1982-1999")
 
     if abs(H.U1_TOTAL - 3.0) > 1e-9:
         fail("arithmetic", "Unit 1 total %.4f != 3.0" % H.U1_TOTAL)
