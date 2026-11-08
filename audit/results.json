@@ -1,0 +1,5015 @@
+{
+  "current_exact_match_files": [],
+  "exact_identifier_check": "stdin",
+  "exact_identifier_count": 6,
+  "failures": [
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/questions.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/questions.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/questions.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/questions.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/questions.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/questions.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/questions.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/questions.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "stray </a>",
+      "kind": "tag-balance",
+      "line": null,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "Missing local target: ../docs/index.html",
+      "kind": "local-target",
+      "line": null,
+      "path": "site/hub/archive.html"
+    }
+  ],
+  "generic_initial_match_files": [],
+  "history": {
+    "affected_paths": [
+      "scripts/check.py",
+      "scripts/independent_audit.py",
+      "tools/check_links.py",
+      "tools/release_gate.py"
+    ],
+    "commits_scanned": 54,
+    "commits_with_matches": 22,
+    "ref": "origin/main",
+    "text_versions_scanned": 4356,
+    "values_redacted": true
+  },
+  "html_files": 102,
+  "indirect_only_rows": [
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "dashboard/findings.html"
+    },
+    {
+      "line": 20,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 25,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 25,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 25,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 25,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 25,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/process.html"
+    },
+    {
+      "line": 35,
+      "path": "dashboard/units.html"
+    },
+    {
+      "line": 35,
+      "path": "dashboard/units.html"
+    },
+    {
+      "line": 54,
+      "path": "dashboard/units.html"
+    },
+    {
+      "line": 54,
+      "path": "dashboard/units.html"
+    },
+    {
+      "line": 54,
+      "path": "dashboard/units.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 22,
+      "path": "site/dashboard/findings.html"
+    },
+    {
+      "line": 20,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 20,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 25,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 25,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 25,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 25,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 25,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/process.html"
+    },
+    {
+      "line": 35,
+      "path": "site/dashboard/units.html"
+    },
+    {
+      "line": 35,
+      "path": "site/dashboard/units.html"
+    },
+    {
+      "line": 54,
+      "path": "site/dashboard/units.html"
+    },
+    {
+      "line": 54,
+      "path": "site/dashboard/units.html"
+    },
+    {
+      "line": 54,
+      "path": "site/dashboard/units.html"
+    }
+  ],
+  "limitations": [
+    "A source link does not prove that every sentence in a row is supported; semantic review is separate.",
+    "Owner-supplied rents, dates, coverage and license status are not authenticated by a government URL.",
+    "Without exact stdin/private-file input, only generic initial/address patterns run.",
+    "Historical matches, forks, caches and clones are not removed by this audit.",
+    "External URL retrieval evidence is recorded separately in audit/source-review.json."
+  ],
+  "links_and_assets_checked": 4674,
+  "mirror_files_checked": 54,
+  "schema": 1,
+  "scope": "All tracked artifacts; all root HTML including archived sets; local targets and citation traceability. Not a live external URL monitor or legal certification.",
+  "street_shaped_candidate_files": [
+    "pages/compilation.html",
+    "pages/rent-board-process.html",
+    "site/pages/compilation.html",
+    "site/pages/rent-board-process.html",
+    "tools/pages_1.py"
+  ],
+  "table_rows": {
+    "direct": 1348,
+    "indirect": 166,
+    "total": 1913,
+    "untraceable": 399
+  },
+  "text_files_scanned": 168,
+  "tracked_files": 168,
+  "unique_external_urls": 84,
+  "untraceable_rows": [
+    {
+      "line": 37,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "line": 40,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 31,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 31,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 36,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 36,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 41,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 41,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/method.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/method.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/method.html"
+    },
+    {
+      "line": 28,
+      "path": "dashboard/method.html"
+    },
+    {
+      "line": 110,
+      "path": "docs/allowable.html"
+    },
+    {
+      "line": 66,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 72,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 78,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 84,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 122,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 133,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 136,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 139,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 142,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 145,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "line": 67,
+      "path": "docs/flagged.html"
+    },
+    {
+      "line": 116,
+      "path": "docs/flagged.html"
+    },
+    {
+      "line": 119,
+      "path": "docs/flagged.html"
+    },
+    {
+      "line": 157,
+      "path": "docs/flagged.html"
+    },
+    {
+      "line": 161,
+      "path": "docs/flagged.html"
+    },
+    {
+      "line": 150,
+      "path": "docs/index.html"
+    },
+    {
+      "line": 153,
+      "path": "docs/index.html"
+    },
+    {
+      "line": 99,
+      "path": "docs/owners.html"
+    },
+    {
+      "line": 102,
+      "path": "docs/owners.html"
+    },
+    {
+      "line": 105,
+      "path": "docs/owners.html"
+    },
+    {
+      "line": 62,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 62,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 77,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 78,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 79,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 101,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 101,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 116,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 117,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 118,
+      "path": "docs/units.html"
+    },
+    {
+      "line": 35,
+      "path": "pages/allowed-increases.html"
+    },
+    {
+      "line": 73,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 74,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 79,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 93,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 94,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 95,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 96,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 97,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 98,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 99,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 100,
+      "path": "pages/compilation.html"
+    },
+    {
+      "line": 51,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "line": 25,
+      "path": "pages/laws.html"
+    },
+    {
+      "line": 25,
+      "path": "pages/owner-practices.html"
+    },
+    {
+      "line": 92,
+      "path": "pages/process.html"
+    },
+    {
+      "line": 93,
+      "path": "pages/process.html"
+    },
+    {
+      "line": 94,
+      "path": "pages/process.html"
+    },
+    {
+      "line": 95,
+      "path": "pages/process.html"
+    },
+    {
+      "line": 96,
+      "path": "pages/process.html"
+    },
+    {
+      "line": 43,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 44,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 45,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 46,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 47,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 48,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 49,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 50,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 51,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 60,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 61,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 62,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 63,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 64,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 65,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 66,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 67,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 68,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 69,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 70,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 71,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 72,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 73,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 74,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 75,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 76,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 77,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 78,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 79,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 80,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 81,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 89,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 90,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 91,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 92,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 93,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 94,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 95,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 96,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 103,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 104,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 105,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 106,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 107,
+      "path": "pages/rates.html"
+    },
+    {
+      "line": 39,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 41,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 50,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 59,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 68,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 77,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 86,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 95,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 104,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 118,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 119,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 120,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 121,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 122,
+      "path": "pages/review.html"
+    },
+    {
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "line": 61,
+      "path": "pages/units.html"
+    },
+    {
+      "line": 77,
+      "path": "pages/units.html"
+    },
+    {
+      "line": 37,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "line": 40,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 31,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 31,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 36,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 36,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 41,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 41,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/method.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/method.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/method.html"
+    },
+    {
+      "line": 28,
+      "path": "site/dashboard/method.html"
+    },
+    {
+      "line": 35,
+      "path": "site/pages/allowed-increases.html"
+    },
+    {
+      "line": 73,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 74,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 79,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 93,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 94,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 95,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 96,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 97,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 98,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 99,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 100,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "line": 51,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "line": 25,
+      "path": "site/pages/laws.html"
+    },
+    {
+      "line": 25,
+      "path": "site/pages/owner-practices.html"
+    },
+    {
+      "line": 92,
+      "path": "site/pages/process.html"
+    },
+    {
+      "line": 93,
+      "path": "site/pages/process.html"
+    },
+    {
+      "line": 94,
+      "path": "site/pages/process.html"
+    },
+    {
+      "line": 95,
+      "path": "site/pages/process.html"
+    },
+    {
+      "line": 96,
+      "path": "site/pages/process.html"
+    },
+    {
+      "line": 43,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 44,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 45,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 46,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 47,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 48,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 49,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 50,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 51,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 60,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 61,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 62,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 63,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 64,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 65,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 66,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 67,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 68,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 69,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 70,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 71,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 72,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 73,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 74,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 75,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 76,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 77,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 78,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 79,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 80,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 81,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 89,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 90,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 91,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 92,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 93,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 94,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 95,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 96,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 103,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 104,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 105,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 106,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 107,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "line": 39,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 41,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 50,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 59,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 68,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 77,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 86,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 95,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 104,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 118,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 119,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 120,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 121,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 122,
+      "path": "site/pages/review.html"
+    },
+    {
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "line": 61,
+      "path": "site/pages/units.html"
+    },
+    {
+      "line": 77,
+      "path": "site/pages/units.html"
+    }
+  ],
+  "warnings": [
+    {
+      "detail": "Street-shaped text; verify public agency address, not property address",
+      "kind": "address-candidate",
+      "line": 105,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "Street-shaped text; verify public agency address, not property address",
+      "kind": "address-candidate",
+      "line": 121,
+      "path": "pages/rent-board-process.html"
+    },
+    {
+      "detail": "Street-shaped text; verify public agency address, not property address",
+      "kind": "address-candidate",
+      "line": 105,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "Street-shaped text; verify public agency address, not property address",
+      "kind": "address-candidate",
+      "line": 121,
+      "path": "site/pages/rent-board-process.html"
+    },
+    {
+      "detail": "Street-shaped text; verify public agency address, not property address",
+      "kind": "address-candidate",
+      "line": 479,
+      "path": "tools/pages_1.py"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 37,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 40,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 31,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 31,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 36,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 36,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 41,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 41,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 28,
+      "path": "dashboard/method.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 28,
+      "path": "dashboard/method.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 28,
+      "path": "dashboard/method.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 28,
+      "path": "dashboard/method.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 110,
+      "path": "docs/allowable.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 66,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 72,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 78,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 84,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 122,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 133,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 136,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 139,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 142,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 145,
+      "path": "docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 67,
+      "path": "docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 116,
+      "path": "docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 119,
+      "path": "docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 157,
+      "path": "docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 161,
+      "path": "docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 150,
+      "path": "docs/index.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 153,
+      "path": "docs/index.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 99,
+      "path": "docs/owners.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 102,
+      "path": "docs/owners.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 105,
+      "path": "docs/owners.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 62,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 62,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 77,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 78,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 79,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 101,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 101,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 116,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 117,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 118,
+      "path": "docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 35,
+      "path": "pages/allowed-increases.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 73,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 74,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 79,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 93,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 94,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 95,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 96,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 97,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 98,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 99,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 100,
+      "path": "pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 51,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 25,
+      "path": "pages/laws.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 25,
+      "path": "pages/owner-practices.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 92,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 93,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 94,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 95,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 96,
+      "path": "pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 44,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 45,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 46,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 47,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 48,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 49,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 50,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 51,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 60,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 61,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 62,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 63,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 65,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 66,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 67,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 68,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 69,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 70,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 71,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 72,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 73,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 74,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 75,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 76,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 77,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 78,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 79,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 80,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 81,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 89,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 90,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 91,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 92,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 93,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 94,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 95,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 96,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 103,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 104,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 105,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 106,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 107,
+      "path": "pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 41,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 50,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 59,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 68,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 77,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 95,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 104,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 118,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 119,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 120,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 121,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 122,
+      "path": "pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 61,
+      "path": "pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 77,
+      "path": "pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 37,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 40,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "site/dashboard/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 29,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 31,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 31,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 33,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 36,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 36,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 38,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 41,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 41,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/dashboard/market.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 28,
+      "path": "site/dashboard/method.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 28,
+      "path": "site/dashboard/method.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 28,
+      "path": "site/dashboard/method.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 28,
+      "path": "site/dashboard/method.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 35,
+      "path": "site/pages/allowed-increases.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 73,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 74,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 79,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 93,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 94,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 95,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 96,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 97,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 98,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 99,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 100,
+      "path": "site/pages/compilation.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 51,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "site/pages/executive-summary.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 25,
+      "path": "site/pages/laws.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 25,
+      "path": "site/pages/owner-practices.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 92,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 93,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 94,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 95,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 96,
+      "path": "site/pages/process.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 43,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 44,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 45,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 46,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 47,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 48,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 49,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 50,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 51,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 60,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 61,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 62,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 63,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 64,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 65,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 66,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 67,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 68,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 69,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 70,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 71,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 72,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 73,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 74,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 75,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 76,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 77,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 78,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 79,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 80,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 81,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 89,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 90,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 91,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 92,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 93,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 94,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 95,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 96,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 103,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 104,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 105,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 106,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 107,
+      "path": "site/pages/rates.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 41,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 50,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 59,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 68,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 77,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 86,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 95,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 104,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 118,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 119,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 120,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 121,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 122,
+      "path": "site/pages/review.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 39,
+      "path": "site/pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 61,
+      "path": "site/pages/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 77,
+      "path": "site/pages/units.html"
+    },
+    {
+      "detail": "Exact identifiers remain in public history; current-file cleanup is not history removal. Values withheld.",
+      "kind": "historical-privacy",
+      "line": null,
+      "path": "origin/main"
+    }
+  ]
+}
