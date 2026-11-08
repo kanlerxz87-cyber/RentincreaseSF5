@@ -20,7 +20,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TODAY = date(2026, 11, 7)
+TODAY = date(2026, 11, 8)
 
 # ---------------------------------------------------------------------------
 # OFFICIAL SOURCES - every one retrieved and read during this session.
@@ -68,6 +68,18 @@ SOURCES = {
             "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/"),
     "S21": ("Form 1007 - Notice to Tenant / Tenant Right to Counsel", "SF Rent Board",
             "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag[74].pdf"),
+    "S22": ("Failure to Repair and Maintain Petitions (Form 516B)", "SF Rent Board",
+            "https://www.sf.gov/information--failure-repair-and-maintain-petitions"),
+    "S23": ("Rules and Regulations Part X (sec. 10.11 repair deferral, sec. 10.15 hardship)", "SF Rent Board",
+            "https://www.sf.gov/reports/august-2024/rent-board-rules-and-regulations-part-x-tenant-petition-arbitration"),
+    "S24": ("Complete Rules and Regulations, amended 13 January 2026", "SF Rent Board",
+            "https://www.sf.gov/documents/36249/625_RR_Complete_1-13-26.pdf"),
+    "S25": ("Rent Board Forms Center", "SF Rent Board",
+            "https://www.sf.gov/rent-board-forms-forms-center"),
+    "S26": ("Rent Board department home (counsellors, portal, office)", "SF Rent Board",
+            "https://www.sf.gov/departments--rent-board"),
+    "S27": ("The Rent Ordinance (Chapter 37 index)", "SF Rent Board",
+            "https://www.sf.gov/rent-ordinance/"),
 }
 
 # ---------------------------------------------------------------------------
@@ -353,6 +365,60 @@ row("review", "Hearing format",
     "Designed so that no one needs an attorney; parties may still be represented. The judge cannot "
     "consider evidence outside the record or not served on the other side.", VERIFIED, ["S20"])
 
+# --- Added by the 2026-11-08 re-verification session ------------------------
+row("licence", "What the Housing Inventory actually publishes about the unit",
+    "Owner name and business contact, business registration number if any, approximate square "
+    "footage in 250 sq ft increments, number of bedrooms and bathrooms, the date occupancy began, "
+    "the base rent in $250 increments and whether utilities are included. The submission is public "
+    "and is made under penalty of perjury.", VERIFIED, ["S1", "S2"],
+    "The exact rent is not published: it is reported in $250 bands, so $3,995.00 sits inside a band. "
+    "Do not type tenant names into free-text fields - the information is public.")
+row("licence", "Can part of the Rent Board fee be recovered from tenants?",
+    "Yes - 50%, i.e. $29.50 per dwelling unit, once the fee is paid in full, if the tenant lived in "
+    "the unit as of 1 November of the tax year. Penalties cannot be recovered.", VERIFIED, ["S12"])
+row("licence", "Is the validity of an increase tied to paying the fee?",
+    "", ABSENT, ["S2", "S12"],
+    "No provision was found linking enforceability of an increase to payment of the Chapter 37A fee; "
+    "sec. 37.15(e) ties the licence to Inventory reporting. This is an absence of authority, not a "
+    "legal conclusion.")
+row("rates", "Does an increase have to be 'reasonable' or match market rent?",
+    "", ABSENT, ["S3", "S6"],
+    "No official definition of a 'reasonable' or 'normal' increase was found. For a covered unit the "
+    "lawful ceiling is the published percentage plus any properly banked amount; a figure at or below "
+    "it needs no justification and no petition. Market rent matters only as one listed indicator of bad "
+    "faith in a sec. 37.10B(a)(5) circumvention claim.")
+row("notices", "Exactly 10 percent - 30 days or 90 days?",
+    "30 days. The 90-day rule applies when the increase is greater than 10 percent, so an increase of "
+    "exactly 10 percent stays in the 30-day band.", VERIFIED, ["S8"],
+    "The 10 percent is measured against the rent charged at any time in the 12 months before the "
+    "effective date, combined with any other increase in that window - so a passthrough or re-notice "
+    "can move a 10 percent increase into the 90-day band.")
+row("notices", "Can a tenant stop an increase over outstanding repairs?",
+    "Yes. A tenant may petition for deferral or denial of an annual or banked increase where required "
+    "repairs were not done. The petition must be filed no later than 60 days after the tenant receives "
+    "the notice; if granted, the increase is postponed until the work is done and rent already paid is "
+    "refunded. It is not granted if the repairs were completed before the effective date.",
+    VERIFIED, ["S22", "S23"])
+row("practices", "How do large corporate owners actually set increases?",
+    "", ABSENT, ["S2", "S3"],
+    "No government source retrieved describes corporate rent-setting practice, and no official "
+    "statistics on it were found. The legal position is identical for every owner: sec. 37.15(a) "
+    "applies to 'owners' and sec. 37.3(a)(1) to 'landlords', with no entity or portfolio threshold. "
+    "The practice associated with large operators that is specifically banned here is algorithmic "
+    "pricing on non-public competitor data (sec. 37.10C).")
+row("units", "Unit 1: which anniversary date governs?",
+    "", UNVERIFIED, ["S5", "S6"],
+    "Depends on a fact not supplied. If any original lessee remained, the tenancy continues from 2025-02-01: "
+    "the anniversary is 1 February and the increases available on 2026-02-01 (1.4%) and 2027-02-01 (1.6%) "
+    "give 3.0% from 2027-02-01. If every original lessee left and a new tenancy began 2026-04-01, the "
+    "anniversary is 1 April, nothing from the old tenancy banks (banked amounts do not survive a new "
+    "tenancy), and the first increase is available 2027-04-01 at the rate published 2027-03-01.")
+row("units", "Unit 2: which years are banked",
+    "The six anniversaries from 2020-06-01 to 2025-06-01: 1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 = 11.5%, "
+    "plus the 1.6% annual increase in effect on the effective date = 13.1%.", COMPUTED, ["S4", "S7"],
+    "Added, never compounded. The 2026-06-01 increase has not itself banked by 2027-02-28; the 1.6% "
+    "counted here is the annual increase in effect on the effective date, so nothing is counted twice.")
+
 # ---------------------------------------------------------------------------
 # Unit arithmetic - computed from owner-supplied inputs and official rates.
 # ---------------------------------------------------------------------------
@@ -414,6 +480,27 @@ nav.main{display:flex;gap:2px;flex-wrap:wrap;font-size:14px}
 nav.main a{padding:6px 10px;border-radius:6px;text-decoration:none;color:var(--muted)}
 nav.main a:hover{background:var(--bg);color:var(--ink)}
 nav.main a.active{background:var(--calcbg);color:var(--accent);font-weight:600}
+nav.sub{display:flex;gap:2px;flex-wrap:wrap;font-size:12.5px;width:100%;margin-top:-6px}
+nav.sub a{padding:4px 8px;border-radius:5px;text-decoration:none;color:var(--muted)}
+nav.sub a:hover{background:var(--bg);color:var(--ink)}
+nav.sub a.active{background:var(--calcbg);color:var(--accent);font-weight:600}
+ol.steps{margin:0;padding-left:22px}
+ol.steps>li{margin:0 0 10px}
+ol.steps b{display:block}
+.qcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.qcard{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:12px 14px;text-decoration:none;color:inherit;display:block}
+.qcard:hover{border-color:var(--accent)}
+.qcard .q{font-weight:600;margin:0 0 4px;display:block}
+.qcard .a{margin:0;color:var(--muted);font-size:14px}
+pre.notice{white-space:pre-wrap;background:var(--bg);border:1px solid var(--line);border-radius:8px;
+padding:14px;font:13.5px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow-x:auto}
+.hero{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);
+border-radius:10px;padding:18px 20px;margin:0 0 18px}
+.hero h2{margin-top:0}
+.tick{list-style:none;padding-left:0;margin:0}
+.tick li{padding:5px 0 5px 26px;position:relative;border-bottom:1px dashed var(--line)}
+.tick li:before{content:"\2610";position:absolute;left:2px;color:var(--accent);font-size:16px}
+.tick li:last-child{border-bottom:none}
 main{padding:26px 0 50px}
 h1{font-size:27px;line-height:1.25;margin:0 0 8px;letter-spacing:-.4px}
 h2{font-size:19px;margin:0 0 12px;letter-spacing:-.2px}
@@ -466,33 +553,44 @@ footer{border-top:1px solid var(--line);background:var(--card);padding:20px 0;fo
 .panel{border:none;padding:0;margin:0 0 14px;break-inside:avoid}}
 """
 
-NAV = [
+NAV_MAIN = [
     ("index.html", "Overview"),
     ("executive-summary.html", "Executive summary"),
     ("process.html", "Rent Board process"),
     ("units.html", "Units and numbers"),
-    ("rates.html", "Allowable increases"),
     ("notices.html", "Notices"),
-    ("laws.html", "Law and protections"),
+    ("notice-kit.html", "Notice kit"),
     ("practices.html", "Owner practices"),
+]
+
+NAV_SUB = [
+    ("rates.html", "Allowable increases"),
+    ("laws.html", "Law and protections"),
     ("review.html", "Tenant-lawyer test"),
     ("register.html", "Full register"),
     ("flagged.html", "Flagged for review"),
+    ("audit.html", "Audit"),
     ("sources.html", "Sources"),
     ("verification.html", "Verification"),
-    ("archive.html", "Earlier research sets"),
+    ("archive.html", "Earlier sets"),
 ]
 
 
-def nav_html(active, root=False):
+def _nav_links(items, active, root):
     out = []
-    for href, label in NAV:
+    for href, label in items:
         target = ("hub/" + href) if root else href
         if href == "index.html":
             target = "index.html" if root else "../index.html"
         cls = ' class="active"' if href == active else ""
         out.append('<a href="%s"%s>%s</a>' % (target, cls, e(label)))
     return "".join(out)
+
+
+def nav_html(active, root=False):
+    return ('<nav class="main" aria-label="Main">%s</nav>'
+            '<nav class="sub" aria-label="Reference">%s</nav>'
+            % (_nav_links(NAV_MAIN, active, root), _nav_links(NAV_SUB, active, root)))
 
 
 def layout(title, body, active, root=False, desc=None):
@@ -512,7 +610,7 @@ def layout(title, body, active, root=False, desc=None):
 <body>
 <header class="top"><div class="top-in">
 <div class="brand"><a href="%s" style="text-decoration:none;color:inherit">SF rent increase dashboard</a>
-<small>Outer Sunset 94122 &middot; anonymised &middot; sources checked 7 Nov 2026</small></div>
+<small>Outer Sunset 94122 &middot; anonymised &middot; sources checked 8 Nov 2026</small></div>
 <nav class="main">%s</nav>
 </div></header>
 <main id="main"><div class="wrap">%s</div></main>
@@ -574,40 +672,73 @@ def reg_table(cat=None, caption="Findings, verification status and official sour
 def page_index():
     b = head("Rent increase dashboard",
              "Two rent-controlled units in a 1940 building in the Outer Sunset, San Francisco 94122. "
-             "Every figure below is either quoted from an official source or computed from the published "
-             "rate, and each table row links to the page it came from.")
-    b += """
-<section class="panel">
-<h2>Your first question: the Rent Board and the licence</h2>
-<div class="answer">
-<p><strong>Yes, you need the licence. No, you do not apply for it, and being an individual owner
-changes nothing.</strong></p>
-<p>Section 37.15(a) obliges every owner of a residential unit covered by the Rent Ordinance to report
-into the Rent Board's Housing Inventory. There is no corporation threshold and no small-owner
-exemption. Once a unit is reported as tenant-occupied, a rent increase licence is
-<strong>generated automatically</strong> - there is no application form and no approval to wait for. %s</p>
-<p>The licence must already be on file <strong>on the effective date</strong> of the increase. If it is
-not, the licence is suspended, the notice is not enforceable, and the tenant owes no increased rent for
-the months of suspension. Reporting later restores the licence <strong>prospectively only</strong>. %s</p>
-<p>You do <strong>not</strong> need a petition or Board approval for an ordinary annual or banked
-increase. Petitions are only for the special increase types such as certified capital improvements. %s</p>
-</div>
-<p class="note">So the order is: report into the Inventory first, confirm the licence is on file, then
-serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</a></p>
+             "Every figure is either quoted from an official source or computed from the published "
+             "rate, and every table row links to the page it came from.")
+    b += """<section class="hero">
+<h2>First question: do you have to inform the Rent Board or apply for a licence?</h2>
+<p><strong>The licence: yes. An application: no. Doing this as an individual rather than a corporation changes nothing.</strong></p>
+<p>Section 37.15(a) requires every owner of a covered unit to report into the Rent Board Housing
+Inventory. Once a unit is reported as tenant-occupied, a rent increase licence is
+<strong>generated automatically</strong> - there is no form to file for it and no approval to wait for. %s</p>
+<p>The licence has to be on file <strong>on the effective date</strong> of the increase. If it is not, the
+licence is suspended, the notice is not enforceable, and the tenant owes no increased rent for the
+months of suspension; reporting later restores it <strong>prospectively only</strong>. %s</p>
+<p>No petition and no Board approval is needed for an ordinary annual or banked increase - the Rent
+Board's own rate sheet says it may be imposed <strong>without filing a petition</strong>. %s</p>
 </section>
-""" % (src("S1", "S2"), src("S2"), src("S3", "S13"))
+""" % (src("S1", "S2"), src("S2"), src("S4", "S3"))
 
     b += '<div class="grid">'
     for k, v, n in [
         ("Allowable annual increase", "1.6%", "1 Mar 2026 - 28 Feb 2027 " + src("S4", "S5")),
-        ("Unit 1 available 1 Feb 2027", "%.1f%%" % U1_TOTAL,
-         "%s on %s " % (money(round(3995 * U1_TOTAL / 100, 2)), money(3995)) + src("S4")),
-        ("Unit 2 available", "%.1f%%" % U2_TOTAL,
-         "%s on %s " % (money(round(3150 * U2_TOTAL / 100, 2)), money(3150)) + src("S4")),
+        ("Unit 1 from 1 Feb 2027", "%.1f%%" % U1_TOTAL,
+         "%s on %s " % (money(round(3995 * U1_TOTAL / 100, 2)), money(3995)) + src("S4", "S7")),
+        ("Unit 2, full bank", "%.1f%%" % U2_TOTAL,
+         "%s on %s " % (money(round(3150 * U2_TOTAL / 100, 2)), money(3150)) + src("S4", "S7")),
         ("Notice above 10%", "90 days", "30 days at or below 10% " + src("S8")),
     ]:
-        b += '<div class="tile"><div class="k">%s</div><div class="v">%s</div><div class="n">%s</div></div>' % (e(k), e(v), n)
+        b += ('<div class="tile"><div class="k">%s</div><div class="v">%s</div>'
+              '<div class="n">%s</div></div>' % (e(k), e(v), n))
     b += '</div>'
+
+    b += '<section class="panel"><h2>Do these three things, in this order</h2><ol class="steps">'
+    b += ('<li><b>Report both units in the Housing Inventory.</b> Free, online through the Rent Board '
+          'Portal, due 1 March each year. Best-estimate answers are allowed and late filing carries no '
+          'monetary penalty, but the licence only exists once the report is in. %s</li>'
+          % src("S1", "S2", "S12"))
+    b += ('<li><b>Confirm the licence shows in the Portal before you serve anything.</b> The licence must '
+          'be current on the effective date, not on the day you write the notice. %s</li>'
+          % src("S1", "S2"))
+    b += ('<li><b>Choose the effective date, then serve the right notice.</b> Unit 1 reaches its next '
+          'anniversary on 1 February 2027; Unit 2 has had no increase since 2019. Use the rate in effect '
+          'on the effective date, give 30 days, or 90 days if the increase is more than 10 percent, and itemise the annual and banked parts. %s</li>'
+          % src("S5", "S8", "S7"))
+    b += '</ol><p class="note"><a href="hub/process.html">The full nine-step process, with every official link &rarr;</a></p></section>'
+
+    b += '<section class="panel"><h2>Your questions, answered in one line</h2><div class="qcards">'
+    for q, a, href in [
+        ("Do I need to apply for a licence?",
+         "No application exists. Reporting the unit generates it, and being an individual owner changes nothing.",
+         "process.html"),
+        ("How much can I raise each unit?",
+         "Unit 1: 1.6% now, or 3.0% from 1 Feb 2027 with the skipped year. Unit 2: 1.6% now, or 13.1% with the banked years.",
+         "units.html"),
+        ("Should I raise one unit or both?",
+         "No rule requires both. What gets reviewed is the reason for any difference, so write the reason down per unit.",
+         "practices.html"),
+        ("What is a reasonable or normal increase?",
+         "There is no official definition. For a covered unit the lawful ceiling is the published percentage plus any banked amount.",
+         "rates.html"),
+        ("How do I tell the tenants?",
+         "Written notice stating the amount, the percentage, the effective date and the banked part: 30 days, or 90 above 10%.",
+         "notice-kit.html"),
+        ("Would it survive a tenant lawyer?",
+         "Twelve questions a reviewer will ask, and the evidence that answers each of them.",
+         "review.html"),
+    ]:
+        b += ('<a class="qcard" href="hub/%s"><span class="q">%s</span><p class="a">%s</p></a>'
+              % (href, e(q), e(a)))
+    b += '</div></section>'
 
     b += '<section class="panel"><h2>The two units at a glance</h2>'
     rows = []
@@ -623,6 +754,7 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
                 "Effective", "Serve by", "Status and source"], rows, numeric=(2, 3, 4, 5))
     b += ('<p class="note">Base rents and tenancy dates are owner-supplied and cannot be confirmed from an '
           'official source; they are flagged, not asserted. The percentages and notice periods are verified. '
+          'Unit 1 has a second branch if no original lessee remained after the 2026 occupant change - see F17. '
           '<a href="hub/units.html">See the line-by-line arithmetic &rarr;</a></p></section>')
 
     b += '<section class="panel"><h2>Browse by category</h2><div class="cards">'
@@ -632,10 +764,12 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
         ("units.html", "Units and numbers", "Anonymised tenancy records and every calculation shown line by line."),
         ("rates.html", "Allowable increases", "The full official rate table back to 1982 and how the figure is set."),
         ("notices.html", "Notices", "30 versus 90 days, required content, service methods and what voids a notice."),
+        ("notice-kit.html", "Notice kit", "A model notice, the checklist to run before serving, and the three ways a notice fails."),
         ("laws.html", "Law and protections", "Which cap governs, why the state cap does not, and fair-housing limits."),
-        ("practices.html", "Owner practices", "Corporations versus individuals, one unit versus both, and lawful reasons."),
+        ("practices.html", "Owner practices", "Corporations versus individuals, one unit versus both, and what counts as a reason."),
         ("review.html", "Tenant-lawyer test", "The questions a tenant-side review will ask and the evidence that answers them."),
         ("register.html", "Full register", "Every finding in one filterable table with its status and source."),
+        ("audit.html", "Independent audit", "A fresh read of each controlling source on 8 November 2026, with the words relied on."),
         ("flagged.html", "Flagged for review", "Open items, conflicts and blanks, published for your review."),
         ("sources.html", "Sources", "All official sources retrieved and read, with what each was used for."),
         ("archive.html", "Earlier research sets", "The earlier compilations, all preserved unchanged."),
@@ -647,7 +781,9 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
     b += ('<section class="panel"><h2>Verification status</h2><p class="small">'
           '%d findings in the register: %d verified against an official source, %d owner-supplied or '
           'computed, and %d left blank or recorded as no-authority-found. '
-          'Nothing is inferred. <a href="hub/register.html">Open the full register &rarr;</a> &middot; <a href="hub/verification.html">What was checked and how &rarr;</a></p>'
+          'Nothing is inferred. <a href="hub/register.html">Open the full register &rarr;</a> &middot; '
+          '<a href="hub/audit.html">Read the 8 November audit &rarr;</a> &middot; '
+          '<a href="hub/verification.html">What the build enforces &rarr;</a></p>'
           '<p class="note">Privacy: no tenant name, initial or street address appears anywhere on this site. '
           'Occupants are described by role only. Dates and dollar amounts are preserved exactly as supplied.</p>'
           '</section>' % (len(R), nver,
@@ -658,8 +794,8 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
 
 def page_exec():
     b = head("Executive summary",
-             "Prepared 7 November 2026. The licence question is answered first because nothing else "
-             "can be done safely until it is settled.")
+             "Prepared 7 November 2026; every official source re-read on 8 November 2026. The licence "
+             "question is answered first because nothing else can be done safely until it is settled.")
     b += '<section class="panel"><h2>1. The licence question</h2><div class="answer">'
     b += ("<p><strong>You must be licensed, but you do not apply.</strong> Report each unit into the Rent "
           "Board Housing Inventory; a rent increase licence is generated automatically for a "
@@ -687,18 +823,20 @@ def page_exec():
                rows, numeric=(2, 3, 4))
     b += '</section>'
 
-    b += '<section class="panel"><h2>3. The banking conflict, resolved for these units</h2>'
-    b += ("<p class=\"small\">The Rent Board's banking page says a skipped increase banks only after "
-          "<strong>24 full months</strong>; Rule 4.12 says <strong>12 months</strong> from the date the "
-          "increase could have been imposed. %s The Board's own worked example shows the clock runs "
-          "from the date each increase became available. %s Because the first increase becomes available "
-          "12 months after the tenancy starts, the two wordings describe the same point in time measured "
-          "from different starting points.</p>" % (src("S6", "S7"), src("S5")))
-    b += ("<p class=\"small\"><strong>Practical effect: none for you.</strong> Unit 1 reaches 24 months "
-          "without an increase on 1 February 2027, and Unit 2 has had no increase since 2019. Both "
-          "readings give the same answer for both units, so the 3.0% figure for Unit 1 does not depend "
-          "on resolving the wording. This reconciliation is analysis, not a quoted rule, and is "
-          "published on the flagged page for confirmation.</p>")
+    b += '<section class="panel"><h2>3. The banking wording, and why it does not change your numbers</h2>'
+    b += ("<p class=\"small\">The Rent Board's banking page says a skipped increase banks only if at least "
+          "<strong>24 full months</strong> pass without any rent increase. Rule 4.12 says a full "
+          "<strong>12 months</strong> must have elapsed from the date the increase could have been imposed. "
+          "The Board's time-stamped worked examples follow the rule, not that sentence: on the banking page "
+          "a 1.7%% increase available on 1 August 2024 is banked on 1 August 2025, twelve months later; on "
+          "the rent increase page a 1.4%% increase is permanently lost eleven months after it became "
+          "available, even though 35 months had passed since the tenant moved in. %s %s</p>"
+          % (src("S6", "S7"), src("S5")))
+    b += ("<p class=\"small\"><strong>Practical effect for you: none.</strong> Unit 1 reaches twelve months "
+          "after its skipped increase, and twenty-four months after the tenancy began, on the same date: "
+          "1 February 2027. Unit 2 has had no increase since 2019. Both readings therefore give the same "
+          "answer for both units, so the 3.0% figure does not depend on resolving the wording. The conflict "
+          "is published as F04 on the flagged page; ask a counsellor in writing if you want it closed.</p>")
     b += '</section>'
 
     b += '<section class="panel"><h2>4. One unit or both</h2>'
@@ -818,9 +956,13 @@ def page_units():
         ["Serve by (mail)", serve_by(date(2027, 2, 1), U1_TOTAL, True).isoformat(), e("Adds 5 days."), badge(COMPUTED) + " " + src("S8", "S5")],
     ]
     b += table("Unit 1 calculation chain", ["Step", "Value", "Basis", "Status and source"], rows)
-    b += ('<p class="note">The occupant change reported on 2026-04-01 did not create a new tenancy because '
-          'an original occupant remained, so the anniversary is unchanged and no rent reset arises. '
-          'Charging more because a roommate moved in is unlawful. ' + src("S5", "S14") + '</p></section>')
+    b += ('<p class="note"><strong>The 2026-04-01 occupant change is the one input that changes the '
+          'answer.</strong> If any original lessee remained, the tenancy continues, the anniversary stays '
+          '1 February and the 3.0% calculation above applies from 2027-02-01. If every original lessee '
+          'left and a new tenancy began on 2026-04-01, the anniversary is 1 April, no banked amount from '
+          'the earlier tenancy survives, and the first increase is available on 2027-04-01 at the rate the '
+          'Board publishes on 2027-03-01. Charging more because a roommate moved in is unlawful in either '
+          'case. ' + src("S5", "S6", "S14") + ' <a href="flagged.html">See F17 &rarr;</a></p></section>')
 
     b += '<section class="panel"><h2>Unit 2 - the banked ledger</h2>'
     rows = []
@@ -855,7 +997,7 @@ def page_units():
         rows.append([e(unit), e(name), "%.1f%%" % pct, money(inc), money(round(base + inc, 2)),
                      "%d days" % notice_days(pct), eff.isoformat(), serve_by(eff, pct).isoformat(),
                      badge(COMPUTED) + " " + src("S4", "S8")])
-    b += table("Serve-by dates assume personal service and are computed from today, 7 November 2026.",
+    b += table("Serve-by dates are computed from each effective date and assume personal service; add 5 days if mailed.",
                ["Unit", "Option", "Total", "Increase", "New rent", "Notice", "Effective", "Serve by", "Status and source"],
                rows, numeric=(2, 3, 4))
     b += '</section>'
@@ -911,6 +1053,8 @@ def page_notices():
           "tenant's personal circumstances, a request for repairs, or a wish to see the unit vacated. "
           "Those are the facts that turn a lawful number into a retaliation or harassment claim. %s</p>"
           % (src("S3", "S7"), src("S3"), src("S17", "S15")))
+    b += ('<p class="note"><a href="notice-kit.html">Open the notice kit &rarr;</a> for a model notice, '
+          'the pre-service checklist and the three ways a notice fails.</p>')
     b += '</section>'
     return layout("Notices", b, "notices.html")
 
@@ -1041,9 +1185,10 @@ FLAGS = [
      "Unverified input", ["S11"], "Check the Property Information Map and, if unclear, ask a Rent Board counsellor."),
     ("F03", "Inventory and licence status unknown", "Whether either unit has been reported, and whether a licence is currently on file, could not be checked.",
      "Unverified input", ["S1", "S2"], "This is the first action item. The portal is public and reporting is free."),
-    ("F04", "Banking wording: 12 versus 24 months", "The banking page says 24 full months; Rule 4.12 says 12 months from when the increase could have been imposed. The worked example on the rent increase page runs the clock from availability, which reconciles them.",
-     "Conflicting official wording, reconciled by analysis", ["S6", "S7", "S5"],
-     "The reconciliation is interpretation, not a quoted rule. It does not change either unit's figure: Unit 1 hits 24 months on 2027-02-01 and Unit 2 has had no increase since 2019. Confirm in writing with a counsellor if you want certainty."),
+    ("F04", "Banking wording: 12 versus 24 months",
+     "The banking page says a skipped increase is banked only if at least 24 full months pass without any rent increase. Rule 4.12 says a full 12 months must have elapsed from the date the increase could have been imposed, and two official worked examples run the clock from the date each increase became available.",
+     "Conflicting official wording - time-stamped examples read as controlling", ["S5", "S6", "S7"],
+     "For Unit 1 both tests land on 2027-02-01: 12 months after the 1.4% became available and 24 months after the tenancy began. The figure does not depend on resolving the wording. Ask a counsellor in writing if you want the point closed."),
     ("F05", "Rule 6.14 notice on the later co-tenant", "Whether a 6.14 notice was served on the occupant added to Unit 1 around 2026-04-01 is unknown. Generally 60 days is considered reasonable.",
      "Missing fact with future consequences", ["S14"],
      "If it was not served, an unlimited increase when the last original occupant leaves may not be available under Rule 6.14. This does not affect the current annual or banked increase."),
@@ -1073,6 +1218,18 @@ FLAGS = [
      "A separate, real labelling slip does exist on the same guidance page: the first example says the rate in effect on 1 June 2025 is 1.6%, when 1.4% applied on that date. The increase in that example takes effect 1 June 2026, where 1.6% is correct, so the arithmetic is right and only the date label is wrong."),
     ("F14", "Earlier sets differ in presentation", "Five earlier compilations are preserved on this site. They agree on the verified rules but differ on whether to price unit-specific figures.",
      "Reconciled, not deleted", ["S4", "S5"], "This consolidated set prices the options and labels every result computed. The earlier sets remain reachable from the archive page."),
+    ("F17", "Unit 1: the anniversary date depends on a fact not supplied",
+     "The record shows a continuing tenancy from 2025-02-01 at $3,995.00 and a later occupant by 2026-04-01 with the rent unchanged. If any original lessee remained, the tenancy continues and the anniversary stays 1 February. If every original lessee left, a new tenancy may have begun on 2026-04-01.",
+     "Unverified input with a two-branch answer", ["S5", "S6"],
+     "Branch A (continuing): the increases available on 2026-02-01 (1.4%) and 2027-02-01 (1.6%) give 3.0% from 2027-02-01. Branch B (new tenancy): the anniversary is 1 April, no banked amount survives the new tenancy, and the first increase is available 2027-04-01 at the rate published 2027-03-01. Whether an unlimited reset is available at all depends on Rule 6.14 or Costa-Hawkins, on whether the later occupant is a co-tenant or a subtenant, and on a 6.14 notice having been served within a reasonable time - generally 60 days (F05). Establish which branch applies before serving anything."),
+    ("F18", "No official source describes how large operators set rents",
+     "Nothing in the official material reviewed documents corporate rent-setting practice, and no official statistics on it were found. What the sources establish is that the cap, the licence and the notice rules apply identically to every owner, and that algorithmic pricing on non-public competitor data is prohibited.",
+     "Absence of evidence, not a quoted rule", ["S2", "S3", "S16"],
+     "Treat any statement that corporations raise rents by a particular amount as unverified unless it cites a government source."),
+    ("F19", "The complete Rules and Regulations were not read end to end",
+     "Part IV and Part X were read in full text on sf.gov. The complete Rules and Regulations compilation (document 625, amended 13 January 2026) was linked but not read in full, so an amendment outside those Parts could exist.",
+     "Method limitation", ["S24", "S7", "S23"],
+     "Search the complete compilation before relying on a mechanical point, or ask a counsellor."),
 ]
 
 
@@ -1154,6 +1311,8 @@ def page_archive():
 
 def page_verification():
     b = head("Verification", "What was checked, how, and what the build enforces.")
+    b += ('<p class="note">This page covers the mechanical checks. The point-by-point re-reading of the '
+          'sources, with the words relied on, is on the <a href="audit.html">independent audit page</a>.</p>')
     b += '<section class="panel"><h2>Checks run</h2>'
     rows = [
         ["Rate table", e("All 46 periods transcribed from Form 571 and compared against the repository data files."),
@@ -1179,6 +1338,257 @@ def page_verification():
 
 
 # ---------------------------------------------------------------------------
+# INDEPENDENT AUDIT - read on 2026-11-08. Each row is one point checked, the
+# words relied on, and whether the site's value agrees. Short quotations only.
+# ---------------------------------------------------------------------------
+AUDIT = [
+    ("A01", "Who must report into the Housing Inventory",
+     "Owners of residential dwelling units subject to this Chapter 37 shall be required to report certain information about their units to the Rent Board",
+     "Confirms that an individual owner is included; no entity threshold appears.", ["S2"]),
+    ("A02", "When small buildings had to start reporting",
+     "For condominium units and units in buildings with fewer than 10 units, the information shall be reported commencing March 1, 2023",
+     "Confirms 1 March 2023 for a two-unit building.", ["S2"]),
+    ("A03", "What happens while the licence is suspended",
+     "a tenant shall not be obligated to pay the increased rent for months during the period of suspension",
+     "Confirms the suspension is not retroactively cured.", ["S2"]),
+    ("A04", "How the licence is issued",
+     "once you have reported into the Housing Inventory, a rent increase license will be automatically generated for non-owner occupied units",
+     "Confirms there is no application form.", ["S1"]),
+    ("A05", "Whether the licence must exist on the effective date",
+     "your rent increase notice will not be enforceable without having a rent increase license on the effective date of the notice",
+     "Confirms the timing rule.", ["S1"]),
+    ("A06", "Whether the Inventory is public",
+     "The information entered in the housing inventory submission is public.",
+     "Confirms the privacy consequence.", ["S1"]),
+    ("A07", "The annual cap formula",
+     "a rent increase which does not exceed a tenant's base rent by more than 60% of said published increase. In no event, however, shall the allowable annual increase be greater than 7%",
+     "Confirms the formula and the 7% ceiling.", ["S3"]),
+    ("A08", "Banking in the ordinance",
+     "may accumulate said increase and, subject to Section 37.15, impose that amount on the tenant's subsequent rent increase anniversary dates",
+     "Confirms accumulation with no month-count condition in the ordinance.", ["S3"]),
+    ("A09", "Rule 4.12 banking condition",
+     "A full 12 months must have elapsed from the date that an annual rent increase, or a portion thereof, could have been imposed",
+     "Confirms the 12-month test in the rule.", ["S7"]),
+    ("A10", "The banking page's own wording",
+     "A skipped increase is only banked if at least 24 full months pass without any rent increase.",
+     "Quoted as published; see F04 for why it does not change either figure.", ["S6"]),
+    ("A11", "The worked example that loses a skipped increase",
+     "the 1.4% rent increase is permanently lost due to the change in anniversary date",
+     "Confirms the clock runs from availability, not from the tenancy start.", ["S5"]),
+    ("A12", "The current rate and its period",
+     "Effective March 1, 2026 through February 28, 2027, the allowable annual increase amount is 1.6%",
+     "Confirms 1.6% for both units' planned effective dates.", ["S4"]),
+    ("A13", "That no petition is needed for the annual increase",
+     "may increase the tenant's base rent once every 12 months by the amount of the allowable annual rent increase without filing a petition at the Rent Board",
+     "Confirms no petition and no Board approval.", ["S4"]),
+    ("A14", "Notice content under the ordinance",
+     "Which portion of the rent increase reflects the annual increase, and/or a banked amount, if any",
+     "Confirms the itemisation duty.", ["S3"]),
+    ("A15", "Notice content for a banked increase",
+     "inform the tenant, on or before the date upon which the landlord gives the tenant legal notice, which portion of the rent increase reflects banked amount",
+     "Confirms Rule 4.12(b); failure does not void the increase.", ["S7"]),
+    ("A16", "What a defective notice does",
+     "shall render the entire rent increase null and void",
+     "Confirms Rule 4.10(b) is a whole-notice rule, subject to the half-percent good-faith readjustment.", ["S7"]),
+    ("A17", "The 30 and 90 day thresholds",
+     "If the proposed rent increase for that tenant is 10 percent or less ... at least 30 days ... greater than 10 percent ... at least 90 days",
+     "Confirms the thresholds and that exactly 10 percent is a 30-day case.", ["S8"]),
+    ("A18", "How the 10 percent is measured",
+     "of the rental amount charged to that tenant at any time during the 12 months before the effective date of the increase, either in and of itself or when combined with any other rent increases",
+     "Confirms the look-back and the combination rule.", ["S8"]),
+    ("A19", "Service methods",
+     "By delivering a copy to the tenant personally. By serving a copy by mail under the procedures prescribed in Section 1013",
+     "Confirms personal service or mail; San Francisco adds 5 days for mail.", ["S8", "S5"]),
+    ("A20", "Whether the state cap applies here",
+     "Housing subject to rent or price control through a public entity's valid exercise of its police power ... that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a)",
+     "Confirms the local cap displaces AB 1482 for these units.", ["S9", "S10"]),
+    ("A21", "Coverage of a pre-1979 building",
+     "Many residential units built on or before June 13, 1979 have both rent control and eviction protection.",
+     "Confirms the rule; the 1940 build year itself is owner-supplied (F02).", ["S11"]),
+    ("A22", "The fee and its exemption",
+     "$59.00 per dwelling unit; requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements",
+     "Confirms the fee is separate from the licence.", ["S12"]),
+    ("A23", "Repair-based deferral of an increase",
+     "The petition must be filed no later than 60 days following the tenant's receipt of the rent increase notice.",
+     "Confirms the 60-day window and the refund consequence.", ["S22", "S23"]),
+    ("A24", "Cost and deadline of a tenant challenge",
+     "There is no charge for filing the petition; There is no time limit for filing a petition",
+     "Confirms the file has to stand up indefinitely.", ["S20"]),
+    ("A25", "Extra charge for a new occupant",
+     "a landlord may not impose increases solely because a tenant has added an additional occupant to an existing tenancy",
+     "Confirms no occupant-based charge is available.", ["S3"]),
+    ("A26", "Market rent as evidence of bad faith",
+     "the rent increase was substantially in excess of market rates for comparable units",
+     "Confirms market comparison matters only inside a circumvention claim.", ["S15"]),
+    ("A27", "Arithmetic of both units",
+     "3,995.00 x 3.0% = 119.85; 3,150.00 x 13.1% = 412.65; 3,150.00 x 10% = 315.00",
+     "Recomputed to the cent; nothing rounded up.", ["S4", "S8"]),
+]
+
+
+def page_audit():
+    b = head("Independent audit, 8 November 2026",
+             "A second read of every controlling source, the exact words relied on, and whether the "
+             "site agrees with them. This page is generated from the same data the release gate "
+             "checks, so it cannot drift away from the site.")
+    b += '<section class="panel"><h2>Point-by-point check</h2>'
+    rows = []
+    for ref, point, quote, verdict, srclist in AUDIT:
+        rows.append([e(ref), '<strong>%s</strong>' % e(point),
+                     '<span class="quote">%s</span>' % e(quote),
+                     e(verdict), badge(VERIFIED) + " " + src(*srclist)])
+    nq = len(rows)
+    b += table("Short quotations from the official pages, read on 2026-11-08", 
+               ["Ref", "Point checked", "Words relied on", "Result", "Status and source"], rows)
+    b += ('<p class="note">%d points re-read. Quotations are shortened with ellipses where marked; '
+          'nothing is paraphrased inside quotation marks.</p>' % nq)
+    b += '</section>'
+    b += '<section class="panel"><h2>What this pass changed</h2><ul class="tick">'
+    for item in [
+        "F04 was rewritten. The earlier text described the 12-month and 24-month wording as "
+        "reconciled; on a closer read the 24-month sentence cannot be squared with either worked "
+        "example, so the time-stamped examples and Rule 4.12 are treated as controlling and the "
+        "conflict is published rather than smoothed over.",
+        "The Unit 1 anniversary fork was added as F17. The answer changes if no original lessee "
+        "remained after the 2026 occupant change, and that fact was not supplied.",
+        "A second limit was added: the complete Rules and Regulations compilation was linked but not "
+        "read end to end (F19).",
+        "The rent notice kit was added, because the notice content rules are spread across three "
+        "documents and are easy to get wrong in practice.",
+    ]:
+        b += '<li>%s</li>' % e(item)
+    b += '</ul></section>'
+    b += '<section class="panel"><h2>What this audit does not establish</h2>'
+    b += ('<ul class="tick">'
+          '<li>No lease, rent ledger, portal record or property record was examined, so nothing here '
+          'certifies that a particular increase is lawful on these facts.</li>'
+          '<li>The build year, the unit count and both base rents remain owner-supplied (F01, F02).</li>'
+          '<li>External links are checked for publisher and shape at build time, not for perpetual '
+          'availability.</li>'
+          '<li>No browser rendering test was run; the HTML is validated by parser checks instead.</li>'
+          '<li>Nothing here is legal advice, and no notice, petition or licence action was taken.</li>'
+          '</ul></section>')
+    return layout("Audit", b, "audit.html")
+
+
+def page_notice_kit():
+    b = head("Notice kit",
+             "What the notice has to say, a model notice to work from, and the checks to run before "
+             "it is served. The content rules come from three documents: the Rent Ordinance, the "
+             "Rent Board Rules, and the Civil Code.")
+    b += '<section class="panel"><h2>What the notice must contain</h2>'
+    rows = [
+        ["Written notice, at least 30 days ahead",
+         e("30-day written notice of the proposed rent increase; 90-day written notice if the increase, "
+           "alone or combined with another increase in the same year, is more than 10%."),
+         badge(VERIFIED) + " " + src("S5", "S8")],
+        ["Five extra days if mailed",
+         e("If the notice is mailed, the landlord must give the tenant 5 more days."),
+         badge(VERIFIED) + " " + src("S5", "S8")],
+        ["Dollar amount, percentage, effective date, banked part",
+         e("The rent increase notice should include the dollar amount of the increase, the percentage "
+           "amount, the date it goes into effect, and which part of the increase is banked."),
+         badge(VERIFIED) + " " + src("S5", "S6")],
+        ["Which portion is annual, and which is banked",
+         e("Sec. 37.3(b)(1) and Rule 4.10(a)(1) require the owner to tell the tenant in writing, on or "
+           "before the date the notice is given, which portion of the increase reflects the annual "
+           "increase and which reflects a banked amount."),
+         badge(VERIFIED) + " " + src("S3", "S7")],
+        ["The dates the banked amount is based on",
+         e("Rule 4.12(b)(2): state the dates upon which the banked amount is based. Failure to include "
+           "this does not by itself void the increase, but it is the first thing a reviewer looks for."),
+         badge(VERIFIED) + " " + src("S7")],
+        ["The right percentage",
+         e("Use the percentage that will be in effect on the date of the increase, not the percentage "
+           "in effect on the date the notice is served."),
+         badge(VERIFIED) + " " + src("S5", "S6")],
+        ["Correct service",
+         e("Personal delivery, or mail under Code of Civil Procedure sec. 1013. Keep proof of the date "
+           "and method."),
+         badge(VERIFIED) + " " + src("S8")],
+        ["The licence does not have to be attached",
+         e("The rent increase license does not need to be included with the rent increase notice."),
+         badge(VERIFIED) + " " + src("S1")],
+        ["A reason is not required",
+         e("No provision in sec. 37.3(b), Rule 4.10(a) or Civil Code sec. 827 requires the owner to "
+           "state a reason for an annual or banked increase. The duty is to itemise the increase, not "
+           "to justify it."),
+         badge(ABSENT) + " " + src("S3", "S7", "S8")],
+    ]
+    b += table("Required elements, with the official wording and source",
+               ["Element", "What the official text says", "Status and source"], rows)
+    b += '</section>'
+
+    b += '<section class="panel"><h2>Model notice</h2>'
+    b += ('<p class="small">This is a drafting aid for your own records, not a Rent Board form and not '
+          'legal advice. Everything in square brackets is yours to complete accurately. Delete the '
+          'lines that do not apply to the unit you are serving.</p>')
+    model = """NOTICE OF RENT INCREASE
+
+Date of this notice: [date you deliver or mail it]
+To: [tenant name or names as they appear on the rental agreement]
+Rental unit: [unit identifier, not the full street address]
+Current base rent: $[amount] per month
+New base rent: $[amount] per month
+Amount of the increase: $[amount] per month
+Percentage increase: [x.x]% of the current base rent
+Effective date: [a date at least 30 days after this notice, or at least 90 days if the increase is more than 10 percent; add 5 days if this notice is mailed]
+
+How the increase is made up (Rent Ordinance sec. 37.3(b); Rules and Regulations sec. 4.10(a)):
+  - Annual allowable increase: [x.x]%, being the Rent Board allowance in effect on the effective date
+  - Banked increase: [x.x]%, based on the rent increase anniversary dates of [list the dates]
+
+Rent increase licence: this unit is reported in the Rent Board Housing Inventory and a rent increase
+licence is on file. The licence does not need to be attached to this notice.
+
+Questions: Rent Board counsellors, 415-252-4600, weekdays 9am to noon and 1pm to 4pm.
+
+Your options: you may ask the Rent Board to review this increase by filing Tenant Petition Form 516C
+(there is no filing fee and no time limit). If repairs you have requested in writing have not been
+made, you may file Form 516B within 60 days of receiving this notice; a granted petition postpones
+the increase until the work is done.
+
+Served by: [personal delivery / first-class mail] on [date]"""
+    b += '<pre class="notice">%s</pre>' % e(model)
+    b += '</section>'
+
+    b += '<section class="panel"><h2>Before you serve: the checklist</h2><ul class="tick">'
+    for item in [
+        "Both units are reported in the Housing Inventory for the current reporting year, and the licence shows in the Rent Board Portal.",
+        "The anniversary date is confirmed from the rent ledger - for Unit 1 that turns on whether any original lessee remained (F17).",
+        "At least 12 months have passed since the last increase on that tenancy.",
+        "The percentage used is the one in effect on the effective date: 1.6% for any effective date up to 28 February 2027.",
+        "Only properly banked amounts are added, nothing is compounded, and nothing is rounded up.",
+        "The notice states the dollar amount, the percentage, the effective date, the annual portion and the banked portion with its dates.",
+        "The notice period matches the size of the increase: 30 days at or below 10%, 90 days above 10%, plus 5 days if mailed.",
+        "No increase is charged because a new occupant moved in, and no passthrough has been folded into base rent.",
+        "There are no outstanding written repair requests on the unit that could support a Form 516B petition.",
+        "A short written note explains, per unit, the business basis for the increase and why the two units differ. Keep it in the file.",
+        "A copy of the notice and proof of service are kept with the lease and the rent ledger.",
+    ]:
+        b += '<li>%s</li>' % e(item)
+    b += '</ul></section>'
+
+    b += '<section class="panel"><h2>The three ways a notice fails</h2>'
+    rows = [
+        ["Served without a current licence",
+         e("The notice is not enforceable for the months of suspension, and reporting later does not revive them."),
+         badge(VERIFIED) + " " + src("S1", "S2")],
+        ["Content does not conform to Rule 4.10(a)",
+         e("The entire increase is null and void, unless it is within the allowable annual and banked amounts; a good-faith excess of no more than one-half of one percent can be readjusted by an administrative law judge."),
+         badge(VERIFIED) + " " + src("S7", "S3")],
+        ["Too little notice",
+         e("30 days at or below 10%, 90 days above 10%, measured against the rent charged at any time in the previous 12 months and combined with any other increase in that window."),
+         badge(VERIFIED) + " " + src("S8")],
+    ]
+    b += table("The failures that void or defer an increase", ["Failure", "Consequence", "Status and source"], rows)
+    b += ('<p class="note">A fourth route is not a defect in the notice: a tenant who has asked in '
+          'writing for repairs may petition within 60 days of receiving the notice, and the increase is '
+          'postponed until the work is done. %s</p></section>' % src("S22", "S23"))
+    return layout("Notice kit", b, "notice-kit.html")
+
+
+# ---------------------------------------------------------------------------
 # Build
 # ---------------------------------------------------------------------------
 PAGES = {
@@ -1195,6 +1605,8 @@ PAGES = {
     "sources.html": page_sources,
     "archive.html": page_archive,
     "verification.html": page_verification,
+    "audit.html": page_audit,
+    "notice-kit.html": page_notice_kit,
 }
 
 
@@ -1222,6 +1634,36 @@ def build():
             w.writerow([r["id"], r["cat"], r["item"], r["value"], r["status"], r["note"],
                         " | ".join(SOURCES[s][2] for s in r["sources"])])
     written.append("data/verified-register.csv")
+
+    # Repository record of the audit, generated from the same data as hub/audit.html
+    # so the two can never drift apart.
+    md = ["# Independent audit - 8 November 2026", "",
+          "Generated by `tools/build_hub.py` from the same data that renders "
+          "`hub/audit.html` and that the release gate checks.", "",
+          "Scope: a fresh read of every controlling official source for the rules this site relies on. "
+          "No lease, rent ledger, portal record or property record was examined, so nothing here "
+          "certifies a particular increase on these facts.", "",
+          "| Ref | Point checked | Words relied on | Result | Source |",
+          "| --- | --- | --- | --- | --- |"]
+    for ref, point, quote, verdict, srclist in AUDIT:
+        urls = " ".join(SOURCES[i][2] for i in srclist)
+        md.append("| %s | %s | %s | %s | %s |" % (ref, point, quote.replace("|", "/"), verdict, urls))
+    md += ["", "## Findings that changed this pass", "",
+           "- F04 rewritten: the banking page's 24-month sentence cannot be squared with either official "
+           "worked example, so the time-stamped examples and Rule 4.12 are treated as controlling.",
+           "- F17 added: Unit 1's anniversary date depends on whether any original lessee remained after "
+           "the 2026 occupant change.",
+           "- F19 added: the complete Rules and Regulations compilation was linked but not read end to end.",
+           "- Notice kit added: the notice-content duties are split across section 37.3(b), Rule 4.10(a) "
+           "and Rule 4.12(b), which is where a compliant increase most often fails.",
+           "", "## Register totals", "",
+           "- %d findings: %d verified, %d owner-supplied or computed, %d blank or no-authority-found."
+           % (len(R), sum(1 for r in R if r["status"] == VERIFIED),
+              sum(1 for r in R if r["status"] in (OWNER, COMPUTED, ANALYSIS)),
+              sum(1 for r in R if r["status"] in (UNVERIFIED, ABSENT))),
+           ""]
+    (ROOT / "AUDIT-2026-11-08.md").write_text("\n".join(md), encoding="utf-8")
+    written.append("AUDIT-2026-11-08.md")
 
     # Mirror into site/ so the repository's root/site parity audit keeps passing.
     import shutil
