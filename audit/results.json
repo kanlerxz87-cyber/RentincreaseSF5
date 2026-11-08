@@ -686,7 +686,7 @@
     "Historical matches, forks, caches and clones are not removed by this audit.",
     "External URL retrieval evidence is recorded separately in audit/source-review.json."
   ],
-  "links_and_assets_checked": 4858,
+  "links_and_assets_checked": 4912,
   "mirror_files_checked": 54,
   "schema": 1,
   "scope": "All tracked artifacts; all root HTML including archived sets; local targets and citation traceability. Not a live external URL monitor or legal certification.",
@@ -698,13 +698,13 @@
     "tools/pages_1.py"
   ],
   "table_rows": {
-    "direct": 1410,
+    "direct": 1426,
     "indirect": 166,
-    "total": 1913,
+    "total": 1929,
     "untraceable": 337
   },
-  "text_files_scanned": 171,
-  "tracked_files": 171,
+  "text_files_scanned": 172,
+  "tracked_files": 172,
   "unique_external_urls": 96,
   "untraceable_rows": [
     {

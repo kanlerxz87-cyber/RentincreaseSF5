@@ -911,3 +911,5 @@ verbatim. No session's work was deleted.
 | Live verification | Landing page, `hub/flagged.html` (F19–F21 with source links), `hub/rates.html` (corrected century range) and `internal/notes.md` (corrected warning) all retrieved from the deployed URL and read |
 
 - arena-e126bdbe rebase note: after merging released origin/main, the required pre-push `git pull --rebase` attempted to flatten the explicit merge and replay already-merged parallel commits, creating a coordination conflict. It was aborted without discarding work. The remote assigned branch was fetched and confirmed an ancestor of the resolved local merge; no remote session work was lost. The resolved merge is pushed without flattening other sessions' commits.
+
+- arena-e126bdbe source evidence recorded in `audit/source-review.json` and 62-row semantic review in `audit/register-line-review.csv`. Browser QA (headless Chromium): desktop 1440px clean; mobile 390px has 8px document overflow from nowrap header brand, requested from active CSS owner PR #18; no JavaScript page errors. Archived malformed-anchor repair remains intact after merging released main.
