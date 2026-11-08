@@ -367,6 +367,19 @@ def main() -> int:
                 fail("mirror-parity", str(rel), "Missing or differing root counterpart")
 
     history = scan_history(args.history_ref, tokens) if args.history_ref else None
+    prior_history = None
+    prior_exact = None
+    output = ROOT / args.output
+    if output.exists():
+        try:
+            prior = json.loads(output.read_text(encoding="utf-8"))
+            prior_history = prior.get("history")
+            if prior.get("exact_identifier_check") in {"stdin", "private-file"}:
+                prior_exact = {k: prior.get(k) for k in (
+                    "exact_identifier_check", "exact_identifier_count",
+                    "current_exact_match_files", "tracked_files", "text_files_scanned")}
+        except (json.JSONDecodeError, OSError):
+            pass
     if history and history["commits_with_matches"]:
         warnings.append({
             "kind": "historical-privacy", "path": args.history_ref, "line": None,
@@ -384,7 +397,8 @@ def main() -> int:
         "generic_initial_match_files": sorted(generic_initial_files),
         "street_shaped_candidate_files": sorted(street_candidates),
         "untraceable_rows": unsourced_rows, "indirect_only_rows": indirect_rows,
-        "history": history, "failures": failures, "warnings": warnings,
+        "history": history, "last_exact_scan": prior_exact, "last_history_scan": prior_history,
+        "failures": failures, "warnings": warnings,
         "limitations": [
             "A source link does not prove that every sentence in a row is supported; semantic review is separate.",
             "Owner-supplied rents, dates, coverage and license status are not authenticated by a government URL.",
@@ -393,7 +407,6 @@ def main() -> int:
             "External URL retrieval evidence is recorded separately in audit/source-review.json.",
         ],
     }
-    output = ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     manifest_path = ROOT / args.manifest
