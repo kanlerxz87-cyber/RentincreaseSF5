@@ -909,3 +909,5 @@ verbatim. No session's work was deleted.
 | Pages build/deploy | **success** (run 42532441873); Pages API status `built` at `4c0cf6d5` |
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Landing page, `hub/flagged.html` (F19–F21 with source links), `hub/rates.html` (corrected century range) and `internal/notes.md` (corrected warning) all retrieved from the deployed URL and read |
+
+- arena-e126bdbe rebase note: after merging released origin/main, the required pre-push `git pull --rebase` attempted to flatten the explicit merge and replay already-merged parallel commits, creating a coordination conflict. It was aborted without discarding work. The remote assigned branch was fetched and confirmed an ancestor of the resolved local merge; no remote session work was lost. The resolved merge is pushed without flattening other sessions' commits.
