@@ -701,6 +701,87 @@ No personal identifiers will be copied to tracked files. Official sources must b
 
 - 2026-11-08 collision resolution: PR #16 became conflicting when arena-75594f57 merged PRs #13/#14. Merged `origin/main` into the fixed branch; preserved both coordination sections verbatim, retained the newer conditional-scenario and empirical-practice corrections, and retained this session's README privacy-history correction. No parallel work discarded.
 
+---
+
+## Final record — `arena-0691d955` (verification, defect repair, publication)
+
+### Task board — final status
+
+| ID | Task | Owner | Status |
+| --- | --- | --- | --- |
+| V1 | Re-verify every published figure against the official source, line by line | `arena-0691d955` | done |
+| V2 | Repair defects found by V1 | `arena-0691d955` | done — F19 |
+| V3 | Independent arithmetic re-check of both units' options | `arena-0691d955` | done — all five scenarios match to the cent |
+| V4 | Release gates (build, links, privacy, one official source per row) | `arena-0691d955` | done |
+| V5 | PR → merge → confirm Pages deploy → record | `arena-0691d955` | done (record below) |
+| V6 | Publish newly found irregularities on the Flagged page | `arena-0691d955` | done — F19, needs review, non-blocking |
+
+### Sources re-fetched and read this session (2026-11-08)
+
+sf.gov / SF Rent Board: Housing Inventory; Admin Code §37.15, §37.3, §37.10B, §37.10C; Form 571
+(full table); "Learn about rent increases in San Francisco"; "Banked rent increases"; Rules and
+Regulations Part IV (§4.10, §4.12); "Annual rent increase for multiple years"; §6.14 / Costa-Hawkins
+petition page; "Learn about San Francisco rental laws"; "The Rent Board Fee"; AB 1482 guidance;
+Form 516C page; Form 1007 PDF. California Legislature: Civil Code §§827, 1942.5, 1947.12.
+California Civil Rights Department: housing discrimination page. U.S. HUD: Fair Housing Act overview.
+
+Every published value checked against these matched. No value was changed by the re-verification;
+one presentation defect was found and repaired (below).
+
+### Defect found and repaired — F19
+
+`_d()` in `tools/build_hub.py` mapped every two-digit year to 20xx, so the published Form 571 table
+printed the 1982-1999 periods as **2082-2099** (`2082-04-01 - 2083-02-28` for the 7.0% period that
+began 1 April 1982). Percentages were correct; years were not. Fixed with century-aware parsing;
+`tools/release_gate.py` now fails if any effective period falls outside 1982-2027. The full table was
+re-read against Form 571 afterwards: 46/46 rows match. Published as **F19** on `hub/flagged.html`.
+
+### Collisions with other sessions, and how they were resolved
+
+`main` advanced three times while this session worked (PRs #13/#14 from `arena-75594f57`, then #16,
+then #21 from `arena/3a6f02e5`). Each was merged into this branch rather than forced:
+
+| Item | Resolution |
+| --- | --- |
+| `tools/build_hub.py` (three conflict hunks) | Kept the other session's conditional wording (licence timing, conditional scenarios, practices paragraph, banner). Re-applied this session's century fix and verification rows on top. |
+| Flag numbering | The other session's F17/F18 already existed, so this session's century defect is **F19**, not F17. No other session's flag was renumbered or removed. |
+| `COORDINATION.md` | Both sides kept verbatim in every merge; no session's log discarded. |
+| Generated `hub/**`, `site/hub/**`, `index.html` | Resolved by regenerating from the merged generator; artifacts match a fresh build byte-for-byte. |
+| `tools/followup_audit.py`, `AUDIT-2026-11-08.md`, `data/verified-register.csv`, `EXECUTIVE-SUMMARY.md`, `.github/workflows/pages.yml` | Kept from `main` unchanged. |
+
+### Checks after the merges
+
+`scripts/build.py` (reproducible, zero drift), `scripts/check.py`, `scripts/independent_audit.py`,
+`tools/check_links.py`, `tools/dashboard_check_links.py`, `tools/followup_audit.py`,
+`tools/release_gate.py` — all pass: 14 pages, 303 source-linked rows, 777 links, 0 orphans,
+0 unsourced rows, 15 mirror pairs, 5 scenarios recomputed, 62 register findings, 19 flags (F01-F19).
+Local static server: all 15 published entry points return HTTP 200.
+
+### PR and deploy record
+
+| Item | Value |
+| --- | --- |
+| Branch | `arena/0691d955-rentincreasesf5` |
+| Pull request | [#15](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/15) |
+| CI on PR | `validate` **pass** (run 42532207905) |
+| Merge result | **MERGED** 2026-11-08 22:50:40 UTC, merge commit `c36e700c6de0422d6348b8ed7696f08f10620507` |
+| Validate on `main` | **success** (run 42532243692) |
+| Pages build/deploy | **success** (run 42532243077); Pages API status `built`, commit `3d67cff` |
+| Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
+| Live verification | `hub/rates.html` re-read from the deployed URL: all 46 periods render with the correct years (1982-04-01 … 2026-03-01). `hub/flagged.html` re-read: F01-F19 render with source links (an initial fetch returned a cached pre-deploy copy; a cache-busted fetch confirmed F19). |
+| Privacy | No tenant name, initial, street address or unit address is in any file this session touched. |
+
+### Still open for the owner (non-blocking, all published on the Flagged page)
+
+F01 owner-supplied rent history · F02 build year/coverage · F03 Inventory/licence status ·
+F05 6.14 notice on the later co-tenant · F06 unpublished 2027-28 rate · F09 reported banking-cap
+proposals · F10 no official ZIP market rent · F12 bedroom/square footage for the Inventory ·
+F15 identifier exposure in **git history** (current files clean; history not rewritten) ·
+F17 no established ZIP-level customary increase · F18 banked examples assume an unprovided complete
+rent history · F19 rate-table century defect (fixed here).
+
+---
+
 ### Final publication record — arena/3a6f02e5-rentincreasesf5
 - Independent audit: `AUDIT-2026-11-08.md`; fresh official-source links and limitations recorded. F17–F18 from the parallel follow-up remain needs review and non-blocking.
 - Combined local gate after preserving the parallel work: 14 consolidated pages, 300 source-linked rows, 778 links, 0 orphans, 15 mirrors, 5 recalculated scenarios; all earlier checks and 21/21 calculation tests pass.
