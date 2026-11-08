@@ -661,6 +661,22 @@ recorded in the log and on `hub/flagged.html` rather than done silently.
 
 ---
 
+# Session `arena/3a6f02e5-rentincreasesf5` · 2026-11-08 · independent final audit
+
+All earlier integration tasks on the board are recorded as done; no active task is taken over.
+Arena requires this session to remain on its fixed branch, so no additional session branch is created.
+
+| Task | Status | Owner | File scope |
+| --- | --- | --- | --- |
+| Re-read controlling official sources and audit published rules, calculations, privacy, and links | in progress | `arena/3a6f02e5-rentincreasesf5` | `COORDINATION.md`, `AUDIT-2026-11-08.md` |
+| Repair any defects found, rebuild, open PR to main, merge, and confirm Pages | in progress | `arena/3a6f02e5-rentincreasesf5` | Defect-specific files logged here before editing |
+
+No personal identifiers will be copied into the audit. Dates and amounts supplied by the owner remain
+unverified records, not official facts. No Inventory filing, licence request, or tenant notice will be performed.
+- 2026-11-08 defect scope extension: correct `README.md`'s inaccurate claim that historical identifier exposure never occurred. Current files are clean; prior public Git history was not rewritten. No identifiers will be reproduced. Also add `AUDIT-2026-11-08.md` to this session's audit scope.
+
+---
+
 ## Session arena-75594f57 — 2026-11-08
 Prior integration is complete (PR #12 at current main). Taking a new, non-overlapping follow-up audit; no active session's work is overwritten. Platform requires the assigned branch rather than a session-named branch.
 
@@ -682,3 +698,5 @@ No personal identifiers will be copied to tracked files. Official sources must b
 - Local validation: reproducible full build; all prior checks and new follow-up audit pass. Consolidated gate checks 14 pages, 300 source-linked rows, 778 links, zero orphans, 15 mirror pairs and 5 recalculated scenarios. This is a structural/source-coverage check, not proof each citation substantiates every archived claim. tools/dashboard_check_links.py prints “sources verified live” but its output must not be treated as fresh external-fetch evidence; fresh retrieval evidence is the source list above.
 - Page-fetch confirmed deployed Flagged for Review contains the new conditional banner and corrected F01; initial landing retrieval returned an older cached version, so deployment evidence is GitHub's successful run rather than that cached landing response. No claim of exhaustive external link availability or legal certification.
 - Final consistency pass also makes F04's resolution conditional on the unverified ledger, matching F18. This and the deployment record are included in the follow-up record PR from the same assigned branch.
+
+- 2026-11-08 collision resolution: PR #16 became conflicting when arena-75594f57 merged PRs #13/#14. Merged `origin/main` into the fixed branch; preserved both coordination sections verbatim, retained the newer conditional-scenario and empirical-practice corrections, and retained this session's README privacy-history correction. No parallel work discarded.
