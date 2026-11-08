@@ -1,8 +1,14 @@
-# Internal working notes — not published
+# Internal working notes — public by construction
 
-This file is **not** part of the published site (GitHub Pages serves only `index.html`, `pages/`, `assets/`).
-It deliberately contains **no tenant names, initials, addresses, parcel numbers or owner identifiers**.
-Those exist only in the owner's own file, outside this repository. Do not add them here or anywhere else in git.
+**Correction (2026-11-08):** an earlier version of this header said these notes were not published. That was
+wrong. GitHub Pages serves the **repository root**, so every committed file — including this one — is
+publicly readable at `https://kanlerxz87-cyber.github.io/RentincreaseSF5/internal/notes.md`, and also in the
+repository. Treat this file as published.
+
+It therefore deliberately contains **no tenant names, initials, addresses, parcel numbers or owner
+identifiers**. Those exist only in the owner's own file, outside this repository. Do not add them here or
+anywhere else in git; a file is public as soon as it is committed, and remains in git history even after
+deletion (see F15 on the site's Flagged for review page).
 
 Placeholders used across the repo: `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenant B2`, `Unit A`, `Unit B`.
 

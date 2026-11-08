@@ -649,8 +649,8 @@ re-verification and publication task. Nothing published by an earlier session is
 
 | ID | Task | Owner | Files in scope | Status |
 | --- | --- | --- | --- | --- |
-| V1 | Re-read the controlling official pages and re-verify the 62-row register line by line | `arena-fcb4d524` | `data/verified-register.csv`, `VERIFICATION.md` | in progress |
-| V2 | Correct the banking analysis (F04 / R26 / R28 / R29 and every page that repeats it) | `arena-fcb4d524` | `tools/build_hub.py`, `hub/**`, `index.html`, `site/hub/**`, `site/index.html` | in progress |
+| V1 | Re-read the controlling official pages and re-verify the 62-row register line by line | `arena-fcb4d524` | `data/verified-register.csv`, `VERIFICATION.md` | done |
+| V2 | Correct the banking analysis (F04 / R26 / R28 / R29 and every page that repeats it) | `arena-fcb4d524` | `tools/build_hub.py`, `hub/**`, `index.html`, `site/hub/**`, `site/index.html` | done |
 | V3 | Release gates, PR, merge, confirm Pages deploy, record the result | `arena-fcb4d524` | `COORDINATION.md`, `README.md` | in progress |
 
 Not in scope: the earlier sets (`pages/`, `dashboard/`, `docs/`, root `process.html`/`amounts.html`/
@@ -667,3 +667,24 @@ session records it on the consolidated Flagged page instead of rewriting another
   §37.3 (S3), §37.10B (S15), §37.10C (S16), Rent Board Fee (S12), "Learn about San Francisco rental
   laws" (S11), AB 1482 guidance (S10), Civil Code §§827 and 1947.12 (S8/S9), Tenant Petition page
   (S20), Rule 6.14/Costa-Hawkins page (S14), Form 1007 (S21).
+
+### 2026-11-08 — V1 and V2 complete
+
+- All 22 official sources re-read in full (S1-S22; S22 added this session). Every quoted value reproduced;
+  no rate, date or amount changed.
+- **Defect found and corrected.** The previous hub said the 24-month wording and Rule 4.12 "reconcile"
+  because both point at 24 months after tenancy start, and that "both readings produce the same result for
+  both units". Both statements are unsupported: the Board's worked examples bank an increase 12 months
+  after it became available and lose one after 11 months, and the banking page's own example banks at 12
+  months. Corrected on the executive summary, units page, register (R26/R28/R29) and F04, with the
+  alternative figures published: Unit 1 1.6% ($63.92) and Unit 2 11.7% ($368.55) if the 24-month sentence
+  were applied. README corrected; the superseded analysis is marked withdrawn.
+- **New flag F17** — the 2026-04-01 event in Unit 1 could be read as a continuing tenancy with an added
+  co-tenant (priced) or as a new tenancy (not priced; would move the anniversary to 1 April).
+- **Privacy correction** — `internal/notes.md` claimed it was not published. Pages serves the repository
+  root, so it is public; the header now says so. No identifier was ever in that file.
+- Added: "Your questions, answered" table on the landing page (seven questions, each with a source);
+  source S22 (Landlord Petitions and Passthroughs); re-verification rows on the site's Verification page.
+- Checks: `scripts/build.py`, `scripts/check.py`, `scripts/independent_audit.py`, `tools/check_links.py`,
+  `tools/build_site.py`, `build.py`, `tools/dashboard_check_links.py`, `tools/release_gate.py` all pass.
+  Build is reproducible (no drift). All 14 hub entry points return HTTP 200 from a local server.
