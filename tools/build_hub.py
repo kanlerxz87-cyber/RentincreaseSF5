@@ -1055,7 +1055,7 @@ FLAGS = [
      "Unverified input", ["S1", "S2"], "This is the first action item. The portal is public and reporting is free."),
     ("F04", "Banking wording: 12 versus 24 months", "The banking page says 24 full months; Rule 4.12 says 12 months from when the increase could have been imposed. The worked example on the rent increase page runs the clock from availability, which reconciles them.",
      "Conflicting official wording, reconciled by analysis", ["S6", "S7", "S5"],
-     "The reconciliation is interpretation, not a quoted rule. It does not change either unit's figure: Unit 1 hits 24 months on 2027-02-01 and Unit 2 has had no increase since 2019. Confirm in writing with a counsellor if you want certainty."),
+     "The reconciliation is interpretation, not a quoted rule. Conditional on no intervening increases: Unit 1 hits 24 months on 2027-02-01. Unit 2's no-increase history is unconfirmed (F18). Obtain written counselling and authenticate the ledger before relying on banking."),
     ("F05", "Rule 6.14 notice on the later co-tenant", "Whether a 6.14 notice was served on the occupant added to Unit 1 around 2026-04-01 is unknown. Generally 60 days is considered reasonable.",
      "Missing fact with future consequences", ["S14"],
      "If it was not served, an unlimited increase when the last original occupant leaves may not be available under Rule 6.14. This does not affect the current annual or banked increase."),
