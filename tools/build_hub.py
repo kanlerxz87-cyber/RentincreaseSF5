@@ -20,7 +20,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TODAY = date(2026, 11, 7)
+TODAY = date(2026, 11, 8)
 
 # ---------------------------------------------------------------------------
 # OFFICIAL SOURCES - every one retrieved and read during this session.
@@ -68,6 +68,10 @@ SOURCES = {
             "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/"),
     "S21": ("Form 1007 - Notice to Tenant / Tenant Right to Counsel", "SF Rent Board",
             "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag[74].pdf"),
+    "S22": ("Annual rent increase for multiple years", "SF Rent Board",
+            "https://www.sf.gov/information--annual-rent-increase-multiple-years"),
+    "S23": ("The Rent Ordinance (Chapter 37 index)", "SF Rent Board",
+            "https://www.sf.gov/reports--rent-ordinance/"),
 }
 
 # ---------------------------------------------------------------------------
@@ -95,7 +99,12 @@ RATES = [
 
 def _d(s):
     m, d, y = (int(x) for x in s.split("/"))
-    return date(y + 2000 if y < 100 else y, m, d)
+    if y < 100:
+        # The Form 571 table runs from 1982 to the current period, so a two-digit
+        # year is 19xx up to 99 and 20xx only from 00 onward. Mapping every
+        # two-digit year to 20xx printed the 1982-1999 rows as 2082-2099.
+        y += 1900 if y >= 82 else 2000
+    return date(y, m, d)
 
 
 def rate_on(d):
@@ -501,7 +510,7 @@ def layout(title, body, active, root=False, desc=None):
             'Coverage, lawful base rents, complete rent history and current licences are unverified. '
             'Banked examples assume no intervening increases; that history was not established for Unit 2. '
             'No amount is cleared for service or guaranteed to pass legal review. '
-            '<a href="' + flag_link + '">Review the limitations (including F17–F18)</a>.</p></section>') + body
+            '<a href="' + flag_link + '">Review the limitations (including F17–F19)</a>.</p></section>') + body
     css = "hub/hub.css" if root else "hub.css"
     home = "index.html" if root else "../index.html"
     d = desc or ("Source-linked research on lawful rent increases for two rent-controlled units "
@@ -518,7 +527,7 @@ def layout(title, body, active, root=False, desc=None):
 <body>
 <header class="top"><div class="top-in">
 <div class="brand"><a href="%s" style="text-decoration:none;color:inherit">SF rent increase dashboard</a>
-<small>Outer Sunset 94122 &middot; anonymised &middot; sources checked 7 Nov 2026</small></div>
+<small>Outer Sunset 94122 &middot; anonymised &middot; sources rechecked 8 Nov 2026</small></div>
 <nav class="main">%s</nav>
 </div></header>
 <main id="main"><div class="wrap">%s</div></main>
@@ -664,7 +673,7 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
 
 def page_exec():
     b = head("Executive summary",
-             "Compiled 7 November 2026; key rules rechecked 8 November 2026. The licence question comes first because nothing else "
+             "Compiled 7 November 2026; every figure re-verified against the same official sources on 8 November 2026. The licence question comes first because nothing else "
              "can be done safely until it is settled.")
     b += '<section class="panel"><h2>1. The licence question</h2><div class="answer">'
     b += ("<p><strong>You must be licensed, but you do not apply.</strong> Report each unit into the Rent "
@@ -684,7 +693,9 @@ def page_exec():
           "increase <em>is</em> the norm: <strong>1.6%%</strong> for effective dates from 1 March 2026 "
           "through 28 February 2027, once every 12 months, on base rent only, never rounded up. %s "
           "The statewide 8.8%% figure does not replace a stricter applicable local cap. Coverage of these "
-          "particular units remains unverified. No official ZIP-level customary increase was established. %s</p>" % (src("S4", "S5"), src("S9", "S10")))
+          "particular units remains unverified. No official ZIP-level customary increase was established, "
+          "and no federal statute caps rent in private, unsubsidised housing in the sources reviewed, so "
+          "none is estimated here. %s %s</p>" % (src("S4", "S5"), src("S9", "S10"), src("S19")))
     rows = []
     for unit, name, base, pct, eff, note in SCENARIOS:
         inc = round(base * pct / 100, 2)
@@ -863,7 +874,7 @@ def page_units():
         rows.append([e(unit), e(name), "%.1f%%" % pct, money(inc), money(round(base + inc, 2)),
                      "%d days" % notice_days(pct), eff.isoformat(), serve_by(eff, pct).isoformat(),
                      badge(COMPUTED) + " " + src("S4", "S8")])
-    b += table("Serve-by dates assume personal service and are computed from today, 7 November 2026.",
+    b += table("Serve-by dates assume personal service and are computed backwards from the effective date; the earlier of the two applies.",
                ["Unit", "Option", "Total", "Increase", "New rent", "Notice", "Effective", "Serve by", "Status and source"],
                rows, numeric=(2, 3, 4))
     b += '</section>'
@@ -880,7 +891,7 @@ def page_rates():
     b += '<section class="panel"><h2>Official rate table</h2>'
     rows = [[e("%s - %s" % (_d(a).isoformat(), _d(bb).isoformat())), "%.1f%%" % r,
              badge(VERIFIED) + " " + src("S4")] for a, bb, r in RATES]
-    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026. "
+    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026 and re-read on 8 November 2026. "
                "Only one of the two 1992-1993 increases may be imposed, based on the tenant's anniversary date.",
                ["Effective period", "Allowable increase", "Status and source"], rows)
     b += ('<p class="note">The 12/8/1992 - 2/28/1993 and 3/1/1992 - 12/7/1992 rows overlap by design; '
@@ -1051,7 +1062,7 @@ FLAGS = [
      "Unverified input", ["S1", "S2"], "This is the first action item. The portal is public and reporting is free."),
     ("F04", "Banking wording: 12 versus 24 months", "The banking page says 24 full months; Rule 4.12 says 12 months from when the increase could have been imposed. The worked example on the rent increase page runs the clock from availability, which reconciles them.",
      "Conflicting official wording, reconciled by analysis", ["S6", "S7", "S5"],
-     "The reconciliation is interpretation, not a quoted rule. It does not change either unit's figure: Unit 1 hits 24 months on 2027-02-01 and Unit 2 has had no increase since 2019. Confirm in writing with a counsellor if you want certainty."),
+     "The reconciliation is interpretation, not a quoted rule. Conditional on no intervening increases: Unit 1 hits 24 months on 2027-02-01. Unit 2's no-increase history is unconfirmed (F18). Obtain written counselling and authenticate the ledger before relying on banking."),
     ("F05", "Rule 6.14 notice on the later co-tenant", "Whether a 6.14 notice was served on the occupant added to Unit 1 around 2026-04-01 is unknown. Generally 60 days is considered reasonable.",
      "Missing fact with future consequences", ["S14"],
      "If it was not served, an unlimited increase when the last original occupant leaves may not be available under Rule 6.14. This does not affect the current annual or banked increase."),
@@ -1089,6 +1100,18 @@ FLAGS = [
      "The user supplied a 2019 starting rent for Unit 2, not a complete intervening ledger. Full-bank examples assume no intervening increases and unchanged lawful base rent; they are not verified entitlements. Earlier archived sets may describe that assumption as owner-supplied.",
      "Unverified input; conditional arithmetic only", ["S5", "S6", "S20"],
      "Authenticate leases, receipts, every prior increase and concessions before using any illustrated total. No increase is cleared for notice or certified to pass a lawyer's review."),
+    ("F19", "Published rate table showed the wrong century for 1982-1999",
+     "The date helper that sorts and prints the Form 571 table mapped every two-digit year to 20xx, so the 1982-1999 rows were published as 2082-2099 (for example '2082-04-01 - 2083-02-28' for the 7.0% period that began 1 April 1982). No percentage was wrong; the years were.",
+     "Repository defect, fixed and re-verified 2026-11-08", ["S4"],
+     "Repaired in tools/build_hub.py and guarded by the release gate, which fails if any effective period falls outside 1982-2027. The full table was re-read against Form 571 after the fix: all 46 rows match. No legal conclusion or unit figure changed."),
+    ("F20", "The licence must be current on the effective date, not necessarily at service",
+     "Section 37.15(e) and the Inventory page tie the licence to the increase taking effect. Neither source states that the licence must already exist when the notice is served. Obtaining it before service is the recommended safer workflow, not a rule quoted from the ordinance.",
+     "Wording precision, no figure affected", ["S1", "S2", "S5"],
+     "Treat 'licence current before service' as prudent practice; treat 'licence current on the effective date' as the documented requirement."),
+    ("F21", "Publication surface: GitHub Pages serves the whole repository root",
+     "GitHub Pages publishes the entire repository root, so files such as the internal working notes and this coordination file are publicly readable, not just the HTML pages. The earlier internal note's claim that it was not published was incorrect and has been corrected. No tenant name, initial, address or parcel appears in any current file.",
+     "Publication-surface limitation", ["S1", "S2"],
+     "If the repository is made private, confirm Pages access settings before serving notices. Never store personal data anywhere in this repository."),
 
 ]
 
@@ -1189,6 +1212,15 @@ def page_verification():
          e("Defect found in the previous landing page and fixed; now guarded."), badge(VERIFIED) + " " + src("S5")],
         ["Merge markers", e("Scan for unresolved conflict markers in tracked files."),
          e("Markers found in the coordination file and repaired; now guarded."), badge(VERIFIED) + " " + src("S5")],
+        ["Rate table years", e("Every effective period re-read from Form 571 on 8 November 2026 and the two-digit years re-checked."),
+         e("Defect found: 1982-1999 printed as 2082-2099 (F19). Fixed, table re-checked row by row; gate now rejects any year outside 1982-2027."),
+         badge(VERIFIED) + " " + src("S4")],
+        ["Independent re-verification", e("Section 37.15, section 37.3, Form 571, the rent increase and banking pages, Rules 4.10 and 4.12, Civil Code sections 827, 1942.5 and 1947.12, the AB 1482 page, the Rent Board fee page, Form 516C and Form 1007 re-fetched and re-read on 8 November 2026."),
+         e("All published values matched. The 1.6% rate, the licence rule, the notice periods and the AB 1482 exemption are unchanged."),
+         badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S12", "S20", "S21")],
+        ["Arithmetic re-check", e("Both units' five scenarios recomputed from the base rents and the published percentages."),
+         e("Unit 1: 1.6% = $63.92 and 3.0% = $119.85. Unit 2: 1.6% = $50.40, 13.1% = $412.65 and 10.0% = $315.00. All match to the cent, none rounded up."),
+         badge(COMPUTED) + " " + src("S4", "S8")],
     ]
     b += table("Verification performed in this session", ["Check", "Method", "Result", "Status and source"], rows)
     b += '</section>'

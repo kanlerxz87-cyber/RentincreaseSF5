@@ -630,6 +630,53 @@ Flagged here for the owner to close or rebase.
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Landing page and `hub/flagged.html` retrieved from the deployed URL and read: consolidated hub is live, F01-F16 render with source links. Direct `curl` from the sandbox returns `000` because github.io is not on the sandbox egress allowlist - that is an network restriction, not a site fault; verification was done with the page-fetch tool. |
 
+---
+
+# Session `arena-0691d955` · branch `arena/0691d955-rentincreasesf5` · 2026-11-08
+
+## Registry
+
+| Session ID | Branch | Worktree | Started (UTC) | Status |
+| --- | --- | --- | --- | --- |
+| `arena-0691d955` | `arena/0691d955-rentincreasesf5` | repo root | 2026-11-08 | active — independent re-verification, defect repair, publish |
+
+## Claim (written before any other file was touched)
+
+Prior sessions' PRs (#1–#4, #6, #8–#11) are merged to `main`; PRs #5 and #7 are stale open
+branches owned by other sessions and are **not touched** here. No row on the board names a session
+still committing, so the 60-minute takeover rule does not need to be invoked: this session takes a
+**new, independent verification task** over the already-published tree rather than a handoff.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| V1 | Re-verify every published figure on `hub/**` against the official source, line by line | `arena-0691d955` | `COORDINATION.md`, `VERIFICATION.md` | in progress |
+| V2 | Repair defects found by V1 (historical rate-table century bug, others as found) | `arena-0691d955` | `tools/build_hub.py`, `hub/**`, `site/hub/**` | in progress |
+| V3 | Independent arithmetic re-check of both units' options | `arena-0691d955` | `VERIFICATION.md`, `hub/units.html` | in progress |
+| V4 | Release gates: build, links, privacy scan, one official source per row | `arena-0691d955` | `tools/release_gate.py` | in progress |
+| V5 | PR → merge → confirm GitHub Pages deploy → record result | `arena-0691d955` | `COORDINATION.md` | in progress |
+| V6 | Publish newly found irregularities on the Flagged for Review page | `arena-0691d955` | `hub/flagged.html`, `data/flagged.csv` | in progress |
+
+No prior session's page, data file or record is deleted. Repair of an incorrect published value is
+recorded in the log and on `hub/flagged.html` rather than done silently.
+
+---
+
+# Session `arena/3a6f02e5-rentincreasesf5` · 2026-11-08 · independent final audit
+
+All earlier integration tasks on the board are recorded as done; no active task is taken over.
+Arena requires this session to remain on its fixed branch, so no additional session branch is created.
+
+| Task | Status | Owner | File scope |
+| --- | --- | --- | --- |
+| Re-read controlling official sources and audit published rules, calculations, privacy, and links | done | `arena/3a6f02e5-rentincreasesf5` | `COORDINATION.md`, `AUDIT-2026-11-08.md` |
+| Repair any defects found, rebuild, open PR to main, merge, and confirm Pages | done | `arena/3a6f02e5-rentincreasesf5` | Defect-specific files logged here before editing |
+
+No personal identifiers will be copied into the audit. Dates and amounts supplied by the owner remain
+unverified records, not official facts. No Inventory filing, licence request, or tenant notice will be performed.
+- 2026-11-08 defect scope extension: correct `README.md`'s inaccurate claim that historical identifier exposure never occurred. Current files are clean; prior public Git history was not rewritten. No identifiers will be reproduced. Also add `AUDIT-2026-11-08.md` to this session's audit scope.
+
+---
+
 ## Session arena-75594f57 — 2026-11-08
 Prior integration is complete (PR #12 at current main). Taking a new, non-overlapping follow-up audit; no active session's work is overwritten. Platform requires the assigned branch rather than a session-named branch.
 
@@ -671,3 +718,194 @@ No real tenant identifiers will be written into tracked files, test fixtures, er
 ### arena-e126bdbe — released archived-link repair claim
 - 2026-11-08 22:58 UTC: claim the released, non-overlapping archived set `pages/compilation.html`, `pages/process.html`, `pages/questions.html`, `pages/rates.html`, `pages/review.html` and their `site/pages/` mirrors for a minimal malformed-anchor repair only. Original publishing session arena/0502f829 is merged/released; active PRs #17/#18/#20 do not list these files. No content, calculation or navigation rewrite. Repair `<a https://...>` to valid `href="https://..."` anchors and add a regression check in this session's audit tool. The missing `site/docs` mirror remains a request to the hub owner, not an edit here.
 - Archived-link repair completed: 92 malformed source anchors repaired across five released pages (not 22; the initial count was stray closing tags, not occurrences), mirrored byte-for-byte. No text/figures changed. `tools/verify_site.py` passes; the new audit now detects missing `href=` on URL anchors. Remaining whole-tree local-target failure is the hub owner's absent `site/docs` mirror request.
+<!-- arena-e126bdbe merge resolution: both coordination sections preserved verbatim; no session work discarded. -->
+### Follow-up publication record — arena-75594f57
+- Task complete; F17–F18 needs review, published and non-blocking.
+- PR [#13](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/13) merged 2026-11-08 22:45:55 UTC; merge commit `3af6e183044dfbb6751e08517aa23465cb49d24f`.
+- PR validate run 42531815412: success. Main validate run 42531851575: success. Pages build/deploy run 42531851214: success (build, deploy, status report). Live URL: https://kanlerxz87-cyber.github.io/RentincreaseSF5/.
+- Local validation: reproducible full build; all prior checks and new follow-up audit pass. Consolidated gate checks 14 pages, 300 source-linked rows, 778 links, zero orphans, 15 mirror pairs and 5 recalculated scenarios. This is a structural/source-coverage check, not proof each citation substantiates every archived claim. tools/dashboard_check_links.py prints “sources verified live” but its output must not be treated as fresh external-fetch evidence; fresh retrieval evidence is the source list above.
+- Page-fetch confirmed deployed Flagged for Review contains the new conditional banner and corrected F01; initial landing retrieval returned an older cached version, so deployment evidence is GitHub's successful run rather than that cached landing response. No claim of exhaustive external link availability or legal certification.
+- Final consistency pass also makes F04's resolution conditional on the unverified ledger, matching F18. This and the deployment record are included in the follow-up record PR from the same assigned branch.
+
+- 2026-11-08 collision resolution: PR #16 became conflicting when arena-75594f57 merged PRs #13/#14. Merged `origin/main` into the fixed branch; preserved both coordination sections verbatim, retained the newer conditional-scenario and empirical-practice corrections, and retained this session's README privacy-history correction. No parallel work discarded.
+
+---
+
+## Final record — `arena-0691d955` (verification, defect repair, publication)
+
+### Task board — final status
+
+| ID | Task | Owner | Status |
+| --- | --- | --- | --- |
+| V1 | Re-verify every published figure against the official source, line by line | `arena-0691d955` | done |
+| V2 | Repair defects found by V1 | `arena-0691d955` | done — F19 |
+| V3 | Independent arithmetic re-check of both units' options | `arena-0691d955` | done — all five scenarios match to the cent |
+| V4 | Release gates (build, links, privacy, one official source per row) | `arena-0691d955` | done |
+| V5 | PR → merge → confirm Pages deploy → record | `arena-0691d955` | done (record below) |
+| V6 | Publish newly found irregularities on the Flagged page | `arena-0691d955` | done — F19, needs review, non-blocking |
+
+### Sources re-fetched and read this session (2026-11-08)
+
+sf.gov / SF Rent Board: Housing Inventory; Admin Code §37.15, §37.3, §37.10B, §37.10C; Form 571
+(full table); "Learn about rent increases in San Francisco"; "Banked rent increases"; Rules and
+Regulations Part IV (§4.10, §4.12); "Annual rent increase for multiple years"; §6.14 / Costa-Hawkins
+petition page; "Learn about San Francisco rental laws"; "The Rent Board Fee"; AB 1482 guidance;
+Form 516C page; Form 1007 PDF. California Legislature: Civil Code §§827, 1942.5, 1947.12.
+California Civil Rights Department: housing discrimination page. U.S. HUD: Fair Housing Act overview.
+
+Every published value checked against these matched. No value was changed by the re-verification;
+one presentation defect was found and repaired (below).
+
+### Defect found and repaired — F19
+
+`_d()` in `tools/build_hub.py` mapped every two-digit year to 20xx, so the published Form 571 table
+printed the 1982-1999 periods as **2082-2099** (`2082-04-01 - 2083-02-28` for the 7.0% period that
+began 1 April 1982). Percentages were correct; years were not. Fixed with century-aware parsing;
+`tools/release_gate.py` now fails if any effective period falls outside 1982-2027. The full table was
+re-read against Form 571 afterwards: 46/46 rows match. Published as **F19** on `hub/flagged.html`.
+
+### Collisions with other sessions, and how they were resolved
+
+`main` advanced three times while this session worked (PRs #13/#14 from `arena-75594f57`, then #16,
+then #21 from `arena/3a6f02e5`). Each was merged into this branch rather than forced:
+
+| Item | Resolution |
+| --- | --- |
+| `tools/build_hub.py` (three conflict hunks) | Kept the other session's conditional wording (licence timing, conditional scenarios, practices paragraph, banner). Re-applied this session's century fix and verification rows on top. |
+| Flag numbering | The other session's F17/F18 already existed, so this session's century defect is **F19**, not F17. No other session's flag was renumbered or removed. |
+| `COORDINATION.md` | Both sides kept verbatim in every merge; no session's log discarded. |
+| Generated `hub/**`, `site/hub/**`, `index.html` | Resolved by regenerating from the merged generator; artifacts match a fresh build byte-for-byte. |
+| `tools/followup_audit.py`, `AUDIT-2026-11-08.md`, `data/verified-register.csv`, `EXECUTIVE-SUMMARY.md`, `.github/workflows/pages.yml` | Kept from `main` unchanged. |
+
+### Checks after the merges
+
+`scripts/build.py` (reproducible, zero drift), `scripts/check.py`, `scripts/independent_audit.py`,
+`tools/check_links.py`, `tools/dashboard_check_links.py`, `tools/followup_audit.py`,
+`tools/release_gate.py` — all pass: 14 pages, 303 source-linked rows, 777 links, 0 orphans,
+0 unsourced rows, 15 mirror pairs, 5 scenarios recomputed, 62 register findings, 19 flags (F01-F19).
+Local static server: all 15 published entry points return HTTP 200.
+
+### PR and deploy record
+
+| Item | Value |
+| --- | --- |
+| Branch | `arena/0691d955-rentincreasesf5` |
+| Pull request | [#15](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/15) |
+| CI on PR | `validate` **pass** (run 42532207905) |
+| Merge result | **MERGED** 2026-11-08 22:50:40 UTC, merge commit `c36e700c6de0422d6348b8ed7696f08f10620507` |
+| Validate on `main` | **success** (run 42532243692) |
+| Pages build/deploy | **success** (run 42532243077); Pages API status `built`, commit `3d67cff` |
+| Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
+| Live verification | `hub/rates.html` re-read from the deployed URL: all 46 periods render with the correct years (1982-04-01 … 2026-03-01). `hub/flagged.html` re-read: F01-F19 render with source links (an initial fetch returned a cached pre-deploy copy; a cache-busted fetch confirmed F19). |
+| Privacy | No tenant name, initial, street address or unit address is in any file this session touched. |
+
+### Still open for the owner (non-blocking, all published on the Flagged page)
+
+F01 owner-supplied rent history · F02 build year/coverage · F03 Inventory/licence status ·
+F05 6.14 notice on the later co-tenant · F06 unpublished 2027-28 rate · F09 reported banking-cap
+proposals · F10 no official ZIP market rent · F12 bedroom/square footage for the Inventory ·
+F15 identifier exposure in **git history** (current files clean; history not rewritten) ·
+F17 no established ZIP-level customary increase · F18 banked examples assume an unprovided complete
+rent history · F19 rate-table century defect (fixed here).
+
+---
+
+### Final publication record — arena/3a6f02e5-rentincreasesf5
+- Independent audit: `AUDIT-2026-11-08.md`; fresh official-source links and limitations recorded. F17–F18 from the parallel follow-up remain needs review and non-blocking.
+- Combined local gate after preserving the parallel work: 14 consolidated pages, 300 source-linked rows, 778 links, 0 orphans, 15 mirrors, 5 recalculated scenarios; all earlier checks and 21/21 calculation tests pass.
+- PR [#16](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/16) validation run 42532137767: success.
+- PR #16 merged 2026-11-08 22:49:45 UTC; merge commit `ef2869c62ba14c3fe0e7fad2a56880ae7fa4984e`.
+- Main validation run 42532168058: success. Pages build/deploy run 42532167597: success. Pages API latest build is `built` at the PR #16 merge commit.
+- Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF5/. Deployed Flagged page retrieved; its first chunk can be cached and showed the prior F04 wording while F01/banner were current. Deployment evidence is the successful build at the merge commit, not a claim that every CDN cache refreshed simultaneously.
+- Rebase note: the required pre-push `pull --rebase` was attempted after the main-integration merge and tried to replay parallel commits with a coordination conflict. It was aborted to preserve the resolved merge; the remote session branch had not advanced, so the merge commit was pushed without discarding or rewriting parallel work.
+
+---
+
+---
+
+## Session: `arena/aa463593-rentincreasesf5` — independent verification + release pass (2026-11-08)
+
+**Branch:** `arena/aa463593-rentincreasesf5` (Arena-assigned; platform requirement — no session branch created).
+Base commit at claim time: `04d683e` (merge of PR #12), working tree clean.
+All prior sessions' claims are released: `main` contains PRs #1–#4, #6, #8–#12 and no board row
+names a session that is still working. No file owned by another live session is in this scope.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| V1 | Re-read the controlling official sources (SF Rent Board, Chapter 37, Form 571, CA Civil Code, CRD/HUD) and confirm or correct every published figure | `arena/aa463593-rentincreasesf5` | `VERIFICATION.md`, this section | in progress |
+| V2 | Run every existing generator and checker on a clean tree; repair any failure | `arena/aa463593-rentincreasesf5` | `tools/**`, `scripts/**`, `build.py` (only if a check fails) | in progress |
+| V3 | Line-by-line audit of each published table row: official source link present, value matches the source, blanks stay blank | `arena/aa463593-rentincreasesf5` | `hub/**`, `docs/**`, `pages/**`, `dashboard/**` | in progress |
+| V4 | Privacy scan of every published file (names, initials, address, parcel) | `arena/aa463593-rentincreasesf5` | whole tree | in progress |
+| V5 | PR → merge → confirm GitHub Pages deploy → record result | `arena/aa463593-rentincreasesf5` | `COORDINATION.md` | in progress |
+| V6 | Flagged-for-review additions found by this pass | `arena/aa463593-rentincreasesf5` | `hub/flagged.html` via `tools/build_hub.py`, `docs/flagged.html` via `tools/dashboard_build.py` | needs review (published, non-blocking) |
+
+Claim written and pushed before any other file was modified. No prior session's page, data file or
+generator will be deleted or rewritten; defects are fixed additively and logged here.
+
+---
+
+## Session `arena/aa463593-rentincreasesf5` — final record (2026-11-08)
+
+### Task board — final status
+
+| ID | Task | Owner | Status |
+| --- | --- | --- | --- |
+| V1 | Re-read the controlling official sources and confirm or correct every published figure | `arena/aa463593` | done |
+| V2 | Run every generator and checker on a clean tree; repair failures | `arena/aa463593` | done |
+| V3 | Line-by-line audit of published table rows and rates | `arena/aa463593` | done |
+| V4 | Privacy scan of every published file and of the full history | `arena/aa463593` | done (history exposure flagged, not rewritten) |
+| V5 | PR → merge → confirm Pages deploy → record | `arena/aa463593` | done (see below) |
+| V6 | Flagged-for-review additions | `arena/aa463593` | needs review (published, non-blocking) |
+
+### Sources re-read this pass (20)
+
+Form 571 (all 46 periods) · §37.3 · §37.15 · Part IV Rules 4.10/4.12 · banking page · multiple-year
+page · Housing Inventory · rent-increase guidance and all four worked examples · Civ. Code §§827,
+1947.12, 1942.5 · SF AB 1482 guide · §§37.10B, 37.10C · Rule 6.14 guidance · 516C petition route ·
+Rent Board fee · rental-law coverage · Form 1007 · CRD housing guidance. Register extended with
+S22 (multiple-year guidance) and S23 (Rent Ordinance index).
+
+### Verification performed
+
+- Form 571 machine-compared against `data/allowable-increases.csv` (47 rows),
+  `docs/data/allowable_increases.json` (45 periods) and `data/allowance-ledger.csv` (9 rows):
+  **0 mismatches**.
+- Every published dollar figure recomputed independently: matches to the cent, none rounded up.
+- All five serve-by dates recomputed: match.
+- Supplied initials: **0 matches in 167 tracked files**; present in **4 files in earlier commits**.
+- All six checkers pass; `scripts/build.py` twice produces no drift.
+- Live site re-fetched after deploy: `hub/flagged.html` shows F19–F21, `hub/rates.html` shows the
+  corrected 1982–2027 centuries, `internal/notes.md` shows the corrected publication warning.
+
+### Defects found and fixed by this pass
+
+1. `internal/notes.md` claimed it was not published; it is served publicly. Corrected (F21).
+2. The site stamp said 7 November while the sources had been re-read on 8 November. Corrected.
+3. Two prose-cited sources were missing from the register. Added as S22/S23.
+
+### A flag raised and withdrawn
+
+A candidate flag against the multiple-year worked example (8.2% = 2.2+1.6+2.6+1.8) was re-derived
+against Form 571 anniversary by anniversary and found to be **correct**; the flag was withdrawn before
+publication and the withdrawal is recorded in `VERIFICATION.md`.
+
+### Collisions handled
+
+`main` advanced four times during this session (PRs #13, #14, #15/#16/#21, #22). Each time the
+newer `main` was merged in rather than replaced, conflicts in `tools/build_hub.py` were resolved by
+adopting main's version (including its F19 century repair) and re-applying only this pass's
+additions, and `COORDINATION.md` / `VERIFICATION.md` conflicts were resolved by keeping both sides
+verbatim. No session's work was deleted.
+
+### PR and deploy record
+
+| Item | Value |
+| --- | --- |
+| Branch | `arena/aa463593-rentincreasesf5` |
+| Pull request | [#19](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/19) |
+| CI on PR | `validate` **pass** (build, all checkers, release gate, reproducibility) |
+| Merge result | **MERGED** 2026-11-08 22:53 UTC, merge commit `4c0cf6d53a8cd54fc41efbf6d0444a1101814756` |
+| Validate on `main` | **success** (run 42532442193) |
+| Pages build/deploy | **success** (run 42532441873); Pages API status `built` at `4c0cf6d5` |
+| Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
+| Live verification | Landing page, `hub/flagged.html` (F19–F21 with source links), `hub/rates.html` (corrected century range) and `internal/notes.md` (corrected warning) all retrieved from the deployed URL and read |

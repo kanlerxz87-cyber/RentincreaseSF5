@@ -1,8 +1,20 @@
-# Internal working notes — not published
+# Internal working notes — read this before relying on the word "internal"
 
-This file is **not** part of the published site (GitHub Pages serves only `index.html`, `pages/`, `assets/`).
-It deliberately contains **no tenant names, initials, addresses, parcel numbers or owner identifiers**.
-Those exist only in the owner's own file, outside this repository. Do not add them here or anywhere else in git.
+**Corrected 8 November 2026.** An earlier version of this file said it was not published. That was wrong.
+
+GitHub Pages for this repository is configured with **source = `main`, path = `/`**, so the *whole*
+repository root is served publicly. This file is therefore reachable at
+`/internal/notes.md` on the live site, and so is every other tracked file that is not excluded by a
+`_config.yml`/`.nojekyll` rule. Verified by retrieving both this path and `/COORDINATION.md` from the
+deployed URL; both returned 200.
+
+Consequence: **assume every tracked file is public.** It contains **no tenant names, initials,
+addresses, parcel numbers or owner identifiers** — those must stay outside this repository.
+
+Additional 8 November 2026 finding: the *current* copies of `scripts/independent_audit.py`,
+`tools/check_links.py` and `tools/release_gate.py` no longer contain any identifier (they read a
+git-ignored `private/identifiers.txt`). Literal initials **do remain in earlier commits**; see
+`PRIVACY-REVIEW.md` and flagged item F15. Do not assume the history is clean.
 
 Placeholders used across the repo: `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenant B2`, `Unit A`, `Unit B`.
 
