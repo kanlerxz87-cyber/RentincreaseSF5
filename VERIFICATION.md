@@ -185,3 +185,133 @@ searchable. That is a requirement of the licence, not an optional disclosure.
   lawful increase does not depend on market rent.
 - Reported 2026 proposals to cap banked increases at 10% a year could not be confirmed on an official
   legislative status page. No value is asserted (F09).
+
+---
+
+# Independent re-verification — session `arena-847d013c` — 2026-11-08
+
+Previous sections record earlier sessions' verification. This session re-checked the merged tree
+**from the official sources outward**, not from the repository's own claims. Every URL below was
+retrieved and read again on 2026-11-08.
+
+## 1. Rate table — machine comparison, not eyeballing
+
+The 46 periods in Form 571 were transcribed by hand from the PDF read this session and compared
+programmatically against `data/allowable-increases.csv`:
+
+```
+compared 46 rows, 0 mismatches, official table has 46 periods
+periods in official table but missing from repo: none
+BLANK (as designed): 3/1/2027 - 2/29/2028 -> unverified - not yet published
+```
+
+The 2027–28 row remains blank by design: the Board publishes it on 1 March 2027, and it is stated
+as anonymous-ineligible rather than estimated. `1.6%` for 3/1/2026–2/28/2027 is confirmed three ways
+(Form 571 table, the guidance page, and the Board's own news release of 14 January 2026).
+
+## 2. Arithmetic — recomputed independently to the cent
+
+| Scenario | Computation | Result | Site value | Match |
+| --- | --- | --- | --- | --- |
+| Unit 1 annual | $3,995 × 1.6% | $63.9200 | $63.92 | yes |
+| Unit 1 banked + annual | $3,995 × 3.0% | $119.8500 | $119.85 | yes |
+| Unit 2 annual | $3,150 × 1.6% | $50.4000 | $50.40 | yes |
+| Unit 2 banked + annual | $3,150 × 13.1% | $412.6500 | $412.65 | yes |
+| Unit 2 held to 10% | $3,150 × 10% | $315.0000 | $315.00 | yes |
+
+Bank chain: 1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 = **11.5%** banked, plus 1.6% current = **13.1%**.
+The 2.6% for 3/1/2019–2/29/2020 is correctly excluded: that period expired before this tenancy's
+first increase became available on 1 June 2020. No value is rounded up, per Rule 4.10 and Form 571.
+
+Notice dates: 2027-02-01 minus 30 days = **2027-01-02**; 2027-02-28 minus 90 days = **2026-11-30**.
+Both match the site. The 5-day mail extension is stated separately, not folded in.
+
+## 3. The licence question — confirmed again in the ordinance text
+
+- §37.15(a): *"Owners of residential dwelling units subject to this Chapter 37 shall be required to
+  report…"* — no entity-type, no portfolio-size threshold. An **individual owner is covered**.
+- §37.15(e): the licence is granted on substantial compliance, **suspended** on non-compliance,
+  restored **prospectively only**, and *"a tenant shall not be obligated to pay the increased rent
+  for months during the period of suspension."*
+- The Housing Inventory page: the licence is *"automatically generated"* once a unit is reported as
+  non-owner-occupied, and *"does not need to be included with your rent increase notice."*
+- The same page: *"your rent increase notice will not be enforceable without having a rent increase
+  license on the effective date of the notice."*
+
+So: **report first, then serve.** There is no application and no approval decision.
+
+## 4. Notice rules — statute against rule
+
+Civ. Code §827(b)(2)–(3) read verbatim: 30 days for 10% or less, 90 days for more than 10%, each
+measured *"at any time during the 12 months before the effective date"* and combined with other
+increases in that window, service personally or by mail under CCP §1013. Rule 4.10(b) read verbatim:
+a non-conforming increase is **null and void in its entirety**, with only a half-of-one-percent
+good-faith readjustment. Both confirmed as the site states them.
+
+## 5. State cap — the exemption is correctly applied
+
+Civ. Code §1947.12(d)(3) exempts *"Housing subject to rent or price control through a public entity's
+valid exercise of its police power … that restricts annual increases in the rental rate to an amount
+less than that provided in subdivision (a)."* These units are under the Rent Ordinance, which restricts
+increases to 1.6% — far below 5% + CPI. The statewide cap therefore does **not** govern them. The
+8.8% figure (5% + 3.8% CPI for 8/1/2026–7/31/2027) is correctly labelled reference-only.
+
+## 6. New this session
+
+Two sources were added and read in full: the Rent Board's **Tenant Financial Hardship Applications**
+page (S22) and the Board's **annual-rent-increase announcement** (S23). Two register rows were added
+from S22, both directly quoted:
+
+- **R63** — hardship *deferral* is unavailable for annual and banked increases. The page lists the
+  five increase types that qualify and then states that *"for all other types of rent increases or
+  passthroughs, including annual and banked rent increases … financial hardship relief is not
+  available."* This matters to the owner: it is one route a tenant cannot use against a lawful banked
+  increase, and it is stated as a verified fact rather than assumed.
+- **R64** — what a tenant must produce to challenge the calculation, drawn from the petition page.
+
+The register now holds **64 findings: 55 verified, 5 owner-supplied or computed, 4 blank or
+no-authority-found.** No previously verified row changed value.
+
+## 7. Defects found this session
+
+| # | Defect | Action |
+| --- | --- | --- |
+| 1 | `internal/notes.md` claimed GitHub Pages serves only `index.html`, `pages/` and `assets/`. The live Pages configuration serves the repository **root**, so every tracked file — including that note — is publicly readable. | Note rewritten with a correct header; disclosed publicly as **F18** on the flagged page. No personal information was in the file. |
+| 2 | Flag **F09** (reported 10% cap on banked increases) was vague and cited only the banking page. | Rewritten to state precisely what was reported, labelled *secondary reporting only*, with the specific effect on Unit 2 noted. Still **not** asserted as law: no official legislative record page was retrieved. |
+| 3 | The register had no row on hardship deferral, a mechanism a tenant-side review would otherwise appear to have available. | Added R63/R64 from S22. |
+
+## 8. Privacy audit of the whole published tree
+
+Not just HTML. All 57 published HTML files were scanned for local-reference breakage (0 broken
+local refs), and the whole tracked tree plus git history was searched for the supplied tenant
+initials. **No tenant name, initial, address or parcel number appears in any tracked file or in any
+commit.** The only matches for a two-letter pattern were the word "IS" in ordinary prose inside a
+quoted worked example. The site footer's privacy statement is accurate as published.
+
+Note for the owner: because Pages serves the root, `internal/` is **not** private and git history is
+**not** private. Do not add personal information anywhere in this repository.
+
+## 9. What remains unverified, and why
+
+Nothing in this list blocks publication; each is on the flagged page.
+
+- Owner-supplied base rents, tenancy dates and the absence of prior increases (F01).
+- The 1940 build year and two-unit count, and therefore coverage itself (F02).
+- Whether the Housing Inventory is current and a licence is on file — checkable only in the portal (F03).
+- The exact banking boundary for Unit 1: 1 February 2027 is exactly 24 months after 1 February 2025,
+  so "at least 24 full months" is satisfied on that date under the ordinary reading. This is an
+  arithmetic reading of the Board's own wording, so it is published as analysis (F04), not as a rule,
+  and a written counsellor answer is the way to close it.
+- The 2027–28 rate (F06) and any official ZIP-level market figure (F10): left blank.
+- The reported banked-increase cap (F09): no official legislative record retrieved.
+
+## 10. Gates re-run after the changes
+
+```
+python3 scripts/build.py             # 16 files + 13 dashboard files + 6 earlier pages, register 64
+python3 scripts/check.py             # PASS: local links, source allowlist, every row sourced, headings
+python3 scripts/independent_audit.py # PASS: 7 pages, 60 sourced rows, root/site parity, identifier exclusion
+python3 tools/release_gate.py        # PASS: 14 pages, 305 rows, 770 links, 0 orphans, 0 unsourced, 0 privacy hits
+```
+
+Independent from-scratch link audit of all 57 published HTML files: **0 broken local references.**

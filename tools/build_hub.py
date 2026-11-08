@@ -68,6 +68,10 @@ SOURCES = {
             "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/"),
     "S21": ("Form 1007 - Notice to Tenant / Tenant Right to Counsel", "SF Rent Board",
             "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag[74].pdf"),
+    "S22": ("Tenant Financial Hardship Applications (deferral of an increase)", "SF Rent Board",
+            "https://www.sf.gov/tenant-financial-hardship-applications/"),
+    "S23": ("Annual Rent Increase for 3/1/26 - 2/28/27 Announced (news release)", "SF Rent Board",
+            "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced/"),
 }
 
 # ---------------------------------------------------------------------------
@@ -352,6 +356,17 @@ row("review", "Free Rent Board counselling",
 row("review", "Hearing format",
     "Designed so that no one needs an attorney; parties may still be represented. The judge cannot "
     "consider evidence outside the record or not served on the other side.", VERIFIED, ["S20"])
+row("review", "Can a tenant ask the Rent Board to defer an annual or banked increase?",
+    "No. Financial-hardship relief covers only petition-based increases: capital improvement, "
+    "water revenue bond, general obligation bond, utility passthroughs and operating-and-maintenance "
+    "increases. The Rent Board states that for all other types, 'including annual and banked rent "
+    "increases', hardship relief is not available.", VERIFIED, ["S22"],
+    "A tenant faced with a banked increase can still petition the amount or the calculation (Form 516C), "
+    "but cannot obtain hardship deferral of a lawful annual or banked increase.")
+row("review", "What a tenant must show to challenge the calculation",
+    "The rent history is reviewed at the request of the tenant: lease, notices, receipts or cancelled "
+    "checks. Filing is free and has no time limit, so an owner's best protection is a complete "
+    "evidence file kept from the start of the tenancy.", VERIFIED, ["S20", "S22"])
 
 # ---------------------------------------------------------------------------
 # Unit arithmetic - computed from owner-supplied inputs and official rates.
@@ -1053,8 +1068,8 @@ FLAGS = [
      "Absence of authority, not a quoted rule", ["S19"], "Recorded as a search result, not as a legal conclusion."),
     ("F08", "No uniform-increase requirement found", "No provision requiring both units to be raised together, or by the same amount, was found.",
      "Absence of authority, not a quoted rule", ["S3", "S18"], "The anti-discrimination and retaliation rules still apply to the reason for any difference."),
-    ("F09", "Pending local legislation on banked increases", "Proposals to cap banked increases at 10% a year were reported during 2026. No official legislative status page was confirmed in this session.",
-     "Unverified", ["S6"], "No value is asserted. If enacted, it would affect the Unit 2 full-bank option. Recheck before serving."),
+    ("F09", "Pending local legislation on banked increases", "Proposals reported in September 2026 would cap annual increases from banked rent and certain capital-improvement costs at 10% for rent-controlled tenants through 2029, applying to banked increases imposed on or after 15 September 2026, with a Board of Supervisors vote reported as expected in November or December 2026.",
+     "Unverified - secondary reporting only", ["S3"], "No official legislative record page was retrieved, so nothing is asserted as law and no figure here depends on it. The current official text of sec. 37.3(a)(2) contains no such cap. If enacted as reported it would affect the Unit 2 full-bank option, because 13.1% in one year would exceed a 10% annual cap. Recheck the official Rent Ordinance page before serving."),
     ("F10", "ZIP-level market rent not published", "No official rent figure for ZIP 94122 was confirmed. The Rent Board does not publish a market rent for a ZIP code.",
      "Left blank", ["S5"], "For a rent-controlled unit the lawful increase does not depend on market rent, so nothing is estimated here."),
     ("F11", "Notice deadlines assume personal service", "Serve-by dates on this site are computed for personal delivery.",
@@ -1073,6 +1088,10 @@ FLAGS = [
      "A separate, real labelling slip does exist on the same guidance page: the first example says the rate in effect on 1 June 2025 is 1.6%, when 1.4% applied on that date. The increase in that example takes effect 1 June 2026, where 1.6% is correct, so the arithmetic is right and only the date label is wrong."),
     ("F14", "Earlier sets differ in presentation", "Five earlier compilations are preserved on this site. They agree on the verified rules but differ on whether to price unit-specific figures.",
      "Reconciled, not deleted", ["S4", "S5"], "This consolidated set prices the options and labels every result computed. The earlier sets remain reachable from the archive page."),
+    ("F18", "An internal note is publicly readable and was out of date",
+     "GitHub Pages serves this repository's root, so `internal/notes.md` is publicly readable even though it is labelled 'not published'. It also stated that Pages serves only `index.html`, `pages/` and `assets/`, which is not the configured behaviour.",
+     "Repository defect - corrected in this session", ["S2"],
+     "The note holds no personal information and makes no legal claim; it is a working checklist. Its header is corrected and this page discloses the exposure. Everything on the research pages is the authoritative output."),
 ]
 
 

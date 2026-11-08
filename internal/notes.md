@@ -1,10 +1,22 @@
-# Internal working notes — not published
+# Internal working notes — PUBLICLY READABLE
 
-This file is **not** part of the published site (GitHub Pages serves only `index.html`, `pages/`, `assets/`).
-It deliberately contains **no tenant names, initials, addresses, parcel numbers or owner identifiers**.
-Those exist only in the owner's own file, outside this repository. Do not add them here or anywhere else in git.
+**Read this first.** GitHub Pages is configured to publish this repository's **root**, so every
+tracked file is publicly readable at `https://kanlerxz87-cyber.github.io/RentincreaseSF5/<path>`,
+including this one at `/internal/notes.md`. A directory called `internal/` is **not** private just
+because of its name. (An earlier version of this file claimed Pages serves only `index.html`,
+`pages/` and `assets/`; that was wrong and has been corrected here and disclosed as F18 on
+`hub/flagged.html`.)
 
-Placeholders used across the repo: `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenant B2`, `Unit A`, `Unit B`.
+Consequence: **nothing personal may be committed anywhere in this repository.** This file
+deliberately contains no tenant names, initials, addresses, parcel numbers, phone numbers, email
+addresses or owner identifiers. Those stay in the owner's own files, outside git.
+
+Placeholders used across the site and repo: `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenant B2`,
+`Unit A`, `Unit B`. Dates and dollar amounts are preserved because the arithmetic depends on them.
+
+The authoritative published output is the site: the consolidated dashboard at `index.html` and the
+category pages in `hub/`. This file is scratch guidance for the owner and may be stale; if it
+disagrees with a page carrying a source link, the sourced page wins.
 
 ---
 
@@ -12,7 +24,8 @@ Placeholders used across the repo: `Tenant A1`, `Tenant A2`, `Tenant B1`, `Tenan
 
 1. **Rent Board counsellor — 415-252-4600** (weekdays 9–12 and 1–4).
    Ask: (a) for both units, is the Housing Inventory report current and is the rent increase licence live?
-   (b) does a skipped increase bank after 12 months or 24 months — the website says 24, Rule 4.12 says 12?
+   (b) does a skipped increase bank after 12 months or 24 months — the website says 24, Rule 4.12 says 12,
+   and the Board's worked example reconciles them (see F04)?
    (c) confirm the arithmetic: Unit A 1.4% + 1.6% = 3.0%; Unit B 1.8+0.7+2.3+3.6+1.7+1.4+1.6 = 13.1%.
 2. **A landlord-side attorney** (one hour, paid). Ask: whether the 2025-02-01 base-rent reset on Unit A is safe;
    whether a §6.14 notice was required for Tenant A2; and whether to increase one unit or both in the same cycle.
@@ -48,19 +61,20 @@ Dates assume the notice is drafted in November 2026. Recompute from the actual s
 
 The 2027-02-15 route for Unit B needs a notice served in the next ten days. If that is not realistic, keep the
 1 June anniversary date and serve by 3 March 2027 — the computed total is the same 13.1% either way, and the
-1 June route also picks up the 2027-28 allowance.
+1 June route also picks up the 2027-28 allowance. Note that a 90-day notice requires an effective date more
+than 10% above the rent charged in the prior 12 months; 13.1% crosses that threshold, so the 90-day band applies.
 
 ## Decision still open
 
 Do both units in one cycle, or Unit A now and Unit B on its own anniversary? The legal record supports either,
-provided the same written method is applied to both. See `pages/owner-practices.html`.
+provided the same written method is applied to both. See `hub/practices.html`.
 
 ## Known gaps (published on the Flagged for review page)
 
-- F1 banking waiting period: 12 vs 24 months (official pages disagree).
-- F2 Ordinance 261015 (10% cap on banked increases): status unknown, vote reportedly Nov–Dec 2026.
-- F3 Unit A base-rent reset lawfulness.
-- F4 Tenant A2 status and §6.14 notice.
-- F5 HUD Fair Market Rent: no official value confirmed.
-- F6 No provision ties fee payment to increase validity.
-- F7 No provision requires equal increases across units.
+- F01–F02 owner-supplied rent history, build year and unit count.
+- F03 Housing Inventory / licence status unknown — the first action item.
+- F04 banking waiting period: 12 vs 24 months (official pages reconciled by the Board's worked example).
+- F05 §6.14 notice on Unit A's later co-tenant unknown.
+- F06 the 2027-28 rate is not yet published (left blank).
+- F09 proposed 10% cap on banked increases: secondary reporting only, no official record page retrieved.
+- F10 no official ZIP-level market rent (left blank).
