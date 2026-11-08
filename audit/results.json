@@ -1,272 +1,8 @@
 {
   "current_exact_match_files": [],
-  "exact_identifier_check": "stdin",
-  "exact_identifier_count": 6,
+  "exact_identifier_check": "not-run",
+  "exact_identifier_count": 0,
   "failures": [
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/compilation.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/questions.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/questions.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/questions.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/questions.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/compilation.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/process.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/questions.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/questions.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/questions.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/questions.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "stray </a>",
-      "kind": "tag-balance",
-      "line": null,
-      "path": "site/pages/review.html"
-    },
     {
       "detail": "Missing local target: ../docs/index.html",
       "kind": "local-target",
@@ -275,19 +11,7 @@
     }
   ],
   "generic_initial_match_files": [],
-  "history": {
-    "affected_paths": [
-      "scripts/check.py",
-      "scripts/independent_audit.py",
-      "tools/check_links.py",
-      "tools/release_gate.py"
-    ],
-    "commits_scanned": 54,
-    "commits_with_matches": 22,
-    "ref": "origin/main",
-    "text_versions_scanned": 4356,
-    "values_redacted": true
-  },
+  "history": null,
   "html_files": 102,
   "indirect_only_rows": [
     {
@@ -962,7 +686,7 @@
     "Historical matches, forks, caches and clones are not removed by this audit.",
     "External URL retrieval evidence is recorded separately in audit/source-review.json."
   ],
-  "links_and_assets_checked": 4674,
+  "links_and_assets_checked": 4858,
   "mirror_files_checked": 54,
   "schema": 1,
   "scope": "All tracked artifacts; all root HTML including archived sets; local targets and citation traceability. Not a live external URL monitor or legal certification.",
@@ -974,14 +698,14 @@
     "tools/pages_1.py"
   ],
   "table_rows": {
-    "direct": 1348,
+    "direct": 1410,
     "indirect": 166,
     "total": 1913,
-    "untraceable": 399
+    "untraceable": 337
   },
-  "text_files_scanned": 168,
-  "tracked_files": 168,
-  "unique_external_urls": 84,
+  "text_files_scanned": 171,
+  "tracked_files": 171,
+  "unique_external_urls": 96,
   "untraceable_rows": [
     {
       "line": 37,
@@ -1564,63 +1288,11 @@
       "path": "pages/process.html"
     },
     {
-      "line": 93,
-      "path": "pages/process.html"
-    },
-    {
-      "line": 94,
-      "path": "pages/process.html"
-    },
-    {
-      "line": 95,
-      "path": "pages/process.html"
-    },
-    {
-      "line": 96,
-      "path": "pages/process.html"
-    },
-    {
       "line": 43,
       "path": "pages/rates.html"
     },
     {
-      "line": 44,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 45,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 46,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 47,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 48,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 49,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 50,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 51,
-      "path": "pages/rates.html"
-    },
-    {
       "line": 60,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 61,
       "path": "pages/rates.html"
     },
     {
@@ -1708,47 +1380,7 @@
       "path": "pages/rates.html"
     },
     {
-      "line": 90,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 91,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 92,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 93,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 94,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 95,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 96,
-      "path": "pages/rates.html"
-    },
-    {
       "line": 103,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 104,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 105,
-      "path": "pages/rates.html"
-    },
-    {
-      "line": 106,
       "path": "pages/rates.html"
     },
     {
@@ -1757,38 +1389,6 @@
     },
     {
       "line": 39,
-      "path": "pages/review.html"
-    },
-    {
-      "line": 41,
-      "path": "pages/review.html"
-    },
-    {
-      "line": 50,
-      "path": "pages/review.html"
-    },
-    {
-      "line": 59,
-      "path": "pages/review.html"
-    },
-    {
-      "line": 68,
-      "path": "pages/review.html"
-    },
-    {
-      "line": 77,
-      "path": "pages/review.html"
-    },
-    {
-      "line": 86,
-      "path": "pages/review.html"
-    },
-    {
-      "line": 95,
-      "path": "pages/review.html"
-    },
-    {
-      "line": 104,
       "path": "pages/review.html"
     },
     {
@@ -2300,63 +1900,11 @@
       "path": "site/pages/process.html"
     },
     {
-      "line": 93,
-      "path": "site/pages/process.html"
-    },
-    {
-      "line": 94,
-      "path": "site/pages/process.html"
-    },
-    {
-      "line": 95,
-      "path": "site/pages/process.html"
-    },
-    {
-      "line": 96,
-      "path": "site/pages/process.html"
-    },
-    {
       "line": 43,
       "path": "site/pages/rates.html"
     },
     {
-      "line": 44,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 45,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 46,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 47,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 48,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 49,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 50,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 51,
-      "path": "site/pages/rates.html"
-    },
-    {
       "line": 60,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 61,
       "path": "site/pages/rates.html"
     },
     {
@@ -2444,47 +1992,7 @@
       "path": "site/pages/rates.html"
     },
     {
-      "line": 90,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 91,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 92,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 93,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 94,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 95,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 96,
-      "path": "site/pages/rates.html"
-    },
-    {
       "line": 103,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 104,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 105,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "line": 106,
       "path": "site/pages/rates.html"
     },
     {
@@ -2493,38 +2001,6 @@
     },
     {
       "line": 39,
-      "path": "site/pages/review.html"
-    },
-    {
-      "line": 41,
-      "path": "site/pages/review.html"
-    },
-    {
-      "line": 50,
-      "path": "site/pages/review.html"
-    },
-    {
-      "line": 59,
-      "path": "site/pages/review.html"
-    },
-    {
-      "line": 68,
-      "path": "site/pages/review.html"
-    },
-    {
-      "line": 77,
-      "path": "site/pages/review.html"
-    },
-    {
-      "line": 86,
-      "path": "site/pages/review.html"
-    },
-    {
-      "line": 95,
-      "path": "site/pages/review.html"
-    },
-    {
-      "line": 104,
       "path": "site/pages/review.html"
     },
     {
@@ -3482,28 +2958,16 @@
       "path": "pages/process.html"
     },
     {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 93,
-      "path": "pages/process.html"
+      "detail": "Outside official-source allowlist: https://www.govinfo.gov/content/pkg/USCODE-2024-title42/html/USCODE-2024-title42-chap45-subchapI-sec3604.htm",
+      "kind": "external-publisher",
+      "line": null,
+      "path": "pages/questions.html"
     },
     {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 94,
-      "path": "pages/process.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 95,
-      "path": "pages/process.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 96,
-      "path": "pages/process.html"
+      "detail": "Outside official-source allowlist: https://www.govinfo.gov/content/pkg/USCODE-2024-title42/html/USCODE-2024-title42-chap45-subchapI-sec3604.htm",
+      "kind": "external-publisher",
+      "line": null,
+      "path": "pages/questions.html"
     },
     {
       "detail": "No direct or resolvable official source for data row",
@@ -3514,61 +2978,7 @@
     {
       "detail": "No direct or resolvable official source for data row",
       "kind": "row-source",
-      "line": 44,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 45,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 46,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 47,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 48,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 49,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 50,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 51,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
       "line": 60,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 61,
       "path": "pages/rates.html"
     },
     {
@@ -3700,67 +3110,7 @@
     {
       "detail": "No direct or resolvable official source for data row",
       "kind": "row-source",
-      "line": 90,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 91,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 92,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 93,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 94,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 95,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 96,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
       "line": 103,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 104,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 105,
-      "path": "pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 106,
       "path": "pages/rates.html"
     },
     {
@@ -3770,57 +3120,15 @@
       "path": "pages/rates.html"
     },
     {
+      "detail": "Outside official-source allowlist: https://www.govinfo.gov/content/pkg/USCODE-2024-title42/html/USCODE-2024-title42-chap45-subchapI-sec3604.htm",
+      "kind": "external-publisher",
+      "line": null,
+      "path": "pages/rates.html"
+    },
+    {
       "detail": "No direct or resolvable official source for data row",
       "kind": "row-source",
       "line": 39,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 41,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 50,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 59,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 68,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 77,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 86,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 95,
-      "path": "pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 104,
       "path": "pages/review.html"
     },
     {
@@ -4586,28 +3894,16 @@
       "path": "site/pages/process.html"
     },
     {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 93,
-      "path": "site/pages/process.html"
+      "detail": "Outside official-source allowlist: https://www.govinfo.gov/content/pkg/USCODE-2024-title42/html/USCODE-2024-title42-chap45-subchapI-sec3604.htm",
+      "kind": "external-publisher",
+      "line": null,
+      "path": "site/pages/questions.html"
     },
     {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 94,
-      "path": "site/pages/process.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 95,
-      "path": "site/pages/process.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 96,
-      "path": "site/pages/process.html"
+      "detail": "Outside official-source allowlist: https://www.govinfo.gov/content/pkg/USCODE-2024-title42/html/USCODE-2024-title42-chap45-subchapI-sec3604.htm",
+      "kind": "external-publisher",
+      "line": null,
+      "path": "site/pages/questions.html"
     },
     {
       "detail": "No direct or resolvable official source for data row",
@@ -4618,61 +3914,7 @@
     {
       "detail": "No direct or resolvable official source for data row",
       "kind": "row-source",
-      "line": 44,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 45,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 46,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 47,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 48,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 49,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 50,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 51,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
       "line": 60,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 61,
       "path": "site/pages/rates.html"
     },
     {
@@ -4804,67 +4046,7 @@
     {
       "detail": "No direct or resolvable official source for data row",
       "kind": "row-source",
-      "line": 90,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 91,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 92,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 93,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 94,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 95,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 96,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
       "line": 103,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 104,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 105,
-      "path": "site/pages/rates.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 106,
       "path": "site/pages/rates.html"
     },
     {
@@ -4874,57 +4056,15 @@
       "path": "site/pages/rates.html"
     },
     {
+      "detail": "Outside official-source allowlist: https://www.govinfo.gov/content/pkg/USCODE-2024-title42/html/USCODE-2024-title42-chap45-subchapI-sec3604.htm",
+      "kind": "external-publisher",
+      "line": null,
+      "path": "site/pages/rates.html"
+    },
+    {
       "detail": "No direct or resolvable official source for data row",
       "kind": "row-source",
       "line": 39,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 41,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 50,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 59,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 68,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 77,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 86,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 95,
-      "path": "site/pages/review.html"
-    },
-    {
-      "detail": "No direct or resolvable official source for data row",
-      "kind": "row-source",
-      "line": 104,
       "path": "site/pages/review.html"
     },
     {
@@ -5004,12 +4144,6 @@
       "kind": "row-source",
       "line": 77,
       "path": "site/pages/units.html"
-    },
-    {
-      "detail": "Exact identifiers remain in public history; current-file cleanup is not history removal. Values withheld.",
-      "kind": "historical-privacy",
-      "line": null,
-      "path": "origin/main"
     }
   ]
 }

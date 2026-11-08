@@ -44,6 +44,7 @@ OFFICIAL_EXACT = {
 INITIAL_PAIR = re.compile(r"(?<![A-Za-z])[A-Z]\s[A-Z](?![A-Za-z])|(?<![A-Za-z])[A-Z]\.[A-Z]\.(?![A-Za-z])")
 CIVIC_ABBREVIATIONS = {"S.F.", "U.S.", "D.C.", "N.Y.", "N.J.", "N.M.", "N.C.", "S.C."}
 MERGE_MARKER = re.compile(r"^(<{7}|={7}|>{7})(?:\s|$)")
+MALFORMED_ANCHOR = re.compile(r"<a\s+https?://")
 TRACKERS = ("google-analytics", "googletagmanager", "gtag(", "fbevents", "hotjar")
 STREET = re.compile(
     r"\b\d{2,6}\s+[A-Z][A-Za-z.'-]*(?:\s+[A-Z][A-Za-z.'-]*){0,3}\s+"
@@ -271,6 +272,8 @@ def main() -> int:
             for number, line in enumerate(text.splitlines(), 1):
                 if MERGE_MARKER.match(line):
                     fail("merge-marker", rel, "Unresolved merge marker", number)
+                if path.suffix in {".html", ".js", ".css"} and MALFORMED_ANCHOR.search(line):
+                    fail("malformed-anchor", rel, "Anchor URL is missing href=; source link is not usable", number)
                 if any(m.group() not in CIVIC_ABBREVIATIONS for m in INITIAL_PAIR.finditer(line)):
                     generic_initial_files.add(rel)
                     fail("initial-pattern", rel, "Initial-shaped pair; value withheld pending review", number)
