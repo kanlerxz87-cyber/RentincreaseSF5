@@ -26,6 +26,7 @@ from collections import Counter, defaultdict
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+import audit_page
 
 ROOT = Path(__file__).resolve().parent.parent
 TEXT_EXTENSIONS = {
@@ -237,6 +238,7 @@ def main() -> int:
     ap.add_argument("--history-ref", help="Optional exact-token history scan, e.g. origin/main; requires exact tokens")
     ap.add_argument("--output", default="audit/results.json")
     ap.add_argument("--manifest", default="audit/artifact-manifest.csv")
+    ap.add_argument("--no-page", action="store_true", help="Do not rewrite the tracked public audit page (CI gate mode)")
     args = ap.parse_args()
     tokens, token_mode = load_identifier_tokens(args)
     if args.history_ref and not tokens:
@@ -373,11 +375,13 @@ def main() -> int:
     if output.exists():
         try:
             prior = json.loads(output.read_text(encoding="utf-8"))
-            prior_history = prior.get("history")
+            prior_history = prior.get("history") or prior.get("last_history_scan")
             if prior.get("exact_identifier_check") in {"stdin", "private-file"}:
                 prior_exact = {k: prior.get(k) for k in (
                     "exact_identifier_check", "exact_identifier_count",
                     "current_exact_match_files", "tracked_files", "text_files_scanned")}
+            else:
+                prior_exact = prior.get("last_exact_scan")
         except (json.JSONDecodeError, OSError):
             pass
     if history and history["commits_with_matches"]:
@@ -415,6 +419,9 @@ def main() -> int:
         writer = csv.DictWriter(handle, fieldnames=["path", "bytes", "lines", "sha256", "text_scanned", "exact_identifier_check"])
         writer.writeheader()
         writer.writerows(manifest)
+    if not args.no_page:
+        if not args.no_page:
+        audit_page.write(ROOT, result)
     print(f"Repository audit: {len(files)} tracked files, {len(pages)} HTML files, {row_counts['total']} data rows")
     print(f"Exact identifier check: {token_mode}; current matching files: {len(current_privacy_files)}")
     print(f"Rows: {row_counts['direct']} direct, {row_counts['indirect']} indirect, {row_counts['untraceable']} untraceable")

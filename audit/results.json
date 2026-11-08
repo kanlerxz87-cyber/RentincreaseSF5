@@ -679,26 +679,8 @@
       "path": "site/dashboard/units.html"
     }
   ],
-  "last_exact_scan": {
-    "current_exact_match_files": [],
-    "exact_identifier_check": "stdin",
-    "exact_identifier_count": 6,
-    "text_files_scanned": 174,
-    "tracked_files": 174
-  },
-  "last_history_scan": {
-    "affected_paths": [
-      "scripts/check.py",
-      "scripts/independent_audit.py",
-      "tools/check_links.py",
-      "tools/release_gate.py"
-    ],
-    "commits_scanned": 78,
-    "commits_with_matches": 22,
-    "ref": "origin/main",
-    "text_versions_scanned": 8252,
-    "values_redacted": true
-  },
+  "last_exact_scan": null,
+  "last_history_scan": null,
   "limitations": [
     "A source link does not prove that every sentence in a row is supported; semantic review is separate.",
     "Owner-supplied rents, dates, coverage and license status are not authenticated by a government URL.",

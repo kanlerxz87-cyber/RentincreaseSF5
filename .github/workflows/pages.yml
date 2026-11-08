@@ -29,7 +29,7 @@ jobs:
       - name: Release gate (blocks a broken or private site)
         run: python tools/release_gate.py
       - name: Whole-repository artifact audit
-        run: python tools/repository_audit.py
+        run: python tools/repository_audit.py --no-page --output "$RUNNER_TEMP/repository-audit.json" --manifest "$RUNNER_TEMP/artifact-manifest.csv"
       - name: Follow-up disclosures and summary regression checks
         run: python tools/followup_audit.py
       - name: Confirm the build is reproducible
