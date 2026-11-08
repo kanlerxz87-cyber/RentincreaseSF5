@@ -1,11 +1,23 @@
 {
   "current_exact_match_files": [],
-  "exact_identifier_check": "not-run",
-  "exact_identifier_count": 0,
+  "exact_identifier_check": "stdin",
+  "exact_identifier_count": 6,
   "failures": [],
   "generic_initial_match_files": [],
-  "history": null,
-  "html_files": 103,
+  "history": {
+    "affected_paths": [
+      "scripts/check.py",
+      "scripts/independent_audit.py",
+      "tools/check_links.py",
+      "tools/release_gate.py"
+    ],
+    "commits_scanned": 78,
+    "commits_with_matches": 22,
+    "ref": "origin/main",
+    "text_versions_scanned": 8252,
+    "values_redacted": true
+  },
+  "html_files": 115,
   "indirect_only_rows": [
     {
       "line": 22,
@@ -681,8 +693,8 @@
     "Historical matches, forks, caches and clones are not removed by this audit.",
     "External URL retrieval evidence is recorded separately in audit/source-review.json."
   ],
-  "links_and_assets_checked": 4931,
-  "mirror_files_checked": 54,
+  "links_and_assets_checked": 5481,
+  "mirror_files_checked": 73,
   "schema": 1,
   "scope": "All tracked artifacts; all root HTML including archived sets; local targets and citation traceability. Not a live external URL monitor or legal certification.",
   "street_shaped_candidate_files": [
@@ -693,13 +705,13 @@
     "tools/pages_1.py"
   ],
   "table_rows": {
-    "direct": 1435,
+    "direct": 1595,
     "indirect": 166,
-    "total": 1938,
-    "untraceable": 337
+    "total": 2129,
+    "untraceable": 368
   },
-  "text_files_scanned": 177,
-  "tracked_files": 177,
+  "text_files_scanned": 196,
+  "tracked_files": 196,
   "unique_external_urls": 98,
   "untraceable_rows": [
     {
@@ -1805,6 +1817,130 @@
     {
       "line": 28,
       "path": "site/dashboard/method.html"
+    },
+    {
+      "line": 110,
+      "path": "site/docs/allowable.html"
+    },
+    {
+      "line": 66,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 72,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 78,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 84,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 122,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 133,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 136,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 139,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 142,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 145,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "line": 67,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "line": 116,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "line": 119,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "line": 157,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "line": 161,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "line": 150,
+      "path": "site/docs/index.html"
+    },
+    {
+      "line": 153,
+      "path": "site/docs/index.html"
+    },
+    {
+      "line": 99,
+      "path": "site/docs/owners.html"
+    },
+    {
+      "line": 102,
+      "path": "site/docs/owners.html"
+    },
+    {
+      "line": 105,
+      "path": "site/docs/owners.html"
+    },
+    {
+      "line": 62,
+      "path": "site/docs/units.html"
+    },
+    {
+      "line": 62,
+      "path": "site/docs/units.html"
+    },
+    {
+      "line": 77,
+      "path": "site/docs/units.html"
+    },
+    {
+      "line": 78,
+      "path": "site/docs/units.html"
+    },
+    {
+      "line": 79,
+      "path": "site/docs/units.html"
+    },
+    {
+      "line": 101,
+      "path": "site/docs/units.html"
+    },
+    {
+      "line": 101,
+      "path": "site/docs/units.html"
+    },
+    {
+      "line": 116,
+      "path": "site/docs/units.html"
+    },
+    {
+      "line": 117,
+      "path": "site/docs/units.html"
+    },
+    {
+      "line": 118,
+      "path": "site/docs/units.html"
     },
     {
       "line": 35,
@@ -3759,6 +3895,192 @@
     {
       "detail": "No direct or resolvable official source for data row",
       "kind": "row-source",
+      "line": 110,
+      "path": "site/docs/allowable.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 66,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 72,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 78,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 84,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 122,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 133,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 136,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 139,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 142,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 145,
+      "path": "site/docs/fair-housing.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 67,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 116,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 119,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 157,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 161,
+      "path": "site/docs/flagged.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 150,
+      "path": "site/docs/index.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 153,
+      "path": "site/docs/index.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 99,
+      "path": "site/docs/owners.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 102,
+      "path": "site/docs/owners.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 105,
+      "path": "site/docs/owners.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 62,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 62,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 77,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 78,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 79,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 101,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 101,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 116,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 117,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
+      "line": 118,
+      "path": "site/docs/units.html"
+    },
+    {
+      "detail": "No direct or resolvable official source for data row",
+      "kind": "row-source",
       "line": 35,
       "path": "site/pages/allowed-increases.html"
     },
@@ -4139,6 +4461,12 @@
       "kind": "row-source",
       "line": 77,
       "path": "site/pages/units.html"
+    },
+    {
+      "detail": "Exact identifiers remain in public history; current-file cleanup is not history removal. Values withheld.",
+      "kind": "historical-privacy",
+      "line": null,
+      "path": "origin/main"
     }
   ]
 }

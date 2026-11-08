@@ -5,17 +5,17 @@
 
 ## Release status
 
-**NOT a clean release pass yet.** The existing consolidated release gate and follow-up checks pass, but the new whole-repository audit finds a real broken mirror link and many untraceable archived table rows. The Pages workflow now runs this stricter audit; it must be repaired before merging a new release.
+**Mechanical release checks pass; review warnings remain.** The existing consolidated release gate, follow-up checks and the new whole-repository mechanical audit pass after the missing docs mirror was added. Untraceable archived rows, mobile header overflow in the active hub, and historical identifier exposure remain disclosed review items; this is not legal certification or a privacy-history clean bill.
 
 ## What was checked
 
-- 174 tracked files; 102 HTML files; 1,929 table data rows; 4,572 links/assets.
+- 196 tracked files; 115 HTML files; 2,129 table data rows; links/assets recorded in `audit/results.json`.
 - Exact-token privacy check supplied only through stdin: **0 current matching files**. A generic initial-shaped-pair heuristic remains advisory and is not equivalent to exact review.
 - History: 78 commits / 8,252 text versions scanned on `origin/main` at the last exact scan. **22 commits** still contain exact identifier tokens in four prior checker paths. Values and raw lines are withheld. Current-file cleanup did not erase history.
-- Tables: 1,426 rows have a direct official citation in the row; 166 have an indirect caption/section citation; 337 archived/mirror rows are not traceable to a source in their own row. Indirect citations are disclosed, not silently treated as row-level proof.
+- Tables: 1,595 rows have a direct official citation in the row; 166 have an indirect caption/section citation; 368 archived/mirror rows are not traceable to a source in their own row. Indirect citations are disclosed, not silently treated as row-level proof.
 - Five released archive pages had 92 malformed source anchors (`<a https://...>`). Repaired to usable `href` links and mirrored byte-for-byte; no legal text or figures changed. A regression check now rejects malformed URL anchors.
 - Browser render: desktop 1440px clean; mobile 390px had 8px document overflow from the nowrap header brand. Requested fix from the active CSS owner (PR #18); tables already scroll inside their wrappers. No JavaScript page errors observed.
-- One broken local target remains: `site/hub/archive.html` links to absent `site/docs/index.html`. Requested repair from the active hub/mirror owner; do not fake a redirect page.
+- Repaired: the released archive target `site/docs/index.html` now exists by mirroring the existing tracked `docs/` set through `scripts/build.py`; no active hub file was edited.
 
 ## Legal/source review
 
