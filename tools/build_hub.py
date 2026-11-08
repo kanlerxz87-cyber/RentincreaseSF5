@@ -681,7 +681,9 @@ def page_exec():
           "increase <em>is</em> the norm: <strong>1.6%%</strong> for effective dates from 1 March 2026 "
           "through 28 February 2027, once every 12 months, on base rent only, never rounded up. %s "
           "The statewide 8.8%% figure does not apply to these units because they are already under a "
-          "stricter local ordinance. %s</p>" % (src("S4", "S5"), src("S9", "S10")))
+          "stricter local ordinance. %s No federal statute caps rent in private, unsubsidised housing "
+          "in the sources reviewed, and no official market-rent benchmark is published for ZIP 94122, "
+          "so none is estimated. %s</p>" % (src("S4", "S5"), src("S9", "S10"), src("S19")))
     rows = []
     for unit, name, base, pct, eff, note in SCENARIOS:
         inc = round(base * pct / 100, 2)
