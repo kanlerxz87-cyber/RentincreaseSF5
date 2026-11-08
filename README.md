@@ -23,15 +23,19 @@ linked from `hub/archive.html`:
 
 All sets are source-linked to official pages. Where they differ, the difference is one of approach, not of law.
 
-**Resolved in the final integration (2026-11-07):** earlier sets priced Unit 1 at 1.6% ($63.92) as the
-"safe option" and 3.0% ($119.85) as "needing confirmation", because sf.gov's banking page states a
-**24-month** condition while Rule 4.12 states **12 months**. The Rent Board's own worked example on
-[Learn about rent increases](https://www.sf.gov/learn-about-rent-increases-san-francisco) shows the clock
-runs 12 months **from the date each increase became available** — and since the first increase becomes
-available 12 months after the tenancy starts, the two wordings measure the same instant from different
-starting points. **Both readings agree on both units:** Unit 1 reaches 24 months on 2027-02-01, and Unit 2
-has had no increase since 2019. The 3.0% figure therefore does not depend on resolving the wording. The
-reconciliation is labelled analysis, not a quoted rule, and is published as F04. See [VERIFICATION.md](VERIFICATION.md).
+**The banking wording is an unresolved official inconsistency, corrected on 2026-11-08.** sf.gov's banking
+page states a **24-month** condition ("A skipped increase is only banked if at least 24 full months pass
+without any rent increase"), while Rule 4.12 states **12 months from the date the increase could have been
+imposed**. The Rent Board's worked examples apply the 12-month test from both sides: an increase available
+2024-06-01 is banked when the rent increase takes effect 2026-05-01, while one available 2025-06-01 is lost
+when the increase takes effect on that same date 11 months later; the banking page's own example also banks a
+1.7% increase 12 months after it became available. No 24-month reading fits those examples, so the sentence is
+published as an inconsistency rather than a second rule. This site applies Rule 4.12 — **Unit 1 3.0%
+($119.85)**, **Unit 2 13.1% ($412.65)** — and publishes the alternative: if the 24-month sentence were applied
+to each increase, Unit 1 would be **1.6% ($63.92)** and Unit 2 **11.7% ($368.55)**. Confirm any banked amount in
+writing with a Rent Board counsellor (415-252-4600) before serving. See F04 on the Flagged page and
+[VERIFICATION.md](VERIFICATION.md). An earlier version of this repository described the two wordings as
+reconcilable; that analysis was wrong and has been withdrawn.
 
 ## The question the research answers first
 

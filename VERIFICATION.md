@@ -185,3 +185,87 @@ searchable. That is a requirement of the licence, not an optional disclosure.
   lawful increase does not depend on market rent.
 - Reported 2026 proposals to cap banked increases at 10% a year could not be confirmed on an official
   legislative status page. No value is asserted (F09).
+
+---
+
+# Re-verification record — session `arena-fcb4d524` (2026-11-08)
+
+Independent re-read of every controlling source on the consolidated hub, with the register and the
+published pages checked line by line. One substantive error was found and corrected; nothing was
+published that asserts a value no official page states.
+
+## 1. Sources re-read in full this session
+
+| Ref | Source | Publisher | What it was checked against |
+| --- | --- | --- | --- |
+| S1 | [The Rent Board Housing Inventory](https://www.sf.gov/rent-board-housing-inventory) | SF Rent Board | R01–R10: automatic licence, public submission, no late fee, licence not attached to notice |
+| S2 | [Admin Code §37.15](https://www.sf.gov/information--sec-3715-reporting-obligations-licensing) | SF Rent Board | R01–R06: no entity-type or size threshold; suspension is prospective only |
+| S3 | [Admin Code §37.3](https://www.sf.gov/information--sec-373-rent-limitations) | SF Rent Board | R11, R16, R17, R24: 60% of CPI, 7% ceiling, banking, no petition |
+| S4 | [Form 571 rate table](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf) | SF Rent Board | All seven rates used in the scenarios: 1.8, 0.7, 2.3, 3.6, 1.7, 1.4, 1.6 |
+| S5 | [Learn about rent increases](https://www.sf.gov/learn-about-rent-increases-san-francisco) | SF Rent Board | 1.6% period; 30/90-day notice; 5-day mailing addition; the four worked examples |
+| S6 | [Banked rent increases](https://www.sf.gov/information--banked-rent-increases) | SF Rent Board | The 24-month sentence, the "added not compounded" rule, the worked example used in §2 below |
+| S7 | [Rules & Regulations Part IV](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring) | SF Rent Board | §4.10(a)–(b) notice and nullity; §4.12(a) 12-month test; §4.12(b) banked-portion disclosure |
+| S8 | [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827) | California Legislature | 827(b)(1)(A)–(B) service; 827(b)(2)–(3) 30/90-day thresholds, 12-month look-back |
+| S9 | [Civil Code §1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12) | California Legislature | §1947.12(d)(3) local-ordinance exemption |
+| S10 | [AB 1482 guidance](https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482) | SF Rent Board | 8.8% state figure for 2026-08-01 to 2027-07-31; does not apply to units under the SF ordinance |
+| S11 | [Learn about San Francisco rental laws](https://www.sf.gov/learn-about-san-francisco-rental-laws) | SF Rent Board | 14 June 1979 coverage line; counsellor 415-252-4600; hours 9–12 and 1–4 weekdays |
+| S12 | [The Rent Board Fee](https://www.sf.gov/rent-board-fee) | SF Rent Board | $59.00 per dwelling unit for 2026-2027; 5% monthly penalty capped at 15% |
+| S14 | [Rule 6.14 / Costa-Hawkins petition page](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins) | SF Rent Board | "generally, sixty days is considered reasonable"; co-tenants not subject to a Costa-Hawkins increase |
+| S15 | [Admin Code §37.10B](https://www.sf.gov/information/sec-3710b-tenant-harassment) | SF Rent Board | (a)(5) rent increase to influence a tenant to vacate; (a)(9) discrimination; treble or $1,000 damages |
+| S16 | [Admin Code §37.10C](https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited) | SF Rent Board | Algorithmic-device prohibition; private right of action for tenants and tenant nonprofits |
+| S20 | [Report an unlawful rent increase](https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/) | SF Rent Board | Form 516C box C; no fee; no time limit; hearing format |
+| S21 | [Form 1007](https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag%5B74%5D.pdf) | SF Rent Board | Tenant Right to Counsel intake: Eviction Defense Collaborative, (415) 659-9184 |
+| — | [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5) | California Legislature | 180-day retaliation window; §1942.5(d) retaliation for organising, no time limit |
+| — | [CRD housing discrimination](https://calcivilrights.ca.gov/housing/) | California Civil Rights Dept. | Protected-characteristics list compared with R48 |
+
+Every quoted value in the register reproduced. No value was changed on re-reading; the correction
+below is to the *reasoning* attached to one value, not to a rate, date or amount.
+
+## 2. The error that was corrected
+
+The previous version of this repository (and of the live site) stated that the 24-month wording and the
+12-month Rule reconcile, because "the first increase becomes available 12 months after the tenancy
+starts; it banks 12 months after that = 24 months after tenancy start". That reasoning is not supported
+by the Board's published examples, and the claim that "both readings produce the same result for both
+units" is therefore unsafe. The examples are decisive:
+
+| Example (official) | Increase available | Increase imposed | Gap | Outcome published |
+| --- | --- | --- | --- | --- |
+| "Banked rent increases" worked example (S6) | 2024-08-01 (1.7%) | 2025-08-01 | 12 months | **Banked** |
+| "Learn about rent increases", first banked year (S5) | 2024-06-01 (1.7%) | 2026-05-01 | 23 months | **Banked** |
+| "Learn about rent increases", second banked year (S5) | 2025-06-01 (1.4%) | 2026-05-01 | 11 months | **Not banked; permanently lost** |
+
+A 24-month requirement excludes the 12-month and 23-month rows, which the Board publishes as banked.
+The 12-month test explains all three rows. The correct statement is therefore: **Rule 4.12's 12-month
+test is the test demonstrated by the Board's own examples, and the 24-month sentence on the banking
+page is an unresolved inconsistency.** It is published as F04.
+
+Effect on the two units:
+
+| Unit | Rule 4.12 (applied) | If the 24-month sentence were applied to each increase |
+| --- | --- | --- |
+| Unit 1 | 1.4% banked + 1.6% annual = **3.0%**, $119.85 | 1.6% only = **$63.92** |
+| Unit 2 | 11.5% banked + 1.6% annual = **13.1%**, $412.65 | 1.4% excluded = 11.7%, **$368.55** |
+
+Arithmetic rechecked: 3,995 × 3.0% = 119.85 · 3,995 × 1.6% = 63.92 · 3,150 × 13.1% = 412.65 ·
+3,150 × 11.7% = 368.55. None rounded up.
+
+## 3. Checks run
+
+`python3 scripts/build.py`, `scripts/check.py`, `scripts/independent_audit.py`, `tools/check_links.py`,
+`tools/build_site.py`, `build.py`, `tools/dashboard_check_links.py` and `tools/release_gate.py` all
+pass on the merged tree. The gate reports 14 pages, 299 source-bearing data rows, 763 links, 0 orphans,
+0 unsourced rows, 0 privacy hits, 15 identical mirror pairs and 62 register findings.
+
+## 4. New flag
+
+**F17 — what happened in Unit 1 on 2026-04-01.** The owner's wording supports two readings: a
+continuing tenancy with an added co-tenant (anniversary stays 1 February, no rent reset), or a new
+tenancy if every original occupant vacated (anniversary 1 April; no increase before 1 April 2027). The
+site prices only the first reading and now flags the second. The lease and rent ledger settle it.
+
+## 5. Limits
+
+Unchanged from the previous record: no lease, rent ledger, parcel record, portal record or attorney
+opinion was available, so nothing here certifies that a particular increase on a particular unit is
+lawful. External links are validated for publisher and shape, not for perpetual availability.

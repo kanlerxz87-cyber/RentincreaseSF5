@@ -230,19 +230,28 @@ row("banking", "Rule 4.12 timing condition",
     "thereof, could have been imposed before this banking section becomes applicable.'", VERIFIED, ["S7"])
 row("banking", "sf.gov banking page wording",
     "'A skipped increase is only banked if at least 24 full months pass without any rent increase.'",
-    VERIFIED, ["S6"], "Quoted as published. Appears to contradict Rule 4.12 until the measuring point is identified.")
-row("banking", "Official worked example settles the measuring point",
-    "Tenant moved in 6/1/2023; increase imposed 5/1/2026. The 1.7% available 6/1/2024 IS banked; "
-    "the 1.4% available 6/1/2025 is NOT, and is permanently lost. The clock runs 12 months from "
-    "the date each increase became available.", VERIFIED, ["S5"])
-row("banking", "Reconciliation of the two wordings",
-    "First increase becomes available 12 months after tenancy start; it banks 12 months after that "
-    "= 24 months after tenancy start. The two statements measure from different starting points and agree.",
+    VERIFIED, ["S6"],
+    "Quoted as published. It cannot be reconciled with Rule 4.12 or with the Board's own worked "
+    "examples; see the next two rows.")
+row("banking", "Official worked examples test the threshold from both sides",
+    "Example 1: a 1.7% increase available 6/1/2024 is banked when the increase is imposed 5/1/2026 "
+    "(23 months). Example 2: a 1.4% increase available 6/1/2025 is not banked and is permanently lost "
+    "when the increase is imposed 5/1/2026 (11 months). Example 3: the banking page itself treats a "
+    "1.7% increase available 8/1/2024 as banked on 8/1/2025 (12 months). Every example applies a "
+    "12-month test measured from the date the increase became available.",
+    VERIFIED, ["S5", "S6"])
+row("banking", "Can the 24-month sentence be reconciled with those examples?",
+    "No. The examples bank an increase 12 months after it became available and lose one after 11 "
+    "months. A 24-month requirement would exclude both. Rule 4.12 therefore states the controlling "
+    "test, and the 24-month sentence is an unresolved inconsistency on the guidance page.",
     ANALYSIS, ["S5", "S6", "S7"],
-    "Interpretation, not a quoted rule. See the Flagged page. It does not change either unit's number.")
-row("banking", "Does the conflict change the numbers for these two units?",
-    "No. Unit 1 reaches 24 months on 2/1/2027; Unit 2 has had no increase since 2019. "
-    "Both readings produce the same result for both units.", ANALYSIS, ["S5", "S6", "S7"])
+    "Interpretation, not a quoted rule. Published as F04. Rule 4.12 is the test applied to both units.")
+row("banking", "Does the 24-month wording change these two units' figures?",
+    "It could, which is why it is flagged. Under Rule 4.12 (12 months from availability) Unit 1 "
+    "reaches 3.0% and Unit 2 13.1%. Applied literally to each increase, the 24-month sentence would "
+    "cut Unit 1 to 1.6% ($63.92) and Unit 2 to 11.7% ($368.55). The annual-only options are "
+    "unaffected either way.", ANALYSIS, ["S5", "S6", "S7"],
+    "The banked options therefore carry a confirmation step with a Rent Board counsellor before service.")
 row("banking", "Compounding and rounding of banked amounts",
     "Banked increases are added, not compounded, and may not be rounded up. An administrative law "
     "judge may readjust a good-faith overage of no more than one-half of one percent.", VERIFIED, ["S7", "S6", "S13"])
@@ -377,7 +386,7 @@ SCENARIOS = [
     ("Unit 1", "Annual only", 3995.00, 1.6, date(2027, 2, 1),
      "Ignores the skipped 2026 anniversary. Lowest scrutiny."),
     ("Unit 1", "Annual + banked 2026", 3995.00, U1_TOTAL, date(2027, 2, 1),
-     "1.4% banked + 1.6% annual. Both banking readings agree on this date."),
+     "1.4% banked (Rule 4.12 12-month test) + 1.6% annual. Confirm the banked part - see F04."),
     ("Unit 2", "Annual only", 3150.00, 1.6, date(2027, 2, 1),
      "Leaves the accumulated bank unused. Lowest scrutiny."),
     ("Unit 2", "Banked + annual", 3150.00, U2_TOTAL, date(2027, 2, 28),
@@ -512,7 +521,7 @@ def layout(title, body, active, root=False, desc=None):
 <body>
 <header class="top"><div class="top-in">
 <div class="brand"><a href="%s" style="text-decoration:none;color:inherit">SF rent increase dashboard</a>
-<small>Outer Sunset 94122 &middot; anonymised &middot; sources checked 7 Nov 2026</small></div>
+<small>Outer Sunset 94122 &middot; anonymised &middot; sources checked 8 Nov 2026</small></div>
 <nav class="main">%s</nav>
 </div></header>
 <main id="main"><div class="wrap">%s</div></main>
@@ -687,18 +696,23 @@ def page_exec():
                rows, numeric=(2, 3, 4))
     b += '</section>'
 
-    b += '<section class="panel"><h2>3. The banking conflict, resolved for these units</h2>'
+    b += '<section class="panel"><h2>3. The banking wording conflict, and what it could cost you</h2>'
     b += ("<p class=\"small\">The Rent Board's banking page says a skipped increase banks only after "
-          "<strong>24 full months</strong>; Rule 4.12 says <strong>12 months</strong> from the date the "
-          "increase could have been imposed. %s The Board's own worked example shows the clock runs "
-          "from the date each increase became available. %s Because the first increase becomes available "
-          "12 months after the tenancy starts, the two wordings describe the same point in time measured "
-          "from different starting points.</p>" % (src("S6", "S7"), src("S5")))
-    b += ("<p class=\"small\"><strong>Practical effect: none for you.</strong> Unit 1 reaches 24 months "
-          "without an increase on 1 February 2027, and Unit 2 has had no increase since 2019. Both "
-          "readings give the same answer for both units, so the 3.0% figure for Unit 1 does not depend "
-          "on resolving the wording. This reconciliation is analysis, not a quoted rule, and is "
-          "published on the flagged page for confirmation.</p>")
+          "<strong>24 full months</strong> without any rent increase; Rule 4.12 says "
+          "<strong>12 months</strong> from the date the increase could have been imposed. %s The "
+          "Board's worked examples apply the 12-month test from both sides: an increase available "
+          "1 June 2024 is banked when the increase is imposed 1 May 2026, while one available 1 June "
+          "2025 is lost when the increase is imposed on the same date 11 months later. %s The banking "
+          "page's own example also banks a 1.7%% increase 12 months after it became available. %s No "
+          "24-month reading fits those examples, so this site applies Rule 4.12 and says so openly.</p>"
+          % (src("S6", "S7"), src("S5"), src("S6")))
+    b += ("<p class=\"small\"><strong>Practical effect: it could be real.</strong> Under Rule 4.12 "
+          "Unit 1 reaches <strong>3.0%</strong> and Unit 2 <strong>13.1%</strong>. If the 24-month "
+          "sentence were applied to each increase, Unit 1 would be limited to 1.6% ($63.92) and "
+          "Unit 2 to 11.7% ($368.55). The annual-only options cannot be challenged on this point. "
+          "Before serving a banked amount, get the Rent Board's written confirmation through a "
+          "counsellor on 415-252-4600 and keep it in the file. This is analysis, not a quoted rule, "
+          "and it is published as F04.</p>")
     b += '</section>'
 
     b += '<section class="panel"><h2>4. One unit or both</h2>'
@@ -808,7 +822,7 @@ def page_units():
         ["First increase could be imposed", "2026-02-01", e("12 months after the lease began."), badge(VERIFIED) + " " + src("S5")],
         ["Rate in effect on that date", "%.1f%%" % U1_BANK, e("1 March 2025 - 28 February 2026 period."), badge(VERIFIED) + " " + src("S4")],
         ["Was it imposed?", "No", e("Rent reported unchanged; the increase was skipped."), badge(OWNER) + " " + src("S6")],
-        ["When it becomes banked", "2027-02-01", e("12 full months after it became available; also 24 months after the tenancy began, so both readings agree."), badge(COMPUTED) + " " + src("S7", "S5", "S6")],
+        ["When it becomes banked", "2027-02-01", e("12 full months after it became available, per Rule 4.12. The 24-month wording on the guidance page would exclude it - see F04."), badge(COMPUTED) + " " + src("S7", "S5", "S6")],
         ["Annual rate on 2027-02-01", "%.1f%%" % U1_ANN, e("1 March 2026 - 28 February 2027 period."), badge(VERIFIED) + " " + src("S4")],
         ["Total available", "%.1f%%" % U1_TOTAL, e("1.4 banked + 1.6 annual, added not compounded."), badge(COMPUTED) + " " + src("S4", "S7")],
         ["Dollar increase", money(round(3995 * U1_TOTAL / 100, 2)), e("3,995.00 x 0.030, not rounded up."), badge(COMPUTED) + " " + src("S4", "S5")],
@@ -1041,9 +1055,10 @@ FLAGS = [
      "Unverified input", ["S11"], "Check the Property Information Map and, if unclear, ask a Rent Board counsellor."),
     ("F03", "Inventory and licence status unknown", "Whether either unit has been reported, and whether a licence is currently on file, could not be checked.",
      "Unverified input", ["S1", "S2"], "This is the first action item. The portal is public and reporting is free."),
-    ("F04", "Banking wording: 12 versus 24 months", "The banking page says 24 full months; Rule 4.12 says 12 months from when the increase could have been imposed. The worked example on the rent increase page runs the clock from availability, which reconciles them.",
-     "Conflicting official wording, reconciled by analysis", ["S6", "S7", "S5"],
-     "The reconciliation is interpretation, not a quoted rule. It does not change either unit's figure: Unit 1 hits 24 months on 2027-02-01 and Unit 2 has had no increase since 2019. Confirm in writing with a counsellor if you want certainty."),
+    ("F04", "Banking wording: 12 versus 24 months",
+     "The banking page says 24 full months; Rule 4.12 says 12 months from when the increase could have been imposed. The Board's worked examples apply the 12-month test from both sides - an increase is banked 23 months after it became available and lost after 11 months - and the banking page's own example banks one at 12 months. No 24-month reading fits the examples, so the sentence is an unresolved inconsistency rather than a different rule.",
+     "Conflicting official wording, not reconciled", ["S6", "S7", "S5"],
+     "This is the one open item that can move a dollar figure. Rule 4.12 is applied here: Unit 1 3.0% ($119.85), Unit 2 13.1% ($412.65). If the 24-month sentence were applied to each increase, Unit 1 would be 1.6% ($63.92) and Unit 2 11.7% ($368.55). Confirm in writing with a Rent Board counsellor before serving a banked amount and keep the reply in the file; the annual-only options are unaffected."),
     ("F05", "Rule 6.14 notice on the later co-tenant", "Whether a 6.14 notice was served on the occupant added to Unit 1 around 2026-04-01 is unknown. Generally 60 days is considered reasonable.",
      "Missing fact with future consequences", ["S14"],
      "If it was not served, an unlimited increase when the last original occupant leaves may not be available under Rule 6.14. This does not affect the current annual or banked increase."),
@@ -1067,12 +1082,15 @@ FLAGS = [
      "An earlier session's privacy review found literal tenant initials inside two verification scripts. GitHub Pages serves the repository root, so those scripts were publicly readable. They were remediated by moving exact tokens into a git-ignored file, and this session's release gate follows the same pattern.",
      "Remediated in current files; history not rewritten", ["S1"],
      "Removing the strings does not remove them from public git history, forks or caches. No identifier is reproduced here. Consider whether a history rewrite or a GitHub removal request is warranted, and note that publishing a dedicated artifact instead of the repository root would reduce the exposure."),
-    ("F16", "A flagged claim in an earlier set is itself incorrect",
-     "One earlier set flagged that a Rent Board worked example applies 1.6% to a 1 May 2026 effective date when 1.4% was in force. Form 571 shows 1.6% in force from 1 March 2026, so 1.6% is correct for that date and the example is not in error on that point.",
+    ("F16", "A flagged claim in an earlier set is itself incorrect",     "One earlier set flagged that a Rent Board worked example applies 1.6% to a 1 May 2026 effective date when 1.4% was in force. Form 571 shows 1.6% in force from 1 March 2026, so 1.6% is correct for that date and the example is not in error on that point.",
      "Corrected by verification", ["S4", "S5"],
      "A separate, real labelling slip does exist on the same guidance page: the first example says the rate in effect on 1 June 2025 is 1.6%, when 1.4% applied on that date. The increase in that example takes effect 1 June 2026, where 1.6% is correct, so the arithmetic is right and only the date label is wrong."),
     ("F14", "Earlier sets differ in presentation", "Five earlier compilations are preserved on this site. They agree on the verified rules but differ on whether to price unit-specific figures.",
      "Reconciled, not deleted", ["S4", "S5"], "This consolidated set prices the options and labels every result computed. The earlier sets remain reachable from the archive page."),
+    ("F17", "What happened in Unit 1 on 2026-04-01",
+     "The owner reports the same $3,995.00 base rent with one original occupant continuing and a later co-tenant added. On that reading the tenancy continues, the anniversary stays 1 February and no rent reset arises. If instead every original occupant had vacated and a new tenancy began on that date, the anniversary would be 1 April and no increase could take effect before 1 April 2027.",
+     "Unverified interpretation of owner-supplied facts", ["S5", "S14"],
+     "Confirm which of the two happened before serving anything; the lease documents and the rent ledger settle it. Charging more simply because a roommate moved in is separately unlawful, and whether a Rule 6.14 notice was served is F05."),
 ]
 
 
@@ -1146,8 +1164,8 @@ def page_archive():
     b += ('<p class="note">These sets agree on the verified rules. They differ on presentation: some '
           'decline to price unit-specific figures, while this consolidated set prices the options and '
           'labels every result computed. Where an earlier set describes the banking wording as an '
-          'unresolved conflict, this set explains why the two readings converge and shows that neither '
-          'unit\'s figure depends on the difference. <a href="flagged.html">See F04 and F14 &rarr;</a></p>')
+          'unresolved conflict, this set explains why the 24-month wording cannot be reconciled with the '
+          'Board\'s own worked examples and quantifies what each reading would produce for these units. <a href="flagged.html">See F04 and F14 &rarr;</a></p>')
     b += '</section>'
     return layout("Earlier research sets", b, "archive.html")
 
@@ -1172,8 +1190,16 @@ def page_verification():
          e("Defect found in the previous landing page and fixed; now guarded."), badge(VERIFIED) + " " + src("S5")],
         ["Merge markers", e("Scan for unresolved conflict markers in tracked files."),
          e("Markers found in the coordination file and repaired; now guarded."), badge(VERIFIED) + " " + src("S5")],
+        ["Re-read of every controlling page (8 Nov 2026)", e("Rule 4.12, the banking page, Form 571, sec. 37.15, sec. 37.3, sec. 37.10B, sec. 37.10C, the Housing Inventory, the fee page, the counsellor page, AB 1482 guidance, Civil Code secs. 827, 1942.5 and 1947.12, the petition page, the Rule 6.14 page and Form 1007 opened and read again."),
+         e("Every quoted value reproduced. The 1.6% current rate, the $59.00 fee, the 415-252-4600 counsellor line and hours, the 8.8% state figure, sec. 1947.12(d)(3) and the 12-month Rule 4.12 text all matched."), badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S6", "S7", "S8")],
+        ["Banking analysis corrected", e("The previous version said the 24-month and 12-month wordings reconcile because both point at 24 months after tenancy start."),
+         e("That reconciliation is not supported. The Board's examples bank an increase 12 months after availability and lose one after 11 months, and the banking page's own example banks at 12 months. The sentence is an unresolved inconsistency; Rule 4.12 is applied and the alternative figures are published."), badge(ANALYSIS) + " " + src("S5", "S6", "S7")],
     ]
     b += table("Verification performed in this session", ["Check", "Method", "Result", "Status and source"], rows)
+    b += ('<p class="note">The earlier sets preserved on this site were published before this correction. '
+          'Where one of them still explains the 24-month sentence as reconciling with Rule 4.12, this page '
+          'and F04 are the current position: the two statements do not reconcile, and the alternative '
+          'figures are 1.6% for Unit 1 and 11.7% for Unit 2 if the 24-month sentence were applied.</p>')
     b += '</section>'
     return layout("Verification", b, "verification.html")
 
