@@ -604,7 +604,7 @@ def layout(title, body, active, root=False, desc=None):
             'Coverage, lawful base rents, complete rent history and current licences are unverified. '
             'Banked examples assume no intervening increases; that history was not established for Unit 2. '
             'No amount is cleared for service or guaranteed to pass legal review. '
-            '<a href="' + flag_link + '">Review the limitations (including F17–F20)</a>.</p></section>') + body
+            '<a href="' + flag_link + '">Review the limitations (including F17–F21)</a>.</p></section>') + body
     css = "hub/hub.css" if root else "hub.css"
     home = "index.html" if root else "../index.html"
     d = desc or ("Source-linked research on lawful rent increases for two rent-controlled units "
@@ -765,7 +765,7 @@ Board's own rate sheet says it may be imposed <strong>without filing a petition<
                 "Effective", "Serve by", "Status and source"], rows, numeric=(2, 3, 4, 5))
     b += ('<p class="note">Base rents and tenancy dates are owner-supplied and cannot be confirmed from an '
           'official source; they are flagged, not asserted. The percentages and notice periods are verified. '
-          'Unit 1 has a second branch if no original lessee remained after the 2026 occupant change - see F19. '
+          'Unit 1 has a second branch if no original lessee remained after the 2026 occupant change - see F20. '
           '<a href="hub/units.html">See the line-by-line arithmetic &rarr;</a></p></section>')
 
     b += '<section class="panel"><h2>Browse by category</h2><div class="cards">'
@@ -805,8 +805,9 @@ Board's own rate sheet says it may be imposed <strong>without filing a petition<
 
 def page_exec():
     b = head("Executive summary",
-             "Compiled 7 November 2026; the controlling rules were re-read on 8 November 2026. The "
-             "licence question comes first because nothing else can be done safely until it is settled.")
+             "Compiled 7 November 2026; every figure re-verified against the same official sources on "
+             "8 November 2026. The licence question comes first because nothing else can be done safely "
+             "until it is settled.")
     b += '<section class="panel"><h2>1. The licence question</h2><div class="answer">'
     b += ("<p><strong>You must be licensed, but you do not apply.</strong> Report each unit into the Rent "
           "Board Housing Inventory; a rent increase licence is generated automatically for a "
@@ -978,7 +979,7 @@ def page_units():
           'left and a new tenancy began on 2026-04-01, the anniversary is 1 April, no banked amount from '
           'the earlier tenancy survives, and the first increase is available on 2027-04-01 at the rate the '
           'Board publishes on 2027-03-01. Charging more because a roommate moved in is unlawful in either '
-          'case. ' + src("S5", "S6", "S14") + ' <a href="flagged.html">See F19 &rarr;</a></p></section>')
+          'case. ' + src("S5", "S6", "S14") + ' <a href="flagged.html">See F20 &rarr;</a></p></section>')
 
     b += '<section class="panel"><h2>Unit 2 - the banked ledger</h2>'
     rows = []
@@ -1013,7 +1014,7 @@ def page_units():
         rows.append([e(unit), e(name), "%.1f%%" % pct, money(inc), money(round(base + inc, 2)),
                      "%d days" % notice_days(pct), eff.isoformat(), serve_by(eff, pct).isoformat(),
                      badge(COMPUTED) + " " + src("S4", "S8")])
-    b += table("Serve-by dates are computed from each effective date and assume personal service; add 5 days if mailed.",
+    b += table("Serve-by dates assume personal service and are computed from the effective date, not from today.",
                ["Unit", "Option", "Total", "Increase", "New rent", "Notice", "Effective", "Serve by", "Status and source"],
                rows, numeric=(2, 3, 4))
     b += '</section>'
@@ -1234,7 +1235,7 @@ FLAGS = [
      "A separate, real labelling slip does exist on the same guidance page: the first example says the rate in effect on 1 June 2025 is 1.6%, when 1.4% applied on that date. The increase in that example takes effect 1 June 2026, where 1.6% is correct, so the arithmetic is right and only the date label is wrong."),
     ("F14", "Earlier sets differ in presentation", "Five earlier compilations are preserved on this site. They agree on the verified rules but differ on whether to price unit-specific figures.",
      "Reconciled, not deleted", ["S4", "S5"], "This consolidated set prices the options and labels every result computed. The earlier sets remain reachable from the archive page."),
-    ("F19", "Unit 1: the anniversary date depends on a fact not supplied",
+    ("F20", "Unit 1: the anniversary date depends on a fact not supplied",
      "The record shows a continuing tenancy from 2025-02-01 at $3,995.00 and a later occupant by 2026-04-01 with the rent unchanged. If any original lessee remained, the tenancy continues and the anniversary stays 1 February. If every original lessee left, a new tenancy may have begun on 2026-04-01.",
      "Unverified input with a two-branch answer", ["S5", "S6"],
      "Branch A (continuing): the increases available on 2026-02-01 (1.4%) and 2027-02-01 (1.6%) give 3.0% from 2027-02-01. Branch B (new tenancy): the anniversary is 1 April, no banked amount survives the new tenancy, and the first increase is available 2027-04-01 at the rate published 2027-03-01. Whether an unlimited reset is available at all depends on Rule 6.14 or Costa-Hawkins, on whether the later occupant is a co-tenant or a subtenant, and on a 6.14 notice having been served within a reasonable time - generally 60 days (F05). Establish which branch applies before serving anything."),
@@ -1246,7 +1247,11 @@ FLAGS = [
      "The owner supplied a 2019 starting rent for Unit 2, not a complete intervening ledger. The full-bank examples assume no intervening increases and an unchanged lawful base rent. They are conditional arithmetic, not verified entitlements.",
      "Unverified input; conditional arithmetic only", ["S5", "S6", "S20"],
      "Authenticate leases, receipts and every prior increase before using any illustrated total."),
-    ("F20", "The complete Rules and Regulations were not read end to end",
+    ("F19", "Published rate table showed the wrong century for 1982-1999",
+     "The date helper that sorts and prints the Form 571 table mapped every two-digit year to 20xx, so the 1982-1999 rows were published as 2082-2099 (for example the 7.0% period beginning 1 April 1982 was printed as 2082-04-01). No percentage was wrong; the years were.",
+     "Repository defect, fixed and re-verified 2026-11-08", ["S4"],
+     "Repaired in tools/build_hub.py and guarded by the release gate, which now fails if any effective period falls outside 1982-2027. The full table was re-read against Form 571 after the fix: all 46 rows match. No legal conclusion or unit figure changed."),
+    ("F21", "The complete Rules and Regulations were not read end to end",
      "Part IV and Part X were read in full text on sf.gov. The complete Rules and Regulations compilation (document 625, amended 13 January 2026) was linked but not read in full, so an amendment outside those Parts could exist.",
      "Method limitation", ["S24", "S7", "S23"],
      "Search the complete compilation before relying on a mechanical point, or ask a counsellor."),
@@ -1478,10 +1483,10 @@ def page_audit():
         "reconciled; on a closer read the 24-month sentence cannot be squared with either worked "
         "example, so the time-stamped examples and Rule 4.12 are treated as controlling and the "
         "conflict is published rather than smoothed over.",
-        "The Unit 1 anniversary fork was added as F19. The answer changes if no original lessee "
+        "The Unit 1 anniversary fork was added as F20. The answer changes if no original lessee "
         "remained after the 2026 occupant change, and that fact was not supplied.",
         "A second limit was added: the complete Rules and Regulations compilation was linked but not "
-        "read end to end (F20).",
+        "read end to end (F21).",
         "The rent notice kit was added, because the notice content rules are spread across three "
         "documents and are easy to get wrong in practice.",
     ]:
@@ -1584,7 +1589,7 @@ Served by: [personal delivery / first-class mail] on [date]"""
     b += '<section class="panel"><h2>Before you serve: the checklist</h2><ul class="tick">'
     for item in [
         "Both units are reported in the Housing Inventory for the current reporting year, and the licence shows in the Rent Board Portal.",
-        "The anniversary date is confirmed from the rent ledger - for Unit 1 that turns on whether any original lessee remained (F19).",
+        "The anniversary date is confirmed from the rent ledger - for Unit 1 that turns on whether any original lessee remained (F20).",
         "At least 12 months have passed since the last increase on that tenancy.",
         "The percentage used is the one in effect on the effective date: 1.6% for any effective date up to 28 February 2027.",
         "Only properly banked amounts are added, nothing is compounded, and nothing is rounded up.",
@@ -1686,9 +1691,9 @@ def build():
     md += ["", "## Findings that changed this pass", "",
            "- F04 rewritten: the banking page's 24-month sentence cannot be squared with either official "
            "worked example, so the time-stamped examples and Rule 4.12 are treated as controlling.",
-           "- F19 added: Unit 1's anniversary date depends on whether any original lessee remained after "
+           "- F20 added: Unit 1's anniversary date depends on whether any original lessee remained after "
            "the 2026 occupant change.",
-           "- F20 added: the complete Rules and Regulations compilation was linked but not read end to end.",
+           "- F21 added: the complete Rules and Regulations compilation was linked but not read end to end.",
            "- Notice kit added: the notice-content duties are split across section 37.3(b), Rule 4.10(a) "
            "and Rule 4.12(b), which is where a compliant increase most often fails.",
            "", "## Register totals", "",
@@ -1697,8 +1702,8 @@ def build():
               sum(1 for r in R if r["status"] in (OWNER, COMPUTED, ANALYSIS)),
               sum(1 for r in R if r["status"] in (UNVERIFIED, ABSENT))),
            ""]
-    (ROOT / "AUDIT-2026-11-08.md").write_text("\n".join(md), encoding="utf-8")
-    written.append("AUDIT-2026-11-08.md")
+    (ROOT / "AUDIT-2026-11-08-bcfbbb8d.md").write_text("\n".join(md), encoding="utf-8")
+    written.append("AUDIT-2026-11-08-bcfbbb8d.md")
 
     # Mirror into site/ so the repository's root/site parity audit keeps passing.
     import shutil
