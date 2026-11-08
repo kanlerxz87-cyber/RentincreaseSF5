@@ -644,3 +644,4 @@ Arena requires this session to remain on its fixed branch, so no additional sess
 
 No personal identifiers will be copied into the audit. Dates and amounts supplied by the owner remain
 unverified records, not official facts. No Inventory filing, licence request, or tenant notice will be performed.
+- 2026-11-08 defect scope extension: correct `README.md`'s inaccurate claim that historical identifier exposure never occurred. Current files are clean; prior public Git history was not rewritten. No identifiers will be reproduced. Also add `AUDIT-2026-11-08.md` to this session's audit scope.
