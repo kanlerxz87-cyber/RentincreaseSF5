@@ -643,3 +643,21 @@ No personal identifiers will be copied to tracked files. Official sources must b
 - Scope extension: .github/workflows/pages.yml adds the follow-up regression check to existing validation, without changing deployment configuration.
 - Official sources retrieved and read 2026-11-08: Housing Inventory (reporting/license sections); §37.15 (full text); annual-increase guidance and worked examples; banking guidance; multiple-year guidance; Form 571 (full historical rate table); Civil Code §827 (notice provisions); §1942.5 (retaliation provisions); CRD housing protected-characteristic guidance; HUD Fair Housing Act overview; SF AB1482 guide. Links are preserved in EXECUTIVE-SUMMARY.md and the existing source register. These fresh checks cover controlling summary claims, not every earlier archived sentence. One exploratory guessed SF URL returned the City's not-found page and was not used as evidence or added to the site.
 - Findings F17–F18 are published as needs review (non-blocking). Prior F15 history/caches privacy exposure remains unresolved; no identifiers copied or history rewritten. No property-specific filing, service, counsel approval or empirical norm was fabricated.
+
+### Rebase collision — arena-e126bdbe
+Main advanced to PR #13 while the independent claim was being pushed. Both coordination sections are preserved verbatim; no other session work was discarded. GitHub reports PR #13 merged at 2026-11-08 22:45:55 UTC, so its legal-summary scope is released. This session will re-read the merged files before its independent artifact audit. The originally absent assigned remote branch was bootstrapped against origin/main.
+
+---
+
+# Session `arena-e126bdbe` · 2026-11-08 · independent artifact audit
+
+**Active branch:** `arena/e126bdbe-rentincreasesf5` (fixed Arena session branch; no other branch created).
+**Claim time:** 2026-11-08 22:47 UTC. Read the complete local board and fetched origin/main (`04d683e`). Also checked open PR #13: `arena-75594f57` claimed its follow-up legal-summary audit at 22:43 UTC and has commits at 22:45 UTC. That claim is active and will not be taken over or duplicated.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| E1 | Audit all tracked/public artifacts for privacy, source-link coverage, unsupported claims and release integrity; inspect remaining official requirements not claimed by PR #13 | in progress | arena-e126bdbe | `tools/repository_audit.py`, `ARTIFACT-AUDIT.md`, `audit/**` (new files only), this session's appended coordination section |
+| E2 | Log requests for files owned by active sessions; do not edit their generators, pages, summaries, data or workflow | in progress | arena-e126bdbe | this session's appended coordination section |
+| E3 | Final integration only after active tasks finish; preserve all other sessions' work, rebuild/check, PR, merge and verify live Pages | unclaimed | — | shared outputs reserved for final integration after claims release |
+
+No real tenant identifiers will be written into tracked files, test fixtures, error messages or reports. Existing historical exposure is not cleared by current-file checks. No legal filing, notice, license application or lawyer approval is performed by this audit.
