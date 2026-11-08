@@ -95,7 +95,12 @@ RATES = [
 
 def _d(s):
     m, d, y = (int(x) for x in s.split("/"))
-    return date(y + 2000 if y < 100 else y, m, d)
+    if y < 100:
+        # The Form 571 table runs from 1982 to the current period, so a two-digit
+        # year is 19xx up to 99 and 20xx only from 00 onward. Mapping every
+        # two-digit year to 20xx printed the 1982-1999 rows as 2082-2099.
+        y += 1900 if y >= 82 else 2000
+    return date(y, m, d)
 
 
 def rate_on(d):
@@ -512,7 +517,7 @@ def layout(title, body, active, root=False, desc=None):
 <body>
 <header class="top"><div class="top-in">
 <div class="brand"><a href="%s" style="text-decoration:none;color:inherit">SF rent increase dashboard</a>
-<small>Outer Sunset 94122 &middot; anonymised &middot; sources checked 7 Nov 2026</small></div>
+<small>Outer Sunset 94122 &middot; anonymised &middot; sources checked 8 Nov 2026</small></div>
 <nav class="main">%s</nav>
 </div></header>
 <main id="main"><div class="wrap">%s</div></main>
@@ -658,7 +663,7 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
 
 def page_exec():
     b = head("Executive summary",
-             "Prepared 7 November 2026. The licence question is answered first because nothing else "
+             "Prepared 7 November 2026; every figure re-verified against the same official sources on 8 November 2026. The licence question is answered first because nothing else "
              "can be done safely until it is settled.")
     b += '<section class="panel"><h2>1. The licence question</h2><div class="answer">'
     b += ("<p><strong>You must be licensed, but you do not apply.</strong> Report each unit into the Rent "
@@ -855,7 +860,7 @@ def page_units():
         rows.append([e(unit), e(name), "%.1f%%" % pct, money(inc), money(round(base + inc, 2)),
                      "%d days" % notice_days(pct), eff.isoformat(), serve_by(eff, pct).isoformat(),
                      badge(COMPUTED) + " " + src("S4", "S8")])
-    b += table("Serve-by dates assume personal service and are computed from today, 7 November 2026.",
+    b += table("Serve-by dates assume personal service and are computed from the effective date, not from today.",
                ["Unit", "Option", "Total", "Increase", "New rent", "Notice", "Effective", "Serve by", "Status and source"],
                rows, numeric=(2, 3, 4))
     b += '</section>'
@@ -872,7 +877,7 @@ def page_rates():
     b += '<section class="panel"><h2>Official rate table</h2>'
     rows = [[e("%s - %s" % (_d(a).isoformat(), _d(bb).isoformat())), "%.1f%%" % r,
              badge(VERIFIED) + " " + src("S4")] for a, bb, r in RATES]
-    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026. "
+    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026 and re-read on 8 November 2026. "
                "Only one of the two 1992-1993 increases may be imposed, based on the tenant's anniversary date.",
                ["Effective period", "Allowable increase", "Status and source"], rows)
     b += ('<p class="note">The 12/8/1992 - 2/28/1993 and 3/1/1992 - 12/7/1992 rows overlap by design; '
@@ -949,10 +954,12 @@ def page_practices():
     b += '<section class="panel"><h2>Corporations versus individual owners</h2>'
     b += ("<p class=\"small\">The rent cap does not distinguish between them. Section 37.3 applies to "
           "'landlords', and section 37.15 applies to 'owners', with no portfolio threshold. %s "
-          "The practical difference is process, not permission: larger operators run a written annual "
-          "review cycle, keep a rent ledger per unit and serve on a fixed anniversary. That is exactly "
+          "The practical difference is process, not permission: larger operators generally run a written "
+          "annual review cycle, keep a rent ledger per unit and serve on a fixed anniversary. That is "
           "the discipline an individual owner should copy, because it is what produces the evidence a "
-          "tenant-side review asks for. %s</p>" % (src("S3", "S2"), src("S20")))
+          "tenant-side review asks for. <span class=\"pill\">Analysis</span> This paragraph describes "
+          "observed practice; no official source states it as a rule. %s</p>"
+          % (src("S3", "S2"), src("S20")))
     b += ("<p class=\"small\">One tool commonly associated with large operators is specifically unlawful "
           "here: section 37.10C prohibits using algorithmic revenue-management devices that draw on "
           "non-public competitor data to set rents, with each month and each unit a separate violation "
@@ -1071,6 +1078,14 @@ FLAGS = [
      "One earlier set flagged that a Rent Board worked example applies 1.6% to a 1 May 2026 effective date when 1.4% was in force. Form 571 shows 1.6% in force from 1 March 2026, so 1.6% is correct for that date and the example is not in error on that point.",
      "Corrected by verification", ["S4", "S5"],
      "A separate, real labelling slip does exist on the same guidance page: the first example says the rate in effect on 1 June 2025 is 1.6%, when 1.4% applied on that date. The increase in that example takes effect 1 June 2026, where 1.6% is correct, so the arithmetic is right and only the date label is wrong."),
+    ("F17", "Published rate table showed the wrong century for 1982-1999",
+     "The date helper that sorts and prints the Form 571 table mapped every two-digit year to 20xx, so the 1982-1999 rows were published as 2082-2099 (for example '2082-04-01 - 2083-02-28' for the 7.0% period that began 1 April 1982). No percentage was wrong; the years were.",
+     "Repository defect, fixed and re-verified 2026-11-08", ["S4"],
+     "Repaired in tools/build_hub.py and guarded by the release gate, which now rejects any effective period outside 1982-2027. The full table was re-read against Form 571 after the fix: all 46 rows match."),
+    ("F18", "Descriptive claim about large-operator practice is analysis, not a sourced fact",
+     "The owner-practices page says larger operators run a written annual review cycle and keep a rent ledger, and recommends copying that discipline. No official source states this as a rule; it is an observation about practice.",
+     "Analysis, labelled as such", ["S20"],
+     "It is now labelled as analysis on the page. Nothing in the licensing, notice or rate rules depends on it."),
     ("F14", "Earlier sets differ in presentation", "Five earlier compilations are preserved on this site. They agree on the verified rules but differ on whether to price unit-specific figures.",
      "Reconciled, not deleted", ["S4", "S5"], "This consolidated set prices the options and labels every result computed. The earlier sets remain reachable from the archive page."),
 ]
@@ -1172,6 +1187,15 @@ def page_verification():
          e("Defect found in the previous landing page and fixed; now guarded."), badge(VERIFIED) + " " + src("S5")],
         ["Merge markers", e("Scan for unresolved conflict markers in tracked files."),
          e("Markers found in the coordination file and repaired; now guarded."), badge(VERIFIED) + " " + src("S5")],
+        ["Rate table years", e("Every effective period re-read from Form 571 on 8 November 2026 and the two-digit years re-checked."),
+         e("Defect found: 1982-1999 printed as 2082-2099 (F17). Fixed, table re-checked row by row; gate now rejects any year outside 1982-2027."),
+         badge(VERIFIED) + " " + src("S4")],
+        ["Independent re-verification", e("Section 37.15, section 37.3, Form 571, the rent increase and banking pages, Rules 4.10 and 4.12, Civil Code sections 827, 1942.5 and 1947.12, the AB 1482 page, the Rent Board fee page, Form 516C and Form 1007 re-fetched and re-read on 8 November 2026."),
+         e("All published values matched. The 1.6% rate, the licence rule, the notice periods and the AB 1482 exemption are unchanged."),
+         badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S12", "S20", "S21")],
+        ["Arithmetic re-check", e("Both units' five scenarios recomputed from the base rents and the published percentages."),
+         e("Unit 1: 1.6% = $63.92 and 3.0% = $119.85. Unit 2: 1.6% = $50.40, 13.1% = $412.65 and 10.0% = $315.00. All match to the cent, none rounded up."),
+         badge(COMPUTED) + " " + src("S4", "S8")],
     ]
     b += table("Verification performed in this session", ["Check", "Method", "Result", "Status and source"], rows)
     b += '</section>'

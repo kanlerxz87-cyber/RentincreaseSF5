@@ -185,3 +185,77 @@ searchable. That is a requirement of the licence, not an optional disclosure.
   lawful increase does not depend on market rent.
 - Reported 2026 proposals to cap banked increases at 10% a year could not be confirmed on an official
   legislative status page. No value is asserted (F09).
+
+---
+
+# Independent re-verification — session `arena-0691d955`
+
+**Date:** 2026-11-08 (UTC) · **Branch:** `arena/0691d955-rentincreasesf5`
+**Role:** line-by-line re-verification of the published consolidated set, defect repair, publication.
+
+## A. Sources re-fetched and re-read in full this session
+
+| Ref | Source | Publisher | Used to check |
+| --- | --- | --- | --- |
+| S1 | [The Rent Board Housing Inventory](https://www.sf.gov/rent-board-housing-inventory) | SF Rent Board | licence is automatic on reporting; must be current on the effective date; no penalty for late filing; inventory data is public; no licence needed with the notice |
+| S2 | [Admin Code §37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing) | SF Rent Board | "owners of residential dwelling units"; no entity/size exemption; suspension and prospective restoration in (e) |
+| S3 | [Admin Code §37.3](https://www.sf.gov/information/sec-373-rent-limitations) | SF Rent Board | 60% of CPI, 7% maximum; banking in (a)(2); "landlords" not limited by entity form |
+| S4 | [Form 571 allowable increases](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf) | SF Rent Board | all 46 periods, row by row, including the 1992-93 caution |
+| S5 | [Learn about rent increases in San Francisco](https://www.sf.gov/learn-about-rent-increases-san-francisco) | SF Rent Board | 1.6% for 3/1/2026-2/28/2027; 12-month rule; base rent only; no rounding up; 30/90 days plus 5 for mail; worked examples |
+| S6 | [Banked rent increases](https://www.sf.gov/information/banked-rent-increases) | SF Rent Board | "24 full months", no cap, not compounded or prorated, notice must state the banked portion |
+| S7 | [Rules Part IV (§4.10, §4.12)](https://www.sf.gov/reports/february-2024/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring) | SF Rent Board | notice content; null-and-void rule and the 0.5% readjustment; "full 12 months must have elapsed"; §4.12(b) content and its no-void proviso |
+| S8 | [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827) | California Legislature | 30-day and 90-day notice; service personally or by mail under CCP §1013 |
+| S9 | [Civil Code §1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12) | California Legislature | (d)(3) local-control exemption; (d)(6) two-unit owner-occupied exemption; 5% + CPI, 10% ceiling |
+| S10 | [AB 1482 guidance](https://www.sf.gov/reports/august-2023/california-tenant-protection-act-2019-ab-1482) | SF Rent Board | 8.8% for 8/1/2026-7/31/2027; does not apply to units under the SF Ordinance |
+| S11 | [Learn about San Francisco rental laws](https://www.sf.gov/learn-about-san-francisco-rental-laws/) | SF Rent Board | coverage for units built on or before 13 June 1979, excluding single-family dwellings |
+| S12 | [The Rent Board Fee](https://www.sf.gov/rent-board-fee) | SF Rent Board | $59.00 per dwelling unit 2026-27; 1 March deadline; 5% monthly penalty capped at 15%; exemption deadline 14 Dec 2026; exemption does not satisfy the Inventory |
+| S13 | [Annual rent increase for multiple years](https://www.sf.gov/information/annual-rent-increase-multiple-years) | SF Rent Board | percentages added, not compounded; no petition; no rounding up |
+| S14 | [§6.14 / Costa-Hawkins petition](https://www.sf.gov/information/petition-determination-pursuant-section-614-andor-costa-hawkins) | SF Rent Board | 6.14 notice within a reasonable time, "generally sixty days"; co-tenants not subject to Costa-Hawkins |
+| S15 | [Admin Code §37.10B](https://www.sf.gov/information/sec-3710b-tenant-harassment) | SF Rent Board | (a)(5) coercion to vacate; (a)(9) discrimination; treble or $1,000 minimum plus fees |
+| S16 | [Admin Code §37.10C](https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited) | SF Rent Board | algorithmic-device prohibition; monthly and per-unit violations; private right of action |
+| S17 | [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5) | California Legislature | 180-day retaliation bar in (a); separate bar in (d) |
+| S18 | [CRD housing discrimination](https://calcivilrights.ca.gov/housing/) | California Civil Rights Department | protected-characteristics list, matched item by item |
+| S20 | [Report an unlawful rent increase (516C)](https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history) | SF Rent Board | no filing fee, no time limit, evidence asked for, hearing format |
+| S21 | [Form 1007](https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag%5B74%5D.pdf) | SF Rent Board | Tenant Right to Counsel intake number (415) 659-9184 |
+
+## B. Arithmetic recomputed independently
+
+| Unit | Option | Base | Rate | Increase | New rent | Matches published |
+| --- | --- | --- | --- | --- | --- | --- |
+| Unit 1 | Annual only | $3,995.00 | 1.6% | $63.92 | $4,058.92 | yes |
+| Unit 1 | Annual + banked 2026 | $3,995.00 | 3.0% (1.4 + 1.6) | $119.85 | $4,114.85 | yes |
+| Unit 2 | Annual only | $3,150.00 | 1.6% | $50.40 | $3,200.40 | yes |
+| Unit 2 | Banked + annual | $3,150.00 | 13.1% (11.5 + 1.6) | $412.65 | $3,562.65 | yes |
+| Unit 2 | Capped at 10% by choice | $3,150.00 | 10.0% | $315.00 | $3,465.00 | yes |
+
+Unit 2's 11.5% banked subtotal is the sum of the rates available on each skipped anniversary:
+1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 = 11.5. Percentages added, never compounded, and no result
+rounded up. Serve-by dates re-derived from the effective dates (30 or 90 days, plus 5 if mailed).
+
+## C. Defects found and repaired
+
+1. **F17 — rate-table years were published in the wrong century.** `_d()` in `tools/build_hub.py`
+   mapped every two-digit year to 20xx, so the Form 571 rows for 1982-1999 were printed as
+   2082-2099 (e.g. "2082-04-01 - 2083-02-28"). Percentages were correct; years were not. Fixed,
+   the whole table re-read against Form 571 (46 rows), and the release gate now fails if any
+   effective period falls outside 1982-2027.
+2. **F18 — an unsourced descriptive sentence.** The owner-practices page described large-operator
+   practice without saying it was an observation. Now labelled `Analysis` with an explicit note.
+3. Stale "today" wording removed from the serve-by note; the dates are derived from the effective
+   date, not from the day the page was built.
+4. Research date refreshed to 8 November 2026 on the consolidated hub only. Earlier sets keep their
+   own dates, which remain true for them.
+
+## D. Release gates re-run after the repairs
+
+`python3 scripts/build.py` (16 files), `scripts/check.py`, `scripts/independent_audit.py`,
+`tools/check_links.py`, `tools/dashboard_check_links.py`, `tools/release_gate.py` — all pass:
+14 pages, 303 table data rows, 777 links, 0 orphans, 0 unsourced rows, 15 mirror pairs, 5 scenarios
+recomputed, 62 register findings, 18 flagged items (F01-F18).
+
+## E. What is still not verified
+
+Unchanged from the earlier record: the owner-supplied base rents, tenancy dates, build year and
+unit count (F01, F02); the Inventory/licence status (F03); the unpublished 2027-28 rate (F06);
+no official ZIP-level market rent (F10); no federal rent ceiling found (F07); no uniform-increase
+requirement found (F08); reported but unconfirmed 2026 banking-cap proposals (F09).
