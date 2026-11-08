@@ -813,3 +813,71 @@ names a session that is still working. No file owned by another live session is 
 
 Claim written and pushed before any other file was modified. No prior session's page, data file or
 generator will be deleted or rewritten; defects are fixed additively and logged here.
+
+---
+
+## Session `arena/aa463593-rentincreasesf5` — final record (2026-11-08)
+
+### Task board — final status
+
+| ID | Task | Owner | Status |
+| --- | --- | --- | --- |
+| V1 | Re-read the controlling official sources and confirm or correct every published figure | `arena/aa463593` | done |
+| V2 | Run every generator and checker on a clean tree; repair failures | `arena/aa463593` | done |
+| V3 | Line-by-line audit of published table rows and rates | `arena/aa463593` | done |
+| V4 | Privacy scan of every published file and of the full history | `arena/aa463593` | done (history exposure flagged, not rewritten) |
+| V5 | PR → merge → confirm Pages deploy → record | `arena/aa463593` | done (see below) |
+| V6 | Flagged-for-review additions | `arena/aa463593` | needs review (published, non-blocking) |
+
+### Sources re-read this pass (20)
+
+Form 571 (all 46 periods) · §37.3 · §37.15 · Part IV Rules 4.10/4.12 · banking page · multiple-year
+page · Housing Inventory · rent-increase guidance and all four worked examples · Civ. Code §§827,
+1947.12, 1942.5 · SF AB 1482 guide · §§37.10B, 37.10C · Rule 6.14 guidance · 516C petition route ·
+Rent Board fee · rental-law coverage · Form 1007 · CRD housing guidance. Register extended with
+S22 (multiple-year guidance) and S23 (Rent Ordinance index).
+
+### Verification performed
+
+- Form 571 machine-compared against `data/allowable-increases.csv` (47 rows),
+  `docs/data/allowable_increases.json` (45 periods) and `data/allowance-ledger.csv` (9 rows):
+  **0 mismatches**.
+- Every published dollar figure recomputed independently: matches to the cent, none rounded up.
+- All five serve-by dates recomputed: match.
+- Supplied initials: **0 matches in 167 tracked files**; present in **4 files in earlier commits**.
+- All six checkers pass; `scripts/build.py` twice produces no drift.
+- Live site re-fetched after deploy: `hub/flagged.html` shows F19–F21, `hub/rates.html` shows the
+  corrected 1982–2027 centuries, `internal/notes.md` shows the corrected publication warning.
+
+### Defects found and fixed by this pass
+
+1. `internal/notes.md` claimed it was not published; it is served publicly. Corrected (F21).
+2. The site stamp said 7 November while the sources had been re-read on 8 November. Corrected.
+3. Two prose-cited sources were missing from the register. Added as S22/S23.
+
+### A flag raised and withdrawn
+
+A candidate flag against the multiple-year worked example (8.2% = 2.2+1.6+2.6+1.8) was re-derived
+against Form 571 anniversary by anniversary and found to be **correct**; the flag was withdrawn before
+publication and the withdrawal is recorded in `VERIFICATION.md`.
+
+### Collisions handled
+
+`main` advanced four times during this session (PRs #13, #14, #15/#16/#21, #22). Each time the
+newer `main` was merged in rather than replaced, conflicts in `tools/build_hub.py` were resolved by
+adopting main's version (including its F19 century repair) and re-applying only this pass's
+additions, and `COORDINATION.md` / `VERIFICATION.md` conflicts were resolved by keeping both sides
+verbatim. No session's work was deleted.
+
+### PR and deploy record
+
+| Item | Value |
+| --- | --- |
+| Branch | `arena/aa463593-rentincreasesf5` |
+| Pull request | [#19](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/19) |
+| CI on PR | `validate` **pass** (build, all checkers, release gate, reproducibility) |
+| Merge result | **MERGED** 2026-11-08 22:53 UTC, merge commit `4c0cf6d53a8cd54fc41efbf6d0444a1101814756` |
+| Validate on `main` | **success** (run 42532442193) |
+| Pages build/deploy | **success** (run 42532441873); Pages API status `built` at `4c0cf6d5` |
+| Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
+| Live verification | Landing page, `hub/flagged.html` (F19–F21 with source links), `hub/rates.html` (corrected century range) and `internal/notes.md` (corrected warning) all retrieved from the deployed URL and read |
