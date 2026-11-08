@@ -629,3 +629,32 @@ Flagged here for the owner to close or rebase.
 | Pages build/deploy | **success** (run 42414586035); Pages API status `built` |
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Landing page and `hub/flagged.html` retrieved from the deployed URL and read: consolidated hub is live, F01-F16 render with source links. Direct `curl` from the sandbox returns `000` because github.io is not on the sandbox egress allowlist - that is an network restriction, not a site fault; verification was done with the page-fetch tool. |
+
+---
+
+# Session `arena-0691d955` · branch `arena/0691d955-rentincreasesf5` · 2026-11-08
+
+## Registry
+
+| Session ID | Branch | Worktree | Started (UTC) | Status |
+| --- | --- | --- | --- | --- |
+| `arena-0691d955` | `arena/0691d955-rentincreasesf5` | repo root | 2026-11-08 | active — independent re-verification, defect repair, publish |
+
+## Claim (written before any other file was touched)
+
+Prior sessions' PRs (#1–#4, #6, #8–#11) are merged to `main`; PRs #5 and #7 are stale open
+branches owned by other sessions and are **not touched** here. No row on the board names a session
+still committing, so the 60-minute takeover rule does not need to be invoked: this session takes a
+**new, independent verification task** over the already-published tree rather than a handoff.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| V1 | Re-verify every published figure on `hub/**` against the official source, line by line | `arena-0691d955` | `COORDINATION.md`, `VERIFICATION.md` | in progress |
+| V2 | Repair defects found by V1 (historical rate-table century bug, others as found) | `arena-0691d955` | `tools/build_hub.py`, `hub/**`, `site/hub/**` | in progress |
+| V3 | Independent arithmetic re-check of both units' options | `arena-0691d955` | `VERIFICATION.md`, `hub/units.html` | in progress |
+| V4 | Release gates: build, links, privacy scan, one official source per row | `arena-0691d955` | `tools/release_gate.py` | in progress |
+| V5 | PR → merge → confirm GitHub Pages deploy → record result | `arena-0691d955` | `COORDINATION.md` | in progress |
+| V6 | Publish newly found irregularities on the Flagged for Review page | `arena-0691d955` | `hub/flagged.html`, `data/flagged.csv` | in progress |
+
+No prior session's page, data file or record is deleted. Repair of an incorrect published value is
+recorded in the log and on `hub/flagged.html` rather than done silently.
