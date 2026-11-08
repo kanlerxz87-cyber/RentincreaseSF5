@@ -20,7 +20,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TODAY = date(2026, 11, 7)
+TODAY = date(2026, 11, 8)
 
 # ---------------------------------------------------------------------------
 # OFFICIAL SOURCES - every one retrieved and read during this session.
@@ -68,6 +68,10 @@ SOURCES = {
             "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/"),
     "S21": ("Form 1007 - Notice to Tenant / Tenant Right to Counsel", "SF Rent Board",
             "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag[74].pdf"),
+    "S22": ("Annual rent increase for multiple years", "SF Rent Board",
+            "https://www.sf.gov/information--annual-rent-increase-multiple-years"),
+    "S23": ("The Rent Ordinance (Chapter 37 index)", "SF Rent Board",
+            "https://www.sf.gov/reports--rent-ordinance/"),
 }
 
 # ---------------------------------------------------------------------------
@@ -523,7 +527,7 @@ def layout(title, body, active, root=False, desc=None):
 <body>
 <header class="top"><div class="top-in">
 <div class="brand"><a href="%s" style="text-decoration:none;color:inherit">SF rent increase dashboard</a>
-<small>Outer Sunset 94122 &middot; anonymised &middot; sources checked 8 Nov 2026</small></div>
+<small>Outer Sunset 94122 &middot; anonymised &middot; sources rechecked 8 Nov 2026</small></div>
 <nav class="main">%s</nav>
 </div></header>
 <main id="main"><div class="wrap">%s</div></main>
@@ -870,7 +874,7 @@ def page_units():
         rows.append([e(unit), e(name), "%.1f%%" % pct, money(inc), money(round(base + inc, 2)),
                      "%d days" % notice_days(pct), eff.isoformat(), serve_by(eff, pct).isoformat(),
                      badge(COMPUTED) + " " + src("S4", "S8")])
-    b += table("Serve-by dates assume personal service and are computed from the effective date, not from today.",
+    b += table("Serve-by dates assume personal service and are computed backwards from the effective date; the earlier of the two applies.",
                ["Unit", "Option", "Total", "Increase", "New rent", "Notice", "Effective", "Serve by", "Status and source"],
                rows, numeric=(2, 3, 4))
     b += '</section>'
@@ -1100,6 +1104,14 @@ FLAGS = [
      "The date helper that sorts and prints the Form 571 table mapped every two-digit year to 20xx, so the 1982-1999 rows were published as 2082-2099 (for example '2082-04-01 - 2083-02-28' for the 7.0% period that began 1 April 1982). No percentage was wrong; the years were.",
      "Repository defect, fixed and re-verified 2026-11-08", ["S4"],
      "Repaired in tools/build_hub.py and guarded by the release gate, which fails if any effective period falls outside 1982-2027. The full table was re-read against Form 571 after the fix: all 46 rows match. No legal conclusion or unit figure changed."),
+    ("F20", "The licence must be current on the effective date, not necessarily at service",
+     "Section 37.15(e) and the Inventory page tie the licence to the increase taking effect. Neither source states that the licence must already exist when the notice is served. Obtaining it before service is the recommended safer workflow, not a rule quoted from the ordinance.",
+     "Wording precision, no figure affected", ["S1", "S2", "S5"],
+     "Treat 'licence current before service' as prudent practice; treat 'licence current on the effective date' as the documented requirement."),
+    ("F21", "Publication surface: GitHub Pages serves the whole repository root",
+     "GitHub Pages publishes the entire repository root, so files such as the internal working notes and this coordination file are publicly readable, not just the HTML pages. The earlier internal note's claim that it was not published was incorrect and has been corrected. No tenant name, initial, address or parcel appears in any current file.",
+     "Publication-surface limitation", ["S1", "S2"],
+     "If the repository is made private, confirm Pages access settings before serving notices. Never store personal data anywhere in this repository."),
 
 ]
 

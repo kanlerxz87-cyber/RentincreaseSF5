@@ -790,3 +790,26 @@ rent history · F19 rate-table century defect (fixed here).
 - Main validation run 42532168058: success. Pages build/deploy run 42532167597: success. Pages API latest build is `built` at the PR #16 merge commit.
 - Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF5/. Deployed Flagged page retrieved; its first chunk can be cached and showed the prior F04 wording while F01/banner were current. Deployment evidence is the successful build at the merge commit, not a claim that every CDN cache refreshed simultaneously.
 - Rebase note: the required pre-push `pull --rebase` was attempted after the main-integration merge and tried to replay parallel commits with a coordination conflict. It was aborted to preserve the resolved merge; the remote session branch had not advanced, so the merge commit was pushed without discarding or rewriting parallel work.
+
+---
+
+---
+
+## Session: `arena/aa463593-rentincreasesf5` — independent verification + release pass (2026-11-08)
+
+**Branch:** `arena/aa463593-rentincreasesf5` (Arena-assigned; platform requirement — no session branch created).
+Base commit at claim time: `04d683e` (merge of PR #12), working tree clean.
+All prior sessions' claims are released: `main` contains PRs #1–#4, #6, #8–#12 and no board row
+names a session that is still working. No file owned by another live session is in this scope.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| V1 | Re-read the controlling official sources (SF Rent Board, Chapter 37, Form 571, CA Civil Code, CRD/HUD) and confirm or correct every published figure | `arena/aa463593-rentincreasesf5` | `VERIFICATION.md`, this section | in progress |
+| V2 | Run every existing generator and checker on a clean tree; repair any failure | `arena/aa463593-rentincreasesf5` | `tools/**`, `scripts/**`, `build.py` (only if a check fails) | in progress |
+| V3 | Line-by-line audit of each published table row: official source link present, value matches the source, blanks stay blank | `arena/aa463593-rentincreasesf5` | `hub/**`, `docs/**`, `pages/**`, `dashboard/**` | in progress |
+| V4 | Privacy scan of every published file (names, initials, address, parcel) | `arena/aa463593-rentincreasesf5` | whole tree | in progress |
+| V5 | PR → merge → confirm GitHub Pages deploy → record result | `arena/aa463593-rentincreasesf5` | `COORDINATION.md` | in progress |
+| V6 | Flagged-for-review additions found by this pass | `arena/aa463593-rentincreasesf5` | `hub/flagged.html` via `tools/build_hub.py`, `docs/flagged.html` via `tools/dashboard_build.py` | needs review (published, non-blocking) |
+
+Claim written and pushed before any other file was modified. No prior session's page, data file or
+generator will be deleted or rewritten; defects are fixed additively and logged here.
