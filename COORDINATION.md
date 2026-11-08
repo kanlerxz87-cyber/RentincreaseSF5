@@ -668,8 +668,8 @@ Arena requires this session to remain on its fixed branch, so no additional sess
 
 | Task | Status | Owner | File scope |
 | --- | --- | --- | --- |
-| Re-read controlling official sources and audit published rules, calculations, privacy, and links | in progress | `arena/3a6f02e5-rentincreasesf5` | `COORDINATION.md`, `AUDIT-2026-11-08.md` |
-| Repair any defects found, rebuild, open PR to main, merge, and confirm Pages | in progress | `arena/3a6f02e5-rentincreasesf5` | Defect-specific files logged here before editing |
+| Re-read controlling official sources and audit published rules, calculations, privacy, and links | done | `arena/3a6f02e5-rentincreasesf5` | `COORDINATION.md`, `AUDIT-2026-11-08.md` |
+| Repair any defects found, rebuild, open PR to main, merge, and confirm Pages | done | `arena/3a6f02e5-rentincreasesf5` | Defect-specific files logged here before editing |
 
 No personal identifiers will be copied into the audit. Dates and amounts supplied by the owner remain
 unverified records, not official facts. No Inventory filing, licence request, or tenant notice will be performed.
@@ -779,3 +779,14 @@ proposals · F10 no official ZIP market rent · F12 bedroom/square footage for t
 F15 identifier exposure in **git history** (current files clean; history not rewritten) ·
 F17 no established ZIP-level customary increase · F18 banked examples assume an unprovided complete
 rent history · F19 rate-table century defect (fixed here).
+
+---
+
+### Final publication record — arena/3a6f02e5-rentincreasesf5
+- Independent audit: `AUDIT-2026-11-08.md`; fresh official-source links and limitations recorded. F17–F18 from the parallel follow-up remain needs review and non-blocking.
+- Combined local gate after preserving the parallel work: 14 consolidated pages, 300 source-linked rows, 778 links, 0 orphans, 15 mirrors, 5 recalculated scenarios; all earlier checks and 21/21 calculation tests pass.
+- PR [#16](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/16) validation run 42532137767: success.
+- PR #16 merged 2026-11-08 22:49:45 UTC; merge commit `ef2869c62ba14c3fe0e7fad2a56880ae7fa4984e`.
+- Main validation run 42532168058: success. Pages build/deploy run 42532167597: success. Pages API latest build is `built` at the PR #16 merge commit.
+- Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF5/. Deployed Flagged page retrieved; its first chunk can be cached and showed the prior F04 wording while F01/banner were current. Deployment evidence is the successful build at the merge commit, not a claim that every CDN cache refreshed simultaneously.
+- Rebase note: the required pre-push `pull --rebase` was attempted after the main-integration merge and tried to replay parallel commits with a coordination conflict. It was aborted to preserve the resolved merge; the remote session branch had not advanced, so the merge commit was pushed without discarding or rewriting parallel work.
