@@ -12,7 +12,7 @@
   ],
   "generic_initial_match_files": [],
   "history": null,
-  "html_files": 102,
+  "html_files": 103,
   "indirect_only_rows": [
     {
       "line": 22,
@@ -688,7 +688,7 @@
     "Historical matches, forks, caches and clones are not removed by this audit.",
     "External URL retrieval evidence is recorded separately in audit/source-review.json."
   ],
-  "links_and_assets_checked": 4912,
+  "links_and_assets_checked": 4931,
   "mirror_files_checked": 54,
   "schema": 1,
   "scope": "All tracked artifacts; all root HTML including archived sets; local targets and citation traceability. Not a live external URL monitor or legal certification.",
@@ -700,14 +700,14 @@
     "tools/pages_1.py"
   ],
   "table_rows": {
-    "direct": 1426,
+    "direct": 1435,
     "indirect": 166,
-    "total": 1929,
+    "total": 1938,
     "untraceable": 337
   },
-  "text_files_scanned": 174,
-  "tracked_files": 174,
-  "unique_external_urls": 96,
+  "text_files_scanned": 177,
+  "tracked_files": 177,
+  "unique_external_urls": 98,
   "untraceable_rows": [
     {
       "line": 37,

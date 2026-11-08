@@ -420,7 +420,6 @@ def main() -> int:
         writer.writeheader()
         writer.writerows(manifest)
     if not args.no_page:
-        if not args.no_page:
         audit_page.write(ROOT, result)
     print(f"Repository audit: {len(files)} tracked files, {len(pages)} HTML files, {row_counts['total']} data rows")
     print(f"Exact identifier check: {token_mode}; current matching files: {len(current_privacy_files)}")

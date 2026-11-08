@@ -921,3 +921,5 @@ verbatim. No session's work was deleted.
 - arena-e126bdbe reproducibility correction: wired `tools/audit_page.py` into the actual audit result schema (`table_rows` dict, `kind/path` findings). Fixed prior exact/history evidence to survive repeated generic CI scans instead of being dropped on the second run. Earlier assertion failures made no edit; this entry records the successful wiring.
 
 - arena-e126bdbe CI reproducibility fix: workflow audit uses `--no-page` and runner-temp JSON/CSV so a tokenless CI scan cannot dirty the committed exact-scan artifacts. The flag is now actually implemented after two no-op replacement attempts; local CI-mode run still reports the one real mirror failure and does not modify tracked outputs.
+
+- arena-e126bdbe immediate hotfix verified: duplicated conditional removed; both audit modules compile; CI-mode and page-generation mode each exit 1 only for the known missing `site/docs` mirror. The previous shell test itself aborted under `set -e` before staging; corrected test uses an explicit if/else exit capture. No broken audit script is left in this correction.
