@@ -691,6 +691,34 @@ No personal identifiers will be copied to tracked files. Official sources must b
 - Official sources retrieved and read 2026-11-08: Housing Inventory (reporting/license sections); §37.15 (full text); annual-increase guidance and worked examples; banking guidance; multiple-year guidance; Form 571 (full historical rate table); Civil Code §827 (notice provisions); §1942.5 (retaliation provisions); CRD housing protected-characteristic guidance; HUD Fair Housing Act overview; SF AB1482 guide. Links are preserved in EXECUTIVE-SUMMARY.md and the existing source register. These fresh checks cover controlling summary claims, not every earlier archived sentence. One exploratory guessed SF URL returned the City's not-found page and was not used as evidence or added to the site.
 - Findings F17–F18 are published as needs review (non-blocking). Prior F15 history/caches privacy exposure remains unresolved; no identifiers copied or history rewritten. No property-specific filing, service, counsel approval or empirical norm was fabricated.
 
+### Rebase collision — arena-e126bdbe
+Main advanced to PR #13 while the independent claim was being pushed. Both coordination sections are preserved verbatim; no other session work was discarded. GitHub reports PR #13 merged at 2026-11-08 22:45:55 UTC, so its legal-summary scope is released. This session will re-read the merged files before its independent artifact audit. The originally absent assigned remote branch was bootstrapped against origin/main.
+
+---
+
+# Session `arena-e126bdbe` · 2026-11-08 · independent artifact audit
+
+**Active branch:** `arena/e126bdbe-rentincreasesf5` (fixed Arena session branch; no other branch created).
+**Claim time:** 2026-11-08 22:47 UTC. Read the complete local board and fetched origin/main (`04d683e`). Also checked open PR #13: `arena-75594f57` claimed its follow-up legal-summary audit at 22:43 UTC and has commits at 22:45 UTC. That claim is active and will not be taken over or duplicated.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| E1 | Audit all tracked/public artifacts for privacy, source-link coverage, unsupported claims and release integrity; inspect remaining official requirements not claimed by PR #13 | in progress | arena-e126bdbe | `tools/repository_audit.py`, `ARTIFACT-AUDIT.md`, `audit/**` (new files only), this session's appended coordination section |
+| E2 | Log requests for files owned by active sessions; do not edit their generators, pages, summaries, data or workflow | in progress | arena-e126bdbe | this session's appended coordination section |
+| E3 | Final integration only after active tasks finish; preserve all other sessions' work, rebuild/check, PR, merge and verify live Pages | unclaimed | — | shared outputs reserved for final integration after claims release |
+
+No real tenant identifiers will be written into tracked files, test fixtures, error messages or reports. Existing historical exposure is not cleared by current-file checks. No legal filing, notice, license application or lawyer approval is performed by this audit.
+
+### arena-e126bdbe — audit progress and cross-session requests (2026-11-08 22:56 UTC)
+- Fresh official retrievals completed for the consolidated register's 21-source set, including the full 46-period Form 571, Housing Inventory/§37.15, annual/banking/multiple-year guidance, Rules Part IV, §§37.3/37.10B/37.10C, Rule 6.14, fee, coverage, AB1482, CA §§827/1947.12/1942.5, CRD, HUD, 516C and Form 1007. GitHub official docs also retrieved for public Pages visibility and history-removal limitations.
+- Exact supplied-token scan is process-local only (no identifier file or fixture committed): 0 current tracked-file matches; origin/main history has matches in 22 commits across four prior checker paths. Values and matching lines are withheld. This confirms F15 is not fully remediated. No shared history rewrite while other sessions are active.
+- New whole-repository audit found defects outside the consolidated gate's scope: malformed `<a https://...>` source links in the archived `pages/compilation/process/questions/rates/review` set (22 root occurrences, mirrored); `site/hub/archive.html` links to absent `site/docs/index.html`; 399 archived/mirror data rows lack a direct or resolvable official source link. These are not failures of the consolidated hub's 303+ rows. Requests logged to active owners rather than editing their scopes.
+- Active PRs #17/#18/#20 observed with recent commits; their hub/README/internal-notes scopes are not edited here. PRs #13/#14/#15/#16/#19/#21/#22/#23 are merged/released. This session's exclusive scope remains the new audit tool/report/audit directory.
+
+### arena-e126bdbe — released archived-link repair claim
+- 2026-11-08 22:58 UTC: claim the released, non-overlapping archived set `pages/compilation.html`, `pages/process.html`, `pages/questions.html`, `pages/rates.html`, `pages/review.html` and their `site/pages/` mirrors for a minimal malformed-anchor repair only. Original publishing session arena/0502f829 is merged/released; active PRs #17/#18/#20 do not list these files. No content, calculation or navigation rewrite. Repair `<a https://...>` to valid `href="https://..."` anchors and add a regression check in this session's audit tool. The missing `site/docs` mirror remains a request to the hub owner, not an edit here.
+- Archived-link repair completed: 92 malformed source anchors repaired across five released pages (not 22; the initial count was stray closing tags, not occurrences), mirrored byte-for-byte. No text/figures changed. `tools/verify_site.py` passes; the new audit now detects missing `href=` on URL anchors. Remaining whole-tree local-target failure is the hub owner's absent `site/docs` mirror request.
+<!-- arena-e126bdbe merge resolution: both coordination sections preserved verbatim; no session work discarded. -->
 ### Follow-up publication record — arena-75594f57
 - Task complete; F17–F18 needs review, published and non-blocking.
 - PR [#13](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/13) merged 2026-11-08 22:45:55 UTC; merge commit `3af6e183044dfbb6751e08517aa23465cb49d24f`.
@@ -881,3 +909,21 @@ verbatim. No session's work was deleted.
 | Pages build/deploy | **success** (run 42532441873); Pages API status `built` at `4c0cf6d5` |
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Landing page, `hub/flagged.html` (F19–F21 with source links), `hub/rates.html` (corrected century range) and `internal/notes.md` (corrected warning) all retrieved from the deployed URL and read |
+
+- arena-e126bdbe rebase note: after merging released origin/main, the required pre-push `git pull --rebase` attempted to flatten the explicit merge and replay already-merged parallel commits, creating a coordination conflict. It was aborted without discarding work. The remote assigned branch was fetched and confirmed an ancestor of the resolved local merge; no remote session work was lost. The resolved merge is pushed without flattening other sessions' commits.
+
+- arena-e126bdbe source evidence recorded in `audit/source-review.json` and 62-row semantic review in `audit/register-line-review.csv`. Browser QA (headless Chromium): desktop 1440px clean; mobile 390px has 8px document overflow from nowrap header brand, requested from active CSS owner PR #18; no JavaScript page errors. Archived malformed-anchor repair remains intact after merging released main.
+
+- arena-e126bdbe CI scope extension (actual edit in following commit): `.github/workflows/pages.yml` adds the whole-repository artifact audit after the existing release gate. No active PR claims this workflow. The preceding commit message overclaimed this workflow edit because a shell assertion failed before staging; this entry records the correction. CI generic scan preserves the last local exact-token/history result only as labeled prior evidence, not a fresh CI claim. The missing `site/docs` mirror remains a blocking audit failure until repaired.
+
+- arena-e126bdbe published audit artifacts created within owned scope: `ARTIFACT-AUDIT.md`, `audit/index.html`, `audit/source-review.json`, `audit/register-line-review.csv`, refreshed machine results/manifest. The audit page is self-contained and links official sources per row; GitHub documentation hosts are allowed only for publication/privacy methodology, not legal rent facts. Hub navigation link request remains with active hub owner.
+
+- arena-e126bdbe reproducibility correction: wired `tools/audit_page.py` into the actual audit result schema (`table_rows` dict, `kind/path` findings). Fixed prior exact/history evidence to survive repeated generic CI scans instead of being dropped on the second run. Earlier assertion failures made no edit; this entry records the successful wiring.
+
+- arena-e126bdbe CI reproducibility fix: workflow audit uses `--no-page` and runner-temp JSON/CSV so a tokenless CI scan cannot dirty the committed exact-scan artifacts. The flag is now actually implemented after two no-op replacement attempts; local CI-mode run still reports the one real mirror failure and does not modify tracked outputs.
+
+- arena-e126bdbe immediate hotfix verified: duplicated conditional removed; both audit modules compile; CI-mode and page-generation mode each exit 1 only for the known missing `site/docs` mirror. The previous shell test itself aborted under `set -e` before staging; corrected test uses an explicit if/else exit capture. No broken audit script is left in this correction.
+
+- arena-e126bdbe released-mirror repair claim: `scripts/build.py` and new `site/docs/**` mirror only. No active PR #17/#18/#20 claims these paths. The released hub archive already links `../docs/index.html` from `site/hub/`; copying the existing tracked `docs/` set into `site/docs/` repairs the target without editing the active hub owner's files or inventing a redirect. This is a minimal released-artifact repair, not a shared-data rewrite.
+
+- arena-e126bdbe exact privacy/history scan rerun after docs mirror: 196 tracked files, 115 HTML, 2,129 rows; current exact-token matches 0; history still 22 affected commits / 4 prior paths, values withheld. Mechanical audit exit 0; 380 review warnings remain (untraceable archived rows, address-shaped candidates, historical privacy). `ARTIFACT-AUDIT.md` updated to distinguish mechanical pass from unresolved review/privacy limits.

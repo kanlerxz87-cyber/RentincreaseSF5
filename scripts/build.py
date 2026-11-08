@@ -120,5 +120,9 @@ for _src in list(Path('pages').glob('*.html')) + [p for p in Path('assets').glob
 _sh.copyfile('index.html', 'previous-dashboard.html')
 _sh.copyfile('index.html', Path('site') / 'previous-dashboard.html')
 _sp.run([_sys.executable, 'tools/build_hub.py'], check=True)
+# The released hub archive links to ../docs/index.html from site/hub/. Mirror the
+# existing independent docs set so that target exists under the main:/ publication
+# surface. Additive only: no docs content or active hub file is rewritten.
+_sh.copytree('docs', Path('site') / 'docs', dirs_exist_ok=True)
 print('Consolidated hub built; earlier sets preserved and linked from hub/archive.html.')
 

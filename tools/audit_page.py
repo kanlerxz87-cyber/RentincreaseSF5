@@ -1,0 +1,63 @@
+"""Render the anonymised public audit page from repository_audit results."""
+from html import escape
+from pathlib import Path
+
+TEMPLATE = r'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Independent repository, privacy and official-source audit. Unverified items remain blank."><title>Independent artifact audit · SF rent research</title><style>
+:root{--bg:#f5f7fb;--card:#fff;--ink:#172033;--muted:#526078;--line:#d9e0eb;--accent:#174ea6;--warn:#fff4d6;--bad:#fff0ef;--good:#eaf7ee}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}header,main,footer{max-width:1120px;margin:auto;padding:24px}header{border-bottom:1px solid var(--line);background:var(--card)}a{color:var(--accent);overflow-wrap:anywhere}h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.2;margin:.2em 0}h2{margin-top:1.8em}.meta,.muted{color:var(--muted)}.notice,.card{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:18px;margin:18px 0}.notice{background:var(--warn)}.bad{background:var(--bad)}.good{background:var(--good)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.metric strong{display:block;font-size:1.5rem}.tw{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}table{border-collapse:collapse;width:100%;min-width:760px}caption{text-align:left;padding:14px;font-weight:700}th,td{padding:11px 12px;border-top:1px solid var(--line);text-align:left;vertical-align:top}th{background:#edf2fa;font-size:.82rem;text-transform:uppercase;letter-spacing:.03em}code{overflow-wrap:anywhere}ul{padding-left:1.3em}footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}@media(max-width:600px){header,main,footer{padding:16px}.notice,.card{padding:14px}}
+</style></head><body><header><p class="meta">SF rent research · Outer Sunset 94122 · anonymised placeholders</p><h1>Independent artifact audit</h1><p class="muted">Session <code>arena-e126bdbe</code> · generated from machine results · <a href="../index.html">Dashboard</a> · <a href="../hub/flagged.html">Flagged for review</a></p></header><main>
+<div class="notice @STATUS_CLASS@"><strong>@STATUS@</strong> Existing consolidated checks may pass while this stricter whole-repository audit reports failures or review warnings. No tenant identifier is reproduced here. No amount is cleared for service or certified to pass a tenant-side lawyer’s review.</div>
+<div class="grid"><div class="card metric"><span class="muted">Tracked files</span><strong>@TRACKED@</strong><span>@HTML@ HTML files</span></div><div class="card metric"><span class="muted">Table data rows</span><strong>@ROWS@</strong><span>@UNTRACEABLE@ untraceable archived/mirror rows</span></div><div class="card metric"><span class="muted">Exact-token current hits</span><strong>@EXACT_FILES@ files</strong><span>last exact mode: @EXACT_MODE@; not a fresh CI token claim</span></div><div class="card metric"><span class="muted">Historical exposure</span><strong>@HIST_COMMITS@ commits</strong><span>@HIST_PATHS@ prior paths; values withheld</span></div></div>
+<h2>Mechanical findings</h2><div class="card"><p>@FAIL_COUNT@ failures; @WARN_COUNT@ review warnings. Row evidence: @DIRECT@ direct, @INDIRECT@ indirect, @UNTRACEABLE@ untraceable.</p><ul>@FAILURES@</ul><p>92 malformed source anchors in five released archive pages and mirrors were repaired without changing legal text or figures. Browser QA found an 8px mobile header overflow and requested the fix from the active CSS owner; no JavaScript page errors were observed.</p></div>
+<h2>Official-source review</h2><p>Each row links to an official source actually retrieved. This table reviews legal propositions, not private property records. <a href="source-review.json">Machine-readable evidence</a> · <a href="register-line-review.csv">All 62 finding-level reviews</a> · <a href="results.json">Audit results</a> · <a href="artifact-manifest.csv">Artifact manifest</a></p><div class="tw"><table><caption>Legal propositions checked against retrieved official sources</caption><thead><tr><th>Question</th><th>Finding</th><th>Limit</th><th>Official source</th></tr></thead><tbody>
+<tr><td>Must an individual owner report?</td><td>Yes. The Inventory obligation applies to owners, not only corporations; reporting tenant-occupied units generates the licence automatically.</td><td>Actual reporting/licence status is unknown.</td><td><a href="https://www.sf.gov/rent-board-housing-inventory">SF Rent Board Housing Inventory</a></td></tr>
+<tr><td>When must the licence exist?</td><td>Current on the increase effective date; later reporting restores prospectively.</td><td>Confirming before service is prudent workflow, not a quoted prerequisite.</td><td><a href="https://www.sf.gov/information--sec-3715-reporting-obligations-licensing">SF Admin Code §37.15</a></td></tr>
+<tr><td>Is a petition needed for ordinary annual/banked increases?</td><td>No petition for these ordinary increases; petitions cover specified special types.</td><td>Entitlement still depends on lawful base rent and history.</td><td><a href="https://www.sf.gov/information--sec-373-rent-limitations">SF Admin Code §37.3</a></td></tr>
+<tr><td>Current annual allowance</td><td>1.6% for 1 March 2026–28 February 2027.</td><td>2027–28 rate not published; left blank.</td><td><a href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf">Rent Board Form 571</a></td></tr>
+<tr><td>Banking timing</td><td>Rule 4.12 says 12 months from availability; the public banking page says 24 full months. Reconciled by the worked example as analysis.</td><td>Not a property-specific ruling; complete Unit 2 ledger missing.</td><td><a href="https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring">Rent Board Rule 4.12</a> · <a href="https://www.sf.gov/information--banked-rent-increases">Banked increases guidance</a></td></tr>
+<tr><td>Notice period</td><td>30 days at or below 10%; 90 days above 10%, using cumulative increases over the prior 12 months.</td><td>Subsidy status unknown; statutory recertification exception exists.</td><td><a href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&amp;sectionNum=827">California Civil Code §827</a></td></tr>
+<tr><td>Does the state cap replace the local cap?</td><td>No. SF AB 1482 guidance explicitly excludes units under the SF Rent Ordinance increase limits.</td><td>Parcel coverage itself relies on owner-supplied 1940/two-unit facts.</td><td><a href="https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482">SF AB 1482 guidance</a></td></tr>
+<tr><td>Must both units be raised together?</td><td>No uniform-increase rule identified in reviewed sources.</td><td>Absence finding, not immunity: discrimination, retaliation and accommodation rules still apply.</td><td><a href="https://calcivilrights.ca.gov/housing/">California Civil Rights Department</a> · <a href="https://www.hud.gov/helping-americans/fair-housing-act-overview">HUD Fair Housing</a></td></tr>
+<tr><td>Can a tenant challenge the increase/history?</td><td>Yes. Tenant Petition 516C/Form C is free; the page states no filing time limit.</td><td>No lawyer reviewed this project; free counsel is not guaranteed for every rent dispute.</td><td><a href="https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/">SF Rent Board tenant petition guidance</a></td></tr>
+</tbody></table></div>
+<h2>Publication and privacy boundary</h2><div class="notice"><p>The repository is public and Pages publishes the whole <code>main:/</code> root, including Markdown and scripts. The live internal notes now warn that they are public. Earlier commits still contain identifiers; a force-push alone cannot remove clones, forks, cached views or open PR references. No destructive history rewrite was attempted while parallel sessions were active.</p><p><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">Official Pages publishing-source guidance</a> · <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">Official sensitive-data removal guidance</a></p></div>
+<h2>Reproduce</h2><div class="card"><p>Run the existing build/check chain, then <code>python3 tools/repository_audit.py</code>. Keep literal tokens outside Git and pipe them through stdin for exact privacy review. The history option records counts and paths only. A CI run without tokens preserves the last exact/history scan as labeled prior evidence, not a fresh CI claim.</p></div>
+</main><footer>Research record, not legal advice. Values that cannot be confirmed remain blank or explicitly unverified. Personal identifiers are excluded; dates and dollar amounts are preserved as supplied. Rent Board counsellors: 415-252-4600, weekdays 9am–noon and 1pm–4pm.</footer></body></html>
+'''
+
+
+def render(result: dict) -> str:
+    last_exact = result.get("last_exact_scan") or {}
+    last_history = result.get("last_history_scan") or {}
+    exact_mode = result.get("exact_identifier_check")
+    if exact_mode not in {"stdin", "private-file"} and last_exact:
+        exact_mode = last_exact.get("exact_identifier_check", "not-run")
+    hist = result.get("history") or last_history or {}
+    failures = result.get("failures") or []
+    items = "".join(
+        f"<li><strong>{escape(x['kind'])}</strong> — <code>{escape(x['path'])}</code>: {escape(x['detail'])}</li>"
+        for x in failures
+    ) or "<li>No mechanical failures in this scan.</li>"
+    values = {
+        "STATUS_CLASS": "bad" if failures else "good",
+        "STATUS": "Not a clean release pass." if failures else "Mechanical checks pass; review warnings remain.",
+        "TRACKED": str(result["tracked_files"]), "HTML": str(result["html_files"]),
+        "ROWS": f"{result['table_rows']['total']:,}", "UNTRACEABLE": str(result["untraceable_rows"]),
+        "EXACT_FILES": str(len(result.get("current_exact_match_files") or [])),
+        "EXACT_MODE": escape(str(exact_mode)),
+        "HIST_COMMITS": str(hist.get("commits_with_matches", 0)),
+        "HIST_PATHS": str(len(hist.get("affected_paths", []))),
+        "FAIL_COUNT": str(len(failures)), "WARN_COUNT": str(len(result.get("warnings") or [])),
+        "DIRECT": str(result["table_rows"]["direct"]),
+        "INDIRECT": str(result.get("indirect_only_rows", 0)), "FAILURES": items,
+    }
+    page = TEMPLATE
+    for key, value in values.items():
+        page = page.replace("@" + key + "@", value)
+    return page
+
+
+def write(root: Path, result: dict) -> None:
+    out = root / "audit" / "index.html"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(render(result), encoding="utf-8")
