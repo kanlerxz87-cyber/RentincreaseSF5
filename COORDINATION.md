@@ -629,3 +629,39 @@ Flagged here for the owner to close or rebase.
 | Pages build/deploy | **success** (run 42414586035); Pages API status `built` |
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Landing page and `hub/flagged.html` retrieved from the deployed URL and read: consolidated hub is live, F01-F16 render with source links. Direct `curl` from the sandbox returns `000` because github.io is not on the sandbox egress allowlist - that is an network restriction, not a site fault; verification was done with the page-fetch tool. |
+
+---
+
+# Session `arena-847d013c` · branch `arena/847d013c-rentincreasesf5` · 2026-11-08
+
+## Registry / claim (written before any other file was touched)
+
+| Session ID | Branch | Worktree | Started (UTC) | Status |
+| --- | --- | --- | --- | --- |
+| `arena-847d013c` | `arena/847d013c-rentincreasesf5` | repo root | 2026-11-08 | active — final integration + independent re-verification |
+
+I read this board first. Every earlier session (`arena-f5ead75b`, `arena-05e5d5ab`,
+`session-c6d53281`, `SES-8b5ad092`, `arena/0502f829`, `9c07e651`, `a6525036`, `arena-d4b68642`)
+has **merged to `main`** (PRs #1–#4, #6, #8–#11). Their claims are therefore released: no
+`in progress` row names a session that is still committing. `main` is at `04d683e` (PR #12 merge)
+and the working tree is clean. The takeover rule applies to the still-open *final integration*
+row, so this session takes it.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| Z1 | Repair / keep the board current; record this session's claim | `arena-847d013c` | `COORDINATION.md` | in progress |
+| Z2 | Independent line-by-line re-verification of every register row, rate and arithmetic against the official pages | `arena-847d013c` | `VERIFICATION.md`, `data/verified-register.csv` (read-mostly) | in progress |
+| Z3 | Privacy audit of the **whole published tree** (not just HTML) and of the two earlier exposures | `arena-847d013c` | `PRIVACY-REVIEW.md` | in progress |
+| Z4 | Site quality pass: one clean dashboard entry point, category subpages, every table row source-linked, no broken links | `arena-847d013c` | `index.html`, `hub/**`, `tools/build_hub.py` | in progress |
+| Z5 | Build + gates + PR → merge → confirm Pages deploy → record | `arena-847d013c` | `COORDINATION.md` | in progress |
+
+**No earlier session's page, data file, log entry or generator is deleted or rewritten.** If a fix
+belongs to another session's file I record the request here rather than editing it, unless the
+defect is live on the published site (broken page, leaked identifier, wrong figure), in which case
+I make the minimum safe edit and log it.
+
+### Log
+- 2026-11-08: Repo re-read. `python3 scripts/build.py`, `scripts/check.py`,
+  `scripts/independent_audit.py` and `tools/release_gate.py` all pass on the untouched tree
+  (14 pages, 298 data rows, 759 links, 0 orphans, 0 unsourced rows). Beginning independent
+  re-verification (Z2) against the official sources themselves, not against the repo's own claims.
