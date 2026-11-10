@@ -932,3 +932,15 @@ verbatim. No session's work was deleted.
 - PR #24 merged to `main` at 2026-11-08T23:10:21Z, merge commit `7eb39fb0d2c8c05035632658e64c1b1326c1003b`; validation run 42533865727 success; Pages build/deployment run 42533865252 success; Pages API status `built`, latest build commit matches merge.
 - Live verification required cache-busting query strings: `/audit/index.html?v=7eb39fb`, `/site/docs/index.html?v=7eb39fb` and `/tools/repository_audit.py?v=7eb39fb` returned the new artifacts; unqualified directory URLs initially returned cached 404s. GitHub API confirmed repaired `pages/rates.html` anchors have real `href` attributes on main.
 - Live render review caught a presentation defect in the first generated audit page: list-valued audit fields were interpolated as raw Python list representations, inflating the page to ~53KB. Hotfix normalizes list/dict counts to integers, regenerates a ~9KB page, reruns exact privacy/history scan (0 current hits; 22 historical commits), and re-renders cleanly at 390px/1440px with no JS errors. This follow-up PR releases the correction; no tenant values were exposed by the defect.
+
+---
+
+## Session `arena/d448f2f5-rentincreasesf5` — claim (2026-11-10)
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| W1 | Re-verify live site + controlling official sources; run full build/checks | `arena/d448f2f5` | `COORDINATION.md`, `VERIFICATION.md` | in progress |
+| W2 | Update F09: confirm Board of Supervisors File No. 261020 proposal (SF Rent Board notice posted 2026-11-09; not enacted) | `arena/d448f2f5` | `tools/build_hub.py`, `tools/followup_audit.py`, generated `hub/**`, `index.html`, `EXECUTIVE-SUMMARY.md`, `data/verified-register.csv`, `site/**` mirrors | in progress |
+| W3 | PR → merge → confirm Pages deploy → record | `arena/d448f2f5` | `COORDINATION.md` | in progress |
+
+Claim written before any other file was modified. No prior session's page, data file or generator will be deleted or rewritten; the F09 change is additive and source-linked. No tenant identifiers are used.

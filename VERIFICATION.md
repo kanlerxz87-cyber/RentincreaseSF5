@@ -339,3 +339,33 @@ An earlier draft of this pass added a flag suggesting the multiple-year guidance
 mis-indexed year. Re-derived against Form 571 anniversary by anniversary: 1 Sep 2017 → 2.2%,
 1 Sep 2018 → 1.6%, 1 Sep 2019 → 2.6%, 1 Sep 2020 → 1.8%. **The example is correct**, so the flag was
 wrong and has been removed before publication. It is recorded here rather than quietly dropped.
+
+# Re-verification — session `arena/d448f2f5`
+
+**Date:** 2026-11-10 (UTC) · **Branch:** `arena/d448f2f5-rentincreasesf5`
+**Role:** live-site and official-source re-verification; F09 update; publication.
+
+## A. Sources re-fetched and re-read this session
+
+| Ref | Source | Publisher | What was confirmed |
+| --- | --- | --- | --- |
+| S1 | [The Rent Board Housing Inventory](https://www.sf.gov/rent-board-housing-inventory) | SF Rent Board | All owners must report; licence auto-generated for tenant-occupied units; must be current on effective date; free; March 1 deadline; submissions public under penalty of perjury |
+| S5 | [Learn about rent increases in San Francisco](https://www.sf.gov/learn-about-rent-increases-san-francisco) | SF Rent Board | 1.6% for 2026-03-01–2027-02-28; 12-month interval; banking; 30/90-day notice + 5 days if mailed; **new notice posted 2026-11-09 re File No. 261020 (proposed 10% cap, not enacted)** |
+| — | [Live site landing page](https://kanlerxz87-cyber.github.io/RentincreaseSF5/) | GitHub Pages | Licence-first answer, 1.6% tile, five computed scenarios, category nav all present and matching the generators |
+
+The Legistar detail page for File No. 261020 (status: Pending Committee Action; introduced 2026-09-15) was read for corroboration only. It is not linked from the site because the release gate's official-publisher allowlist covers sf.gov, leginfo, CRD and HUD only; the site cites the SF Rent Board notice (S5), which contains the same facts.
+
+## B. F09 update (the only content change this session)
+
+F09 previously read "No official legislative status page was confirmed in this session." The 2026-11-09 Rent Board notice now confirms the proposal on an official page. F09 now states the proposal, its proposed applicability date (banked increases noticed on/after 2026-09-15), and that it has not been enacted and is subject to change. No new figure is asserted; the Unit 2 full-bank option (13.1%) is flagged as affected if enacted as proposed. The executive summary (hub + `EXECUTIVE-SUMMARY.md`) carries the same caveat. Site stamp updated to "sources rechecked 10 Nov 2026".
+
+## C. Verification performed
+
+- Full pipeline `python3 scripts/build.py`: exit 0, no drift on second run.
+- `scripts/check.py`, `scripts/independent_audit.py`, `tools/check_links.py`, `tools/release_gate.py`, `tools/followup_audit.py`: all PASS.
+- Arithmetic recomputed independently (Decimal, round-down): $63.92 / $4,058.92; $119.85 / $4,114.85; $50.40 / $3,200.40; $412.65 / $3,562.65; $315.00 / $3,465.00; Unit 2 banked sum 13.1%. All match to the cent, none rounded up.
+- Privacy: no tenant name, initial, address or parcel in the diff; placeholders only. Dates and amounts preserved as owner-supplied and labelled unverified.
+
+## D. Limits (unchanged)
+
+No lease, ledger, portal account or attorney opinion was available. Nothing here certifies that a specific increase is lawful. The 2027–2028 rate remains unpublished and blank. The proposal in F09 may change or lapse; recheck before serving.
