@@ -32,6 +32,12 @@ ROOT = Path(__file__).resolve().parent.parent
 
 ALLOWED_HOSTS = {
     "www.sf.gov",
+    # City document host used by sf.gov for its own PDFs (the URL the sf.gov
+    # page redirects to when a document is served from media.api.sf.gov).
+    "media.api.sf.gov",
+    # San Francisco Board of Supervisors legislative record. Needed to cite the
+    # status of a pending ordinance rather than a secondary report of it.
+    "sfgov.legistar.com",
     "leginfo.legislature.ca.gov",
     "calcivilrights.ca.gov",
     "www.hud.gov",

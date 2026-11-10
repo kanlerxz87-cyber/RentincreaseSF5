@@ -29,7 +29,7 @@ class Audit(HTMLParser):
             h=a.get('href',''); u=urlsplit(h)
             if u.scheme:
                 assert u.scheme=='https', (self.path,h)
-                assert u.hostname in {'www.sf.gov','leginfo.legislature.ca.gov','calcivilrights.ca.gov','www.hud.gov'}, (self.path,h)
+                assert u.hostname in {'www.sf.gov','media.api.sf.gov','sfgov.legistar.com','leginfo.legislature.ca.gov','calcivilrights.ca.gov','www.hud.gov'}, (self.path,h)
                 if tag=='a' and self.row: self.source=True
             elif u.path:
                 assert (self.path.parent/unquote(u.path)).exists(), (self.path,h)

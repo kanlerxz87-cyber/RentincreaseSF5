@@ -40,6 +40,9 @@ OFFICIAL_SUFFIXES = (".sf.gov", ".ca.gov", ".hud.gov", ".huduser.gov", ".sfgov.o
 OFFICIAL_EXACT = {
     "sf.gov", "ca.gov", "hud.gov", "huduser.gov", "sfgov.org",
     "sfplanning.org", "sfplanninggis.org", "sfassessor.org", "sfrb.org",
+    # The Board of Supervisors' official legislative record system, used to cite
+    # the status of a pending ordinance (File 261020) rather than press coverage.
+    "sfgov.legistar.com",
     "docs.github.com", "github.com",
 }
 INITIAL_PAIR = re.compile(r"(?<![A-Za-z])[A-Z]\s[A-Z](?![A-Za-z])|(?<![A-Za-z])[A-Z]\.[A-Z]\.(?![A-Za-z])")

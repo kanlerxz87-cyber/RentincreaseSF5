@@ -546,8 +546,9 @@ def sources():
     (1.7%). None is relied on here.</li>
     <li><strong>The HUD FMR summary page</strong> &mdash; reachable, but the FY2026 table rendered without values,
     so no figure is reported.</li>
-    <li><strong>Legistar</strong> &mdash; the pending Ordinance 261015 file could not be opened, so its status is
-    reported as unknown rather than summarised from press coverage.</li>
+    <li><strong>Legistar</strong> &mdash; the pending File 261020 file was opened later: its official status is
+    <em>Pending Committee Action</em>, and it is reported that way here rather than summarised from press
+    coverage.</li>
   </ul>
 </section>
 """
@@ -563,10 +564,10 @@ FLAS_DIRECT = [
      "Unit A's 2026-02-01 allowance and any future skipped year.",
      "Ask the Rent Board counsellor which is current, and whether the 1/13/26 rule amendments changed Rule 4.12. Until then, treat the earlier year as at risk if the anniversary date is moved.",
      "conflict", ["S11", "S9", "S1", "S10"]),
-    ("F2", "Ordinance 261015 (10% cap on banked and capital-improvement increases) &mdash; status unknown",
-     "A bill introduced 15&ndash;18 September 2026 would cap banked plus capital-improvement increases at 10% per "
-     "year for three years. Secondary reporting says a Board vote was expected in November or December 2026, but no "
-     "official legislative record page could be opened in this session.",
+    ("F2", "File 261020 (10% cap on banked and capital-improvement increases) &mdash; pending, not enacted",
+     "Board of Supervisors File 261020, introduced 15 September 2026, would cap banked plus capital-improvement "
+     "increases at 10% per year for three years. The official Legistar status page reads Pending Committee Action. "
+     "The Rent Board posted an official notice about it on 9 November 2026.",
      "Directly changes Unit B's 13.1% to 10% this cycle if enacted as described.",
      "Check the Board of Supervisors legislative record and the Rent Board's news page before drafting any Unit B notice; if enacted, recompute and carry the balance forward.",
      "pending", ["S18", "S28"]),
@@ -629,7 +630,7 @@ def flagged():
   <h2>Summary</h2>
   <div class="grid">
     <div class="tile"><div class="k">Conflicting official sources</div><div class="v">1</div><div class="n">F1 &mdash; banking waiting period</div></div>
-    <div class="tile"><div class="k">Pending legislation</div><div class="v">1</div><div class="n">F2 &mdash; Ordinance 261015, 10% cap</div></div>
+    <div class="tile"><div class="k">Pending legislation</div><div class="v">1</div><div class="n">F2 &mdash; File 261020, 10% cap</div></div>
     <div class="tile"><div class="k">Unverified facts</div><div class="v">3</div><div class="n">F3, F4, F5</div></div>
     <div class="tile"><div class="k">Absence-of-authority findings</div><div class="v">2</div><div class="n">F6, F7</div></div>
     <div class="tile"><div class="k">Documented assumption</div><div class="v">1</div><div class="n">F8 &mdash; Unit A anniversary date</div></div>
@@ -650,7 +651,7 @@ def flagged():
   <ul>
     <li>Allowable annual increase for 3/1/2027&ndash;2/29/2028 &mdash; not yet published by the Rent Board. <span class="badge bad">unverified</span></li>
     <li>HUD Fair Market Rent, two-bedroom, this area, FY2026/27 &mdash; could not be confirmed. <span class="badge bad">unverified</span></li>
-    <li>Outcome and effective date of Ordinance 261015 &mdash; could not be confirmed. <span class="badge warn">pending legislation</span></li>
+    <li>Outcome and effective date of File 261020 &mdash; pending committee action, not enacted. <span class="badge warn">pending legislation</span></li>
   </ul>
   <p class="small">Each of these is a cell a reader might expect to be filled. They are blank because filling them
   would have meant guessing.</p>

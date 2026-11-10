@@ -150,7 +150,7 @@ def index():
     b += legend()
     b += """
   <p class="small">Blank rather than guessed: the FY2026/27 HUD Fair Market Rent for this ZIP area, the
-  3/1/2027&ndash;2/29/2028 allowable increase, and the outcome of pending Ordinance 261015. See
+  3/1/2027&ndash;2/29/2028 allowable increase, and the outcome of pending File 261020. See
   <a href="pages/flagged.html">Flagged for review</a>.</p>
 </section>
 """
@@ -225,7 +225,7 @@ def executive_summary():
             ["9", "An increase that does not conform is <strong>null and void</strong>; the Rules allow only a narrow half-of-one-percent good-faith readjustment.", "[[S5]] [[S9]]", badge("verified")],
             ["10", "AB 1482's 8.8% cap does <strong>not</strong> apply to units already limited by the Rent Ordinance.", "[[S14]] [[S15]]", badge("verified")],
             ["11", "There is no federal rent cap. Federal law enters only through fair housing: a rent increase used to discriminate on a protected characteristic is unlawful.", "[[S25]] [[S26]]", badge("verified")],
-            ["12", "A cap of 10% per year on banked and capital-improvement increases has been <em>introduced</em> (Ordinance 261015). Its outcome is not confirmed, and it would directly affect Unit B.", "&mdash;", badge("pending")],
+            ["12", "A cap of 10% per year on banked and capital-improvement increases has been <em>introduced</em> as Board of Supervisors File 261020 (status: Pending Committee Action). It is not enacted, and it would directly affect Unit B.", "&mdash;", badge("pending")],
         ])
     b += """
   <p class="small">Row 12 is the one place where the record is thinner than the others; it is expanded on
@@ -332,7 +332,7 @@ def executive_summary():
             ["2", "Pay the 2026-27 Rent Board fee ($59 per unit; $118 for two) or file the exemption.", "By 1 March 2027", "[[S7]]"],
             ["3", "Reconstruct Unit A's rent history: was 2025-02-01 a genuine vacancy, and was a &sect;6.14 notice ever served on Tenant A2?", "Before deciding Unit A", "[[S24]]"],
             ["4", "Serve Unit A's 30-day notice so it takes effect 2027-02-01 (3.0%).", "By about 2027-01-02, or 2026-12-28 if mailed", "[[S1]]"],
-            ["5", "Decide Unit B's strategy with counsel: 13.1% on 2027-06-01, or 13.1% on 2027-02-15 with a new anniversary date &mdash; after checking whether Ordinance 261015 has passed.", "Before drafting the notice", "[[S11]]"],
+            ["5", "Decide Unit B's strategy with counsel: 13.1% on 2027-06-01, or 13.1% on 2027-02-15 with a new anniversary date &mdash; after checking whether File 261020 has been enacted.", "Before drafting the notice", "[[S11]]"],
             ["6", "Serve Unit B's 90-day notice; it must itemise the 11.5% banked and 1.6% current portions and the years they came from.", "90 days before the effective date", "[[S9]]"],
             ["7", "Adopt a one-page written rent-increase policy applied identically to both units and keep it with the notices.", "Before step 4", "[[S25]]"],
             ["8", "Keep every notice, proof of service, rent ledger and licence record for the life of the tenancy.", "Ongoing", "[[S20]]"],
@@ -612,12 +612,12 @@ def units():
   the 1.6% annual rate in effect on 15 February 2027 is the same 1.6%, so the total lands in the same place
   [[S1]] [[S2]]. The third row is arithmetic on a bill that has been <em>introduced</em>, not enacted &mdash; see
   below.</p>
-  <div class="callout"><strong>Check before drafting: Ordinance 261015.</strong> A bill introduced
-  15&ndash;18 September 2026 would cap banked and capital-improvement increases for rent-controlled units at 10%
-  per year for three years. Secondary reporting says a Board vote was expected in November or December 2026. No
-  official record page could be opened in this session, so the status is
-  <span class="badge warn">pending legislation</span>. If it passes on the terms reported, Unit B's 13.1% becomes
-  10% this cycle with the balance carried forward. See <a href="flagged.html">Flagged for review</a>, F2.</div>
+  <div class="callout"><strong>Check before drafting: File 261020.</strong> Board of Supervisors File 261020
+  (introduced 15 September 2026) would cap banked and capital-improvement increases for rent-controlled units at
+  10% per year for three years. Its official Legistar status page reads
+  <em>Pending Committee Action</em>, so the status is <span class="badge warn">pending legislation</span> &mdash;
+  it is not enacted. If it passes as introduced, Unit B's 13.1% becomes 10% this cycle with the balance carried
+  forward. See <a href="flagged.html">Flagged for review</a>, F2.</div>
 </section>
 
 <section class="panel">

@@ -72,6 +72,13 @@ SOURCES = {
             "https://www.sf.gov/information--annual-rent-increase-multiple-years"),
     "S23": ("The Rent Ordinance (Chapter 37 index)", "SF Rent Board",
             "https://www.sf.gov/reports--rent-ordinance/"),
+    "S24": ("Notice of Owner Noncompliance with Housing Inventory", "SF Rent Board",
+            "https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory/"),
+    "S25": ("File 261020 - Administrative Code: Cap On Rent Increases for Rent-Controlled Units",
+            "SF Board of Supervisors (Legistar)",
+            "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770"),
+    "S26": ("File 261020 - legislation text, version 1", "SF Board of Supervisors (Legistar)",
+            "https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E"),
 }
 
 # ---------------------------------------------------------------------------
@@ -203,6 +210,12 @@ row("licence", "Rent Board fee (separate from the Inventory)",
     "5% monthly late penalty, capped at 15%.", VERIFIED, ["S12"])
 row("licence", "Does a fee exemption satisfy the Inventory requirement?",
     "No. Requesting a Rent Board fee exemption does not satisfy Housing Inventory reporting.", VERIFIED, ["S12", "S1"])
+row("licence", "What the Rent Board tells a tenant who received a noncompliance notice",
+    "That the unit may have no licence; that an increase which took effect while the unit was "
+    "unlicensed 'may be null and void (this may apply for multiple years)'; and that the tenant "
+    "may be entitled to a rent refund and may file Tenant Petition 516C.", VERIFIED, ["S24"],
+    "This is the Board's own statement of the consequence, not an inference. It is the practical "
+    "reason the licence is checked before a notice is served.")
 row("licence", "Has this owner actually reported / is a licence on file?",
     "", UNVERIFIED, ["S1"],
     "Cannot be checked without the property address and portal access. Tenants can look this up "
@@ -223,6 +236,13 @@ row("rates", "Rounding", "Increases cannot be rounded up to the nearest dollar."
 row("rates", "Which year's percentage to use",
     "The percentage in effect on the effective date of the increase, not the date the notice is served.",
     VERIFIED, ["S5", "S6"])
+row("rates", "Pending ordinance on banked and capital-improvement increases", "", UNVERIFIED,
+    ["S25", "S26", "S5", "S6"],
+    "File 261020 is before the Board of Supervisors: status 'Pending Committee Action', introduced "
+    "15 September 2026, in the Land Use and Transportation Committee. As introduced it would add "
+    "Sec. 37.3(h), limiting banked increases plus capital-improvement increases to a total of 10% of "
+    "the lowest base rent in effect in the preceding 12 months, for notices given on or after "
+    "15 September 2026, until 31 December 2029. It is NOT enacted. No figure on this site assumes it.")
 row("rates", "Allowable increase, 3/1/2027 - 2/29/2028", "", UNVERIFIED, ["S4"],
     "Not yet published. The Rent Board publishes it on March 1, 2027. Left blank deliberately.")
 row("rates", "Initial rent for a genuinely new vacant tenancy",
@@ -387,8 +407,8 @@ SCENARIOS = [
      "Ignores the skipped 2026 anniversary. Lowest scrutiny."),
     ("Unit 1", "Annual + banked 2026", 3995.00, U1_TOTAL, date(2027, 2, 1),
      "1.4% banked + 1.6% annual. Both banking readings agree on this date."),
-    ("Unit 2", "Annual only", 3150.00, 1.6, date(2027, 2, 1),
-     "Leaves the accumulated bank unused. Lowest scrutiny."),
+    ("Unit 2", "Annual only", 3150.00, 1.6, date(2027, 6, 1),
+     "Leaves the accumulated bank unused. Lowest scrutiny. 1 June keeps the anniversary."),
     ("Unit 2", "Banked + annual", 3150.00, U2_TOTAL, date(2027, 2, 28),
      "11.5% banked + 1.6% annual. Above 10%, so 90 days' notice."),
     ("Unit 2", "Capped at 10% by choice", 3150.00, 10.0, date(2027, 2, 28),
@@ -510,7 +530,7 @@ def layout(title, body, active, root=False, desc=None):
             'Coverage, lawful base rents, complete rent history and current licences are unverified. '
             'Banked examples assume no intervening increases; that history was not established for Unit 2. '
             'No amount is cleared for service or guaranteed to pass legal review. '
-            '<a href="' + flag_link + '">Review the limitations (including F17–F19)</a>.</p></section>') + body
+            '<a href="' + flag_link + '">Review the limitations (including F01–F03 and F09)</a>.</p></section>') + body
     css = "hub/hub.css" if root else "hub.css"
     home = "index.html" if root else "../index.html"
     d = desc or ("Source-linked research on lawful rent increases for two rent-controlled units "
@@ -527,7 +547,7 @@ def layout(title, body, active, root=False, desc=None):
 <body>
 <header class="top"><div class="top-in">
 <div class="brand"><a href="%s" style="text-decoration:none;color:inherit">SF rent increase dashboard</a>
-<small>Outer Sunset 94122 &middot; anonymised &middot; sources rechecked 8 Nov 2026</small></div>
+<small>Outer Sunset 94122 &middot; anonymised &middot; sources rechecked 10 Nov 2026</small></div>
 <nav class="main">%s</nav>
 </div></header>
 <main id="main"><div class="wrap">%s</div></main>
@@ -673,7 +693,7 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
 
 def page_exec():
     b = head("Executive summary",
-             "Compiled 7 November 2026; every figure re-verified against the same official sources on 8 November 2026. The licence question comes first because nothing else "
+             "Compiled 7 November 2026; every figure re-verified against the same official sources on 8 November 2026 and again on 10 November 2026. The licence question comes first because nothing else "
              "can be done safely until it is settled.")
     b += '<section class="panel"><h2>1. The licence question</h2><div class="answer">'
     b += ("<p><strong>You must be licensed, but you do not apply.</strong> Report each unit into the Rent "
@@ -885,13 +905,24 @@ def page_rates():
     b = head("Allowable increases",
              "The annual percentage is set by the Rent Board, not by the market. It is 60% of the "
              "published CPI increase and can never exceed 7%.")
+    b += '<section class="panel"><h2>The number to use, in plain terms</h2><div class="answer">'
+    b += ("<p><strong>1.6%%.</strong> That is the ordinary annual allowance for any increase whose "
+          "effective date falls between 1 March 2026 and 28 February 2027. It applies once every 12 "
+          "months, to the base rent only, and cannot be rounded up. %s</p>" % src("S4", "S5"))
+    b += ("<p>The percentage is not chosen by the owner and does not follow the neighbourhood market. "
+          "For a rent-controlled unit the lawful allowance <em>is</em> the benchmark, so 1.6%% is the "
+          "figure an increase would be measured against. Imposing less is lawful; imposing more needs "
+          "a separate, documented basis such as properly banked years. %s</p>" % src("S3", "S5"))
+    b += ("<p>The rate for an effective date on or after 1 March 2027 is not yet published, so it is "
+          "left blank rather than estimated. %s</p>" % src("S4"))
+    b += '</div></section>'
     b += '<section class="panel"><h2>How the figure is set</h2>'
     b += reg_table("rates", "The rules behind the percentage")
     b += '</section>'
     b += '<section class="panel"><h2>Official rate table</h2>'
     rows = [[e("%s - %s" % (_d(a).isoformat(), _d(bb).isoformat())), "%.1f%%" % r,
              badge(VERIFIED) + " " + src("S4")] for a, bb, r in RATES]
-    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026 and re-read on 8 November 2026. "
+    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026 and re-read on 8 and 10 November 2026. "
                "Only one of the two 1992-1993 increases may be imposed, based on the tenant's anniversary date.",
                ["Effective period", "Allowable increase", "Status and source"], rows)
     b += ('<p class="note">The 12/8/1992 - 2/28/1993 and 3/1/1992 - 12/7/1992 rows overlap by design; '
@@ -1072,8 +1103,9 @@ FLAGS = [
      "Absence of authority, not a quoted rule", ["S19"], "Recorded as a search result, not as a legal conclusion."),
     ("F08", "No uniform-increase requirement found", "No provision requiring both units to be raised together, or by the same amount, was found.",
      "Absence of authority, not a quoted rule", ["S3", "S18"], "The anti-discrimination and retaliation rules still apply to the reason for any difference."),
-    ("F09", "Pending local legislation on banked increases", "Proposals to cap banked increases at 10% a year were reported during 2026. No official legislative status page was confirmed in this session.",
-     "Unverified", ["S6"], "No value is asserted. If enacted, it would affect the Unit 2 full-bank option. Recheck before serving."),
+    ("F09", "Pending local legislation on banked increases", "The Rent Board posted an official notice on 9 November 2026 about Board of Supervisors File 261020, which would limit banked plus capital-improvement increases to 10% a year. The file's official status page reads 'Pending Committee Action'; introduced 15 September 2026, in the Land Use and Transportation Committee. An earlier entry on this page said no official status page could be confirmed - that was true when written and is now superseded.",
+     "Pending legislation - not enacted", ["S25", "S26", "S5", "S6"],
+     "No value on this site assumes enactment. If it passes as introduced, the Unit 2 full-bank option (13.1%) would be capped and the balance carried forward. Recheck the file page and the Rent Board notice before serving."),
     ("F10", "ZIP-level market rent not published", "No official rent figure for ZIP 94122 was confirmed. The Rent Board does not publish a market rent for a ZIP code.",
      "Left blank", ["S5"], "For a rent-controlled unit the lawful increase does not depend on market rent, so nothing is estimated here."),
     ("F11", "Notice deadlines assume personal service", "Serve-by dates on this site are computed for personal delivery.",
@@ -1108,6 +1140,14 @@ FLAGS = [
      "Section 37.15(e) and the Inventory page tie the licence to the increase taking effect. Neither source states that the licence must already exist when the notice is served. Obtaining it before service is the recommended safer workflow, not a rule quoted from the ordinance.",
      "Wording precision, no figure affected", ["S1", "S2", "S5"],
      "Treat 'licence current before service' as prudent practice; treat 'licence current on the effective date' as the documented requirement."),
+    ("F22", "Pending ordinance would reach back to notices given on or after 15 September 2026",
+     "As introduced, File 261020's new Sec. 37.3(h) applies the 10% limit to banked increases based on rent increase notices provided on or after 15 September 2026, and to capital-improvement pass-throughs based on petitions filed on or after 15 September 2026. That date precedes the ordinance's introduction and any possible enactment.",
+     "Retroactive date in a bill - not enacted, no legal conclusion", ["S26", "S25"],
+     "Recorded, not resolved: this is a question for the Rent Board or counsel if a notice was served on or after 15 September 2026. No notice has been served by this project, and this site does not predict whether the clause survives or how it would be applied."),
+    ("F23", "No official ZIP-level or neighbourhood market benchmark exists",
+     "No official source reviewed publishes a customary, average or 'normal' increase for ZIP 94122, and the Rent Board states no limit on the initial rent for a vacant covered unit - so there is no published market figure against which a neighbourhood increase could be measured.",
+     "Absence of authority - recorded, nothing estimated", ["S5", "S11"],
+     "This is why the site answers 'what is reasonable' with the lawful allowance and a documented business reason rather than a market percentage. If a market benchmark is wanted, it has to come from a named, dated source - not from this site."),
     ("F21", "Publication surface: GitHub Pages serves the whole repository root",
      "GitHub Pages publishes the entire repository root, so files such as the internal working notes and this coordination file are publicly readable, not just the HTML pages. The earlier internal note's claim that it was not published was incorrect and has been corrected. No tenant name, initial, address or parcel appears in any current file.",
      "Publication-surface limitation", ["S1", "S2"],
@@ -1212,7 +1252,7 @@ def page_verification():
          e("Defect found in the previous landing page and fixed; now guarded."), badge(VERIFIED) + " " + src("S5")],
         ["Merge markers", e("Scan for unresolved conflict markers in tracked files."),
          e("Markers found in the coordination file and repaired; now guarded."), badge(VERIFIED) + " " + src("S5")],
-        ["Rate table years", e("Every effective period re-read from Form 571 on 8 November 2026 and the two-digit years re-checked."),
+        ["Rate table years", e("Every period re-read from Form 571 on 8 November 2026, and the whole table template-compared against the PDF again on 10 November 2026."),
          e("Defect found: 1982-1999 printed as 2082-2099 (F19). Fixed, table re-checked row by row; gate now rejects any year outside 1982-2027."),
          badge(VERIFIED) + " " + src("S4")],
         ["Independent re-verification", e("Section 37.15, section 37.3, Form 571, the rent increase and banking pages, Rules 4.10 and 4.12, Civil Code sections 827, 1942.5 and 1947.12, the AB 1482 page, the Rent Board fee page, Form 516C and Form 1007 re-fetched and re-read on 8 November 2026."),
