@@ -932,3 +932,26 @@ verbatim. No session's work was deleted.
 - PR #24 merged to `main` at 2026-11-08T23:10:21Z, merge commit `7eb39fb0d2c8c05035632658e64c1b1326c1003b`; validation run 42533865727 success; Pages build/deployment run 42533865252 success; Pages API status `built`, latest build commit matches merge.
 - Live verification required cache-busting query strings: `/audit/index.html?v=7eb39fb`, `/site/docs/index.html?v=7eb39fb` and `/tools/repository_audit.py?v=7eb39fb` returned the new artifacts; unqualified directory URLs initially returned cached 404s. GitHub API confirmed repaired `pages/rates.html` anchors have real `href` attributes on main.
 - Live render review caught a presentation defect in the first generated audit page: list-valued audit fields were interpolated as raw Python list representations, inflating the page to ~53KB. Hotfix normalizes list/dict counts to integers, regenerates a ~9KB page, reruns exact privacy/history scan (0 current hits; 22 historical commits), and re-renders cleanly at 390px/1440px with no JS errors. This follow-up PR releases the correction; no tenant values were exposed by the defect.
+
+---
+
+## Session `session-0c632e7e` — branch `arena/0c632e7e-rentincreasesf5` (claimed 2026-11-10 UTC)
+
+**Base commit at claim time:** `1687b1d` (merge of PR #25), working tree clean.
+**Takeover note:** every claim above is dated 2026-11-07 or 2026-11-08 and has had no commit for
+more than 60 minutes (more than 48 hours), so under the handoff rule in this file those scopes are
+released and may be taken over. PRs #5, #7, #17, #18 and #20 are still open on other sessions'
+branches; this session does not touch, merge or close them (logged as an irregularity, I07).
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| C1 | Re-read every controlling official source on 2026-11-10 and re-verify every published figure | `session-0c632e7e` | `VERIFICATION.md`, `data/verified-register.csv` | in progress |
+| C2 | Research and publish the pending Board of Supervisors legislation on banked-increase caps (File No. 261020) and recompute both units against it | `session-0c632e7e` | `data/verified-register.csv`, `tools/build_hub.py`, `hub/**` | in progress |
+| C3 | Clean single-dashboard landing page + category subpages (reduce four competing page sets to one signposted entry point) | `session-0c632e7e` | `index.html`, `hub/**`, `tools/build_hub.py` | in progress |
+| C4 | Privacy scan of all tracked files (names, initials, address, parcel) | `session-0c632e7e` | whole tree (read-only unless a hit is found) | in progress |
+| C5 | Link + source-coverage check: every data row sourced, no broken local links | `session-0c632e7e` | `tools/**`, `scripts/**` | in progress |
+| C6 | PR → merge → confirm Pages deploy → record | `session-0c632e7e` | `COORDINATION.md`, `README.md` | in progress |
+
+Claim written and pushed before any other file was modified. No other session's page, data file or
+generator is deleted; corrections are made in place and logged, and superseded page sets stay
+reachable from the archive page.
