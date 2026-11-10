@@ -20,7 +20,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TODAY = date(2026, 11, 8)
+TODAY = date(2026, 11, 10)
 
 # ---------------------------------------------------------------------------
 # OFFICIAL SOURCES - every one retrieved and read during this session.
@@ -66,12 +66,25 @@ SOURCES = {
             "https://www.hud.gov/helping-americans/fair-housing-act-overview"),
     "S20": ("Report an unlawful rent increase (Tenant Petition 516C)", "SF Rent Board",
             "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/"),
+    # The published path contains square brackets. Served raw they break some
+    # retrievers; percent-encoded (%5B74%5D) the same file loads. See flag F23.
     "S21": ("Form 1007 - Notice to Tenant / Tenant Right to Counsel", "SF Rent Board",
-            "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag[74].pdf"),
+            "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag%5B74%5D.pdf"),
     "S22": ("Annual rent increase for multiple years", "SF Rent Board",
             "https://www.sf.gov/information--annual-rent-increase-multiple-years"),
     "S23": ("The Rent Ordinance (Chapter 37 index)", "SF Rent Board",
             "https://www.sf.gov/reports--rent-ordinance/"),
+    # Added 10 November 2026: the pending cap on banked increases. The Rent
+    # Board's own pages link to this Legistar file for the current status, so
+    # it is the official status record for File No. 261020.
+    "S24": ("Board of Supervisors File No. 261020 - legislative status",
+            "SF Board of Supervisors (Legistar)",
+            "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770"),
+    "S25": ("File No. 261020 - ordinance text as introduced (new sec. 37.3(h))",
+            "SF Board of Supervisors (Legistar)",
+            "https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E"),
+    "S26": ("Current Rates, including Rent Increase, Relocation, Sec. Deposit", "SF Rent Board",
+            "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit/"),
 }
 
 # ---------------------------------------------------------------------------
@@ -362,6 +375,56 @@ row("review", "Hearing format",
     "Designed so that no one needs an attorney; parties may still be represented. The judge cannot "
     "consider evidence outside the record or not served on the other side.", VERIFIED, ["S20"])
 
+# --- Pending legislation (added 10 November 2026) ---------------------------
+# New rows are appended so that R01-R62, which earlier sessions' audit files
+# reference by number, keep their identifiers.
+row("pending", "Is there pending legislation that would change these numbers?",
+    "Yes. On 9 November 2026 the Rent Board posted a notice on its rent increase, banking, "
+    "multiple-year, rates and forms pages: the Board of Supervisors is considering File No. 261020, "
+    "which would temporarily limit banked and capital improvement increases to 10% per year.",
+    VERIFIED, ["S5", "S6", "S26"],
+    "The notice appears on every Rent Board page this research relies on for banking.")
+row("pending", "What the proposed ordinance would add",
+    "A new Sec. 37.3(h): a landlord 'may not impose banked rent increases under Section 37.3(a)(2), "
+    "and/or rent increases based on any of the types of capital improvements described in Section "
+    "37.3(a)(3), that cause a tenant's rent to increase by more than a total of 10% of the lowest base "
+    "rent that was in effect at any time during the 12 months immediately preceding the date the "
+    "increase takes effect'.", VERIFIED, ["S25"], "Quoted from the ordinance text as introduced.")
+row("pending", "Which notices it would reach",
+    "Banked increases based on rent increase notices provided on or after 15 September 2026, and "
+    "capital improvement passthroughs based on petitions filed on or after 15 September 2026.",
+    VERIFIED, ["S25", "S5"],
+    "A notice served today falls inside that window, so the cap would reach it retroactively if the "
+    "ordinance is enacted as drafted.")
+row("pending", "How long the cap would last",
+    "Until 31 December 2029 unless extended. Amounts above 10% a year may still be accumulated during "
+    "the cap and imposed to take effect on or after 1 January 2030, as otherwise permitted by law.",
+    VERIFIED, ["S25"], "So the proposal would defer the excess, not cancel it.")
+row("pending", "Current legislative status",
+    "Introduced 15 September 2026 by Supervisors Sauter, Chan and Mahmood; assigned under the 30-day "
+    "rule; referred to departments 18 and 30 September 2026; Youth Commission response 7 October 2026. "
+    "Status on 10 November 2026: 'Pending Committee Action' in the Land Use and Transportation "
+    "Committee. Not enacted.", VERIFIED, ["S24"],
+    "Re-check this page before serving any notice that relies on banking.")
+row("pending", "Does the Rent Board treat it as current law?",
+    "No. The notice states in bold that the legislation 'has not been enacted and is subject to "
+    "change', and the 1.6% annual figure and banking rules on those pages are unchanged.",
+    VERIFIED, ["S5", "S6"])
+row("pending", "Effect on Unit 1",
+    "None at the figures researched. Unit 1's banked component is 1.4% and its total is 3.0%, far "
+    "below a 10% ceiling.", ANALYSIS, ["S25", "S4"])
+row("pending", "Effect on Unit 2",
+    "Decisive. The full-bank illustration is 11.5% banked plus 1.6% annual. The banked component alone "
+    "exceeds a 10% ceiling, so if the ordinance is enacted as drafted a notice served now could be "
+    "limited to 10% and the excess deferred.", ANALYSIS, ["S25", "S4", "S6"],
+    "This is the reason the 10% option is no longer only a presentation choice.")
+row("pending", "Does the annual increase count toward the proposed 10%?",
+    "", UNVERIFIED, ["S25", "S5"],
+    "The text caps increases 'under Section 37.3(a)(2)-(3)', which would exclude the ordinary annual "
+    "increase under (a)(1); the Rent Board's summary says the cap is on 'the combined amount of banked "
+    "rent increases and capital improvement rent increases'. Neither source states whether an annual "
+    "increase served with banked amounts counts. Left blank; see F22.")
+
 # ---------------------------------------------------------------------------
 # Unit arithmetic - computed from owner-supplied inputs and official rates.
 # ---------------------------------------------------------------------------
@@ -390,10 +453,19 @@ SCENARIOS = [
     ("Unit 2", "Annual only", 3150.00, 1.6, date(2027, 2, 1),
      "Leaves the accumulated bank unused. Lowest scrutiny."),
     ("Unit 2", "Banked + annual", 3150.00, U2_TOTAL, date(2027, 2, 28),
-     "11.5% banked + 1.6% annual. Above 10%, so 90 days' notice."),
-    ("Unit 2", "Capped at 10% by choice", 3150.00, 10.0, date(2027, 2, 28),
-     "Policy choice, not a legal ceiling. Keeps the 30-day notice band; the balance stays banked."),
+     "11.5% banked + 1.6% annual. Above 10%, so 90 days' notice - and above the 10% ceiling in "
+     "pending File No. 261020, which would reach notices served on or after 15 Sep 2026."),
+    ("Unit 2", "Held to 10%", 3150.00, 10.0, date(2027, 2, 28),
+     "Lawful today and still lawful if the pending 10% cap is enacted. Keeps the 30-day notice band; "
+     "the balance stays banked."),
 ]
+
+# Pending File No. 261020 would cap banked (and capital improvement) increases at
+# 10% of the lowest base rent in the preceding 12 months. Computed for the
+# pending page; nothing here assumes the ordinance passes.
+PENDING_CAP_PCT = 10.0
+PENDING_TRIGGER = date(2026, 9, 15)
+PENDING_SUNSET = date(2029, 12, 31)
 
 
 def notice_days(pct):
@@ -423,6 +495,7 @@ nav.main{display:flex;gap:2px;flex-wrap:wrap;font-size:14px}
 nav.main a{padding:6px 10px;border-radius:6px;text-decoration:none;color:var(--muted)}
 nav.main a:hover{background:var(--bg);color:var(--ink)}
 nav.main a.active{background:var(--calcbg);color:var(--accent);font-weight:600}
+.navsep{width:1px;align-self:stretch;background:var(--line);margin:2px 7px}
 main{padding:26px 0 50px}
 h1{font-size:27px;line-height:1.25;margin:0 0 8px;letter-spacing:-.4px}
 h2{font-size:19px;margin:0 0 12px;letter-spacing:-.2px}
@@ -456,6 +529,12 @@ td.num,th.num{text-align:right;white-space:nowrap}
 a.src{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 6px;margin:1px 2px 1px 0;
 border:1px solid var(--line);border-radius:5px;text-decoration:none;background:#f7f9fc}
 a.src:hover{border-color:var(--accent)}
+.alert{background:#fff8e6;border:1px solid #f0d089;border-left:4px solid #c8860d;
+border-radius:8px;padding:13px 16px;margin:0 0 16px}
+.alert p{margin:0;font-size:14px}
+.quote{margin:0 0 12px;padding:12px 16px;background:#f7f9fc;border-left:3px solid var(--accent);
+border-radius:0 8px 8px 0}
+.quote p{margin:0 0 6px;font-size:14.5px}.quote p:last-child{margin:0}
 .note{font-size:13px;color:var(--muted);margin:6px 0 0}
 .small{font-size:13.5px}
 .blank{color:#a32020;font-style:italic}
@@ -478,6 +557,7 @@ footer{border-top:1px solid var(--line);background:var(--card);padding:20px 0;fo
 NAV = [
     ("index.html", "Overview"),
     ("executive-summary.html", "Executive summary"),
+    ("pending.html", "Pending 10% cap"),
     ("process.html", "Rent Board process"),
     ("units.html", "Units and numbers"),
     ("rates.html", "Allowable increases"),
@@ -494,8 +574,11 @@ NAV = [
 
 
 def nav_html(active, root=False):
+    """Two visual groups: the research pages, then the evidence and audit pages."""
     out = []
     for href, label in NAV:
+        if href == "register.html":
+            out.append('<span class="navsep" aria-hidden="true"></span>')
         target = ("hub/" + href) if root else href
         if href == "index.html":
             target = "index.html" if root else "../index.html"
@@ -506,6 +589,13 @@ def nav_html(active, root=False):
 
 def layout(title, body, active, root=False, desc=None):
     flag_link = "hub/flagged.html" if root else "flagged.html"
+    pending_link = "hub/pending.html" if root else "pending.html"
+    body = ('<section class="alert"><p><strong>Rent Board notice, posted 9 November 2026:</strong> '
+            'the Board of Supervisors is considering File No. 261020, which would cap banked and '
+            'capital improvement increases at 10% a year and would apply to banked increases noticed '
+            '<strong>on or after 15 September 2026</strong>. It is not enacted. It does not change '
+            'Unit 1, but it is decisive for the Unit 2 full-bank option. '
+            '<a href="' + pending_link + '">Read what it would change &rarr;</a></p></section>') + body
     body = ('<section class="panel"><p><strong>Conditional research, not an approved increase.</strong> '
             'Coverage, lawful base rents, complete rent history and current licences are unverified. '
             'Banked examples assume no intervening increases; that history was not established for Unit 2. '
@@ -527,7 +617,7 @@ def layout(title, body, active, root=False, desc=None):
 <body>
 <header class="top"><div class="top-in">
 <div class="brand"><a href="%s" style="text-decoration:none;color:inherit">SF rent increase dashboard</a>
-<small>Outer Sunset 94122 &middot; anonymised &middot; sources rechecked 8 Nov 2026</small></div>
+<small>Outer Sunset 94122 &middot; anonymised &middot; sources rechecked 10 Nov 2026</small></div>
 <nav class="main">%s</nav>
 </div></header>
 <main id="main"><div class="wrap">%s</div></main>
@@ -614,11 +704,15 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
 
     b += '<div class="grid">'
     for k, v, n in [
-        ("Allowable annual increase", "1.6%", "1 Mar 2026 - 28 Feb 2027 " + src("S4", "S5")),
+        ("Allowable annual increase", "1.6%", "1 Mar 2026 - 28 Feb 2027 " + src("S4", "S5", "S26")),
         ("Unit 1 conditional scenario, 1 Feb 2027", "%.1f%%" % U1_TOTAL,
-         "%s on %s " % (money(round(3995 * U1_TOTAL / 100, 2)), money(3995)) + src("S4")),
-        ("Unit 2 conditional full-bank scenario", "%.1f%%" % U2_TOTAL,
-         "%s on %s " % (money(round(3150 * U2_TOTAL / 100, 2)), money(3150)) + src("S4")),
+         "%s on %s - unaffected by the pending cap " % (money(round(3995 * U1_TOTAL / 100, 2)), money(3995))
+         + src("S4", "S25")),
+        ("Unit 2 full bank", "%.1f%%" % U2_TOTAL,
+         "%s on %s - above the 10%% ceiling in the pending proposal "
+         % (money(round(3150 * U2_TOTAL / 100, 2)), money(3150)) + src("S4", "S25")),
+        ("Unit 2 held to 10%", money(round(3150 * 10.0 / 100, 2)),
+         "Lawful now and if the proposal is enacted " + src("S4", "S25")),
         ("Notice above 10%", "90 days", "30 days at or below 10% " + src("S8")),
     ]:
         b += '<div class="tile"><div class="k">%s</div><div class="v">%s</div><div class="n">%s</div></div>' % (e(k), e(v), n)
@@ -643,6 +737,7 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
     b += '<section class="panel"><h2>Browse by category</h2><div class="cards">'
     for href, label, desc in [
         ("executive-summary.html", "Executive summary", "The licence answer first, then the numbers, the risks and the decisions."),
+        ("pending.html", "Pending 10% cap", "File No. 261020 would cap banked increases at 10% a year, reaching notices served from 15 Sep 2026."),
         ("process.html", "Rent Board process", "Nine steps from confirming coverage to a served notice, with official links."),
         ("units.html", "Units and numbers", "Anonymised tenancy records and every calculation shown line by line."),
         ("rates.html", "Allowable increases", "The full official rate table back to 1982 and how the figure is set."),
@@ -688,7 +783,20 @@ def page_exec():
     b += reg_table("licence", "Licence and reporting - every requirement, with its source")
     b += '</section>'
 
-    b += '<section class="panel"><h2>2. What is a normal increase here</h2>'
+    b += '<section class="panel"><h2>2. The pending 10% cap on banked increases</h2><div class="answer">'
+    b += ("<p><strong>Found on 10 November 2026, after the rest of this research was written.</strong> "
+          "The Rent Board posted a notice on 9 November 2026 that the Board of Supervisors is "
+          "considering File No. 261020, which would cap banked and capital improvement increases at "
+          "10%% a year and would apply to banked increases <strong>noticed on or after 15 September "
+          "2026</strong>. It has not been enacted. %s</p>" % src("S5", "S6", "S24"))
+    b += ("<p>It does not touch Unit 1 (banked component 1.4%%). It is decisive for Unit 2: the full-bank "
+          "option is 11.5%% banked plus 1.6%% annual, and the banked part alone exceeds a 10%% ceiling. "
+          "Holding Unit 2 to 10%% is lawful today and would stay lawful if the ordinance passes as "
+          "drafted. %s <a href=\"pending.html\">See the proposed text and the analysis &rarr;</a></p>"
+          % src("S25"))
+    b += '</div></section>'
+
+    b += '<section class="panel"><h2>3. What is a normal increase here</h2>'
     b += ("<p class=\"small\">For a rent-controlled unit there is no market test. The lawful annual "
           "increase <em>is</em> the norm: <strong>1.6%%</strong> for effective dates from 1 March 2026 "
           "through 28 February 2027, once every 12 months, on base rent only, never rounded up. %s "
@@ -706,7 +814,7 @@ def page_exec():
                rows, numeric=(2, 3, 4))
     b += '</section>'
 
-    b += '<section class="panel"><h2>3. The banking conflict, resolved for these units</h2>'
+    b += '<section class="panel"><h2>4. The banking conflict, resolved for these units</h2>'
     b += ("<p class=\"small\">The Rent Board's banking page says a skipped increase banks only after "
           "<strong>24 full months</strong>; Rule 4.12 says <strong>12 months</strong> from the date the "
           "increase could have been imposed. %s The Board's own worked example shows the clock runs "
@@ -720,7 +828,7 @@ def page_exec():
           "published on the flagged page for confirmation.</p>")
     b += '</section>'
 
-    b += '<section class="panel"><h2>4. One unit or both</h2>'
+    b += '<section class="panel"><h2>5. One unit or both</h2>'
     b += ("<p class=\"small\">No provision requiring identical or simultaneous increases across units "
           "was found in the sources reviewed. %s What the law prohibits is a difference driven by a "
           "protected characteristic %s or a retaliatory or coercive purpose. %s The two tenancies are "
@@ -730,7 +838,7 @@ def page_exec():
           % (src("S3"), src("S18", "S19"), src("S15", "S17")))
     b += '</section>'
 
-    b += '<section class="panel"><h2>5. What to do next</h2><ol class="steps">'
+    b += '<section class="panel"><h2>6. What to do next</h2><ol class="steps">'
     for h, p in [
         ("Confirm the Inventory and licence", "Check the public Rent Board Portal for both units. If either is unreported, report it now - it is free and the licence is generated on submission. " + src("S1")),
         ("Confirm coverage", "Verify the 1940 construction date on the Property Information Map. Coverage follows the pre-14 June 1979 rule. " + src("S11")),
@@ -742,6 +850,96 @@ def page_exec():
         b += "<li><h3>%s</h3><p>%s</p></li>" % (e(h), p)
     b += '</ol></section>'
     return layout("Executive summary", b, "executive-summary.html")
+
+
+def page_pending():
+    """Pending File No. 261020. Written without %-formatting: the text is full of
+    literal percent signs and escaping them was a defect waiting to happen."""
+    b = head("Pending: a 10% cap on banked increases (File No. 261020)",
+             "Found on 10 November 2026. The Rent Board posted a notice about this proposal on "
+             "9 November 2026, after the earlier research on this site was compiled. It is not law. "
+             "It is the single item most likely to change what you serve on Unit 2.")
+
+    b += '<section class="panel"><h2>What the Rent Board posted</h2><div class="answer">'
+    b += ("<p>The same notice now appears on the Rent Board's rent increase page, its banked increases "
+          "page, its multiple-year page, its current rates page and its forms centre: the Board of "
+          "Supervisors is considering legislation that would <strong>temporarily limit the combined "
+          "amount of banked rent increases and capital improvement rent increases to 10% per "
+          "year</strong>. " + src("S5", "S6", "S26") + "</p>")
+    b += ("<p>The notice says the limit would apply to banked increases <strong>noticed on or after "
+          "15 September 2026</strong>, and it states in bold that the legislation <strong>has not been "
+          "enacted and is subject to change</strong>. " + src("S6", "S24") + "</p>")
+    b += '</div>'
+    b += ('<p class="note">Today is ' + TODAY.strftime("%-d %B %Y") + '. A notice served now sits inside '
+          'the window the proposal describes, which is why it matters even though nothing has passed.</p>')
+    b += '</section>'
+
+    b += '<section class="panel"><h2>The proposed text, as introduced</h2>'
+    b += ('<blockquote class="quote"><p>&ldquo;A landlord may not impose banked rent increases under '
+          'Section 37.3(a)(2), and/or rent increases based on any of the types of capital improvements '
+          'described in Section 37.3(a)(3), that cause a tenant&rsquo;s rent to increase by more than a '
+          'total of 10% of the lowest base rent that was in effect at any time during the 12 months '
+          'immediately preceding the date the increase takes effect, notwithstanding any other provision '
+          'of this Chapter 37.&rdquo;</p><p class="note">Proposed new Sec. 37.3(h), File No. 261020, text '
+          'as introduced. ' + src("S25") + '</p></blockquote>')
+    b += reg_table("pending", "Everything confirmed about the proposal, with its official source")
+    b += '</section>'
+
+    b += '<section class="panel"><h2>What it would do to each unit</h2>'
+    cap_amt = round(3150.00 * PENDING_CAP_PCT / 100, 2)
+    rows = [
+        ["Unit 1", "1.4% banked + 1.6% annual = 3.0%", money(round(3995 * U1_TOTAL / 100, 2)),
+         "No change", "The banked component is 1.4%, nowhere near 10%.",
+         badge(ANALYSIS) + " " + src("S25", "S4")],
+        ["Unit 2", "11.5% banked + 1.6% annual = 13.1%", money(round(3150 * U2_TOTAL / 100, 2)),
+         "Would be cut back",
+         "The banked component alone is 11.5%. Under the proposal as drafted the increase would be "
+         "limited to 10% of the lowest base rent in the preceding 12 months (" + money(cap_amt) +
+         ") and the rest deferred.",
+         badge(ANALYSIS) + " " + src("S25", "S4")],
+        ["Unit 2", "Held to 10%", money(cap_amt), "No change",
+         "Lawful today and still lawful if the proposal is enacted. 30-day notice band.",
+         badge(ANALYSIS) + " " + src("S25", "S8")],
+    ]
+    b += table("Impact of the proposal on the options already published on this site. Analysis of "
+               "proposed text, not a determination.",
+               ["Unit", "Option", "Increase", "Effect if enacted", "Why", "Status and source"], rows,
+               numeric=(2,))
+    b += ('<p class="note">The proposal would <em>defer</em> rather than cancel the excess: amounts above '
+          '10% a year may still be accumulated while the cap is in force and imposed to take effect on or '
+          'after 1 January 2030. ' + src("S25") + '</p>')
+    b += '</section>'
+
+    b += '<section class="panel"><h2>What is not settled</h2>'
+    b += ('<p class="small">The ordinance text caps increases imposed <em>under Sections 37.3(a)(2)-(3)</em> '
+          '&ndash; banking and capital improvements. The ordinary annual increase lives in 37.3(a)(1), so on '
+          'the face of the text it is outside the cap; the Rent Board&rsquo;s plain-language summary simply '
+          'says the cap is on &ldquo;the combined amount of banked rent increases and capital improvement '
+          'rent increases&rdquo;. Neither source says what happens when an annual increase is served '
+          'together with banked amounts. ' + src("S25", "S5") + ' That gap is left blank in the register '
+          'and published as <a href="flagged.html">F22</a> rather than resolved by inference.</p>')
+    b += ('<p class="small">The committee has not acted, no amendments are posted, and the Board has not '
+          'voted. Status, amendments and any final text are on the official file. ' + src("S24") + '</p>')
+    b += '</section>'
+
+    b += '<section class="panel"><h2>What this means for the decision</h2><ol class="steps">'
+    for h, pz in [
+        ("Treat 10% as the practical ceiling for Unit 2 while this is pending",
+         "A 10% increase is lawful under current law and would remain lawful if the proposal is enacted "
+         "as drafted. It also keeps the notice in the 30-day band. " + src("S8", "S25")),
+        ("Price the risk before choosing 13.1%",
+         "If the ordinance passes as drafted after a 13.1% notice is served, the increase would be reached "
+         "retroactively, and a non-conforming increase is challengeable with no filing fee and no time "
+         "limit. " + src("S25", "S20")),
+        ("Re-check the file immediately before serving",
+         "The status page is the authoritative record of what has been enacted. Nothing on this site "
+         "should be relied on for the state of the legislation on the day you serve. " + src("S24")),
+        ("Nothing here changes Unit 1",
+         "Unit 1's figures stand as published; the proposal does not reach them. " + src("S25")),
+    ]:
+        b += "<li><h3>" + e(h) + "</h3><p>" + pz + "</p></li>"
+    b += '</ol></section>'
+    return layout("Pending 10% cap", b, "pending.html")
 
 
 def page_process():
@@ -1072,8 +1270,10 @@ FLAGS = [
      "Absence of authority, not a quoted rule", ["S19"], "Recorded as a search result, not as a legal conclusion."),
     ("F08", "No uniform-increase requirement found", "No provision requiring both units to be raised together, or by the same amount, was found.",
      "Absence of authority, not a quoted rule", ["S3", "S18"], "The anti-discrimination and retaliation rules still apply to the reason for any difference."),
-    ("F09", "Pending local legislation on banked increases", "Proposals to cap banked increases at 10% a year were reported during 2026. No official legislative status page was confirmed in this session.",
-     "Unverified", ["S6"], "No value is asserted. If enacted, it would affect the Unit 2 full-bank option. Recheck before serving."),
+    ("F09", "Pending local legislation on banked increases - now confirmed from the official record",
+     "An earlier pass recorded this as an unverified rumour because no official status page had been found. On 10 November 2026 it was confirmed: the Rent Board posted a notice dated 9 November 2026 on its rent increase, banking, multiple-year, current rates and forms pages, and the Board of Supervisors file exists. File No. 261020 would cap banked and capital improvement increases at 10% a year, reaching banked increases noticed on or after 15 September 2026, with a sunset of 31 December 2029. Status on 10 November 2026: Pending Committee Action in the Land Use and Transportation Committee. Not enacted.",
+     "Upgraded from unverified to verified; still only a proposal", ["S24", "S25", "S5", "S6"],
+     "Nothing to resolve in the record - but the status must be re-checked on the official file immediately before any banked notice is served, because enactment would reach a notice served today."),
     ("F10", "ZIP-level market rent not published", "No official rent figure for ZIP 94122 was confirmed. The Rent Board does not publish a market rent for a ZIP code.",
      "Left blank", ["S5"], "For a rent-controlled unit the lawful increase does not depend on market rent, so nothing is estimated here."),
     ("F11", "Notice deadlines assume personal service", "Serve-by dates on this site are computed for personal delivery.",
@@ -1108,6 +1308,14 @@ FLAGS = [
      "Section 37.15(e) and the Inventory page tie the licence to the increase taking effect. Neither source states that the licence must already exist when the notice is served. Obtaining it before service is the recommended safer workflow, not a rule quoted from the ordinance.",
      "Wording precision, no figure affected", ["S1", "S2", "S5"],
      "Treat 'licence current before service' as prudent practice; treat 'licence current on the effective date' as the documented requirement."),
+    ("F22", "Unsettled: whether the annual increase counts toward the proposed 10% cap",
+     "The text of File No. 261020 caps increases imposed under Sections 37.3(a)(2)-(3) - banking and capital improvements - which on its face excludes the ordinary annual increase under 37.3(a)(1). The Rent Board's plain-language notice says the cap applies to 'the combined amount of banked rent increases and capital improvement rent increases'. Neither source states whether an annual increase served alongside banked amounts counts toward the 10%.",
+     "Open question on proposed text; value left blank", ["S25", "S5"],
+     "Nothing is inferred. The site prices a 10% total for Unit 2, which is compliant under either reading. If the ordinance advances, the enacted text or a Rent Board rule should settle it; a Rent Board counsellor can be asked at 415-252-4600."),
+    ("F23", "A published source link used raw square brackets and failed to load",
+     "Form 1007's official URL contains literal '[' and ']' characters. Requested exactly as published the retrieval failed; percent-encoded as %5B74%5D the same file loads and was read in full. The published link on this site has been changed to the percent-encoded form.",
+     "Repository defect, fixed and re-verified 2026-11-10", ["S21"],
+     "No legal content changed. The fix is cosmetic but it is the difference between a working and a dead citation; every other external citation on the site was retrieved again on 10 November 2026."),
     ("F21", "Publication surface: GitHub Pages serves the whole repository root",
      "GitHub Pages publishes the entire repository root, so files such as the internal working notes and this coordination file are publicly readable, not just the HTML pages. The earlier internal note's claim that it was not published was incorrect and has been corrected. No tenant name, initial, address or parcel appears in any current file.",
      "Publication-surface limitation", ["S1", "S2"],
@@ -1128,6 +1336,29 @@ def page_flagged_blank():
     b += table("Every flagged item with its source and the action that would close it",
                ["Ref", "Item", "Type", "What would resolve it", "Official source"], rows)
     b += '</section>'
+    b += ('<section class="panel"><h2>Repository housekeeping, not legal findings</h2>'
+          '<p class="small">These are observations about this repository rather than about the law, '
+          'so they are listed outside the sourced table above - there is no official publisher to cite '
+          'for them.</p>'
+          '<ul class="small">'
+          '<li><strong>H1 &ndash; Five pull requests from earlier agent sessions are still open</strong> '
+          '(#5, #7, #17, #18 and #20, opened 7-8 November 2026). They were left untouched: the '
+          'coordination rules for this repository forbid one session from merging or closing another '
+          "session's branch. Review and either merge or close them. "
+          '<a href="https://github.com/kanlerxz87-cyber/RentincreaseSF5/pulls" target="_blank" '
+          'rel="noopener">Open pull requests</a>.</li>'
+          '<li><strong>H2 &ndash; Four earlier page sets are preserved on this site.</strong> The consolidated set '
+          'you are reading is the current one; the others remain reachable from '
+          '<a href="archive.html">Earlier research sets</a> so that nothing published before is deleted. '
+          'Where they differ from this set, this set is the later verification.</li>'
+          '<li><strong>H3 &ndash; A second generator used to overwrite the landing page.</strong> '
+          'The deep-dive set\'s generator (<code>tools/build_site.py</code>) writes its own landing '
+          'page to <code>index.html</code>, the same path the consolidated dashboard publishes to, so '
+          'running it on its own silently replaced the published landing page with the older set\'s '
+          'page. Found and fixed on 10 November 2026: that generator now rebuilds the consolidated '
+          'hub as its last step, so the published root is the same page whichever generator is run. '
+          'Nothing was deleted.</li>'
+          '</ul></section>')
     blank = [r for r in R if r["status"] in (UNVERIFIED, ABSENT)]
     b += '<section class="panel"><h2>Values left blank rather than guessed</h2>'
     rows = []
@@ -1142,8 +1373,10 @@ def page_flagged_blank():
 def page_sources():
     b = head("Sources",
              "Every source below was retrieved and read during this session. Only official publishers "
-             "are used: the San Francisco Rent Board, the California Legislature, the California Civil "
-             "Rights Department and the United States Department of Housing and Urban Development.")
+             "are used: the San Francisco Rent Board, the San Francisco Board of Supervisors' legislative "
+             "record (Legistar, the status system the Rent Board itself links to), the California "
+             "Legislature, the California Civil Rights Department and the United States Department "
+             "of Housing and Urban Development.")
     b += '<section class="panel">'
     rows = []
     for sid, (title, pub, url) in SOURCES.items():
@@ -1222,6 +1455,43 @@ def page_verification():
          e("Unit 1: 1.6% = $63.92 and 3.0% = $119.85. Unit 2: 1.6% = $50.40, 13.1% = $412.65 and 10.0% = $315.00. All match to the cent, none rounded up."),
          badge(COMPUTED) + " " + src("S4", "S8")],
     ]
+    rows += [
+        ["Re-verification, 10 November 2026",
+         e("Every official source behind a published value fetched again and read: the Housing "
+           "Inventory page, sec. 37.15, sec. 37.3, Form 571 (all 46 periods), the rent increase page "
+           "and its four worked examples, the banking page, the multiple-year page, Rules and "
+           "Regulations Part IV (4.10 and 4.12), the Rent Board fee page, the current rates page, the "
+           "AB 1482 page, the coverage page, the Rule 6.14 / Costa-Hawkins page, secs. 37.10B and "
+           "37.10C, the tenant petition page, Form 1007, the Rent Ordinance index, Civil Code sec. "
+           "827, the CRD housing page and the HUD fair-housing page."),
+         e("Every published figure still matches: 1.6% for 1 Mar 2026 - 28 Feb 2027, the $59.00 fee, "
+           "the 30/90-day notice rule, the 8.8% AB 1482 reference figure and the licence rule. Two "
+           "defects found and fixed: a source URL that failed when its square brackets were sent raw "
+           "(F23), and an unverified rumour about pending legislation that is now confirmed from the "
+           "official record (F09)."),
+         badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S10", "S11",
+                                     "S12", "S14", "S15", "S16", "S20", "S21", "S23", "S26")],
+        ["Pending legislation",
+         e("Rent Board notice of 9 November 2026 read on five separate Rent Board pages; the Board of "
+           "Supervisors file and the full ordinance text as introduced read on the City's legislative "
+           "record."),
+         e("File No. 261020 confirmed: 10% annual cap on banked and capital improvement increases, "
+           "reaching banked increases noticed on or after 15 September 2026, sunset 31 December 2029, "
+           "status 'Pending Committee Action'. Not enacted. One question left open and blank (F22)."),
+         badge(VERIFIED) + " " + src("S24", "S25", "S5", "S6", "S26")],
+        ["Second rate source",
+         e("The 1.6% figure cross-checked against a second official page, the Rent Board's current "
+           "rates sheet, as well as Form 571."),
+         e("Both state 1.6% for 1 March 2026 - 28 February 2027."),
+         badge(VERIFIED) + " " + src("S26", "S4")],
+        ["Worked-example label re-checked",
+         e("The first worked example on the rent increase page re-read on 10 November 2026 to see "
+           "whether the mislabelled date recorded in F16 had been corrected."),
+         e("Still present: the example says the rate in effect on 1 June 2025 is 1.6%, when 1.4% "
+           "applied on that date. The arithmetic is right because the increase takes effect 1 June "
+           "2026. Nothing on this site depends on it."),
+         badge(VERIFIED) + " " + src("S5", "S4")],
+    ]
     b += table("Verification performed in this session", ["Check", "Method", "Result", "Status and source"], rows)
     b += '</section>'
     return layout("Verification", b, "verification.html")
@@ -1232,6 +1502,7 @@ def page_verification():
 # ---------------------------------------------------------------------------
 PAGES = {
     "executive-summary.html": page_exec,
+    "pending.html": page_pending,
     "process.html": page_process,
     "units.html": page_units,
     "rates.html": page_rates,

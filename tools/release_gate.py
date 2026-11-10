@@ -30,12 +30,21 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 
+# Hosts that may be cited as the official source of a published value.
+# sfgov.legistar.com is the Board of Supervisors' legislative record; the Rent
+# Board's own pages link to it for the status of pending legislation.
 ALLOWED_HOSTS = {
     "www.sf.gov",
+    "sfgov.legistar.com",
     "leginfo.legislature.ca.gov",
     "calcivilrights.ca.gov",
     "www.hud.gov",
 }
+
+# Hosts that may appear as a link but never as the source of a legal value.
+# github.com is used only for repository housekeeping (the open-PR list), which
+# is published outside the sourced tables.
+LINK_ONLY_HOSTS = {"github.com"}
 
 # Privacy: no personal identifier is committed to this repository. GitHub Pages
 # serves this file from the repository root, so a literal token list here would
@@ -175,7 +184,7 @@ def check_pages():
             if u.scheme:
                 if u.scheme != "https":
                     fail("external", "%s non-https link %s" % (rel, href))
-                elif u.hostname not in ALLOWED_HOSTS:
+                elif u.hostname not in ALLOWED_HOSTS | LINK_ONLY_HOSTS:
                     fail("external", "%s non-official host %s" % (rel, href))
             elif u.path:
                 target = (p.parent / unquote(u.path)).resolve()

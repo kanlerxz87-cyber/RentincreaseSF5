@@ -139,6 +139,18 @@ def check_rows_have_sources():
     return problems
 
 
+def rebuild_consolidated_hub():
+    """This generator writes the deep-dive set's own landing page to index.html,
+    which is also where the consolidated hub publishes. Run on its own it
+    therefore silently replaced the published landing page with the older set's
+    page (found 2026-11-10; published as housekeeping item H3 on the Flagged for Review page).
+    Rebuilding the hub here makes the published root the same page whichever
+    generator is run, without deleting or altering the deep-dive set."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import build_hub
+    build_hub.build()
+
+
 def main():
     files = build_html()
     build_csv()
@@ -153,6 +165,7 @@ def main():
         print("  ROW %s :: %s" % (f, row))
     if broken or unlinked:
         sys.exit(1)
+    rebuild_consolidated_hub()
 
 
 if __name__ == "__main__":
