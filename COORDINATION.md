@@ -944,3 +944,35 @@ verbatim. No session's work was deleted.
 | W3 | PR → merge → confirm Pages deploy → record | `arena/d448f2f5` | `COORDINATION.md` | in progress |
 
 Claim written before any other file was modified. No prior session's page, data file or generator will be deleted or rewritten; the F09 change is additive and source-linked. No tenant identifiers are used.
+
+## Session `arena/d448f2f5-rentincreasesf5` — final record (2026-11-10)
+
+| ID | Task | Status |
+| --- | --- | --- |
+| W1 | Re-verify live site + controlling official sources; run full build/checks | done |
+| W2 | Update F09: confirm File No. 261020 proposal (not enacted) | done |
+| W3 | PR → merge → confirm Pages deploy → record | done (see below) |
+
+### Sources re-read
+SF Rent Board Housing Inventory (S1) · SF Rent Board rent-increase page (S5, incl. new 2026-11-09 File 261020 notice) · live site landing page. Legistar File 261020 detail read for corroboration only (Pending Committee Action; introduced 2026-09-15); not linked — release-gate allowlist covers sf.gov/leginfo/CRD/HUD only.
+
+### Verification performed
+- `scripts/build.py` twice, reproducible, no drift. All checkers PASS: `check.py`, `independent_audit.py`, `check_links.py`, `release_gate.py`, `followup_audit.py`. `repository_audit.py`: 0 failures.
+- Arithmetic recomputed independently to the cent, none rounded up: $63.92/$4,058.92; $119.85/$4,114.85; $50.40/$3,200.40; $412.65/$3,562.65; $315.00/$3,465.00; Unit 2 banked sum 13.1%.
+- Privacy: placeholders only; no identifiers in diff; dates/amounts labelled owner-supplied.
+
+### Irregularities
+- F09 was stale ("no official status page confirmed"); now confirmed proposed-not-enacted. Non-blocking; published on Flagged for Review.
+- Stale open PRs #20, #18, #17, #7, #5 from earlier sessions left untouched.
+
+### PR and deploy record
+| Item | Value |
+| --- | --- |
+| Branch | `arena/d448f2f5-rentincreasesf5` |
+| Pull request | [#26](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/26) |
+| CI on PR | `validate` **pass** (run 42730009414) |
+| Merge result | **MERGED** 2026-11-10 00:40 UTC, merge commit `eea2fbffe6f442436870f36cc97c175807a91c37` |
+| Validate on `main` | **success** (run 42730124287) |
+| Pages build/deploy | **success** (run 42730123839) |
+| Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
+| Live verification | `hub/flagged.html?v=eea2fbf` re-fetched: F09 shows the confirmed File 261020 proposal text with S5 source link |
