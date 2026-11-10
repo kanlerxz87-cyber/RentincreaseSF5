@@ -72,7 +72,7 @@ block the build, the PR, or the merge.
 - Takeover of the stale `README.md` portions of PR #17 and PR #20 is permitted by the 60-minute no-commit rule: their latest commits were 2026-11-08 22:50:30Z and 22:52:57Z. PR #20 also includes `internal/notes.md`; that path is covered by T13. Active PR #26 has merged and its hub/F09 work is preserved.
 - T13 adds only the source data's privacy wording, its generated mirror, and the stale public working note. No identity map or real tenant identifier will be added.
 - The T12 claim was recorded before modifying `README.md`; this T13 extension was recorded before touching its additional file scope.
-- Rebase note (2026-11-10): `git pull --rebase origin main` attempted to replay already-merged PR #27 commits and conflicted in this file. Aborted that rebase rather than flattening the merge or dropping another session's commits; the explicit merge of `origin/main` remains in the branch and no work was discarded. Before retrying the push, use the assigned branch as the pull target so the merged `main` ancestry is preserved.
+- Rebase note (2026-11-10): both `git pull --rebase origin main` and a pull-rebase from the assigned branch attempted to replay PR #27 commits already integrated in the explicit `origin/main` merge and conflicted in this file. Aborted both rebases rather than flattening merge history or dropping another session's commits. Confirmed the assigned remote branch is an ancestor of the resolved local branch; no work was discarded. The push will preserve the merge with a normal fast-forward.
 
 ### Handoff / takeover rule
 If a session crashes or its claim is more than 60 minutes old with no commits, any other session
