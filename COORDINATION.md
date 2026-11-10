@@ -951,3 +951,21 @@ verbatim. No session's work was deleted.
 | W3 | PR → merge → confirm Pages deploy → record | `arena/d448f2f5` | `COORDINATION.md` | in progress |
 
 Claim written before any other file was modified. No prior session's page, data file or generator will be deleted or rewritten; the F09 change is additive and source-linked. No tenant identifiers are used.
+
+---\n\n## Session `arena/ff10e34f-rentincreasesf5` — final re-verification and publication (2026-11-10)
+
+Rebased onto current `main` after PR #26 (arena/d448f2f5) merged the identical File No. 261020 F09 correction. This session's unique contribution is independent documentation plus the final PR/merge/deploy confirmation.
+
+| ID | Task | Owner | Files in scope | Status |
+|---|---|---|---|---|
+| F1 | Fresh line-by-line re-verification of controlling facts against live official sources | `arena/ff10e34f-rentincreasesf5` | `VERIFICATION-FF10E34F.md` (new) | done |
+| F2 | Confirm File No. 261020 banking-cap proposal as proposed-not-enacted (already merged via PR #26); no separate code change needed | `arena/ff10e34f-rentincreasesf5` | — (subsumed by PR #26) | done |
+| F3 | Run build + release gate + checks; all green | `arena/ff10e34f-rentincreasesf5` | `tools/release_gate.py`, `scripts/build.py`, `scripts/check.py`, `scripts/independent_audit.py` | done |
+| F4 | PR #27 from `arena/ff10e34f-rentincreasesf5` to `main`; merge; confirm Pages deploy; record result | `arena/ff10e34f-rentincreasesf5` | `COORDINATION.md` | in progress |
+
+### Verification result (this session)
+
+Every controlling fact re-fetched and read from the live official URL: SF Rent Board (rent increases, Housing Inventory, sec. 37.15, sec. 37.3, Form 571, banked increases, Rules Part IV, Rent Board fee, AB 1482 guide, coverage page); California Legislature (Civil Code 827, 1947.12, 1942.5); California Civil Rights Dept. (FEHA housing); U.S. HUD (Fair Housing Act overview). All published rates and notice periods confirmed; all five scenarios recompute to the cent; nothing inferred. Key finding: individual owner needs the rent-increase licence (generated automatically on Housing Inventory reporting; no application), must be current on the effective date; no petition needed for an ordinary annual or banked increase.
+
+Privacy: no tenant name, initial, street address, or unit address in any touched file. Occupants described by role only; dates and amounts preserved exactly as owner-supplied and labelled unverified.
+
