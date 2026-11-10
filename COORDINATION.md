@@ -932,3 +932,20 @@ verbatim. No session's work was deleted.
 - PR #24 merged to `main` at 2026-11-08T23:10:21Z, merge commit `7eb39fb0d2c8c05035632658e64c1b1326c1003b`; validation run 42533865727 success; Pages build/deployment run 42533865252 success; Pages API status `built`, latest build commit matches merge.
 - Live verification required cache-busting query strings: `/audit/index.html?v=7eb39fb`, `/site/docs/index.html?v=7eb39fb` and `/tools/repository_audit.py?v=7eb39fb` returned the new artifacts; unqualified directory URLs initially returned cached 404s. GitHub API confirmed repaired `pages/rates.html` anchors have real `href` attributes on main.
 - Live render review caught a presentation defect in the first generated audit page: list-valued audit fields were interpolated as raw Python list representations, inflating the page to ~53KB. Hotfix normalizes list/dict counts to integers, regenerates a ~9KB page, reruns exact privacy/history scan (0 current hits; 22 historical commits), and re-renders cleanly at 390px/1440px with no JS errors. This follow-up PR releases the correction; no tenant values were exposed by the defect.
+
+---
+
+## Session `arena/adace8f8-rentincreasesf5` — final integration claim (2026-11-10 UTC)
+
+**Platform constraint:** Arena binds this session to `arena/adace8f8-rentincreasesf5`; a `session-<id>/<task>` branch cannot be created or pushed. The claim, integration work, PR and push therefore stay on the assigned branch. This is logged rather than silently deviating from the shared task-board convention.
+
+| ID | Task | Status | Owner | File scope |
+| --- | --- | --- | --- | --- |
+| F1 | Final integration: re-read controlling official sources; re-verify combined table rows, arithmetic, privacy and links; resolve stale handoffs; ensure a clean landing page and category subpages; build; PR; merge; confirm Pages deployment | in progress | `arena/adace8f8-rentincreasesf5` | `COORDINATION.md`, `README.md`, `index.html`, `hub/**`, `site/**`, `data/verified-register.csv`, `data/flagged.*`, `tools/build_hub.py`, `tools/release_gate.py`, `scripts/build.py`, `.github/workflows/pages.yml`, new `verification/**` audit artifacts |
+| F2 | Publish defects and unverified values on a clearly labeled Flagged for Review page with official source links | in progress | `arena/adace8f8-rentincreasesf5` | `hub/flagged.html`, `site/hub/flagged.html`, `data/flagged.*` |
+
+**Handoff basis:** the last recorded commits and PR activity are dated 2026-11-07/08, more than 60 minutes before this session. Open PRs #7, #17, #18 and #20 are treated as stale claims rather than active owners: their work will be inspected additively, and no other session's files will be discarded. Earlier `in progress` rows remain historical records and are superseded for integration by this dated claim. Unclaimed E3 is absorbed into F1. Shared index/navigation and combined data changes are reserved to this final integration pass.
+
+**Privacy:** no real tenant names, initials, addresses, unit numbers beyond generic placeholders, or identifying documents will be introduced to any public artifact. Dates and amounts remain as supplied but are labeled unverified owner intake. Historical exposure is flagged, not claimed to be erased.
+
+Claim recorded before any other file was modified; this commit is pushed immediately.
