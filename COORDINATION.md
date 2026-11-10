@@ -65,12 +65,12 @@ block the build, the PR, or the merge.
 | T10 | Final integration: re-verify, link check, build, PR, merge, confirm Pages deploy | `session-c6d53281` | all (integration pass) | in progress |
 | T11 | Interpretation audit of owner-supplied dates (Unit A 2026-04-01 entry) | `session-c6d53281` | `pages/units.html`, `pages/flagged.html` | done |
 | T12 | Update the public README to match the current official-source review, conditional rent scenarios, and privacy caveats; validate its factual/source links | `arena/741c7ecc-rentincreasesf5` | `README.md`, `COORDINATION.md` | in progress |
-| T13 | Correct public claims that an identity map exists privately and stale assertions about the Unit 2 increase history; preserve placeholders and source links | `arena/741c7ecc-rentincreasesf5` | `docs/data/units.json`, generated `site/docs/data/units.json`, `internal/notes.md`, `COORDINATION.md` | in progress |
+| T13 | Correct the public second dashboard's claims about private identity mappings, property coverage, rent history, and unverified scenarios | `arena/741c7ecc-rentincreasesf5` | `docs/**` (including `docs/data/units.json`), `tools/dashboard_build.py`, generated `site/docs/**`, `internal/notes.md`, `COORDINATION.md` | in progress |
 
 ### Claim — `arena/741c7ecc-rentincreasesf5` (2026-11-10)
 - T12 scope is limited to `README.md` and this coordination file; no consolidated hub, calculations generator, or site-index edits.
 - Takeover of the stale `README.md` portions of PR #17 and PR #20 is permitted by the 60-minute no-commit rule: their latest commits were 2026-11-08 22:50:30Z and 22:52:57Z. PR #20 also includes `internal/notes.md`; that path is covered by T13. Active PR #26 has merged and its hub/F09 work is preserved.
-- T13 adds only the source data's privacy wording, its generated mirror, and the stale public working note. No identity map or real tenant identifier will be added.
+- T13 covers the independent `docs/` dashboard source data/generator and its generated `site/docs/` mirror plus `internal/notes.md`; it will replace stale/unverified assertions with explicit owner-input labels and limitations. No identity map or real tenant identifier will be added.
 - The T12 claim was recorded before modifying `README.md`; this T13 extension was recorded before touching its additional file scope.
 - Rebase note (2026-11-10): both `git pull --rebase origin main` and a pull-rebase from the assigned branch attempted to replay PR #27 commits already integrated in the explicit `origin/main` merge and conflicted in this file. Aborted both rebases rather than flattening merge history or dropping another session's commits. Confirmed the assigned remote branch is an ancestor of the resolved local branch; no work was discarded. The push will preserve the merge with a normal fast-forward.
 
