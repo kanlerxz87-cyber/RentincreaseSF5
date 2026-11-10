@@ -122,19 +122,19 @@
     "CA-CIV-827": {
       "title": "California Civil Code Section 827 - notice of change of terms of lease",
       "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV",
       "supports": "30 days' written notice for increases of 10% or less; 90 days for increases greater than 10% (alone or combined with other increases in the prior 12 months)."
     },
     "CA-CIV-1947-12": {
       "title": "California Civil Code Section 1947.12 - AB 1482 statewide rent cap",
       "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV",
       "supports": "5% + CPI (max 10%) cap; no more than two increments in 12 months; (d)(3) exemption for housing already under a lower local rent cap; (d)(5)(A)(ii) corporations cannot use the single-family/condo exemption."
     },
     "CA-CIV-1954-53": {
       "title": "California Civil Code Section 1954.53 - Costa-Hawkins vacancy decontrol",
       "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53&lawCode=CIV",
       "supports": "Owner may set the initial rental rate for a new tenancy, subject to the listed exceptions (e.g. prior tenancy terminated by the owner)."
     },
     "HUD-FHA": {

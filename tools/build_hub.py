@@ -42,9 +42,9 @@ SOURCES = {
     "S7": ("Rules and Regulations Part IV (4.10 notice, 4.12 banking)", "SF Rent Board",
            "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring"),
     "S8": ("Civil Code sec. 827 - notice of rent increase", "California Legislature",
-           "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827"),
+           "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV"),
     "S9": ("Civil Code sec. 1947.12 - statewide rent cap", "California Legislature",
-           "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12"),
+           "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV"),
     "S10": ("California Tenant Protection Act of 2019 (AB 1482)", "SF Rent Board",
             "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482"),
     "S11": ("Learn about San Francisco rental laws (coverage)", "SF Rent Board",
@@ -59,7 +59,7 @@ SOURCES = {
     "S16": ("Admin Code sec. 37.10C - Algorithmic devices prohibited", "SF Rent Board",
             "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited"),
     "S17": ("Civil Code sec. 1942.5 - retaliation", "California Legislature",
-            "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5"),
+            "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5&lawCode=CIV"),
     "S18": ("Housing discrimination (FEHA)", "California Civil Rights Department",
             "https://calcivilrights.ca.gov/housing/"),
     "S19": ("Housing discrimination under the Fair Housing Act", "U.S. HUD",
@@ -75,6 +75,12 @@ SOURCES = {
     "S24": ("Board of Supervisors File No. 261020 - cap on banked rent increases (pending)",
             "City and County of San Francisco",
             "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770"),
+    "S25": ("Rules and Regulations Part XIII, Section 13.14 - Licensing / Notice of Rent Increase", "SF Rent Board",
+            "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent"),
+    "S26": ("Form 538 - 2024-25 Bond Measure Passthrough Worksheet (older effective-date wording)", "SF Rent Board",
+            "https://www.sf.gov/file/538-2024-25-bond-measure-worksheet-1024-pdf"),
+    "S27": ("42 U.S.C. sec. 3604 - discrimination in sale or rental of housing", "U.S. Government Publishing Office",
+            "https://www.govinfo.gov/content/pkg/USCODE-2024-title42/html/USCODE-2024-title42-chap45-subchapI-sec3604.htm"),
 }
 
 # ---------------------------------------------------------------------------
@@ -896,7 +902,7 @@ def page_rates():
     b += '<section class="panel"><h2>Official rate table</h2>'
     rows = [[e("%s - %s" % (_d(a).isoformat(), _d(bb).isoformat())), "%.1f%%" % r,
              badge(VERIFIED) + " " + src("S4")] for a, bb, r in RATES]
-    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026 and re-read on 8 November 2026. "
+    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026 and re-read on 10 November 2026. "
                "Only one of the two 1992-1993 increases may be imposed, based on the tenant's anniversary date.",
                ["Effective period", "Allowable increase", "Status and source"], rows)
     b += ('<p class="note">The 12/8/1992 - 2/28/1993 and 3/1/1992 - 12/7/1992 rows overlap by design; '
@@ -1100,7 +1106,7 @@ FLAGS = [
     ("F17", "Follow-up audit: practices and customary increases",
      "No official empirical comparison of corporate versus individual-owner conduct, or customary ZIP 94122 increase, was established. The legal allowance is not evidence of observed market practice.",
      "Unverified; recommendations distinguished", ["S5", "S20"],
-     "Follow-up 8 November 2026: removed unsupported corporate-practice assertions from the consolidated page. Use the compliance workflow as a recommendation only."),
+     "Follow-up 10 November 2026: removed unsupported corporate-practice assertions from the consolidated page. Use the compliance workflow as a recommendation only."),
     ("F18", "Banked scenarios assume an unprovided complete rent history",
      "The user supplied a 2019 starting rent for Unit 2, not a complete intervening ledger. Full-bank examples assume no intervening increases and unchanged lawful base rent; they are not verified entitlements. Earlier archived sets may describe that assumption as owner-supplied.",
      "Unverified input; conditional arithmetic only", ["S5", "S6", "S20"],
@@ -1118,10 +1124,18 @@ FLAGS = [
      "Publication-surface limitation", ["S1", "S2"],
      "If the repository is made private, confirm Pages access settings before serving notices. Never store personal data anywhere in this repository."),
 
-    ("F22", "Archived research sets contain legacy citation gaps",
-     "A 10 November 2026 whole-repository audit found 366 archived/mirror table rows without a direct source link in the row, mostly in older open-data market tables and duplicate dashboards. The current consolidated hub gates every table row for an official source link; archived sets are preserved for history, not as current certified tables.",
-     "Archived citation gap; non-blocking", ["S5", "S1"],
+    ("F22", "Archived research sets contain legacy citation and address-pattern warnings",
+     "A 10 November 2026 whole-repository audit found 366 archived/mirror table rows without a direct source link in the row, plus five street-shaped strings that are the public Rent Board office address in preserved older pages and a generator, not a property address. The current consolidated hub gates every table row for an official source link; archived sets are preserved for history, not as current certified tables.",
+     "Archived citation gap; non-blocking", ["S5", "S1", "S20"],
      "Use the consolidated hub for current review. If an archived row is to be relied on, add a direct official source link to that row or blank the unconfirmed value; see /audit/index.html for the mechanical row audit."),
+    ("F23", "Older official form gives different licence start dates",
+     "Current Rent Board Rule 13.14 and Administrative Code sec. 37.15(c) say the licence requirement applies to increases effective on or after July 1, 2022 for 10+ non-condo buildings and March 1, 2023 for condos and buildings with fewer than 10 units. The 2024-25 Form 538 worksheet instead says July 1, 2020 and March 1, 2021. The older dates are published here as a source discrepancy, not adopted as current law.",
+     "Official-publication discrepancy; no 2026-27 figure changed", ["S25", "S26", "S2", "S1"],
+     "Use the current rule, ordinance text and Housing Inventory page for any future effective date. Ask a Rent Board counsellor in writing if an old increase effective between 2020 and 2023 must be reconstructed; both candidate dates predate the 2026-27 period analysed here."),
+    ("F24", "Source IDs are scoped to each artifact, not global",
+     "The consolidated hub, data/sources.csv, pages/sources.html and dashboard/sources.html use overlapping S1/S24/S01 identifiers for different official URLs. For example, hub S24 is pending File No. 261020, while data/sources.csv S24 is the section 6.14 / Costa-Hawkins petition guidance. This is a documentation irregularity, not a conflicting legal rule.",
+     "Namespace/documentation limitation", ["S1", "S24", "S25"],
+     "Compare official URLs and publisher names, not ID numbers, when cross-checking artifacts. The hub source register states the scope; older sets are deliberately preserved unchanged."),
 ]
 
 
@@ -1150,9 +1164,9 @@ def page_flagged_blank():
 
 def page_sources():
     b = head("Sources",
-             "Every source below was retrieved and read during this session. Only official publishers "
-             "are used: the San Francisco Rent Board, the California Legislature, the California Civil "
-             "Rights Department and the United States Department of Housing and Urban Development.")
+             "Every source below was retrieved and read on 10 November 2026. Official publishers are the "
+             "City and County of San Francisco / Rent Board, the California Legislature, the California "
+             "Civil Rights Department, HUD and the U.S. Government Publishing Office.")
     b += '<section class="panel">'
     rows = []
     for sid, (title, pub, url) in SOURCES.items():
@@ -1169,11 +1183,13 @@ def page_sources():
           "from the published percentages and the owner-supplied base rents and is labelled computed. "
           "Where an official page could not be reached, or a value is not published, the cell is left "
           "blank and the item appears on the flagged page.</p>")
-    b += ("<p class=\"small\">Two limits are worth stating plainly. First, external links are checked "
-          "for shape and publisher at build time, not for perpetual availability; government sites move. "
-          "Second, no property record, portal account, lease or rent ledger was available, so nothing "
-          "here certifies that a particular increase on a particular unit is lawful. It sets out the "
-          "rules, the arithmetic and the evidence you would need.</p>")
+    b += ("<p class=\"small\">Three limits are worth stating plainly. First, external links are checked "
+          "for shape, publisher and a scheduled retrieval, not for perpetual availability; government sites move. "
+          "Second, S-numbers are scoped to this consolidated hub. Earlier sets in data/sources.csv, "
+          "pages/sources.html and dashboard/sources.html use their own overlapping numbering; compare official "
+          "URLs, not IDs. Third, no property record, portal account, lease or rent ledger was available, so "
+          "nothing here certifies that a particular increase on a particular unit is lawful. It sets out the "
+          "rules, the arithmetic and the evidence you would need. " + src("S1", "S24", "S25") + "</p>")
     b += '</section>'
     return layout("Sources", b, "sources.html")
 
@@ -1221,10 +1237,10 @@ def page_verification():
          e("Defect found in the previous landing page and fixed; now guarded."), badge(VERIFIED) + " " + src("S5")],
         ["Merge markers", e("Scan for unresolved conflict markers in tracked files."),
          e("Markers found in the coordination file and repaired; now guarded."), badge(VERIFIED) + " " + src("S5")],
-        ["Rate table years", e("Every effective period re-read from Form 571 on 8 November 2026 and the two-digit years re-checked."),
+        ["Rate table years", e("Every effective period re-read from Form 571 on 10 November 2026 and the two-digit years re-checked."),
          e("Defect found: 1982-1999 printed as 2082-2099 (F19). Fixed, table re-checked row by row; gate now rejects any year outside 1982-2027."),
          badge(VERIFIED) + " " + src("S4")],
-        ["Independent re-verification", e("Section 37.15, section 37.3, Form 571, the rent increase and banking pages, Rules 4.10 and 4.12, Civil Code sections 827, 1942.5 and 1947.12, the AB 1482 page, the Rent Board fee page, Form 516C and Form 1007 re-fetched and re-read on 8 November 2026."),
+        ["Independent re-verification", e("Section 37.15, section 37.3, Form 571, the rent increase and banking pages, Rules 4.10 and 4.12, Civil Code sections 827, 1942.5 and 1947.12, the AB 1482 page, the Rent Board fee page, Form 516C and Form 1007 re-fetched and re-read on 10 November 2026."),
          e("All published values matched. The 1.6% rate, the licence rule, the notice periods and the AB 1482 exemption are unchanged."),
          badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S12", "S20", "S21")],
         ["Arithmetic re-check", e("Both units' five scenarios recomputed from the base rents and the published percentages."),
@@ -1233,9 +1249,12 @@ def page_verification():
         ["Official sources re-read 10 Nov 2026", e("Housing Inventory, Administrative Code sections 37.15 and 37.3, Form 571, Part IV Rules 4.10 and 4.12, annual, banking and multiple-year guidance, AB 1482, Civil Code sections 827, 1942.5 and 1947.12, CRD and HUD guidance, the Rent Board fee, tenant petition and right-to-counsel form, and Board of Supervisors File 261020 were re-fetched."),
          e("The 1.6% rate, licence rule, notice periods, state-law exclusion and pending status of File 261020 matched. No 2027-28 annual rate was published."),
          badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S12", "S17", "S18", "S19", "S20", "S21", "S24")],
-        ["External link health", e("All unique HTTPS links in tracked HTML, Markdown, CSV and JSON artifacts were retrieved by a GitHub Actions runner; hard 404/410/5xx failures were repaired and the check rerun."),
-         e("Current result: no confirmed broken links. Government bot blocks, if any, are labeled for manual review. The status CSV is committed under verification/."),
+        ["External link health", e("A dedicated GitHub Actions workflow retrieves every unique HTTPS link in tracked HTML, Markdown, CSV and JSON artifacts on pull requests and writes a status CSV; hard 404/410/5xx failures are repaired and the check rerun."),
+         e("See verification/external-link-status.csv for the latest run. Government bot blocks are labeled for manual review, not silently treated as proof."),
          badge(VERIFIED) + " " + src("S5", "S24")],
+        ["Licence effective-date discrepancy", e("Rule 13.14, Administrative Code sec. 37.15(c), the Housing Inventory page and the older Form 538 worksheet were all re-read on 10 November 2026."),
+         e("Current sources say July 1 2022 / March 1 2023; Form 538 says July 1 2020 / March 1 2021. Published as F23; current sources control and no 2026-27 figure changes."),
+         badge(VERIFIED) + " " + src("S25", "S26", "S2", "S1")],
         ["Archived row traceability", e("All current consolidated-hub table rows are gated for a direct official source link. Older archived sets remain for history and include rows with only table-level or no citations."),
          e("Published as F22 on Flagged for Review; use the consolidated hub for current, per-row sourced analysis."),
          badge(VERIFIED) + " " + src("S5")],

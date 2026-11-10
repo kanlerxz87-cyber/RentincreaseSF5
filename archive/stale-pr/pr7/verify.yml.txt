@@ -1,0 +1,84 @@
+name: Verify research site
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: '3.11'
+      - name: Test verifier with synthetic fixtures
+        run: python -m unittest discover -s scripts/tests -v
+      - name: Audit integrated data, source links, rendering mapping, and publication structure
+        run: |
+          python - <<'PY'
+          import json, subprocess, sys
+          from pathlib import Path
+          cmd = [sys.executable, 'scripts/verify.py', '--root', '.', '--base-path', '/RentincreaseSF5', '--external', '--strict-warnings', '--json', 'verification-report.json']
+          p = subprocess.run(cmd, capture_output=True, text=True)
+          # Bounded annotations keep diagnostics readable when blob log downloads
+          # are unavailable. The verifier never echoes private stdin terms.
+          for line in (p.stdout + '\n' + p.stderr).splitlines()[-60:]:
+              print('::notice title=Verifier output::' + line.replace('%', '%25').replace('\r', '%0D').replace('\n', '%0A'))
+          if not Path('verification-report.json').is_file():
+              Path('verification-report.json').write_text(json.dumps({
+                  'tool': 'rent-increase-static-verifier/1', 'passed': False,
+                  'counts': {}, 'issues': [{'level':'ERROR','code':'CI_VERIFIER_NO_REPORT','path':'.github/workflows/verify.yml','message':f'Verifier exited {p.returncode} without writing a report; see bounded annotations.'}],
+                  'external_results': {}
+              }, indent=2) + '\n')
+          raise SystemExit(p.returncode)
+          PY
+      - name: Summarize audit report
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p = Path('verification-report.json')
+          if not p.is_file():
+              print('No audit report was produced.', file=open(os.environ['GITHUB_STEP_SUMMARY'], 'a'))
+              raise SystemExit(0)
+          r = json.loads(p.read_text())
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+              f.write('## Independent verification audit\n\n')
+              f.write(f"Passed: **{r['passed']}**\n\n")
+              f.write('```json\n' + json.dumps(r['counts'], indent=2) + '\n```\n\n')
+              issues = r.get('issues', [])
+              f.write(f"Issues: {len(issues)}\n\n")
+              for i in issues[:80]:
+                  f.write(f"- {i['level']} `{i['code']}` {i['path']}: {i['message']}\n")
+              blocked = {u: x for u, x in r.get('external_results', {}).items() if x.get('blocked') or x.get('soft_404') or (x.get('status') or 0) >= 400}
+              f.write(f"\nExternal problems/blocks: {len(blocked)}\n\n")
+              for u, x in list(blocked.items())[:40]:
+                  f.write(f"- {u}: {x.get('status')} {x.get('error', '')}\n")
+          # GitHub annotations remain readable through the Checks API even when
+          # blob log downloads are unavailable in the agent sandbox.
+          print(f"::notice title=Audit counts::{json.dumps(r['counts'])}")
+          for u, x in list(blocked.items())[:20]:
+              print(f"::warning title=External source problem::{u} status={x.get('status')} {x.get('error', '')}")
+          from collections import Counter
+          print(f"::error title=Audit issue counts::{json.dumps(dict(Counter(i['code'] for i in issues)))}")
+          PY
+      - name: Upload non-sensitive audit report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: verification-report
+          path: verification-report.json
+          if-no-files-found: warn

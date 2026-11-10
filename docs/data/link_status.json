@@ -79,15 +79,15 @@
       "result": "ok",
       "confirmed": "index of Ordinance, Rules and Regulations, Chapter 37A, Costa-Hawkins, Ellis Act, AB 1482"
     },
-    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827": {
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV": {
       "result": "ok",
       "confirmed": "30 days if 10% or less; 90 days if greater than 10%, alone or combined"
     },
-    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12": {
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV": {
       "result": "ok",
       "confirmed": "5% + CPI capped at 10%; no more than two increments in 12 months; (d)(3) exemption for lower local caps; (d)(5)(A)(ii) corporations excluded"
     },
-    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53": {
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53&lawCode=CIV": {
       "result": "ok",
       "confirmed": "vacancy decontrol framework and its exceptions"
     },

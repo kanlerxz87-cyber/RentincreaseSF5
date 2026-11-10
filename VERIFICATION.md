@@ -23,8 +23,8 @@ publishers are used.
 | S5 | [Learn about rent increases in San Francisco](https://www.sf.gov/learn-about-rent-increases-san-francisco) | SF Rent Board |
 | S6 | [Banked rent increases](https://www.sf.gov/information--banked-rent-increases) | SF Rent Board |
 | S7 | [Rules & Regulations Part IV — §4.10 notice, §4.12 banking](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring) | SF Rent Board |
-| S8 | [Civil Code §827 — notice of rent increase](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827) | California Legislature |
-| S9 | [Civil Code §1947.12 — statewide rent cap](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12) | California Legislature |
+| S8 | [Civil Code §827 — notice of rent increase](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) | California Legislature |
+| S9 | [Civil Code §1947.12 — statewide rent cap](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV) | California Legislature |
 | S10 | [California Tenant Protection Act (AB 1482)](https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482) | SF Rent Board |
 | S11 | [Learn about San Francisco rental laws](https://www.sf.gov/learn-about-san-francisco-rental-laws) | SF Rent Board |
 | S12 | [The Rent Board Fee](https://www.sf.gov/rent-board-fee) | SF Rent Board |
@@ -32,7 +32,7 @@ publishers are used.
 | S14 | [Rule 6.14 / Costa-Hawkins petitions](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins) | SF Rent Board |
 | S15 | [Admin Code §37.10B — Tenant Harassment](https://www.sf.gov/information/sec-3710b-tenant-harassment) | SF Rent Board |
 | S16 | [Admin Code §37.10C — Algorithmic devices prohibited](https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited) | SF Rent Board |
-| S17 | [Civil Code §1942.5 — retaliation](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5) | California Legislature |
+| S17 | [Civil Code §1942.5 — retaliation](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5&lawCode=CIV) | California Legislature |
 | S18 | [Housing discrimination (FEHA)](https://calcivilrights.ca.gov/housing/) | California Civil Rights Dept. |
 | S19 | [Housing discrimination under the Fair Housing Act](https://www.hud.gov/helping-americans/fair-housing-act-overview) | U.S. HUD |
 | S20 | [Report an unlawful rent increase (Form 516C)](https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/) | SF Rent Board |
@@ -204,8 +204,8 @@ searchable. That is a requirement of the licence, not an optional disclosure.
 | S5 | [Learn about rent increases in San Francisco](https://www.sf.gov/learn-about-rent-increases-san-francisco) | SF Rent Board | 1.6% for 3/1/2026-2/28/2027; 12-month rule; base rent only; no rounding up; 30/90 days plus 5 for mail; worked examples |
 | S6 | [Banked rent increases](https://www.sf.gov/information/banked-rent-increases) | SF Rent Board | "24 full months", no cap, not compounded or prorated, notice must state the banked portion |
 | S7 | [Rules Part IV (§4.10, §4.12)](https://www.sf.gov/reports/february-2024/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring) | SF Rent Board | notice content; null-and-void rule and the 0.5% readjustment; "full 12 months must have elapsed"; §4.12(b) content and its no-void proviso |
-| S8 | [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827) | California Legislature | 30-day and 90-day notice; service personally or by mail under CCP §1013 |
-| S9 | [Civil Code §1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12) | California Legislature | (d)(3) local-control exemption; (d)(6) two-unit owner-occupied exemption; 5% + CPI, 10% ceiling |
+| S8 | [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) | California Legislature | 30-day and 90-day notice; service personally or by mail under CCP §1013 |
+| S9 | [Civil Code §1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV) | California Legislature | (d)(3) local-control exemption; (d)(6) two-unit owner-occupied exemption; 5% + CPI, 10% ceiling |
 | S10 | [AB 1482 guidance](https://www.sf.gov/reports/august-2023/california-tenant-protection-act-2019-ab-1482) | SF Rent Board | 8.8% for 8/1/2026-7/31/2027; does not apply to units under the SF Ordinance |
 | S11 | [Learn about San Francisco rental laws](https://www.sf.gov/learn-about-san-francisco-rental-laws/) | SF Rent Board | coverage for units built on or before 13 June 1979, excluding single-family dwellings |
 | S12 | [The Rent Board Fee](https://www.sf.gov/rent-board-fee) | SF Rent Board | $59.00 per dwelling unit 2026-27; 1 March deadline; 5% monthly penalty capped at 15%; exemption deadline 14 Dec 2026; exemption does not satisfy the Inventory |
@@ -213,7 +213,7 @@ searchable. That is a requirement of the licence, not an optional disclosure.
 | S14 | [§6.14 / Costa-Hawkins petition](https://www.sf.gov/information/petition-determination-pursuant-section-614-andor-costa-hawkins) | SF Rent Board | 6.14 notice within a reasonable time, "generally sixty days"; co-tenants not subject to Costa-Hawkins |
 | S15 | [Admin Code §37.10B](https://www.sf.gov/information/sec-3710b-tenant-harassment) | SF Rent Board | (a)(5) coercion to vacate; (a)(9) discrimination; treble or $1,000 minimum plus fees |
 | S16 | [Admin Code §37.10C](https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited) | SF Rent Board | algorithmic-device prohibition; monthly and per-unit violations; private right of action |
-| S17 | [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5) | California Legislature | 180-day retaliation bar in (a); separate bar in (d) |
+| S17 | [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5&lawCode=CIV) | California Legislature | 180-day retaliation bar in (a); separate bar in (d) |
 | S18 | [CRD housing discrimination](https://calcivilrights.ca.gov/housing/) | California Civil Rights Department | protected-characteristics list, matched item by item |
 | S20 | [Report an unlawful rent increase (516C)](https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history) | SF Rent Board | no filing fee, no time limit, evidence asked for, hearing format |
 | S21 | [Form 1007](https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag%5B74%5D.pdf) | SF Rent Board | Tenant Right to Counsel intake number (415) 659-9184 |
@@ -275,10 +275,10 @@ Nothing below is taken from another session's notes: every value was re-read fro
 | 6 | [Banked rent increases](https://www.sf.gov/information--banked-rent-increases) | "24 full months"; added not compounded; no proration; no expiry; no carry-over to a new tenant |
 | 7 | [Rules & Regulations Part IV](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring) | §4.10(a) notice content, §4.10(b) null-and-void, §4.12(a) 12-month test and half-percent readjustment, §4.12(b) banked-part disclosure |
 | 8 | [Annual rent increase for multiple years](https://www.sf.gov/information--annual-rent-increase-multiple-years) | No compounding; no petition; no rounding up |
-| 9 | [Civ. Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827) | (b)(1) personal delivery or CCP §1013 mail; (b)(2) 30 days ≤10%; (b)(3)(A) 90 days >10% |
-| 10 | [Civ. Code §1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12) | (a) 5%+CPI / 10%; (b) new-tenancy initial rate; (d)(3) local-ordinance exemption |
+| 9 | [Civ. Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) | (b)(1) personal delivery or CCP §1013 mail; (b)(2) 30 days ≤10%; (b)(3)(A) 90 days >10% |
+| 10 | [Civ. Code §1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV) | (a) 5%+CPI / 10%; (b) new-tenancy initial rate; (d)(3) local-ordinance exemption |
 | 11 | [SF AB 1482 guide](https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482) | 8.8% for 8/1/2026–7/31/2027 and that it "does NOT apply" to locally controlled units; two-unit owner-occupied exemption |
-| 12 | [Civ. Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5) | (a) 180 days; (d) retaliation for organising, no time limit |
+| 12 | [Civ. Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5&lawCode=CIV) | (a) 180 days; (d) retaliation for organising, no time limit |
 | 13 | [§37.10B tenant harassment](https://www.sf.gov/information/sec-3710b-tenant-harassment) | (a)(5) coercion to vacate; (a)(9) discrimination; (c)(5) treble damages / $1,000 minimum plus fees |
 | 14 | [§37.10C algorithmic devices](https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited) | Prohibition on use, per-month and per-unit violations, tenant and nonprofit private right of action |
 | 15 | [§6.14 / Costa-Hawkins guidance](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins) | 6.14 notice to each subsequent occupant; 60 days generally reasonable; co-tenants not subject to a Costa-Hawkins increase |

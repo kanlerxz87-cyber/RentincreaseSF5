@@ -7,7 +7,7 @@
 - Increase **greater than 10%**: **90 days'** written notice.
 - Service under CCP §1013 (mail) adds **5 days**.
 
-https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827
+https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV
 
 The Rent Board states the same rule: "If the notice is mailed, the landlord must give the
 tenant 5 more days." — https://www.sf.gov/learn-about-rent-increases-san-francisco/
@@ -25,7 +25,7 @@ increases too. — https://www.sf.gov/documents/7737/537_6.14_Costa-Hawkins_Peti
 - **(d)(5)(A)(ii):** the single-family/condo exemption is unavailable to "a
   corporation" (and to a REIT, and to an LLC with at least one corporate member).
 
-https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12
+https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV
 
 The Rent Board publishes the current San Francisco figure and the interaction:
 
@@ -39,7 +39,7 @@ The Rent Board publishes the current San Francisco figure and the interaction:
 
 ## Costa-Hawkins — Civil Code §§1954.50–1954.535
 
-Vacancy decontrol framework. https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53
+Vacancy decontrol framework. https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53&lawCode=CIV
 
 The San Francisco application matters more than the statute for this property:
 

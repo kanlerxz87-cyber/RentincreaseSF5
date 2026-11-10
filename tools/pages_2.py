@@ -4,6 +4,7 @@ tenant-lawyer stress test, source register, flagged for review.
 Citation convention: write [[S1]] inside any HTML string; resolve() converts it to a link.
 """
 
+from html import escape as _html_escape
 from site_lib import badge, page_head, tbl, legend, layout, resolve, SOURCES
 
 ALLOWANCES = [
@@ -512,10 +513,11 @@ def sources():
     b += """
 <section class="panel">
   <h2>How verification was done</h2>
-  <p>Each source below was fetched and read in full during the session on 7 November 2026, and each table row
-  elsewhere on the site links to the specific page its value came from. Nothing was taken from a secondary summary
-  without a matching official page. Where an official page could not be read, the value is blank and the gap is
-  listed on <a href="flagged.html">Flagged for review</a>.</p>
+  <p>The original register was compiled on 7 November 2026; the controlling sources and the newly added
+  official records were re-read on 10 November 2026. Each table row elsewhere on the site links to the specific
+  page its value came from. Nothing was taken from a secondary summary without a matching official page. Where an
+  official value could not be confirmed, the cell is blank and the gap is listed on
+  <a href="flagged.html">Flagged for review</a>.</p>
 """
     b += legend()
     b += """
@@ -525,13 +527,17 @@ def sources():
   <h2>The register</h2>
 """
     rows = [["<strong>%s</strong>" % sid,
-             '<a href="%s" target="_blank" rel="noopener">%s</a>' % (url, title),
+             '<a href="%s" target="_blank" rel="noopener">%s</a>' % (_html_escape(url, quote=True), title),
              pub, used, badge("verified")]
             for sid, title, pub, url, used, status in SOURCES]
     b += tbl("Sources, what each was used for, and verification status",
              [("ID", False), ("Source", False), ("Publisher", False), ("Used for", False), ("Status", False)],
              rows)
     b += """
+  <p class="small"><strong>Source-ID scope:</strong> IDs such as S1 in this older set are local to
+  <code>data/sources.csv</code> and <code>pages/sources.html</code>. The consolidated hub at
+  <code>hub/sources.html</code> uses its own S-numbering, and the data-driven dashboard uses S01-style IDs.
+  Compare the official URLs, not the numeric IDs, when moving between sets. [[S1]] [[S33]]</p>
   <p class="small">Publisher note: the Rent Board publishes its copies of the ordinance and rules &ldquo;for
   administrative and public convenience only&rdquo;; the official publisher of San Francisco's Administrative Code
   is American Legal Publishing, linked from the Rent Board's ordinance page [[S18]]. For a court filing, cite the
@@ -546,8 +552,9 @@ def sources():
     (1.7%). None is relied on here.</li>
     <li><strong>The HUD FMR summary page</strong> &mdash; reachable, but the FY2026 table rendered without values,
     so no figure is reported.</li>
-    <li><strong>Legistar</strong> &mdash; the pending Ordinance 261015 file could not be opened, so its status is
-    reported as unknown rather than summarised from press coverage.</li>
+    <li><strong>Secondary reports about a banked-increase cap</strong> &mdash; the official legislative record for
+    Board of Supervisors File No. 261020 was retrieved on 10 November 2026, so press estimates of a vote date are
+    not used. The official record says <em>Pending Committee Action</em>; see [[S33]].</li>
   </ul>
 </section>
 """
@@ -563,13 +570,14 @@ FLAS_DIRECT = [
      "Unit A's 2026-02-01 allowance and any future skipped year.",
      "Ask the Rent Board counsellor which is current, and whether the 1/13/26 rule amendments changed Rule 4.12. Until then, treat the earlier year as at risk if the anniversary date is moved.",
      "conflict", ["S11", "S9", "S1", "S10"]),
-    ("F2", "Ordinance 261015 (10% cap on banked and capital-improvement increases) &mdash; status unknown",
-     "A bill introduced 15&ndash;18 September 2026 would cap banked plus capital-improvement increases at 10% per "
-     "year for three years. Secondary reporting says a Board vote was expected in November or December 2026, but no "
-     "official legislative record page could be opened in this session.",
-     "Directly changes Unit B's 13.1% to 10% this cycle if enacted as described.",
-     "Check the Board of Supervisors legislative record and the Rent Board's news page before drafting any Unit B notice; if enacted, recompute and carry the balance forward.",
-     "pending", ["S18", "S28"]),
+    ("F2", "Board of Supervisors File No. 261020 - proposed 10% cap, not enacted",
+     "The official legislative record was opened on 10 November 2026. It shows a proposal introduced on "
+     "15 September 2026, status <em>Pending Committee Action</em>, and no final action. The Rent Board's 9 November "
+     "notice says the proposal would temporarily cap combined banked and capital-improvement increases at 10% per "
+     "year; no enactment date or final text is asserted. [[S33]] [[S1]]",
+     "Would change the conditional 13.1% Unit B illustration if enacted as proposed; no amount is cleared for service.",
+     "Recheck the official legislative record and the Rent Board notice immediately before any banked increase; see consolidated-hub flag F09. This archived flag is superseded by that current disclosure.",
+     "pending", ["S33", "S1"]),
     ("F3", "Unit A base rent of $3,995.00 set on 2025-02-01 &mdash; lawfulness unverified",
      "A new-tenancy initial rent may be set without limit for an empty unit [[S1]], but the ordinance withdraws that "
      "for five years where the prior tenancy ended by an owner notice under Civil Code &sect;1946.1 or a &sect;827 "
@@ -629,7 +637,7 @@ def flagged():
   <h2>Summary</h2>
   <div class="grid">
     <div class="tile"><div class="k">Conflicting official sources</div><div class="v">1</div><div class="n">F1 &mdash; banking waiting period</div></div>
-    <div class="tile"><div class="k">Pending legislation</div><div class="v">1</div><div class="n">F2 &mdash; Ordinance 261015, 10% cap</div></div>
+    <div class="tile"><div class="k">Pending legislation</div><div class="v">1</div><div class="n">F2 &mdash; File 261020, proposed 10% cap</div></div>
     <div class="tile"><div class="k">Unverified facts</div><div class="v">3</div><div class="n">F3, F4, F5</div></div>
     <div class="tile"><div class="k">Absence-of-authority findings</div><div class="v">2</div><div class="n">F6, F7</div></div>
     <div class="tile"><div class="k">Documented assumption</div><div class="v">1</div><div class="n">F8 &mdash; Unit A anniversary date</div></div>
@@ -650,7 +658,7 @@ def flagged():
   <ul>
     <li>Allowable annual increase for 3/1/2027&ndash;2/29/2028 &mdash; not yet published by the Rent Board. <span class="badge bad">unverified</span></li>
     <li>HUD Fair Market Rent, two-bedroom, this area, FY2026/27 &mdash; could not be confirmed. <span class="badge bad">unverified</span></li>
-    <li>Outcome and effective date of Ordinance 261015 &mdash; could not be confirmed. <span class="badge warn">pending legislation</span></li>
+    <li>Enactment date and final text of File No. 261020 &mdash; not yet published; proposal only. <span class="badge warn">pending legislation</span></li>
   </ul>
   <p class="small">Each of these is a cell a reader might expect to be filled. They are blank because filling them
   would have meant guessing.</p>

@@ -79,7 +79,7 @@
       "publisher": "California Legislative Information",
       "title": "Civil Code §827 - notice of change in terms / rent increase",
       "type": "Statute",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV",
       "verifies": "30-day notice for increases of 10% or less; 90-day notice for more than 10% (alone or combined with other increases in the prior 12 months); service personally or by mail per CCP §1013."
     },
     {
@@ -87,7 +87,7 @@
       "publisher": "California Legislative Information",
       "title": "Civil Code §1947.12 - Tenant Protection Act of 2019 (AB 1482)",
       "type": "Statute",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV",
       "verifies": "State cap of 5% + CPI or 10%, whichever is lower; and §1947.12(d)(3) exclusion for housing subject to a local ordinance that restricts annual increases below that amount."
     },
     {
@@ -95,7 +95,7 @@
       "publisher": "California Legislative Information",
       "title": "Civil Code §1954.53 - Costa-Hawkins Rental Housing Act",
       "type": "Statute",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53&lawCode=CIV",
       "verifies": "§1954.53(a) owner may set the initial rate for a new tenancy; §1954.53(d)(2) market increase only after the original occupants no longer permanently reside; §1954.53(d)(3) does NOT apply to partial changes of occupancy where an original occupant remains."
     },
     {
@@ -103,7 +103,7 @@
       "publisher": "California Legislative Information",
       "title": "Government Code §12955 - FEHA housing discrimination",
       "type": "Statute",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=12955",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12955&lawCode=GOV",
       "verifies": "Unlawful for an owner to discriminate or harass on the listed protected bases (race, color, religion, sex, gender identity, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran status, genetic information)."
     },
     {
@@ -119,7 +119,7 @@
       "publisher": "California Legislative Information",
       "title": "Penal Code §396 - price gouging during a declared emergency",
       "type": "Statute",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=396",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=396&lawCode=PEN",
       "verifies": "During a declared state or local emergency (and 30 days after), it is unlawful to charge more than 10% above the prior price for, among other things, housing."
     },
     {

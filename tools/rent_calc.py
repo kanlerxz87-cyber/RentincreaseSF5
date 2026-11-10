@@ -226,7 +226,7 @@ def compute_scenario(unit, rates, effective, banked_months_rule, only_most_recen
         "notice_reason": reason,
         "serve_by_delivered": (effective - timedelta(days=days)).isoformat() if days else None,
         "serve_by_mailed": (effective - timedelta(days=days + 5)).isoformat() if days else None,
-        "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
+        "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV",
     }
 
 

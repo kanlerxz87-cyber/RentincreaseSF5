@@ -6,8 +6,10 @@ confirmed from an official source it is either omitted, or emitted as a blank ce
 with an "unverified" badge.
 """
 
+from html import escape as _html_escape
+
 SITE_TITLE = "SF Rental Increase Compliance Dashboard"
-SITE_SUB = "Two rent-controlled units &middot; 1940 building &middot; Outer Sunset, ZIP 94122 &middot; research date 7 November 2026"
+SITE_SUB = "Two rent-controlled units &middot; 1940 building &middot; Outer Sunset, ZIP 94122 &middot; research date 10 November 2026"
 
 # ---------------------------------------------------------------------------
 # Source register. Every row of every table cites one of these ids.
@@ -56,13 +58,13 @@ SOURCES = [
      "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482/",
      "AB 1482 cap 5%+CPI or 10%; 8.8% for SF from 8/1/2026-7/31/2027; does NOT apply to units under the SF Rent Ordinance increase limits; no limit on initial rent for a vacant unit.", "verified"),
     ("S15", "Cal. Civil Code Sec. 1947.12 (AB 1482 rent cap)", "California Legislative Information",
-     "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+     "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV",
      "Statutory text: 5%+CPI or 10%; only two increments in 12 months; new-tenancy initial rate (b); exemption for housing under a local ordinance that restricts increases below the state cap (d)(3).", "verified"),
     ("S16", "Cal. Civil Code Sec. 827 (notice of change in terms / rent increase)", "California Legislative Information",
-     "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
+     "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV",
      "30 days for an increase of 10% or less; 90 days for more than 10%; personal delivery or mail per Code Civ. Proc. Sec. 1013.", "verified"),
     ("S17", "Cal. Civil Code Sec. 1954.53 (Costa-Hawkins: initial rental rate)", "California Legislative Information",
-     "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53",
+     "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53&lawCode=CIV",
      "An owner may establish the initial rental rate for a dwelling, except in the enumerated situations.", "verified"),
     ("S18", "The Rent Ordinance (Chapter 37 index and full text, amended 11/2/26)", "SF.gov / San Francisco Rent Board",
      "https://www.sf.gov/reports--rent-ordinance/",
@@ -103,6 +105,21 @@ SOURCES = [
     ("S30", "626A - Complete list of amendments to the Rules and Regulations (through 1/13/26)", "SF.gov / San Francisco Rent Board",
      "https://media.api.sf.gov/documents/626A_Complete_List_of_Amendments_to_the_RRs_1-13-26_.pdf",
      "Amendment history, including the 3/11/86 entry that the landlord bears the burden of proving an above-allowable increase is justified, and the 5/6/86 banking clarifications.", "verified"),
+    ("S31", "Rules and Regulations Part XIII, Section 13.14 - Licensing / Notice of Rent Increase", "SF.gov / San Francisco Rent Board",
+     "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent",
+     "Current Rule 13.14: licence judged on the effective date, not service date; applies on/after July 1 2022 for 10+ non-condo buildings and March 1 2023 for condos and buildings with fewer than 10 units.", "verified"),
+    ("S32", "Form 538 - 2024-25 Bond Measure Passthrough Worksheet", "SF.gov / San Francisco Rent Board",
+     "https://www.sf.gov/file/538-2024-25-bond-measure-worksheet-1024-pdf",
+     "Older official form stating July 1 2020 / March 1 2021 licence effective dates; conflicts with current Rule 13.14 and Administrative Code sec. 37.15(c). Published as flagged item F23.", "verified"),
+    ("S33", "Board of Supervisors File No. 261020 - cap on banked rent increases", "City and County of San Francisco",
+     "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
+     "Official legislative record: introduced September 15 2026, Pending Committee Action, no enactment or final action. Proposed 10% annual cap is not law.", "verified"),
+    ("S34", "Fair Housing Act overview", "U.S. Department of Housing and Urban Development",
+     "https://www.hud.gov/helping-americans/fair-housing-act-overview",
+     "Federal protected classes and prohibition on discrimination in housing terms; no general federal numerical private-rent ceiling established.", "verified"),
+    ("S35", "42 U.S.C. sec. 3604 - discrimination in sale or rental of housing", "U.S. Government Publishing Office",
+     "https://www.govinfo.gov/content/pkg/USCODE-2024-title42/html/USCODE-2024-title42-chap45-subchapI-sec3604.htm",
+     "Official U.S. Code text of the Fair Housing Act discrimination prohibition and disability accommodation duties.", "verified"),
 ]
 
 SRC = {sid: dict(id=sid, title=t, pub=p, url=u, used=w, status=s) for sid, t, p, u, w, s in SOURCES}
@@ -112,7 +129,8 @@ def link(sid, text=None):
     """Inline citation link."""
     s = SRC[sid]
     label = text if text else s["id"]
-    return '<a class="src" href="%s" target="_blank" rel="noopener">%s</a>' % (s["url"], label)
+    return '<a class="src" href="%s" target="_blank" rel="noopener">%s</a>' % (
+        _html_escape(s["url"], quote=True), label)
 
 
 BADGE = {

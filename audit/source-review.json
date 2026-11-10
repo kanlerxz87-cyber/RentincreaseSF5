@@ -1,32 +1,311 @@
 {
-  "review_date": "2026-11-08",
-  "method": "Direct retrieval with the page-fetch tool; controlling text read against the consolidated register. This is retrieval and semantic-review evidence, not a continuous live monitor.",
+  "review_date": "2026-11-10",
+  "method": "Direct retrieval with the page-fetch tool on 10 November 2026; controlling text read against the consolidated register and older official publications checked for conflicts. This is retrieval and semantic-review evidence, not a continuous live monitor.",
   "sources": [
-    {"id": "S1", "url": "https://www.sf.gov/rent-board-housing-inventory", "status": "retrieved", "supports": ["R01-R10", "R13-R14"], "notes": "All residential owners report; tenant-occupied reporting generates license; current license required before increase goes into effect; March 1 deadline; late filing has no monetary penalty; submissions public and under penalty of perjury."},
-    {"id": "S2", "url": "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing", "status": "retrieved", "supports": ["R01", "R03-R06"], "notes": "Read full subsections (a)-(e). Small-building/condo reporting commenced March 1, 2023; suspension is prospective-restoration only."},
-    {"id": "S3", "url": "https://www.sf.gov/information--sec-373-rent-limitations", "status": "retrieved", "supports": ["R11", "R16-R17", "R24", "R41", "R52-R53", "R55"], "notes": "Read annual 60%-of-CPI/7% ceiling, banking, additional occupants, petition provisions, notice content and null-and-void text. No entity-size distinction in ordinary annual cap."},
-    {"id": "S4", "url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf", "resolved_url": "https://media.api.sf.gov/documents/571_Allowable_Annual_Increases_26-27_1.pdf", "status": "retrieved", "supports": ["R15", "R22", "all 46 historical rate periods"], "notes": "Full PDF read. Current 1.6% for 2026-03-01 through 2027-02-28; no 2027-28 value. Two-digit years 82-99 are 1982-1999, not 2082-2099."},
-    {"id": "S5", "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco", "status": "retrieved", "supports": ["R15", "R17-R21", "R23", "R27", "R33-R35", "R37", "R39", "R41", "R53", "R55"], "notes": "Current rate, base-rent-only, no rounding up, 12-month timing, 30/90-day notice, five extra mailing days, roommate surcharge prohibition and worked examples read. First example mislabels a June 2025 rate as 1.6%; Form 571 says 1.4% for that period. Multi-year example also contains an availability-date parenthetical inconsistency; do not treat examples as property rulings."},
-    {"id": "S6", "url": "https://www.sf.gov/information--banked-rent-increases", "status": "retrieved", "supports": ["R11", "R21", "R26", "R30", "R32", "R37", "R39"], "notes": "Page states 24 full months without any increase; Rule 4.12 states 12 months from availability. Reconciliation is analysis, not a quoted unified rule. Example contains a 2024/2025 rate-label inconsistency; arithmetic uses 1.4% for August 2025."},
-    {"id": "S7", "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring", "status": "retrieved", "supports": ["R20", "R25", "R30-R31", "R39-R41"], "notes": "Read Rules 4.10 and 4.12 in retrieved chunks. 4.12 requires 12 months from availability, no compounding/rounding up, banked portion and dates disclosed; omission of banked detail alone does not void under 4.12(b)."},
-    {"id": "S8", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827", "status": "retrieved", "supports": ["R34-R36", "R38"], "notes": "Periodic residential tenancies: personal or CCP 1013 mail service; 30 days at <=10%, 90 days >10%, cumulative prior-12-month test. Subsidized recertification exception exists; subsidy status unknown."},
-    {"id": "S9", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12", "status": "retrieved", "supports": ["R43", "R45"], "notes": "State cap 5%+CPI or 10%; local stricter rent-control exclusion in (d)(3); owner-occupied two-unit exemption conditions read."},
-    {"id": "S10", "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482", "status": "retrieved", "supports": ["R43-R45"], "notes": "SF AB1482 maximum 8.8% for 2026-08-01 through 2027-07-31; explicitly does not apply to units under SF Rent Ordinance increase limits."},
-    {"id": "S11", "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws", "status": "retrieved", "supports": ["R42", "R61"], "notes": "June 13, 1979 cutoff is a coverage indicator, not proof for an unidentified parcel. Exemptions and free counselor hours read."},
-    {"id": "S12", "url": "https://www.sf.gov/rent-board-fee", "status": "retrieved", "supports": ["R12-R13"], "notes": "2026-27 fee $59/unit, March 1 deadline, 5% monthly penalty capped at 15%; fee exemption does not satisfy Inventory reporting. No claim that fee delinquency alone suspends the license."},
-    {"id": "S13", "url": "https://www.sf.gov/information--annual-rent-increase-multiple-years", "status": "retrieved", "supports": ["R11", "R19-R20", "R30"], "notes": "Add percentages, do not compound; no petition; base rent only; no rounding up. Worked 8.2% example re-derived successfully."},
-    {"id": "S14", "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins", "status": "retrieved", "supports": ["R23", "R56-R57"], "notes": "6.14 notice generally within 60 days of knowledge; last original occupant must vacate. Costa-Hawkins does not apply to later co-tenants; optional determination petition available."},
-    {"id": "S15", "url": "https://www.sf.gov/information/sec-3710b-tenant-harassment", "status": "retrieved", "supports": ["R50"], "notes": "Bad-faith fraud/intimidation/coercion and discrimination provisions; civil damages/fees read. A lawful cap-compliant increase is not immunity from motive-based claims."},
-    {"id": "S16", "url": "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited", "status": "retrieved", "supports": ["R51", "R54"], "notes": "Non-public competitor-data revenue-management software prohibited; each month/unit separate violation; aggregated public-data reports excluded."},
-    {"id": "S17", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5", "status": "retrieved", "supports": ["R49"], "notes": "180-day protection tied to specified habitability events and broader retaliation prohibition in (d); lawful-cause savings clause and tenant evidentiary burden read."},
-    {"id": "S18", "url": "https://calcivilrights.ca.gov/housing/", "status": "retrieved", "supports": ["R48", "R52"], "notes": "Protected characteristics, reasonable accommodation, source-of-income and retaliation guidance read. No uniform-increase safe harbor stated."},
-    {"id": "S19", "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview", "status": "retrieved", "supports": ["R46-R47", "R52"], "notes": "Federal protected classes and housing discrimination prohibition read. Page establishes no general numerical rent ceiling; absence finding is scoped to reviewed private unsubsidized housing sources."},
-    {"id": "S20", "url": "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/", "status": "retrieved", "supports": ["R58-R59", "R61-R62"], "notes": "Tenant Petition 516C/Form C, no filing charge or stated filing time limit, evidence list, hearing procedure and counselor number read."},
-    {"id": "S21", "url": "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag%5B74%5D.pdf", "status": "retrieved", "supports": ["R60"], "notes": "Form 1007 is an eviction-termination notice resource; free Tenant Right to Counsel intake through Eviction Defense Collaborative. Does not establish free counsel for every rent-increase dispute."},
-    {"id": "S22", "url": "https://www.sf.gov/information--annual-rent-increase-multiple-years", "status": "retrieved", "supports": ["duplicate of S13 in merged register"], "notes": "Retrieved and read; same official multiple-year guidance."},
-    {"id": "S23", "url": "https://www.sf.gov/rent-ordinance/", "status": "retrieved_via_section_pages", "supports": ["ordinance index"], "notes": "Controlling section pages S2/S3/S15/S16 were directly retrieved; index is a navigation aid, not independent proof of a property fact."},
-    {"id": "G1", "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site", "status": "retrieved", "supports": ["public Pages visibility", "branch-root publishing"], "notes": "GitHub warns Pages sites are public even from private repositories where supported; branch publishing takes the selected root/docs folder."},
-    {"id": "G2", "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository", "status": "retrieved", "supports": ["historical exposure limitation"], "notes": "History rewrite requires coordination, changes hashes, risks losing/recontaminating work, and cannot remove clones/forks/cached views by force-push alone. Open PRs should be merged/closed first; GitHub Support may remove cached views."}
+    {
+      "id": "S1",
+      "url": "https://www.sf.gov/rent-board-housing-inventory",
+      "status": "retrieved",
+      "supports": [
+        "R01-R10",
+        "R13-R14"
+      ],
+      "notes": "All residential owners report; tenant-occupied reporting generates license; current license required before increase goes into effect; March 1 deadline; late filing has no monetary penalty; submissions public and under penalty of perjury."
+    },
+    {
+      "id": "S2",
+      "url": "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing",
+      "status": "retrieved",
+      "supports": [
+        "R01",
+        "R03-R06"
+      ],
+      "notes": "Read full subsections (a)-(e). Small-building/condo reporting commenced March 1, 2023; suspension is prospective-restoration only."
+    },
+    {
+      "id": "S3",
+      "url": "https://www.sf.gov/information--sec-373-rent-limitations",
+      "status": "retrieved",
+      "supports": [
+        "R11",
+        "R16-R17",
+        "R24",
+        "R41",
+        "R52-R53",
+        "R55"
+      ],
+      "notes": "Read annual 60%-of-CPI/7% ceiling, banking, additional occupants, petition provisions, notice content and null-and-void text. No entity-size distinction in ordinary annual cap."
+    },
+    {
+      "id": "S4",
+      "url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf",
+      "resolved_url": "https://media.api.sf.gov/documents/571_Allowable_Annual_Increases_26-27_1.pdf",
+      "status": "retrieved",
+      "supports": [
+        "R15",
+        "R22",
+        "all 46 historical rate periods"
+      ],
+      "notes": "Full PDF read. Current 1.6% for 2026-03-01 through 2027-02-28; no 2027-28 value. Two-digit years 82-99 are 1982-1999, not 2082-2099."
+    },
+    {
+      "id": "S5",
+      "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+      "status": "retrieved",
+      "supports": [
+        "R15",
+        "R17-R21",
+        "R23",
+        "R27",
+        "R33-R35",
+        "R37",
+        "R39",
+        "R41",
+        "R53",
+        "R55"
+      ],
+      "notes": "Current rate, base-rent-only, no rounding up, 12-month timing, 30/90-day notice, five extra mailing days, roommate surcharge prohibition and worked examples read. First example mislabels a June 2025 rate as 1.6%; Form 571 says 1.4% for that period. Multi-year example also contains an availability-date parenthetical inconsistency; do not treat examples as property rulings."
+    },
+    {
+      "id": "S6",
+      "url": "https://www.sf.gov/information--banked-rent-increases",
+      "status": "retrieved",
+      "supports": [
+        "R11",
+        "R21",
+        "R26",
+        "R30",
+        "R32",
+        "R37",
+        "R39"
+      ],
+      "notes": "Page states 24 full months without any increase; Rule 4.12 states 12 months from availability. Reconciliation is analysis, not a quoted unified rule. Example contains a 2024/2025 rate-label inconsistency; arithmetic uses 1.4% for August 2025."
+    },
+    {
+      "id": "S7",
+      "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
+      "status": "retrieved",
+      "supports": [
+        "R20",
+        "R25",
+        "R30-R31",
+        "R39-R41"
+      ],
+      "notes": "Read Rules 4.10 and 4.12 in retrieved chunks. 4.12 requires 12 months from availability, no compounding/rounding up, banked portion and dates disclosed; omission of banked detail alone does not void under 4.12(b)."
+    },
+    {
+      "id": "S8",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV",
+      "status": "retrieved",
+      "supports": [
+        "R34-R36",
+        "R38"
+      ],
+      "notes": "Periodic residential tenancies: personal or CCP 1013 mail service; 30 days at <=10%, 90 days >10%, cumulative prior-12-month test. Subsidized recertification exception exists; subsidy status unknown."
+    },
+    {
+      "id": "S9",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV",
+      "status": "retrieved",
+      "supports": [
+        "R43",
+        "R45"
+      ],
+      "notes": "State cap 5%+CPI or 10%; local stricter rent-control exclusion in (d)(3); owner-occupied two-unit exemption conditions read."
+    },
+    {
+      "id": "S10",
+      "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482",
+      "status": "retrieved",
+      "supports": [
+        "R43-R45"
+      ],
+      "notes": "SF AB1482 maximum 8.8% for 2026-08-01 through 2027-07-31; explicitly does not apply to units under SF Rent Ordinance increase limits."
+    },
+    {
+      "id": "S11",
+      "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws",
+      "status": "retrieved",
+      "supports": [
+        "R42",
+        "R61"
+      ],
+      "notes": "June 13, 1979 cutoff is a coverage indicator, not proof for an unidentified parcel. Exemptions and free counselor hours read."
+    },
+    {
+      "id": "S12",
+      "url": "https://www.sf.gov/rent-board-fee",
+      "status": "retrieved",
+      "supports": [
+        "R12-R13"
+      ],
+      "notes": "2026-27 fee $59/unit, March 1 deadline, 5% monthly penalty capped at 15%; fee exemption does not satisfy Inventory reporting. No claim that fee delinquency alone suspends the license."
+    },
+    {
+      "id": "S13",
+      "url": "https://www.sf.gov/information--annual-rent-increase-multiple-years",
+      "status": "retrieved",
+      "supports": [
+        "R11",
+        "R19-R20",
+        "R30"
+      ],
+      "notes": "Add percentages, do not compound; no petition; base rent only; no rounding up. Worked 8.2% example re-derived successfully."
+    },
+    {
+      "id": "S14",
+      "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
+      "status": "retrieved",
+      "supports": [
+        "R23",
+        "R56-R57"
+      ],
+      "notes": "6.14 notice generally within 60 days of knowledge; last original occupant must vacate. Costa-Hawkins does not apply to later co-tenants; optional determination petition available."
+    },
+    {
+      "id": "S15",
+      "url": "https://www.sf.gov/information--sec-3710b-tenant-harassment",
+      "status": "retrieved",
+      "supports": [
+        "R50"
+      ],
+      "notes": "Bad-faith fraud/intimidation/coercion and discrimination provisions; civil damages/fees read. A lawful cap-compliant increase is not immunity from motive-based claims."
+    },
+    {
+      "id": "S16",
+      "url": "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited",
+      "status": "retrieved",
+      "supports": [
+        "R51",
+        "R54"
+      ],
+      "notes": "Non-public competitor-data revenue-management software prohibited; each month/unit separate violation; aggregated public-data reports excluded."
+    },
+    {
+      "id": "S17",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5&lawCode=CIV",
+      "status": "retrieved",
+      "supports": [
+        "R49"
+      ],
+      "notes": "180-day protection tied to specified habitability events and broader retaliation prohibition in (d); lawful-cause savings clause and tenant evidentiary burden read."
+    },
+    {
+      "id": "S18",
+      "url": "https://calcivilrights.ca.gov/housing/",
+      "status": "retrieved",
+      "supports": [
+        "R48",
+        "R52"
+      ],
+      "notes": "Protected characteristics, reasonable accommodation, source-of-income and retaliation guidance read. No uniform-increase safe harbor stated."
+    },
+    {
+      "id": "S19",
+      "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
+      "status": "retrieved",
+      "supports": [
+        "R46-R47",
+        "R52"
+      ],
+      "notes": "Federal protected classes and housing discrimination prohibition read. Page establishes no general numerical rent ceiling; absence finding is scoped to reviewed private unsubsidized housing sources."
+    },
+    {
+      "id": "S20",
+      "url": "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/",
+      "status": "retrieved",
+      "supports": [
+        "R58-R59",
+        "R61-R62"
+      ],
+      "notes": "Tenant Petition 516C/Form C, no filing charge or stated filing time limit, evidence list, hearing procedure and counselor number read."
+    },
+    {
+      "id": "S21",
+      "url": "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag%5B74%5D.pdf",
+      "status": "retrieved",
+      "supports": [
+        "R60"
+      ],
+      "notes": "Form 1007 is an eviction-termination notice resource; free Tenant Right to Counsel intake through Eviction Defense Collaborative. Does not establish free counsel for every rent-increase dispute."
+    },
+    {
+      "id": "S22",
+      "url": "https://www.sf.gov/information--annual-rent-increase-multiple-years",
+      "status": "retrieved",
+      "supports": [
+        "duplicate of S13 in merged register"
+      ],
+      "notes": "Retrieved and read; same official multiple-year guidance."
+    },
+    {
+      "id": "S23",
+      "url": "https://www.sf.gov/reports--rent-ordinance/",
+      "status": "retrieved_via_section_pages",
+      "supports": [
+        "ordinance index"
+      ],
+      "notes": "Controlling section pages S2/S3/S15/S16 were directly retrieved; index is a navigation aid, not independent proof of a property fact."
+    },
+    {
+      "id": "G1",
+      "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site",
+      "status": "retrieved",
+      "supports": [
+        "public Pages visibility",
+        "branch-root publishing"
+      ],
+      "notes": "GitHub warns Pages sites are public even from private repositories where supported; branch publishing takes the selected root/docs folder."
+    },
+    {
+      "id": "G2",
+      "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository",
+      "status": "retrieved",
+      "supports": [
+        "historical exposure limitation"
+      ],
+      "notes": "History rewrite requires coordination, changes hashes, risks losing/recontaminating work, and cannot remove clones/forks/cached views by force-push alone. Open PRs should be merged/closed first; GitHub Support may remove cached views."
+    },
+    {
+      "id": "S24",
+      "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
+      "status": "retrieved",
+      "supports": [
+        "F09",
+        "pending-law caveat"
+      ],
+      "notes": "Official bill record: File No. 261020 introduced 2026-09-15, Pending Committee Action, no final action or enactment. Proposal would cap combined banked and capital-improvement increases at 10% per year; not law."
+    },
+    {
+      "id": "S25",
+      "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent",
+      "status": "retrieved",
+      "supports": [
+        "F23",
+        "R03",
+        "R05"
+      ],
+      "notes": "Full Part XIII read. Rule 13.14 judges licence compliance on the increase effective date, not service date, and applies on/after 2022-07-01 for 10+ non-condo buildings and 2023-03-01 for condos and buildings with fewer than 10 units."
+    },
+    {
+      "id": "S26",
+      "url": "https://www.sf.gov/file/538-2024-25-bond-measure-worksheet-1024-pdf",
+      "status": "retrieved",
+      "supports": [
+        "F23"
+      ],
+      "notes": "Official 2024-25 Form 538 says licence requirement applies to increases effective on/after 2020-07-01 and 2021-03-01. Conflicts with current Rule 13.14 and sec. 37.15(c); published as F23, not adopted as current law."
+    },
+    {
+      "id": "S27",
+      "url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title42/html/USCODE-2024-title42-chap45-subchapI-sec3604.htm",
+      "status": "retrieved",
+      "supports": [
+        "R46-R47",
+        "F07"
+      ],
+      "notes": "Official U.S. Code text of 42 U.S.C. 3604: prohibits discrimination in rental terms and requires disability accommodations; no general numerical private-rent ceiling."
+    }
   ],
   "register_review": {
     "rows_reviewed": 62,
@@ -34,6 +313,11 @@
     "blank_or_absence": "R14, R22, R46 and R52 remain blank/no-authority findings; a review link is not verification of a missing property fact or a universal negative.",
     "analysis": "R28-R29, R41, R45 and R53 are reasoning, not quoted rules. Banking reconciliation and unit entitlement depend on unverified complete rent history.",
     "owner_inputs": "Unit dates, rents, 1940 construction, ZIP and occupancy changes are owner-supplied intake, not government-verified records.",
-    "not_certified": "No parcel coverage determination, license lookup, lawful-rent determination, notice service, lawyer review or empirical neighborhood/owner-type norm is certified."
+    "not_certified": "No parcel coverage determination, license lookup, lawful-rent determination, notice service, lawyer review or empirical neighborhood/owner-type norm is certified. Conditional unit arithmetic is not approved for service."
+  },
+  "review_warnings": {
+    "whole_repo_audit": "196 tracked files, 115 HTML files, 2,139 data rows, 0 failures, 371 review warnings: 366 archived/mirror rows without direct row-level sources and 5 public-agency address-shaped candidates.",
+    "scope": "The release gate covers the 14 current hub pages; archived sets are preserved for history and are disclosed on F22.",
+    "external_links": "See verification/external-link-status.csv and the external-links workflow artifact after the pull-request run."
   }
 }
