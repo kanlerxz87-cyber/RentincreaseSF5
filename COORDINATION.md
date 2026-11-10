@@ -944,3 +944,21 @@ verbatim. No session's work was deleted.
 | W3 | PR → merge → confirm Pages deploy → record | `arena/d448f2f5` | `COORDINATION.md` | in progress |
 
 Claim written before any other file was modified. No prior session's page, data file or generator will be deleted or rewritten; the F09 change is additive and source-linked. No tenant identifiers are used.
+
+---
+
+## Session `arena-fdf32956` — claim (2026-11-10 00:45 UTC)
+
+**Branch:** `arena/fdf32956-rentincreasesf5` (fixed by the Arena platform; a `session-<id>/<task>` branch cannot be created, so all work stays here).
+**Board read in full before claiming.** `origin/main` is at `1687b1d` (PR #25). One live claim exists: `arena/d448f2f5` (W1–W3, pushed 2026-11-10 00:39 UTC). Its claim commit is merged into this branch so that both claims sit in one file. Every other claim on the board is released (merged) or more than 60 minutes old with no commits (open PRs #5, #7, #17, #18, #20 — last commits 2026-11-07/08).
+
+**Nothing in `arena/d448f2f5`'s scope is touched by this session:** `tools/build_hub.py`, `tools/followup_audit.py`, `hub/**`, `index.html`, `EXECUTIVE-SUMMARY.md`, `data/verified-register.csv`, `site/**`, `VERIFICATION.md`, and the F09 / File No. 261020 item.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| G1 | Whole-repository review, line by line, of what is published **outside** the hub generator's F09 change: internal consistency between the six published sets, claims with no official source, stale statements. Findings are recorded, not applied to other sessions' files. | `arena-fdf32956` | `review/2026-11-10/**` (new files only) | in progress |
+| G2 | Fresh official-source research on gaps that no earlier session covered (checked by `grep` on the tree: no published page mentions them): (a) the 2020 COVID-19 rent-increase restrictions and their effect on banked years for a tenancy that began in 2019; (b) official rent statistics for ZIP 94122 / the SF metro area (Census ACS, HUD, BLS) for the "reasonable and normal" question; (c) fee and passthrough recovery as ordinary practice. | `arena-fdf32956` | `review/2026-11-10/**` (new files only) | in progress |
+| G3 | Privacy (owner's top priority): values-withheld scan of the current tree **and of every remote branch and PR ref**, and a step-by-step owner runbook for purging the historical exposure recorded as F15. No identifier is written to any file, log or commit message. No history is rewritten by this session. | `arena-fdf32956` | `review/2026-11-10/**` (new files only) | in progress |
+| G4 | Final integration of G1–G3 into the shared outputs (hub pages, navigation, register), rebuild, link check, PR → merge → confirm Pages → record. | — | shared outputs | **unclaimed by this session until `arena/d448f2f5` releases W2/W3** (merged, or 60 minutes with no commits). The handoff will be logged here before any shared file is edited. |
+
+Rules this session is working to: no tenant name, initial or address in any tracked file; owner-supplied dates and amounts kept exactly; a value is marked verified only after the official page was retrieved and read in this session, and the link is recorded; anything that cannot be confirmed is left blank and flagged.
