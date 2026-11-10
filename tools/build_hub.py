@@ -527,7 +527,7 @@ def layout(title, body, active, root=False, desc=None):
 <body>
 <header class="top"><div class="top-in">
 <div class="brand"><a href="%s" style="text-decoration:none;color:inherit">SF rent increase dashboard</a>
-<small>Outer Sunset 94122 &middot; anonymised &middot; sources rechecked 8 Nov 2026</small></div>
+<small>Outer Sunset 94122 &middot; anonymised &middot; sources rechecked 10 Nov 2026</small></div>
 <nav class="main">%s</nav>
 </div></header>
 <main id="main"><div class="wrap">%s</div></main>
@@ -717,7 +717,9 @@ def page_exec():
           "without an increase on 1 February 2027. Unit 2 banking assumes no increases since 2019, which was not established. Both "
           "readings give the same answer for both units, so the 3.0% figure for Unit 1 does not depend "
           "on resolving the wording. This reconciliation is analysis, not a quoted rule, and is "
-          "published on the flagged page for confirmation.</p>")
+          "published on the flagged page for confirmation. A proposed temporary 10% cap on combined "
+          "banked and capital-improvement increases (File No. 261020) is under consideration and has "
+          "not been enacted; see F09. " + src("S5") + "</p>")
     b += '</section>'
 
     b += '<section class="panel"><h2>4. One unit or both</h2>'
@@ -1072,8 +1074,8 @@ FLAGS = [
      "Absence of authority, not a quoted rule", ["S19"], "Recorded as a search result, not as a legal conclusion."),
     ("F08", "No uniform-increase requirement found", "No provision requiring both units to be raised together, or by the same amount, was found.",
      "Absence of authority, not a quoted rule", ["S3", "S18"], "The anti-discrimination and retaliation rules still apply to the reason for any difference."),
-    ("F09", "Pending local legislation on banked increases", "Proposals to cap banked increases at 10% a year were reported during 2026. No official legislative status page was confirmed in this session.",
-     "Unverified", ["S6"], "No value is asserted. If enacted, it would affect the Unit 2 full-bank option. Recheck before serving."),
+    ("F09", "Pending local legislation on banked increases", "SF Rent Board notice posted 9 November 2026: Board of Supervisors File No. 261020 would temporarily limit combined banked and capital-improvement increases to 10% per year. If enacted as proposed it would apply to banked increases noticed on or after 15 September 2026. It has not been enacted and is subject to change.",
+     "Proposed, not enacted - recheck before serving", ["S5"], "No value is asserted. If enacted as proposed, it would affect the Unit 2 full-bank option (13.1%). Recheck the Rent Board page before serving any banked increase."),
     ("F10", "ZIP-level market rent not published", "No official rent figure for ZIP 94122 was confirmed. The Rent Board does not publish a market rent for a ZIP code.",
      "Left blank", ["S5"], "For a rent-controlled unit the lawful increase does not depend on market rent, so nothing is estimated here."),
     ("F11", "Notice deadlines assume personal service", "Serve-by dates on this site are computed for personal delivery.",

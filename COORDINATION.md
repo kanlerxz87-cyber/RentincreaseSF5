@@ -949,3 +949,19 @@ verbatim. No session's work was deleted.
 **Privacy:** no real tenant names, initials, addresses, unit numbers beyond generic placeholders, or identifying documents will be introduced to any public artifact. Dates and amounts remain as supplied but are labeled unverified owner intake. Historical exposure is flagged, not claimed to be erased.
 
 Claim recorded before any other file was modified; this commit is pushed immediately.
+
+---
+
+## Session `arena/d448f2f5-rentincreasesf5` — claim (2026-11-10)
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| W1 | Re-verify live site + controlling official sources; run full build/checks | `arena/d448f2f5` | `COORDINATION.md`, `VERIFICATION.md` | in progress |
+| W2 | Update F09: confirm Board of Supervisors File No. 261020 proposal (SF Rent Board notice posted 2026-11-09; not enacted) | `arena/d448f2f5` | `tools/build_hub.py`, `tools/followup_audit.py`, generated `hub/**`, `index.html`, `EXECUTIVE-SUMMARY.md`, `data/verified-register.csv`, `site/**` mirrors | in progress |
+| W3 | PR → merge → confirm Pages deploy → record | `arena/d448f2f5` | `COORDINATION.md` | in progress |
+
+Claim written before any other file was modified. No prior session's page, data file or generator will be deleted or rewritten; the F09 change is additive and source-linked. No tenant identifiers are used.
+
+### Concurrent-session reconciliation — 2026-11-10
+
+`arena/d448f2f5` completed W1–W3 in merged PR #26 (`eea2fbf`) while this branch was being claimed. Its November 9 official notice about proposed File No. 261020, the updated F09 flag, executive summary and 10 November site stamp are preserved verbatim. This session re-fetched those official sources independently, will not duplicate or overwrite that completed work, and continues F1/F2 from the merged tip. The stale open PRs are not treated as active owners; their content is not silently discarded. The merge conflict in this shared file was resolved by retaining both claim sections and adding only this reconciliation note.
