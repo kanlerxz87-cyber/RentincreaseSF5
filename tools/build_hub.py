@@ -79,6 +79,12 @@ SOURCES = {
             "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770"),
     "S26": ("File 261020 - legislation text, version 1", "SF Board of Supervisors (Legistar)",
             "https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E"),
+    "S27": ("Failure to Repair and Maintain Petitions (Form 516B, 60-day window)", "SF Rent Board",
+            "https://www.sf.gov/information--failure-repair-and-maintain-petitions/"),
+    "S28": ("Rent Board Forms Center (516A-518 forms)", "SF Rent Board",
+            "https://www.sf.gov/rent-board-forms-forms-center/"),
+    "S29": ("Tenant Summary Petitions (Form 518)", "SF Rent Board",
+            "https://www.sf.gov/information--tenant-summary-petitions/"),
 }
 
 # ---------------------------------------------------------------------------
@@ -301,6 +307,27 @@ row("notices", "Required notice content",
 row("notices", "Consequence of a defective notice",
     "Rule 4.10(b): a non-conforming increase is null and void in its entirety, subject only to a "
     "good-faith readjustment where the excess is no more than one-half of one percent.", VERIFIED, ["S7"])
+row("notices", "The statute's own list of what the notice must itemise", "", VERIFIED, ["S3"],
+    "Sec. 37.3(b) requires the landlord, on or before the date the notice is given, to state in "
+    "writing which portion of the increase is (1) the annual and/or banked amount, (2) certified "
+    "operating-and-maintenance, comparable-rent or capital-improvement costs, (3) utility, water-bond "
+    "or general-obligation-bond passthroughs, and (4) RAP loan amortisation. Sec. 37.3(b)(5): a "
+    "non-conforming increase 'shall be null and void'.")
+row("notices", "Charging extra rent because a roommate moved in", "", VERIFIED, ["S3"],
+    "Sec. 37.3(a)(11)(A) prohibits an increase imposed solely because an additional occupant joined "
+    "the tenancy, 'notwithstanding a rental agreement or lease that specifically permits a rent "
+    "increase for additional occupants'. A Board petition is the only route, under (a)(11)(B).")
+row("notices", "Tenant route: defer an increase while repairs are outstanding (Form 516B)", "", VERIFIED,
+    ["S27", "S28"],
+    "A tenant may petition to defer an annual increase if required repairs were not made. The "
+    "petition must be filed no later than 60 days after the tenant receives the rent increase notice; "
+    "a granted petition postpones the increase until the work is done, and the anniversary date is "
+    "not affected.")
+row("notices", "Tenant route: a notice that is clearly unlawful on its face (Form 518)", "", VERIFIED,
+    ["S29", "S28"],
+    "A Tenant Summary Petition, with a copy of the notice, is for an increase that is clearly "
+    "unlawful on its face. Rent Board staff contact the landlord; in most cases a corrected notice "
+    "follows, and its effective date sets a new anniversary date.")
 row("notices", "Must the notice state a reason?",
     "No reason is required for an annual or banked increase; the ordinance itself authorises it. "
     "Reasons and cost proof attach to petition-based increases.", ANALYSIS, ["S3", "S5", "S7"])
@@ -490,9 +517,37 @@ display:flex;align-items:center;justify-content:center}
 input.filter{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:14px;margin:0 0 12px}
 footer{border-top:1px solid var(--line);background:var(--card);padding:20px 0;font-size:13px;color:var(--muted)}
 .pill{display:inline-block;font-size:12px;background:#eef1f5;border-radius:999px;padding:2px 9px;margin:0 5px 5px 0}
+pre.model{background:#fafbfc;border:1px solid var(--line);border-radius:8px;padding:14px 16px;
+font:13px/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;overflow-x:auto}
 @media(max-width:640px){h1{font-size:22px}.panel{padding:15px}table{font-size:13px}}
 @media print{header.top,nav.main,input.filter{display:none}body{background:#fff}
 .panel{border:none;padding:0;margin:0 0 14px;break-inside:avoid}}
+"""
+
+MODEL_NOTICE = """NOTICE OF RENT INCREASE
+
+Date of this notice:        [date you deliver or mail it]
+To:                         [tenant name or names as they appear on the rental agreement]
+Rental unit:                [unit identifier - do not put the full street address on a public site]
+Current base rent:          $[amount] per month
+New base rent:              $[amount] per month
+Amount of the increase:     $[amount] per month
+Percentage increase:        [x.x]% of the current base rent
+Effective date:             [at least 30 days after this notice, or at least 90 days if the
+                            increase is more than 10 percent; add 5 days if this is mailed]
+
+How the increase is made up (Rent Ordinance sec. 37.3(b); Rules and Regulations sec. 4.10(a)):
+    - Annual allowable increase:  [x.x]%, being the Rent Board allowance in effect on the
+      effective date
+    - Banked increase:            [x.x]%, based on the rent increase anniversary dates of
+      [list the dates]
+
+Rent increase licence: this unit is reported in the Rent Board Housing Inventory and a rent
+increase licence is on file. The licence does not need to be attached to this notice.
+
+Questions: Rent Board counsellors, 415-252-4600, weekdays 9am to noon and 1pm to 4pm.
+
+Served by: [personal delivery / first-class mail] on [date]
 """
 
 NAV = [
@@ -705,6 +760,33 @@ def page_exec():
           "workflow: confirm the licence before serving. A licence is not immunity from a tenant challenge. %s</p>"
           % src("S3", "S13"))
     b += '</div>'
+    b += '<h3 style="margin:18px 0 8px">If this is your first increase, do these six things in this order</h3><p class="note">The whole process for an ordinary annual increase. Steps 1-3 are the licence; steps 4-6 are the notice.</p>'
+    b += '<ol class="steps">'
+    for title_, body_, s in [
+        ("Confirm the unit is covered",
+         "The reported 1940 build year points to coverage, because many units built on or before "
+         "13 June 1979 are covered, but confirm it rather than assume it. If the classification is "
+         "unclear, ask a Rent Board counsellor - the call is free.", ["S11"]),
+        ("Report the unit into the Housing Inventory",
+         "Free, online through the Rent Board Portal, once a year, due 1 March. This is the step that "
+         "replaces the \u201capplication\u201d you read about: reporting a tenant-occupied unit generates "
+         "the rent increase licence automatically.", ["S1", "S2"]),
+        ("Check the licence is on file before you serve anything",
+         "The requirement is that the licence be current on the effective date. Checking it first costs "
+         "nothing and removes the single most common reason an increase is void.", ["S1", "S24"]),
+        ("Work out the number and the date",
+         "Use the allowance in effect on the effective date (1.6% up to 28 February 2027), applied to "
+         "base rent only, at least 12 months after the tenancy began or the last increase. Do not round "
+         "up, and do not add a charge because someone new moved in.", ["S4", "S5", "S3"]),
+        ("Serve a written notice with the right period",
+         "30 days at or below 10%, 90 days above it, plus 5 days if mailed. The notice must state the "
+         "dollar amount, the percentage, the effective date and which part is banked.", ["S8", "S5", "S3"]),
+        ("Keep the file",
+         "Lease, ledger, calculations, licence evidence, the notice as served and proof of service. A "
+         "tenant petition can reopen the whole rent history with no time limit.", ["S20"]),
+    ]:
+        b += "<li><h3>%s</h3><p>%s</p><p>%s</p></li>" % (e(title_), e(body_), src(*s))
+    b += '</ol>'
     b += reg_table("licence", "Licence and reporting - every requirement, with its source")
     b += '</section>'
 
@@ -748,6 +830,20 @@ def page_exec():
           "unused increases - so treating them differently is explained by the tenancy history, "
           "not by the tenants. Document that reasoning in writing before serving anything.</p>"
           % (src("S3"), src("S18", "S19"), src("S15", "S17")))
+    b += ('<p class="small"><strong>The practical answer, on the facts supplied:</strong> nothing '
+          'requires you to raise both units. But raising both at the same published percentage, each at '
+          'its own lawful date, is the option that is easiest to defend - not because uniformity is '
+          'required, but because it removes the only question a reviewer would otherwise have to ask. '
+          'Raising one and not the other is lawful when the reason is tenancy-specific and written down. '
+          'Raising both by the same dollar amount, or on the same date regardless of anniversary, is not '
+          'required and can create its own problems.</p>')
+    b += ('<p class="small"><strong>If an increase is challenged.</strong> The tenant can file Form 516C '
+          'at no charge and with no time limit; the Board sends the petition to the owner and the matter '
+          'is usually set for an arbitration hearing before an Administrative Law Judge within a few '
+          'months, a process designed so that no one needs an attorney. If the unit was never reported, '
+          'the licence is suspended and the tenant is not obligated to pay the increased rent for the '
+          'months of suspension. %s %s</p>'
+          % (src("S20", "S2"), src("S24")))
     b += '</section>'
 
     b += '<section class="panel"><h2>5. What to do next</h2><ol class="steps">'
@@ -961,6 +1057,89 @@ def page_notices():
           "tenant's personal circumstances, a request for repairs, or a wish to see the unit vacated. "
           "Those are the facts that turn a lawful number into a retaliation or harassment claim. %s</p>"
           % (src("S3", "S7"), src("S3"), src("S17", "S15")))
+    b += '</section>'
+
+    # ---- Model notice: a drafting aid, built from the itemisation duty -----
+    b += '<section class="panel"><h2>A model notice you can work from</h2>'
+    b += ("<p class=\"small\">This is a drafting aid for your own file. It is not a Rent Board form "
+          "and it is not legal advice. Everything in square brackets is yours to complete accurately, "
+          "and any line that does not apply to the unit should be deleted rather than guessed. The "
+          "itemisation follows sec. 37.3(b); the 30/90-day periods follow Civil Code sec. 827(b). "
+          "%s %s</p>" % (src("S3"), src("S8")))
+    b += '<pre class="model">' + e(MODEL_NOTICE) + '</pre>'
+    b += ('<p class="note">Deliberately absent: any reason, any reference to a tenant\'s personal '
+          'circumstances, and any occupant-based charge. There is no requirement to state a reason for '
+          'an annual increase, and an occupant-based increase is prohibited. ' + src("S3", "S17") + '</p>')
+    b += '</section>'
+
+    # ---- Pre-service checklist -------------------------------------------
+    b += '<section class="panel"><h2>Before you serve: the checklist</h2>'
+    checks = [
+        ("Both units are reported in the Housing Inventory for the current reporting year",
+         "Confirm in the Rent Board Portal, which is public and shows the licence status for each unit.",
+         ["S1", "S24"]),
+        ("The tenancy start, anniversary date and last increase are documented",
+         "The site cannot supply these. A tenant petition can reach the whole rent history with no time "
+         "limit, so the ledger has to be right before the notice goes out.",
+         ["S5", "S20"]),
+        ("The percentage used is the one in effect on the effective date",
+         "1.6% for any effective date from 1 March 2026 through 28 February 2027. Not the service date.",
+         ["S4", "S5"]),
+        ("Banked years, if any, are listed individually with the rates and dates claimed",
+         "Added, never compounded, never rounded up, and stated in the notice.",
+         ["S7", "S6"]),
+        ("The notice period matches the size of the increase",
+         "30 days at or below 10%; 90 days above 10%, measured against the lowest rent charged in the "
+         "preceding 12 months and combined with any other increase in that window.",
+         ["S8"]),
+        ("Service method and proof are planned",
+         "Personal delivery, or mail under Code of Civil Procedure sec. 1013 with 5 extra days. Keep the "
+         "proof of service.",
+         ["S8", "S5"]),
+        ("Nothing in the file links the increase to a repair request, a complaint or a protected trait",
+         "Civil Code sec. 1942.5 and sec. 37.10B apply to the purpose, not the percentage.",
+         ["S17", "S15"]),
+    ]
+    b += '<div class="tw"><table><caption>Run every line before the notice is served</caption>'
+    b += '<thead><tr><th>Check</th><th>What to confirm</th><th>Status and source</th></tr></thead><tbody>'
+    for item, detail, s in checks:
+        b += ("<tr><td>%s</td><td>%s</td><td>%s %s</td></tr>"
+              % (e(item), e(detail), badge(VERIFIED), src(*s)))
+    b += '</tbody></table></div></section>'
+
+    # ---- What the tenant can do with the notice --------------------------
+    b += '<section class="panel"><h2>What the tenant can do with the notice</h2>'
+    b += ("<p class=\"small\">This is the section a tenant-side reviewer will use, so it is worth "
+          "reading before serving. The Board states that there is no charge for filing its tenant "
+          "petitions. %s</p>"
+          % src("S20", "S27"))
+    b += '<div class="tw"><table><caption>Tenant routes, with the official source for each</caption>'
+    b += '<thead><tr><th>Route</th><th>Use</th><th>Deadline</th><th>Status and source</th></tr></thead><tbody>'
+    for route, use, when, s in [
+        ("Form 516C - unlawful rent increase or review of rent history",
+         "Challenges the increase itself or asks the Board to determine the lawful rent. No filing fee.",
+         "No time limit", ["S20"]),
+        ("Form 518 - Tenant Summary Petition",
+         "For a notice that is clearly unlawful on its face. Staff contact the owner; a corrected notice "
+         "usually follows and sets a new anniversary date.",
+         "No time limit stated", ["S29", "S28"]),
+        ("Form 516B - failure to repair and maintain",
+         "Defers the increase until required repairs are done, if the tenant reported them and they were "
+         "required by law. The anniversary date is not affected.",
+         "60 days from receipt of the notice", ["S27", "S28"]),
+        ("Form 516A - decrease in housing services",
+         "Where services were reduced without a matching rent reduction, a rent reduction may be "
+         "sought instead of a challenge to the increase.",
+         "No time limit stated", ["S28"]),
+        ("Rent Board counselling",
+         "Free advice for owners and tenants alike, before or after service.",
+         "Weekdays 9-12 and 1-4", ["S11"]),
+    ]:
+        b += ("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s %s</td></tr>"
+              % (e(route), e(use), e(when), badge(VERIFIED), src(*s)))
+    b += '</tbody></table></div>'
+    b += ('<p class="note">The purpose of listing these is not to predict a challenge. It is that a '
+          'notice built to survive each route is the same notice as a notice built to comply.</p>')
     b += '</section>'
     return layout("Notices", b, "notices.html")
 

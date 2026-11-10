@@ -70,7 +70,7 @@ provided the same written method is applied to both. See `pages/owner-practices.
 ## Known gaps (published on the Flagged for review page)
 
 - F1 banking waiting period: 12 vs 24 months (official pages disagree).
-- F2 Ordinance 261015 (10% cap on banked increases): status unknown, vote reportedly Nov–Dec 2026.
+- F2 Ordinance 261015 (10% cap on banked increases): superseded. The real file is Board of Supervisors File 261020; official Legistar status "Pending Committee Action" (introduced 15 September 2026). See hub/flagged.html F09/F22.
 - F3 Unit A base-rent reset lawfulness.
 - F4 Tenant A2 status and §6.14 notice.
 - F5 HUD Fair Market Rent: no official value confirmed.
