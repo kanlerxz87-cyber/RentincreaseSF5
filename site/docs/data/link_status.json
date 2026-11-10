@@ -23,7 +23,7 @@
       "result": "ok",
       "confirmed": "no limit on banking; banked increases do not expire; do not carry over to a new tenant; not compounded or prorated; notice must state which part is banked"
     },
-    "https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring": {
+    "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring": {
       "result": "ok",
       "confirmed": "Rule 4.10(a) notice contents; Rule 4.10(b) null and void; Rule 4.12(a) full 12 months / not compounded / not rounded up; Rule 4.12(b) banked disclosure; Rule 4.11(h) and 4.13(f) not part of base rent"
     },
@@ -79,15 +79,15 @@
       "result": "ok",
       "confirmed": "index of Ordinance, Rules and Regulations, Chapter 37A, Costa-Hawkins, Ellis Act, AB 1482"
     },
-    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.": {
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827": {
       "result": "ok",
       "confirmed": "30 days if 10% or less; 90 days if greater than 10%, alone or combined"
     },
-    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12.": {
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12": {
       "result": "ok",
       "confirmed": "5% + CPI capped at 10%; no more than two increments in 12 months; (d)(3) exemption for lower local caps; (d)(5)(A)(ii) corporations excluded"
     },
-    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53.": {
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53": {
       "result": "ok",
       "confirmed": "vacancy decontrol framework and its exceptions"
     },

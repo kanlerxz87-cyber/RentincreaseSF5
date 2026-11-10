@@ -38,7 +38,7 @@
     "SFRB-RR-PART4": {
       "title": "Rent Board Rules and Regulations, Part IV - Rent Increases Not Requiring Approval (Section 4.10 Notice; Section 4.12 Banking)",
       "publisher": "San Francisco Rent Board (sf.gov)",
-      "url": "https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
+      "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
       "supports": "Rule 4.12: banking requires a full 12 months; banked increases are not compounded and not rounded up; Rule 4.10(a): required contents of the rent increase notice; Rule 4.10(b): non-conforming increase is null and void."
     },
     "SFRB-RR-COMPLETE": {
@@ -122,19 +122,19 @@
     "CA-CIV-827": {
       "title": "California Civil Code Section 827 - notice of change of terms of lease",
       "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
       "supports": "30 days' written notice for increases of 10% or less; 90 days for increases greater than 10% (alone or combined with other increases in the prior 12 months)."
     },
     "CA-CIV-1947-12": {
       "title": "California Civil Code Section 1947.12 - AB 1482 statewide rent cap",
       "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12.",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
       "supports": "5% + CPI (max 10%) cap; no more than two increments in 12 months; (d)(3) exemption for housing already under a lower local rent cap; (d)(5)(A)(ii) corporations cannot use the single-family/condo exemption."
     },
     "CA-CIV-1954-53": {
       "title": "California Civil Code Section 1954.53 - Costa-Hawkins vacancy decontrol",
       "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
-      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53.",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53",
       "supports": "Owner may set the initial rental rate for a new tenancy, subject to the listed exceptions (e.g. prior tenancy terminated by the owner)."
     },
     "HUD-FHA": {

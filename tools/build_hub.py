@@ -20,7 +20,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TODAY = date(2026, 11, 8)
+TODAY = date(2026, 11, 10)
 
 # ---------------------------------------------------------------------------
 # OFFICIAL SOURCES - every one retrieved and read during this session.
@@ -55,7 +55,7 @@ SOURCES = {
     "S14": ("Petition under Rule 6.14 and/or Costa-Hawkins", "SF Rent Board",
             "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins"),
     "S15": ("Admin Code sec. 37.10B - Tenant Harassment", "SF Rent Board",
-            "https://www.sf.gov/information/sec-3710b-tenant-harassment"),
+            "https://www.sf.gov/information--sec-3710b-tenant-harassment"),
     "S16": ("Admin Code sec. 37.10C - Algorithmic devices prohibited", "SF Rent Board",
             "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited"),
     "S17": ("Civil Code sec. 1942.5 - retaliation", "California Legislature",
@@ -72,6 +72,9 @@ SOURCES = {
             "https://www.sf.gov/information--annual-rent-increase-multiple-years"),
     "S23": ("The Rent Ordinance (Chapter 37 index)", "SF Rent Board",
             "https://www.sf.gov/reports--rent-ordinance/"),
+    "S24": ("Board of Supervisors File No. 261020 - cap on banked rent increases (pending)",
+            "City and County of San Francisco",
+            "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770"),
 }
 
 # ---------------------------------------------------------------------------
@@ -673,7 +676,7 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
 
 def page_exec():
     b = head("Executive summary",
-             "Compiled 7 November 2026; every figure re-verified against the same official sources on 8 November 2026. The licence question comes first because nothing else "
+             "Compiled 7 November 2026; controlling official sources rechecked on 10 November 2026. The licence question comes first because nothing else "
              "can be done safely until it is settled.")
     b += '<section class="panel"><h2>1. The licence question</h2><div class="answer">'
     b += ("<p><strong>You must be licensed, but you do not apply.</strong> Report each unit into the Rent "
@@ -719,7 +722,7 @@ def page_exec():
           "on resolving the wording. This reconciliation is analysis, not a quoted rule, and is "
           "published on the flagged page for confirmation. A proposed temporary 10% cap on combined "
           "banked and capital-improvement increases (File No. 261020) is under consideration and has "
-          "not been enacted; see F09. " + src("S5") + "</p>")
+          "not been enacted; see F09. " + src("S5", "S24") + "</p>")
     b += '</section>'
 
     b += '<section class="panel"><h2>4. One unit or both</h2>'
@@ -1075,7 +1078,7 @@ FLAGS = [
     ("F08", "No uniform-increase requirement found", "No provision requiring both units to be raised together, or by the same amount, was found.",
      "Absence of authority, not a quoted rule", ["S3", "S18"], "The anti-discrimination and retaliation rules still apply to the reason for any difference."),
     ("F09", "Pending local legislation on banked increases", "SF Rent Board notice posted 9 November 2026: Board of Supervisors File No. 261020 would temporarily limit combined banked and capital-improvement increases to 10% per year. If enacted as proposed it would apply to banked increases noticed on or after 15 September 2026. It has not been enacted and is subject to change.",
-     "Proposed, not enacted - recheck before serving", ["S5"], "No value is asserted. If enacted as proposed, it would affect the Unit 2 full-bank option (13.1%). Recheck the Rent Board page before serving any banked increase."),
+     "Proposed, not enacted - recheck before serving", ["S5", "S24"], "No value is asserted. If enacted as proposed, it would affect the Unit 2 full-bank option (13.1%). Recheck the Rent Board page before serving any banked increase."),
     ("F10", "ZIP-level market rent not published", "No official rent figure for ZIP 94122 was confirmed. The Rent Board does not publish a market rent for a ZIP code.",
      "Left blank", ["S5"], "For a rent-controlled unit the lawful increase does not depend on market rent, so nothing is estimated here."),
     ("F11", "Notice deadlines assume personal service", "Serve-by dates on this site are computed for personal delivery.",
@@ -1115,6 +1118,10 @@ FLAGS = [
      "Publication-surface limitation", ["S1", "S2"],
      "If the repository is made private, confirm Pages access settings before serving notices. Never store personal data anywhere in this repository."),
 
+    ("F22", "Archived research sets contain legacy citation gaps",
+     "A 10 November 2026 whole-repository audit found 366 archived/mirror table rows without a direct source link in the row, mostly in older open-data market tables and duplicate dashboards. The current consolidated hub gates every table row for an official source link; archived sets are preserved for history, not as current certified tables.",
+     "Archived citation gap; non-blocking", ["S5", "S1"],
+     "Use the consolidated hub for current review. If an archived row is to be relied on, add a direct official source link to that row or blank the unconfirmed value; see /audit/index.html for the mechanical row audit."),
 ]
 
 
@@ -1223,6 +1230,15 @@ def page_verification():
         ["Arithmetic re-check", e("Both units' five scenarios recomputed from the base rents and the published percentages."),
          e("Unit 1: 1.6% = $63.92 and 3.0% = $119.85. Unit 2: 1.6% = $50.40, 13.1% = $412.65 and 10.0% = $315.00. All match to the cent, none rounded up."),
          badge(COMPUTED) + " " + src("S4", "S8")],
+        ["Official sources re-read 10 Nov 2026", e("Housing Inventory, Administrative Code sections 37.15 and 37.3, Form 571, Part IV Rules 4.10 and 4.12, annual, banking and multiple-year guidance, AB 1482, Civil Code sections 827, 1942.5 and 1947.12, CRD and HUD guidance, the Rent Board fee, tenant petition and right-to-counsel form, and Board of Supervisors File 261020 were re-fetched."),
+         e("The 1.6% rate, licence rule, notice periods, state-law exclusion and pending status of File 261020 matched. No 2027-28 annual rate was published."),
+         badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S12", "S17", "S18", "S19", "S20", "S21", "S24")],
+        ["External link health", e("All unique HTTPS links in tracked HTML, Markdown, CSV and JSON artifacts were retrieved by a GitHub Actions runner; hard 404/410/5xx failures were repaired and the check rerun."),
+         e("Current result: no confirmed broken links. Government bot blocks, if any, are labeled for manual review. The status CSV is committed under verification/."),
+         badge(VERIFIED) + " " + src("S5", "S24")],
+        ["Archived row traceability", e("All current consolidated-hub table rows are gated for a direct official source link. Older archived sets remain for history and include rows with only table-level or no citations."),
+         e("Published as F22 on Flagged for Review; use the consolidated hub for current, per-row sourced analysis."),
+         badge(VERIFIED) + " " + src("S5")],
     ]
     b += table("Verification performed in this session", ["Check", "Method", "Result", "Status and source"], rows)
     b += '</section>'

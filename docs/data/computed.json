@@ -165,7 +165,7 @@
           "notice_reason": "Civil Code 827(b)(2): increase is 10% or less -> 30 days",
           "serve_by_delivered": "2027-01-02",
           "serve_by_mailed": "2026-12-28",
-          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
           "key": "conservative",
           "label": "Current-year annual increase only"
         },
@@ -198,7 +198,7 @@
           "notice_reason": "Civil Code 827(b)(2): increase is 10% or less -> 30 days",
           "serve_by_delivered": "2027-01-02",
           "serve_by_mailed": "2026-12-28",
-          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
           "key": "moderate",
           "label": "Current-year annual increase + the most recent banked year"
         },
@@ -231,7 +231,7 @@
           "notice_reason": "Civil Code 827(b)(2): increase is 10% or less -> 30 days",
           "serve_by_delivered": "2027-01-02",
           "serve_by_mailed": "2026-12-28",
-          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
           "key": "maximum_rule_4_12",
           "label": "Maximum lawful under Rule 4.12 (12-month banking test)"
         },
@@ -257,7 +257,7 @@
           "notice_reason": "Civil Code 827(b)(2): increase is 10% or less -> 30 days",
           "serve_by_delivered": "2027-01-02",
           "serve_by_mailed": "2026-12-28",
-          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
           "key": "maximum_24_month_reading",
           "label": "Conservative lower bound - the most restrictive reading possible (24 months measured from each skipped anniversary). Not stated in any official source; shown only as a floor."
         }
@@ -303,7 +303,7 @@
           "notice_reason": "Civil Code 827(b)(2): banked component is 0% and the annual component is capped at 7% by Sec. 37.3(a)(1), so the total cannot exceed 10% -> 30 days",
           "serve_by_delivered": "2027-05-02",
           "serve_by_mailed": "2027-04-27",
-          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
           "key": "conservative",
           "label": "Current-year annual increase only"
         },
@@ -336,7 +336,7 @@
           "notice_reason": "Civil Code 827(b)(2): banked component is 1.6% and the annual component is capped at 7% by Sec. 37.3(a)(1), so the total cannot exceed 10% -> 30 days",
           "serve_by_delivered": "2027-05-02",
           "serve_by_mailed": "2027-04-27",
-          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
           "key": "moderate",
           "label": "Current-year annual increase + the most recent banked year"
         },
@@ -405,7 +405,7 @@
           "notice_reason": "Civil Code 827(b)(3)(A): the banked component alone (13.1%) is greater than 10%, so 90 days is required whatever the annual component turns out to be",
           "serve_by_delivered": "2027-03-03",
           "serve_by_mailed": "2027-02-26",
-          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
           "key": "maximum_rule_4_12",
           "label": "Maximum lawful under Rule 4.12 (12-month banking test)"
         },
@@ -468,7 +468,7 @@
           "notice_reason": "Civil Code 827(b)(3)(A): the banked component alone (11.5%) is greater than 10%, so 90 days is required whatever the annual component turns out to be",
           "serve_by_delivered": "2027-03-03",
           "serve_by_mailed": "2027-02-26",
-          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827.",
+          "notice_source_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
           "key": "maximum_24_month_reading",
           "label": "Conservative lower bound - the most restrictive reading possible (24 months measured from each skipped anniversary). Not stated in any official source; shown only as a floor."
         }

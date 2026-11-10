@@ -9,7 +9,7 @@ class Check(HTMLParser):
   if tag=='a':
    u=a.get('href','');p=urlsplit(u)
    if p.scheme=='https':
-    assert p.hostname in {'www.sf.gov','leginfo.legislature.ca.gov','calcivilrights.ca.gov','www.hud.gov'},u
+    assert p.hostname in {'www.sf.gov','leginfo.legislature.ca.gov','calcivilrights.ca.gov','www.hud.gov','sfgov.legistar.com','www.govinfo.gov'},u
     self.official=True
    elif u and not u.startswith('#'):assert Path('site',p.path).exists(),u
  def handle_endtag(self,tag):

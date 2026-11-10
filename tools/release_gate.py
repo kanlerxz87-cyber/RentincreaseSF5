@@ -35,6 +35,8 @@ ALLOWED_HOSTS = {
     "leginfo.legislature.ca.gov",
     "calcivilrights.ca.gov",
     "www.hud.gov",
+    "sfgov.legistar.com",
+    "www.govinfo.gov",
 }
 
 # Privacy: no personal identifier is committed to this repository. GitHub Pages

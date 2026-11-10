@@ -36,7 +36,7 @@ TEXT_EXTENSIONS = {
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
         "meta", "param", "source", "track", "wbr"}
 # Government publishers used by the research, plus GitHub's own documentation.
-OFFICIAL_SUFFIXES = (".sf.gov", ".ca.gov", ".hud.gov", ".huduser.gov", ".sfgov.org")
+OFFICIAL_SUFFIXES = (".sf.gov", ".ca.gov", ".hud.gov", ".huduser.gov", ".sfgov.org", ".govinfo.gov", ".legistar.com")
 OFFICIAL_EXACT = {
     "sf.gov", "ca.gov", "hud.gov", "huduser.gov", "sfgov.org",
     "sfplanning.org", "sfplanninggis.org", "sfassessor.org", "sfrb.org",

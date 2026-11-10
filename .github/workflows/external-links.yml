@@ -1,0 +1,28 @@
+name: Official external link check
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '**.html'
+      - '**.md'
+      - 'data/**'
+      - 'tools/check_external_links.py'
+permissions:
+  contents: read
+concurrency:
+  group: external-links-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retrieve every unique published HTTPS link
+        run: python3 tools/check_external_links.py --output external-link-status.csv
+      - name: Publish the status table
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: external-link-status
+          path: external-link-status.csv
+          if-no-files-found: error

@@ -1,6 +1,6 @@
 # Executive summary — San Francisco rent increases
 
-Key rules rechecked November 8, 2026. Research, not legal advice or permission to serve notices.
+Key rules rechecked November 10, 2026. Research, not legal advice or permission to serve notices.
 
 ## First: an individual owner needs the rent-increase license too
 
@@ -31,7 +31,7 @@ The following are **conditional arithmetic only**, not verified lawful rents. Th
 | Unit 1, using $3,995 | $63.92 (1.6%) | $4,058.92 | Computed, not cleared for service | [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf) |
 | Unit 2, using $3,150 | $50.40 (1.6%) | $3,200.40 | Computed, not cleared for service | [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf) |
 
-More aggressive banked scenarios on the site are conditional, not recommendations or verified entitlements. In particular, no intervening Unit 2 increases since 2019 was **not** established by the supplied information. The 12-month/24-month banking wording is discussed as interpretation, not an official property-specific ruling. No later annual rate is asserted here. A proposed temporary 10% cap on combined banked and capital-improvement increases (Board of Supervisors File No. 261020, noticed by the Rent Board on 9 November 2026) has not been enacted and is subject to change; recheck before serving any banked increase. [Official notice](https://www.sf.gov/learn-about-rent-increases-san-francisco). [Official banking rules](https://www.sf.gov/information--banked-rent-increases).
+More aggressive banked scenarios on the site are conditional, not recommendations or verified entitlements. In particular, no intervening Unit 2 increases since 2019 was **not** established by the supplied information. The 12-month/24-month banking wording is discussed as interpretation, not an official property-specific ruling. No later annual rate is asserted here. A proposed temporary 10% cap on combined banked and capital-improvement increases (Board of Supervisors File No. 261020, noticed by the Rent Board on 9 November 2026) has not been enacted and is subject to change; recheck before serving any banked increase. [Official notice](https://www.sf.gov/learn-about-rent-increases-san-francisco). [Official bill record](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770). [Official banking rules](https://www.sf.gov/information--banked-rent-increases).
 
 ## Local, state and federal layers
 

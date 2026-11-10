@@ -98,7 +98,7 @@ Generated HTML is written to the repository root (GitHub Pages publishes `main:/
 - Values are never inferred. If an official source could not confirm a value, the cell is blank and the gap is
   listed on the *Flagged for review* page.
 - Arithmetic is labelled `calculated` and shows the official percentages it derives from.
-- Research date: **7 November 2026**. Statutes, rules and rates change; re-check before acting.
+- Research date: **10 November 2026**. Statutes, rules and rates change; re-check before acting.
 
 ## Privacy
 
