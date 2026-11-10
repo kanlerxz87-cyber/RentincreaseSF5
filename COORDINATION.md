@@ -932,3 +932,25 @@ verbatim. No session's work was deleted.
 - PR #24 merged to `main` at 2026-11-08T23:10:21Z, merge commit `7eb39fb0d2c8c05035632658e64c1b1326c1003b`; validation run 42533865727 success; Pages build/deployment run 42533865252 success; Pages API status `built`, latest build commit matches merge.
 - Live verification required cache-busting query strings: `/audit/index.html?v=7eb39fb`, `/site/docs/index.html?v=7eb39fb` and `/tools/repository_audit.py?v=7eb39fb` returned the new artifacts; unqualified directory URLs initially returned cached 404s. GitHub API confirmed repaired `pages/rates.html` anchors have real `href` attributes on main.
 - Live render review caught a presentation defect in the first generated audit page: list-valued audit fields were interpolated as raw Python list representations, inflating the page to ~53KB. Hotfix normalizes list/dict counts to integers, regenerates a ~9KB page, reruns exact privacy/history scan (0 current hits; 22 historical commits), and re-renders cleanly at 390px/1440px with no JS errors. This follow-up PR releases the correction; no tenant values were exposed by the defect.
+
+---
+
+## Session: `arena/b76d05a7-rentincreasesf5` — fresh-source re-verification + outstanding-PR integration (2026-11-10)
+
+**Branch:** `arena/b76d05a7-rentincreasesf5` (Arena-assigned; platform requirement — no session branch created).
+Base commit at claim time: `1687b1d` (merge of PR #25), working tree clean, no open claim in the board above
+names a live session. Five earlier PRs (#5, #7, #17, #18, #20) remain **open** from sessions that are no longer
+committing; this session will reconcile and release or supersede them rather than discard their work.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| W1 | Re-read every controlling official source as of 2026-11-10 and correct any figure that has drifted (notably the City's new 9 November 2026 legislation notice) | `arena/b76d05a7` | `tools/build_hub.py`, `tools/pages_*.py`, `tools/dashboard_build.py`, `data/*.{csv,json}` | in progress |
+| W2 | Verify the licence question line by line against §37.15 and the Housing Inventory page; keep it first in the executive summary | `arena/b76d05a7` | `hub/**` (generated) | in progress |
+| W3 | Verify notice content/service, state and federal layers (§827, §1947.12, §1942.5, FHA/FEHA) | `arena/b76d05a7` | `hub/**` (generated) | in progress |
+| W4 | Privacy scan of every published file and of git history | `arena/b76d05a7` | whole tree | in progress |
+| W5 | Run every generator/checker on a clean tree; confirm reproducibility | `arena/b76d05a7` | `tools/**`, `scripts/**` (only if a check fails) | in progress |
+| W6 | Reconcile open PRs #5, #7, #17, #18, #20; PR → merge → confirm Pages deploy → record | `arena/b76d05a7` | `COORDINATION.md` | in progress |
+| W7 | Flagged-for-review additions found by this pass | `arena/b76d05a7` | `hub/flagged.html` via `tools/build_hub.py` | needs review (published, non-blocking) |
+
+Claim written before any tracked artefact was modified. No prior session's page, data file or generator will be
+deleted; corrections are additive and logged here.
