@@ -5,13 +5,20 @@ two-unit building** in San Francisco's Outer Sunset (ZIP 94122).
 
 **Public site:** https://kanlerxz87-cyber.github.io/RentincreaseSF5/
 
+> **Re-verified 10 November 2026.** Every official source behind this research was re-fetched on that date.
+> One material change was found: the Rent Board has posted a notice that the Board of Supervisors is
+> considering **File No. 261020**, which would cap banked and capital-improvement increases at **10% a year**
+> and would reach banked increases noticed **on or after 15 September 2026**. It is **not enacted**. It does
+> not change Unit A. It is decisive for Unit B. See [`hub/pending.html`](hub/pending.html) and the section
+> *Pending legislation* below.
+
 The site now has **one consolidated landing page** with category subpages in `hub/`, built from a single
-62-row verification register. Four earlier independently compiled sets are preserved unchanged and
+71-row verification register. Four earlier independently compiled sets are preserved unchanged and
 linked from `hub/archive.html`:
 
 | Set | Pages | Character |
 | --- | --- | --- |
-| **Consolidated (`index.html` + `hub/`)** | overview, executive summary, Rent Board process, units & numbers, allowable increases, notices, law & protections, owner practices, tenant-lawyer test, full register, flagged for review, sources, verification, archive | **Current entry point.** Every table row carries an official source link; unconfirmed values are blank and flagged. Resolves the banking wording conflict and shows it does not change either unit's figure |
+| **Consolidated (`index.html` + `hub/`)** | overview, executive summary, pending 10% cap, Rent Board process, units & numbers, allowable increases, notices, law & protections, owner practices, tenant-lawyer test, full register, flagged for review, sources, verification, archive | **Current entry point.** Every table row carries an official source link; unconfirmed values are blank and flagged. Resolves the banking wording conflict and shows it does not change either unit's figure |
 
 ### Earlier sets (preserved)
 
@@ -49,8 +56,25 @@ before notice.
 | --- | --- | --- | --- | --- | --- | --- |
 | A / Unit 1 | 2025-02-01 | $3,995.00 | 1.4% + 1.6% = **3.0%** | $119.85 | $4,114.85 | 30 days |
 | A / Unit 1 — annual only | 2025-02-01 | $3,995.00 | **1.6%** current year only | $63.92 | $4,058.92 | 30 days |
-| B / Unit 2 | 2019-06-01 | $3,150.00 | 1.8+0.7+2.3+3.6+1.7+1.4+1.6 = **13.1%** | $412.65 | $3,562.65 | 90 days |
-| B / Unit 2 — held to 10% | 2019-06-01 | $3,150.00 | 10% by choice, not law | $315.00 | $3,465.00 | 30 days |
+| B / Unit 2 — **recommended** | 2019-06-01 | $3,150.00 | **10%**, held below the pending cap | $315.00 | $3,465.00 | 30 days |
+| B / Unit 2 — enacted-law maximum, at risk | 2019-06-01 | $3,150.00 | 1.8+0.7+2.3+3.6+1.7+1.4+1.6 = **13.1%** | $412.65 | $3,562.65 | 90 days |
+
+Both Unit B rows are lawful under the ordinance **as enacted today**. The 13.1% row is the one File No. 261020
+would reach retroactively if it passes as drafted, so the 10% row is the one this research recommends serving.
+
+## Pending legislation — File No. 261020 (not enacted)
+
+| Item | Verified value | Source |
+| --- | --- | --- |
+| What it would do | Cap the **combined** banked (§37.3(a)(2)) and capital-improvement (§37.3(a)(3)) increase at **10% of the lowest base rent in effect at any time in the preceding 12 months** | [Ordinance text as introduced](https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E) |
+| Which notices it reaches | Banked increases noticed, and CI petitions filed, **on or after 2026-09-15** | same |
+| Sunset | **2029-12-31**; the excess accumulates and may be imposed from 2030-01-01 | same |
+| Status on 2026-11-10 | Introduced 2026-09-15; **Pending Committee Action**, Land Use & Transportation | [BOS legislative record](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) |
+| Rent Board notice | Posted 2026-11-09 on the rent increase, banking, multiple-year, rates and forms pages | [Learn about rent increases](https://www.sf.gov/learn-about-rent-increases-san-francisco) |
+| Open question — **left blank, not inferred** | Whether the ordinary annual increase under §37.3(a)(1) counts toward the 10%. The text caps only (a)(2)–(3); the Rent Board summary says "combined amount of banked … and capital improvement" increases. Neither resolves it. Published unverified as **F22** | — |
+
+Waiting does not avoid the cap: the proposal would reach any banked notice served from 2026-09-15 until the
+2029 sunset. Holding Unit B's **total** increase to 10% is compliant under either reading of the open question.
 
 ## Build and validate
 
@@ -58,6 +82,7 @@ Requires Python 3, no packages or external assets:
 
 ```
 python3 scripts/build.py             # all sets; the consolidated hub in hub/ is built LAST
+python3 tools/build_hub.py           # consolidated set on its own
 python3 tools/release_gate.py        # 11 release checks; blocks a broken, unsourced or private site
 python3 scripts/check.py             # local links, official-source allowlist, every data row sourced, headings
 python3 scripts/independent_audit.py # root/site parity, landmarks, identifier exclusion
@@ -76,7 +101,7 @@ Generated HTML is written to the repository root (GitHub Pages publishes `main:/
 | --- | --- |
 | `index.html` | Consolidated landing page (generated by `tools/build_hub.py`) |
 | `hub/*.html`, `hub/hub.css` | Category subpages and stylesheet for the consolidated set |
-| `data/verified-register.csv` | The 62-row register exported for manual review |
+| `data/verified-register.csv` | The 71-row register exported for manual review |
 | `tools/build_hub.py` | Consolidated-set generator; register is the single source of truth |
 | `tools/release_gate.py` | Release gate: sourcing, privacy, links, parity, rates, arithmetic |
 | `previous-dashboard.html` | The previous merged hub, preserved and linked from the archive |
@@ -98,7 +123,11 @@ Generated HTML is written to the repository root (GitHub Pages publishes `main:/
 - Values are never inferred. If an official source could not confirm a value, the cell is blank and the gap is
   listed on the *Flagged for review* page.
 - Arithmetic is labelled `calculated` and shows the official percentages it derives from.
-- Research date: **7 November 2026**. Statutes, rules and rates change; re-check before acting.
+- Research date: **7 November 2026**; all sources re-fetched and re-verified **10 November 2026**.
+  Statutes, rules and rates change; re-check before acting.
+- Official-source hosts accepted by the checkers: `sf.gov`, `leginfo.legislature.ca.gov`,
+  `calcivilrights.ca.gov`, `hud.gov` and `sfgov.legistar.com` (the City's legislative record).
+  `github.com` is allowed as a link but is **never** accepted as a row's official source.
 
 ## Privacy
 

@@ -945,13 +945,73 @@ branches; this session does not touch, merge or close them (logged as an irregul
 
 | ID | Task | Owner | Files in scope | Status |
 | --- | --- | --- | --- | --- |
-| C1 | Re-read every controlling official source on 2026-11-10 and re-verify every published figure | `session-0c632e7e` | `VERIFICATION.md`, `data/verified-register.csv` | in progress |
-| C2 | Research and publish the pending Board of Supervisors legislation on banked-increase caps (File No. 261020) and recompute both units against it | `session-0c632e7e` | `data/verified-register.csv`, `tools/build_hub.py`, `hub/**` | in progress |
-| C3 | Clean single-dashboard landing page + category subpages (reduce four competing page sets to one signposted entry point) | `session-0c632e7e` | `index.html`, `hub/**`, `tools/build_hub.py` | in progress |
-| C4 | Privacy scan of all tracked files (names, initials, address, parcel) | `session-0c632e7e` | whole tree (read-only unless a hit is found) | in progress |
-| C5 | Link + source-coverage check: every data row sourced, no broken local links | `session-0c632e7e` | `tools/**`, `scripts/**` | in progress |
-| C6 | PR → merge → confirm Pages deploy → record | `session-0c632e7e` | `COORDINATION.md`, `README.md` | in progress |
+| C1 | Re-read every controlling official source on 2026-11-10 and re-verify every published figure | `session-0c632e7e` | `VERIFICATION.md`, `data/verified-register.csv` | **done** |
+| C2 | Research and publish the pending Board of Supervisors legislation on banked-increase caps (File No. 261020) and recompute both units against it | `session-0c632e7e` | `data/verified-register.csv`, `tools/build_hub.py`, `hub/**` | **done** |
+| C3 | Clean single-dashboard landing page + category subpages (reduce four competing page sets to one signposted entry point) | `session-0c632e7e` | `index.html`, `hub/**`, `tools/build_hub.py` | **done** |
+| C4 | Privacy scan of all tracked files (names, initials, address, parcel) | `session-0c632e7e` | whole tree (read-only unless a hit is found) | **done** |
+| C5 | Link + source-coverage check: every data row sourced, no broken local links | `session-0c632e7e` | `tools/**`, `scripts/**` | **done** |
+| C6 | PR → merge → confirm Pages deploy → record | `session-0c632e7e` | `COORDINATION.md`, `README.md` | **done** |
 
 Claim written and pushed before any other file was modified. No other session's page, data file or
 generator is deleted; corrections are made in place and logged, and superseded page sets stay
 reachable from the archive page.
+
+### Completion log — `session-0c632e7e`, 2026-11-10
+
+**C1 — re-verification.** S1–S21 all re-fetched on 2026-11-10; all live, all published values still
+match. Three sources added: **S24** (File No. 261020 legislative record), **S25** (ordinance text as
+introduced), **S26** (Current Rates, a second independent confirmation of the 1.6% annual rate).
+`sfgov.legistar.com` added to the official-source allowlist in `tools/release_gate.py`,
+`scripts/check.py` and `scripts/independent_audit.py` — it is the City's own legislative record.
+`github.com` was added as a **link-only** host: permitted as a hyperlink, explicitly refused as a
+row's official source.
+
+**C2 — pending legislation (the material finding of this pass).** The Rent Board posted a notice on
+**2026-11-09**, after the earlier research was compiled. Board of Supervisors **File No. 261020**
+would add §37.3(h) capping combined banked and capital-improvement increases at **10% of the lowest
+base rent in the preceding 12 months**, reaching banked notices served **on or after 2026-09-15**,
+sunsetting **2029-12-31** with the excess imposable from 2030-01-01. Status on 2026-11-10:
+**Pending Committee Action, not enacted.** Published as a new category page `hub/pending.html`, a
+site-wide alert banner, a new §2 of the executive summary, and nine register rows R63–R71.
+Unit A is unaffected. Unit B's 13.1% stays published as the enacted-law maximum but is now labelled
+at-risk, and the recommendation is to hold Unit B to a **10% total** — lawful today and still lawful
+if the ordinance passes.
+
+Related correction: the inherited flag **F09**, which suspected an 8–10% per-year banking cap, was
+re-checked against Rule 4.12 and §37.3(a)(2) in full. **No such cap exists in enacted law** — the
+figure was the pending proposal. F09 is rewritten from unverified rumour into a verified finding.
+
+**Left blank on purpose (F22):** whether the ordinary §37.3(a)(1) annual increase counts toward the
+proposed 10% is not resolvable from any official source — the text caps only (a)(2)–(3), the Rent
+Board summary says "combined". Published blank and unverified rather than inferred. The 10% *total*
+recommendation is compliant either way.
+
+**C3 — one entry point.** `hub/pending.html` added as the third nav item; nav split into a research
+group and an evidence group; landing page gained a pending-cap card and stat tile. No earlier page
+set was deleted; all four remain reachable from `hub/archive.html`.
+
+**C4 — privacy.** Fresh exact scan of all 198 tracked files for tenant initials, name tokens,
+address shapes and parcel numbers: **0 hits.** The only address-shaped matches are the Rent Board's
+own public office address, 25 Van Ness Avenue.
+
+**C5 — checks.** `tools/build_hub.py` 17 files / 71 findings / 59 verified / 5 blank ·
+`tools/release_gate.py` PASS (15 pages, 335 data rows, 933 links, 0 orphans, 16 mirror pairs,
+5 scenarios) · `scripts/check.py` PASS · `scripts/independent_audit.py` PASS ·
+`scripts/build.py`, `build.py`, `tools/build_site.py`, `tools/check_links.py` clean with no drift.
+
+**Repository irregularities found this pass (published as housekeeping, not as legal findings):**
+
+- **H1 / I07** — five pull requests from earlier sessions are still open (#5, #7, #17, #18, #20).
+  Left untouched: they belong to other sessions' branches and the coordination rules forbid acting
+  on another session's scope. Logged here and published on the Flagged page.
+- **H2** — four earlier page sets remain published. Preserved deliberately; the consolidated set is
+  the later verification where they differ.
+- **H3 (fixed)** — `tools/build_site.py` writes its own landing page to `index.html`, the same path
+  the consolidated hub publishes to, so running that generator alone silently replaced the published
+  landing page with the older set's page. It now rebuilds the consolidated hub as its final step, so
+  the published root is identical whichever generator runs. Nothing deleted.
+- **F23 (fixed)** — the published Form 1007 URL carried raw `[` `]` brackets and failed to load;
+  percent-encoded and re-confirmed live.
+
+These three housekeeping items are deliberately **not** register rows: a register row must cite an
+official publisher, and no official publisher can be cited for a fact about this repository.

@@ -339,3 +339,97 @@ An earlier draft of this pass added a flag suggesting the multiple-year guidance
 mis-indexed year. Re-derived against Form 571 anniversary by anniversary: 1 Sep 2017 → 2.2%,
 1 Sep 2018 → 1.6%, 1 Sep 2019 → 2.6%, 1 Sep 2020 → 1.8%. **The example is correct**, so the flag was
 wrong and has been removed before publication. It is recorded here rather than quietly dropped.
+
+---
+
+# Re-verification record — session `session-0c632e7e`
+
+**Date:** 2026-11-10 (UTC) · **Branch:** `arena/0c632e7e-rentincreasesf5`
+**Role:** line-by-line re-verification of the published research and of the repository itself
+
+This pass did not take the earlier sessions' conclusions on trust. Every official source
+behind the register was re-fetched on 2026-11-10 and compared against what the site says.
+Nothing was deleted; one material change in the law's status was found and published.
+
+## 1. Sources re-fetched on 2026-11-10
+
+All of S1–S21 were re-opened. All returned live pages and all previously published values
+still matched, with two exceptions handled below (S21 and the Rent Board notice). Three
+sources were added:
+
+| Ref | Source | Publisher | Why it was added |
+| --- | --- | --- | --- |
+| S24 | [File No. 261020 — legislative record](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) | SF Board of Supervisors (Legistar) | Establishes the proposal's **status**: introduced 2026-09-15, Pending Committee Action, not enacted |
+| S25 | [File No. 261020 — ordinance text as introduced](https://sfgov.legistar.com/View.ashx?M=F&ID=15865646&GUID=0E2E6936-000B-4597-A4EE-FBB17C19636E) | SF Board of Supervisors (Legistar) | The actual proposed §37.3(h) wording, rather than a summary of it |
+| S26 | [Current rates — rent increase, relocation, security deposit](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit/) | SF Rent Board | Independent second confirmation of the 1.6% annual rate |
+
+`sfgov.legistar.com` was added to the official-source allowlist in all three checkers. It is
+the City's own legislative record, not a commentary site.
+
+## 2. The one material change found
+
+The Rent Board posted a notice dated **9 November 2026** — after the earlier research was
+compiled — on its rent increase, banked increases, multiple-year, current-rates and forms
+pages. The Board of Supervisors is considering **File No. 261020**, which would add
+**§37.3(h)**: no banked (a)(2) and/or capital-improvement (a)(3) increase may raise the rent by
+more than **10% of the lowest base rent in effect at any time during the preceding 12 months**.
+
+Verified from the ordinance text itself, not the summary:
+
+- it would reach banked increases based on **notices served on or after 2026-09-15** and CI
+  petitions **filed on or after** that date — i.e. retroactively, relative to a notice served today;
+- it **sunsets 2029-12-31**, and the excess accumulates and may be imposed from 2030-01-01;
+- status on 2026-11-10 is **Pending Committee Action** in Land Use & Transportation. **Not enacted.**
+
+Consequence, published on [`hub/pending.html`](hub/pending.html) and in a site-wide banner:
+Unit A is unaffected (its banked component is 1.4%). Unit B's 13.1% full-bank option is lawful
+today but is exactly what the proposal would claw back, and a tenant petition challenging it is
+free and has no filing deadline. **Holding Unit B to a 10% total** ($315.00 → $3,465.00, 30-day
+notice) is lawful now and remains lawful if the ordinance passes as drafted. Waiting does not help:
+the window runs to the 2029 sunset.
+
+## 3. An earlier suspicion was disproved, not inherited
+
+An earlier pass carried a flag (F09) suspecting an 8%–10% per-year cap on banked increases. Rule
+4.12 and §37.3(a)(2) were re-read in full: **no per-year banking cap exists in enacted law.** The
+figure was not invented — it is the *pending* proposal. F09 has been rewritten from an unverified
+rumour into a verified finding citing S24, S25, S5 and S6. Under enacted law Unit B's 13.1% is correct.
+
+## 4. Left deliberately blank (F22)
+
+Whether the ordinary annual increase under §37.3(a)(1) counts toward the proposed 10% ceiling is
+**not resolvable from any official source**. The ordinance text caps only (a)(2) and (a)(3); the Rent
+Board's summary describes a limit on the "combined amount of banked rent increases and capital
+improvement rent increases". Neither answers it. The value is published **blank and unverified**
+rather than inferred. The 10% *total* recommendation is compliant under either reading, so the
+recommendation does not depend on the answer.
+
+## 5. Defects found in the repository and fixed
+
+| Ref | Defect | Resolution |
+| --- | --- | --- |
+| F23 | The published Form 1007 URL contained raw `[` `]` brackets and returned an error | Percent-encoded to `%5B74%5D`, re-fetched, confirmed live (rev. 2/9/26) |
+| H3 | `tools/build_site.py` writes its own landing page to `index.html` — the same path the consolidated hub publishes to — so running it alone silently replaced the published landing page | That generator now rebuilds the consolidated hub as its final step. Both sets still exist; the published root is now identical whichever generator is run |
+| H1 | Five pull requests from earlier agent sessions are still open (#5, #7, #17, #18, #20) | Left untouched per the coordination rules; published as repository housekeeping on the Flagged page rather than silently closed |
+
+H1–H3 are repository observations, not legal findings. They are published as a labelled panel on
+the Flagged page rather than as register rows, because a register row must carry an official
+publisher as its source and no official publisher can be cited for a fact about this repository.
+
+## 6. Checks run at the end of this pass
+
+`tools/build_hub.py` (17 files, 71 findings, 59 verified, 5 blank or no-authority) ·
+`tools/release_gate.py` PASS (15 pages, 335 data rows, 933 links, 0 orphans, 16 mirror pairs,
+5 scenarios) · `scripts/check.py` PASS · `scripts/independent_audit.py` PASS ·
+`scripts/build.py`, `build.py`, `tools/build_site.py`, `tools/check_links.py` all clean, no drift.
+A fresh scan for tenant initials, addresses and parcel numbers across all 198 tracked files
+returned nothing.
+
+## Limits of this pass
+
+Unchanged from the pass above, and they still bind: whether either unit is actually in the Housing
+Inventory, the lawful base rent and complete rent history, the 1940 construction date, whether a
+§6.14 notice was served, the 2027-03-01 rate, and ZIP-level market rent were all unconfirmable and
+remain blank. Additionally, **File No. 261020 is pending legislation and may be amended, passed or
+dropped at any time** — its status must be re-checked on the legislative record before serving any
+notice on Unit B.
