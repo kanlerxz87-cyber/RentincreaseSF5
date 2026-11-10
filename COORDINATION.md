@@ -40,7 +40,8 @@ Session: arena-f5ead75b. All work stays on the Arena-assigned branch `arena/f5ea
 
 | Session ID | Branch | Worktree | Started (UTC) | Status |
 | --- | --- | --- | --- | --- |
-| `session-c6d53281` | `arena/c6d53281-rentincreasesf5` | repo root | 2026-11-07 | active |
+| `session-c6d53281` | `arena/c6d53281-rentincreasesf5` | repo root | 2026-11-07 | active (historical entry; integration recorded below) |
+| `arena/741c7ecc-rentincreasesf5` | `arena/741c7ecc-rentincreasesf5` | repo root | 2026-11-10 | active |
 
 ---
 
@@ -63,6 +64,12 @@ block the build, the PR, or the merge.
 | T9 | Flagged-for-review page (irregularities, unverified values) | `session-c6d53281` | `pages/flagged.html` | done |
 | T10 | Final integration: re-verify, link check, build, PR, merge, confirm Pages deploy | `session-c6d53281` | all (integration pass) | in progress |
 | T11 | Interpretation audit of owner-supplied dates (Unit A 2026-04-01 entry) | `session-c6d53281` | `pages/units.html`, `pages/flagged.html` | done |
+| T12 | Update the public README to match the current official-source review, conditional rent scenarios, and privacy caveats; validate its factual/source links | `arena/741c7ecc-rentincreasesf5` | `README.md`, `COORDINATION.md` | in progress |
+
+### Claim — `arena/741c7ecc-rentincreasesf5` (2026-11-10)
+- Scope is limited to `README.md` and this coordination file; no `hub/**`, data, generator, or site-index edits.
+- Takeover of the stale `README.md` portions of PR #17 and PR #20 is permitted by the 60-minute no-commit rule: both PRs were last updated 2026-11-08, and neither has a commit since. Active PR #26 (updated 2026-11-10) does not touch `README.md`; its site/F09 scope will be preserved.
+- Claim was recorded before modifying `README.md`. No tenant identifiers or source claims will be added without an official source link.
 
 ### Handoff / takeover rule
 If a session crashes or its claim is more than 60 minutes old with no commits, any other session
