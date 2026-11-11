@@ -196,7 +196,7 @@ Every table data row in `hub/**`, `pages/**`, `docs/**`, `dashboard/**` carries 
 
 ### Privacy — zero identifiers in current tree
 
-- Tenant names/initials (`L O`, `V N`, `JP`, `E R`, `I S`, `M T`) — **0 matches** in any tracked file (grep + `release_gate` identifier tokens via `private/identifiers.txt`, which is git-ignored and absent in CI — generic `INITIAL_PAIR` heuristic still active).
+- Tenant names/initials (all six supplied sets, two per Unit 1 original/continuing and two per Unit 2) — **0 matches** in any tracked file (generic-initial scan + release_gate identifier tokens via git-ignored `private/identifiers.txt`, which is absent in CI).
 - Placeholders used everywhere: `Tenant A1/A2/B1/B2`, `Unit A/B`; dates (`Feb 1, 2025`; `Apr 1, 2026`; `June 1, 2019`) and amounts (`$3,995`; `$3,150`) preserved as requested, labelled owner-supplied/unverified.
 - No street address, parcel, APN, block/lot in any current page (same as prior audits).
 - **History limitation remains:** literal initials persist in **22 earlier commits** across 4 prior checker paths — current files are clean, but history is **not rewritten**. Forcing a rewrite while multiple sessions push risks destroying others’ work and does not clean forks/caches. Recorded as F15; see GitHub’s [removing sensitive data](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) guidance. The repository is public and Pages serves `main:/` — **every tracked file is public, not just HTML** (F20).
