@@ -1,7 +1,7 @@
 name: Validate research dashboard
 on:
   push:
-    branches: [main, arena/f5ead75b-rentincreasesf5, arena/d4b68642-rentincreasesf5]
+    branches: [main, 'arena/**']
   pull_request:
   workflow_dispatch:
 permissions:
