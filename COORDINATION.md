@@ -1197,3 +1197,15 @@ conflict was resolved by keeping both sessions' sections verbatim. No session's 
 deleted or rewritten. This record follows the same record-PR pattern as PRs #28/#34.
 All D1–D3 tasks are done. Flagged items (F01–F04, F07, F09, F15, F17–F18) remain published
 on the Flagged for Review page, non-blocking.
+
+---
+
+## Session `arena/92a81461-rentincreasesf5` — current-date verification + release (2026-11-11)
+
+| ID | Task | Owner | Files in scope | Status |
+|---|---|---|---|---|
+| N1 | Fresh line-by-line audit of current published hub, every table row/source link, privacy, and legal/rate claims against official sources | `arena/92a81461` | `COORDINATION.md`, `VERIFICATION-2026-11-11.md`, `tools/**`, `data/verified-register.csv`, `hub/**`, `index.html`, corresponding `site/**` mirrors (corrections only if audit finds a defect) | in progress |
+| N2 | Rebuild, run all release checks, and independently inspect the generated site | `arena/92a81461` | same integration scope as N1 | in progress |
+| N3 | Open PR from this Arena-assigned branch, merge, verify Pages deployment, and record result | `arena/92a81461` | `COORDINATION.md` | in progress |
+
+Claimed after reading the shared board and checking the branch and working tree. No unresolved active edit claim was present; the November 10 correction and final integration are already recorded as merged in PRs #26–#27. This session uses only the Arena-assigned branch, not a separate session branch. Tenant names/initials and identifying details are explicitly out of scope and will not be copied into any file.
