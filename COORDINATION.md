@@ -1204,7 +1204,7 @@ on the Flagged for Review page, non-blocking.
 
 | ID | Task | Owner | Files in scope | Status |
 |---|---|---|---|---|
-| N1 | Fresh line-by-line audit of current published hub, every table row/source link, privacy, and legal/rate claims against official sources | `arena/92a81461` | `COORDINATION.md`, `VERIFICATION-2026-11-11.md`, `tools/**`, `data/verified-register.csv`, `hub/**`, `index.html`, corresponding `site/**` mirrors (corrections only if audit finds a defect) | in progress |
+| N1 | Fresh line-by-line audit of current published hub, every table row/source link, privacy, and legal/rate claims against official sources | `arena/92a81461` | `COORDINATION.md`, `VERIFICATION-2026-11-11.md`, `README.md`, `EXECUTIVE-SUMMARY.md`, `tools/**`, `data/verified-register.csv`, `hub/**`, `index.html`, corresponding `site/**` mirrors (corrections only if audit finds a defect) | in progress |
 | N2 | Rebuild, run all release checks, and independently inspect the generated site | `arena/92a81461` | same integration scope as N1 | in progress |
 | N3 | Open PR from this Arena-assigned branch, merge, verify Pages deployment, and record result | `arena/92a81461` | `COORDINATION.md` | in progress |
 
