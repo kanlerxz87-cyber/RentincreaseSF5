@@ -1237,3 +1237,47 @@ branch name is the session ID. Nothing else was edited before this claim was com
 No tenant name, initial, street address or parcel number is written to any tracked file, commit
 message, PR text or CI log by this session. Dates and dollar amounts are kept exactly as supplied.
 No Inventory filing, licence request or tenant notice is performed.
+
+### `arena-0360e3ef` log - 2026-11-11 02:40 UTC: scope narrowed, request for shared files
+
+- **Scope change (own claim only).** The evidence gathered for G1 showed that the published hub already has
+  the structure the owner asked for, and that five sessions were stamping it at the same time. Building one
+  more parallel set would add to the sprawl, so `guide/**` and `src/**` are released unused. This session's
+  only new file so far is `tools/hub_evidence.py` (52 official sources read today, 231 verbatim extracts).
+- **Request for files owned by others (not edited yet).** The findings below have to go into the shared
+  generator and its checkers: `tools/build_hub.py`, `tools/release_gate.py`, `tools/followup_audit.py`,
+  `tools/repository_audit.py`, `scripts/check.py`, `scripts/independent_audit.py`, `README.md`, and the
+  generated `index.html`, `hub/**`, `site/**`, `data/verified-register.csv`, `EXECUTIVE-SUMMARY.md`.
+  `arena/92a81461` claimed `tools/**`, `hub/**`, `index.html` and the mirrors at 02:12:26 UTC and has not
+  committed since; `arena/885cb086` (02:12:27) and `arena/47ecd4e4` (02:16:33, PR #36 open, record only) hold
+  `COORDINATION.md` plus their own notes. **Nothing in those scopes is pushed by this session until those
+  sessions finish or their claims pass 60 minutes without a commit (03:12-03:17 UTC).** If they commit first,
+  their work is merged in and kept.
+- **Findings waiting to be integrated** (each read from the official page today, extracts in
+  `tools/hub_evidence.py`):
+  1. Board of Supervisors File No. 261020 is *Pending Committee Action* in the Land Use and Transportation
+     Committee, introduced 9/15/2026, no final action and no enactment date. As drafted it caps the *banked*
+     (and capital-improvement) part at 10% of the lowest base rent of the previous 12 months, for notices
+     given on or after 15 September 2026, until 31 December 2029. The Rent Board's own list of enacted
+     amendments (edition 11-2-26) ends with Ord. No. 207-26. This re-derives, from the official record, the
+     point that stale PR #29 was making.
+  2. **New:** Unit 2's first anniversary (1 June 2020) fell inside the COVID-19 rent freeze (increases
+     effective 7 April - 21 October 2020 were suspended). The emergency ordinance calls this a deferral and
+     says the anniversary date is not affected, but no official text was found that says in terms that an
+     increase never noticed in 2020 banks. No earlier set mentions the freeze.
+  3. **New:** a fixed-term lease bars an increase during its term unless the lease allows it (state guide);
+     Civil Code sec. 827 gives the notice power for periodic tenancies. What was signed for Unit 1 on
+     1 April 2026 is unknown.
+  4. **New:** mailed notices get 5 extra calendar days only when mailed within California to a California
+     address; 10 if either place is outside California (Code of Civil Procedure sec. 1013).
+  5. **Correction:** financial hardship relief is not available against annual or banked increases; the
+     60-day Form 516B route is a failure-to-repair deferral. One archived set lists "a hardship
+     application" as a likely response to a banked increase.
+  6. **Correction:** HUD does publish a ZIP-level benchmark (Small Area Fair Market Rents). The 94122 row
+     could not be read from HUD's own file here, so the value stays blank, but "no official ZIP-level
+     figure exists" is not accurate.
+  7. **Irregularities:** hub source S21 links a superseded 2023 edition of Form 1007 (current edition
+     2/9/26); S22 duplicates S13; the hub says the next annual rate is published on 1 March (Rule 1.12 says
+     on or about 1 January, effective 1 March); an archived set calls the bill "Ordinance 261015", a number
+     that could not be confirmed anywhere official; this file's header date and the README research date
+     are stale; a heading near the end of this file contains literal `\n\n` characters.
