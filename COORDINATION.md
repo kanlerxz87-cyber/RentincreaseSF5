@@ -1262,3 +1262,13 @@ practices-and-scrutiny, repo-audit, flagged, sources) + `data/verified_findings.
 Privacy audit for this session's files: generic initial-pair and street-pattern scans return zero hits
 on every file this session wrote; placeholders only (Unit A/Unit B; Tenant A1/A4, Tenant B1/B2);
 dates and dollar amounts preserved as supplied.
+
+**F46-5 done (2026-11-11).** PR <https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/38>
+(“Session f46f7d0f: fresh 2026-11-11 verification, anonymized dashboard suite, repo audit, flagged
+register”) passed CI (`validate` green) and was merged to `main` with a merge commit at `4a2036c`.
+Post-merge checks: the `main` validation workflow on `4a2036c` completed successfully, and the GitHub
+Pages legacy build (`main` / root) for `4a2036c` reported status `built` with no error, so the suite
+serves live at `https://kanlerxz87-cyber.github.io/RentincreaseSF5/f46f7d0f/` under the existing
+deployment. Flagged items FR-01–FR-20 remain published on the dashboard's Flagged for Review page and
+do not block anything. This follow-up record is delivered in a separate record-only PR; no dashboard
+content changes.
