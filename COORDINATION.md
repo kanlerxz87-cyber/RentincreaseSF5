@@ -975,3 +975,11 @@ Privacy: no tenant name, initial, street address, or unit address in any touched
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Pages API reports status `built`, source branch `main`; deployed from merged commit |
 
+
+## Session arena/8b4c4d7d — 2026-11-11 independent release review
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Fresh controlling-source review, existing site validation, independent public review addendum and publication | in progress | arena/8b4c4d7d | COORDINATION.md (append only), REVIEW-2026-11-11.md (new) |
+
+Read the shared board and open PR #29/#30 before claiming. Those PRs own site/generator revisions; this session will not edit their files or merge their unreviewed changes. Existing claims predate this review; no takeover necessary for this non-overlapping addendum. Platform requires the fixed Arena branch rather than a new session branch. Baseline matches origin/main. No personal identifiers will be written to tracked files. Existing site remains the primary deliverable; this task independently checks its findings and deployment rather than duplicating it.
