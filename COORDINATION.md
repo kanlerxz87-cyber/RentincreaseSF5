@@ -1048,3 +1048,9 @@ Read the shared board and open PR #29/#30 before claiming. Those PRs own site/ge
 
 - Push merged branch → update PR #31 (close/reopen or new PR if needed) → merge → confirm Pages deploy → record final PR link + deploy status below.
 - No tenant identifiers, addresses or parcels added; no filing/notice action performed; research, not legal advice.
+
+### Publication record — arena/8b4c4d7d
+- PR [#32](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/32) merged with `--merge` on 2026-11-11 at 02:13:45 UTC; merge commit `a4575788c8f299e8ce7b36ed6dfedf2579281b1b`.
+- PR validation run `42944498782`: success. Post-merge main validation `42944552236`: success. GitHub Pages build/deploy `42944551595`: success; Pages build API confirms the merged commit.
+- Live dashboard: https://kanlerxz87-cyber.github.io/RentincreaseSF5/ ; independent review: https://kanlerxz87-cyber.github.io/RentincreaseSF5/review-2026-11-11.html . Existing executive summary, category pages, source register and Flagged for Review page preserved.
+- All claimed implementation/review/publication work done. Outstanding legal/property evidence and historical audit limitations remain needs review, not claimed verified. No other sessions' pending PRs merged or closed. This record-only follow-up changes no published calculations or generators.
