@@ -975,3 +975,26 @@ Privacy: no tenant name, initial, street address, or unit address in any touched
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Pages API reports status `built`, source branch `main`; deployed from merged commit |
 
+---
+
+## Session `arena/dc30a15e-rentincreasesf5` — final re-verification and publication (2026-11-11)
+
+**Branch:** `arena/dc30a15e-rentincreasesf5` (fixed Arena session branch; no other branch created).
+**Claim time:** 2026-11-11. Read the full board above plus open PRs #29 and #30 before claiming.
+Open PR #29 (`arena/0c632e7e`, updated 2026-11-10 00:55 UTC) and PR #30 (`arena/adace8f8`,
+updated 2026-11-10 01:00 UTC) have had no commits for well over 60 minutes, so their scopes are
+stale under the handoff rule — but this session will NOT edit their branches. It works only on its
+own branch and preserves all merged work. If their unmerged fixes are still missing from `main`
+after fresh verification, this session will re-derive them from official sources rather than copying
+their branches.
+
+| ID | Task | Owner | Files in scope | Status |
+|---|---|---|---|---|
+| D1 | Fresh line-by-line re-verification of controlling facts against live official sources (11 Nov 2026) | `arena/dc30a15e-rentincreasesf5` | `VERIFICATION-DC30A15E.md` (new), this coordination section | in progress |
+| D2 | Privacy audit (no tenant names/initials), executive-summary licence-first check, full build + release gate + checks; repair only if a check fails | `arena/dc30a15e-rentincreasesf5` | `COORDINATION.md`; generator/page scope extended ONLY if a check fails, and logged here first | in progress |
+| D3 | PR from `arena/dc30a15e-rentincreasesf5` to `main`; merge; confirm Pages deploy; record result | `arena/dc30a15e-rentincreasesf5` | `COORDINATION.md` | in progress |
+
+No tenant name, initial, street address, or unit address will be written to any tracked file.
+No licence filing, inventory submission, notice service, or lawyer approval is performed.
+Every value asserted must be re-read from its official URL this session; anything unconfirmed is
+left blank and flagged, never inferred.
