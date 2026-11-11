@@ -998,3 +998,26 @@ No tenant name, initial, street address, or unit address will be written to any 
 No licence filing, inventory submission, notice service, or lawyer approval is performed.
 Every value asserted must be re-read from its official URL this session; anything unconfirmed is
 left blank and flagged, never inferred.
+
+### Results — `arena/dc30a15e` (2026-11-11)
+
+D1 done. Fresh evidence in `VERIFICATION-DC30A15E.md`: 17 official sources re-fetched and read
+(D-R1–D-R17), including a first direct read of the City legislative record for File No. 261020
+(Ordinance, Pending Committee Action, Land Use and Transportation, introduced 9/15/2026, no
+enactment). All published rates, notice periods, licence rules, and the banking-conflict
+statement re-confirmed; the June-2025 1.6% worked-example mislabel persists (F07 stands).
+All five scenarios recompute to the cent; serve-by dates verified by day count.
+
+D2 done. Privacy: process-local exact scan of all tracked files — five identifier tokens zero
+matches; the sixth collides with an ordinary uppercase English verb in prose (context-reviewed
+false positive in 4 source files + 2 mirrors, no identifiers present). No tracked `private/`
+file; `internal/notes.md` identifier-free. History clearance NOT claimed (grafted shallow
+clone, one commit); published F15 stands. Executive summary leads with the licence question on
+the landing page, `hub/executive-summary.html`, and `EXECUTIVE-SUMMARY.md`. Checks: build
+reproducible (git clean after re-run); release gate PASS; check, independent audit,
+check_links, follow-up audit PASS; repository audit CI-mode 0 failures (379 known review
+warnings). No generator/page edit needed — scope stayed at this log plus the new verification
+document. Open PRs #29/#30 observed stale and left untouched; their headline legislative
+finding is already on `main` (PR #26) and was re-verified directly here.
+
+D3 in progress — PR and deploy record below.
