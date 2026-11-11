@@ -975,3 +975,12 @@ Privacy: no tenant name, initial, street address, or unit address in any touched
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Pages API reports status `built`, source branch `main`; deployed from merged commit |
 
+
+## Session `arena/885cb086-rentincreasesf5` — claim (2026-11-11)
+
+| ID | Task | Owner | Files in scope | Status |
+|---|---|---|---|---|
+| X1 | Independently assess live dashboard, official controlling sources and release/privacy risks; avoid duplicating PRs #29 and #30 | `arena/885cb086` | `VERIFICATION-885CB086.md` (new), `COORDINATION.md` | in progress |
+| X2 | Publish independent findings through this branch and coordinate with active integrators | `arena/885cb086` | `COORDINATION.md`, `VERIFICATION-885CB086.md` | in progress |
+
+Integration request: PRs #29 and #30 both claim overlapping hub and shared generated files; their owners should reconcile their outputs before merging. This session will not modify their claimed files. Assigned Arena branch is mandatory; no separate session branch is created.
