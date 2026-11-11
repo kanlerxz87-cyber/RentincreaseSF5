@@ -1,0 +1,846 @@
+{
+  "schema": 1,
+  "generated_by": "f46f7d0f/build_f46f7d0f.py",
+  "research_date": "2026-11-11",
+  "principle": "official sources only; unconfirmed values are null and appear on flagged.html",
+  "privacy": {
+    "unit_placeholders": [
+      "Unit A",
+      "Unit B"
+    ],
+    "tenant_placeholders": [
+      "Tenant A1",
+      "Tenant A4",
+      "Tenant B1",
+      "Tenant B2"
+    ],
+    "never_published": [
+      "tenant names",
+      "tenant initials",
+      "street or unit address",
+      "parcel number",
+      "contact details"
+    ]
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Rent Board Housing Inventory - reporting instructions and portal access",
+      "url": "https://www.sf.gov/rent-board-housing-inventory",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S02",
+      "title": "San Francisco Administrative Code Sec. 37.15 - Reporting Obligations; Licensing",
+      "url": "https://www.sf.gov/information--sec-3715-reporting-obligations-licensing",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S03",
+      "title": "Learn about rent increases in San Francisco (Rent Board)",
+      "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S04",
+      "title": "Form 571 - Allowable Annual Rent Increases, 2026-27 edition (PDF)",
+      "url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S05",
+      "title": "Banked rent increases (Rent Board)",
+      "url": "https://www.sf.gov/information--banked-rent-increases",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S06",
+      "title": "Annual rent increases for multiple years (Rent Board)",
+      "url": "https://www.sf.gov/information/annual-rent-increase-multiple-years",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S07",
+      "title": "Rent Board Rules and Regulations Part IV - Rent increases not requiring approval (December 2022)",
+      "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S08",
+      "title": "San Francisco Administrative Code Sec. 37.2 - Definitions",
+      "url": "https://www.sf.gov/information/sec-372-definitions",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S09",
+      "title": "San Francisco Administrative Code Sec. 37.3 - Rent Limitations",
+      "url": "https://www.sf.gov/information/sec-373-rent-limitations",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S10",
+      "title": "San Francisco Administrative Code Sec. 37.10B - Tenant harassment",
+      "url": "https://www.sf.gov/information/sec-3710b-tenant-harassment",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S11",
+      "title": "San Francisco Administrative Code Sec. 37.10C - Use and sale of algorithmic devices prohibited",
+      "url": "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S12",
+      "title": "Petition determination pursuant to Section 6.14 and Costa-Hawkins (Rent Board)",
+      "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S13",
+      "title": "The Rent Board Fee",
+      "url": "https://www.sf.gov/rent-board-fee",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S14",
+      "title": "Landlord petitions and passthroughs (Rent Board)",
+      "url": "https://www.sf.gov/landlord-petitions-and-passthroughs/",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S15",
+      "title": "Learn about San Francisco rental laws - coverage guide (Rent Board)",
+      "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws/",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S16",
+      "title": "California Tenant Protection Act of 2019 (state bill 1482) - Rent Board guide",
+      "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S17",
+      "title": "Report an unlawful rent increase or request a review of your rent history (Rent Board)",
+      "url": "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S18",
+      "title": "Form 1007 - Notice to Tenant required by Sec. 37.9(c) (multilingual PDF)",
+      "url": "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag%5B74%5D.pdf",
+      "publisher": "City and County of San Francisco",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S19",
+      "title": "California Civil Code Sec. 827 - written notice of rent increase",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV",
+      "publisher": "State of California",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S20",
+      "title": "California Civil Code Sec. 1942.5 - retaliatory actions prohibited",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5&lawCode=CIV",
+      "publisher": "State of California",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S21",
+      "title": "California Civil Code Sec. 1947.12 - Tenant Protection Act rent cap",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV",
+      "publisher": "State of California",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S22",
+      "title": "California Civil Code Sec. 1954.53 - Costa-Hawkins Rental Housing Act",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53&lawCode=CIV",
+      "publisher": "State of California",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S23",
+      "title": "California Government Code Sec. 12955 - FEHA housing discrimination prohibitions",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12955&lawCode=GOV",
+      "publisher": "State of California",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S24",
+      "title": "California Civil Rights Department - housing discrimination",
+      "url": "https://calcivilrights.ca.gov/housing/",
+      "publisher": "State of California",
+      "fetched": "2026-11-11"
+    },
+    {
+      "id": "S25",
+      "title": "HUD - Fair Housing Act overview",
+      "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
+      "publisher": "United States government",
+      "fetched": "2026-11-11"
+    }
+  ],
+  "intake": [
+    {
+      "unit": "Unit A",
+      "lease_start": "2025-02-01",
+      "monthly_rent_usd": "3995.00",
+      "initial_occupant_count": 3,
+      "continuing_tenancy": {
+        "effective": "2026-04-01",
+        "monthly_rent_usd": "3995.00",
+        "original_occupants_remaining": 1,
+        "subsequent_occupants": 1
+      },
+      "verification": "owner-reported",
+      "sources": [
+        "S17",
+        "S03",
+        "S12"
+      ]
+    },
+    {
+      "unit": "Unit B",
+      "lease_start": "2019-06-01",
+      "monthly_rent_usd": "3150.00",
+      "occupant_count": 2,
+      "intervening_increases": null,
+      "verification": "owner-reported",
+      "sources": [
+        "S17",
+        "S05"
+      ]
+    }
+  ],
+  "rates": {
+    "current_allowance_pct": "1.6",
+    "current_period": {
+      "start": "2026-03-01",
+      "end": "2027-02-28"
+    },
+    "next_period_rate_pct": null,
+    "form571_periods": [
+      {
+        "period": "3/1/26 - 2/28/27",
+        "rate": "1.6%"
+      },
+      {
+        "period": "3/1/25 - 2/28/26",
+        "rate": "1.4%"
+      },
+      {
+        "period": "3/1/24 - 2/28/25",
+        "rate": "1.7%"
+      },
+      {
+        "period": "3/1/23 - 2/29/24",
+        "rate": "3.6%"
+      },
+      {
+        "period": "3/1/22 - 2/28/23",
+        "rate": "2.3%"
+      },
+      {
+        "period": "3/1/21 - 2/28/22",
+        "rate": "0.7%"
+      },
+      {
+        "period": "3/1/20 - 2/28/21",
+        "rate": "1.8%"
+      },
+      {
+        "period": "3/1/19 - 2/29/20",
+        "rate": "2.6%"
+      },
+      {
+        "period": "3/1/18 - 2/28/19",
+        "rate": "1.6%"
+      },
+      {
+        "period": "3/1/17 - 2/28/18",
+        "rate": "2.2%"
+      },
+      {
+        "period": "3/1/16 - 2/28/17",
+        "rate": "1.6%"
+      },
+      {
+        "period": "3/1/15 - 2/29/16",
+        "rate": "1.9%"
+      },
+      {
+        "period": "3/1/14 - 2/28/15",
+        "rate": "1.0%"
+      },
+      {
+        "period": "3/1/13 - 2/28/14",
+        "rate": "1.9%"
+      },
+      {
+        "period": "3/1/12 - 2/28/13",
+        "rate": "1.9%"
+      },
+      {
+        "period": "3/1/11 - 2/29/12",
+        "rate": "0.5%"
+      },
+      {
+        "period": "3/1/10 - 2/28/11",
+        "rate": "0.1%"
+      },
+      {
+        "period": "3/1/09 - 2/28/10",
+        "rate": "2.2%"
+      },
+      {
+        "period": "3/1/08 - 2/28/09",
+        "rate": "2.0%"
+      },
+      {
+        "period": "3/1/07 - 2/29/08",
+        "rate": "1.5%"
+      },
+      {
+        "period": "3/1/06 - 2/28/07",
+        "rate": "1.7%"
+      },
+      {
+        "period": "3/1/05 - 2/28/06",
+        "rate": "1.2%"
+      },
+      {
+        "period": "3/1/04 - 2/28/05",
+        "rate": "0.6%"
+      },
+      {
+        "period": "3/1/03 - 2/29/04",
+        "rate": "0.8%"
+      },
+      {
+        "period": "3/1/02 - 2/28/03",
+        "rate": "2.7%"
+      },
+      {
+        "period": "3/1/01 - 2/28/02",
+        "rate": "2.8%"
+      },
+      {
+        "period": "3/1/00 - 2/28/01",
+        "rate": "2.9%"
+      },
+      {
+        "period": "3/1/99 - 2/29/00",
+        "rate": "1.7%"
+      },
+      {
+        "period": "3/1/98 - 2/28/99",
+        "rate": "2.2%"
+      },
+      {
+        "period": "3/1/97 - 2/28/98",
+        "rate": "1.8%"
+      },
+      {
+        "period": "3/1/96 - 2/28/97",
+        "rate": "1.0%"
+      },
+      {
+        "period": "3/1/95 - 2/29/96",
+        "rate": "1.1%"
+      },
+      {
+        "period": "3/1/94 - 2/28/95",
+        "rate": "1.3%"
+      },
+      {
+        "period": "3/1/93 - 2/28/94",
+        "rate": "1.9%"
+      },
+      {
+        "period": "12/8/92 - 2/28/93",
+        "rate": "1.6%"
+      },
+      {
+        "period": "3/1/92 - 12/7/92",
+        "rate": "4.0%"
+      },
+      {
+        "period": "3/1/91 - 2/29/92",
+        "rate": "4.0%"
+      },
+      {
+        "period": "3/1/90 - 2/28/91",
+        "rate": "4.0%"
+      },
+      {
+        "period": "3/1/89 - 2/28/90",
+        "rate": "4.0%"
+      },
+      {
+        "period": "3/1/88 - 2/28/89",
+        "rate": "4.0%"
+      },
+      {
+        "period": "3/1/87 - 2/29/88",
+        "rate": "4.0%"
+      },
+      {
+        "period": "3/1/86 - 2/28/87",
+        "rate": "4.0%"
+      },
+      {
+        "period": "3/1/85 - 2/28/86",
+        "rate": "4.0%"
+      },
+      {
+        "period": "3/1/84 - 2/28/85",
+        "rate": "4.0%"
+      },
+      {
+        "period": "3/1/83 - 2/29/84",
+        "rate": "7.0%"
+      },
+      {
+        "period": "4/1/82 - 2/28/83",
+        "rate": "7.0%"
+      }
+    ],
+    "form571_source": "S04",
+    "pending_legislation": {
+      "file": "Board of Supervisors File No. 261020",
+      "status": "pending committee action as of 2026-11-11, not enacted",
+      "proposal": "10% per-year cap on combined banked and capital-improvement increases through 2029-12-31; retroactive to notices served on or after 2026-09-15 if enacted as drafted",
+      "sources": [
+        "S03"
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "id": "A-1",
+      "unit": "Unit A",
+      "composition": "1.6% annual only",
+      "increase_pct": "1.6",
+      "increase_usd": "$63.92",
+      "new_rent_usd": "$4,058.92",
+      "notice_days": 30,
+      "mail_days": 35,
+      "example_effective": "2027-01-01",
+      "serve_by_personal": "2026-12-02",
+      "serve_by_mail": "2026-11-27",
+      "status": "calculated-conditional",
+      "sources": [
+        "S03",
+        "S04",
+        "S05",
+        "S19"
+      ]
+    },
+    {
+      "id": "A-2",
+      "unit": "Unit A",
+      "composition": "1.4% banked + 1.6% annual = 3.0%",
+      "increase_pct": "3.0",
+      "increase_usd": "$119.85",
+      "new_rent_usd": "$4,114.85",
+      "notice_days": 30,
+      "mail_days": 35,
+      "example_effective": "2027-02-01",
+      "serve_by_personal": "2027-01-02",
+      "serve_by_mail": "2026-12-28",
+      "status": "calculated-conditional",
+      "sources": [
+        "S04",
+        "S05",
+        "S19",
+        "S03"
+      ]
+    },
+    {
+      "id": "B-1",
+      "unit": "Unit B",
+      "composition": "1.6% annual only",
+      "increase_pct": "1.6",
+      "increase_usd": "$50.40",
+      "new_rent_usd": "$3,200.40",
+      "notice_days": 30,
+      "mail_days": 35,
+      "example_effective": "2027-01-01",
+      "serve_by_personal": "2026-12-02",
+      "serve_by_mail": "2026-11-27",
+      "status": "calculated-conditional",
+      "sources": [
+        "S03",
+        "S04",
+        "S05",
+        "S19"
+      ]
+    },
+    {
+      "id": "B-2",
+      "unit": "Unit B",
+      "composition": "1.6% annual + 8.4% partial bank = 10.0%",
+      "increase_pct": "10.0",
+      "increase_usd": "$315.00",
+      "new_rent_usd": "$3,465.00",
+      "notice_days": 30,
+      "mail_days": 35,
+      "example_effective": "2027-01-01",
+      "serve_by_personal": "2026-12-02",
+      "serve_by_mail": "2026-11-27",
+      "status": "calculated-conditional",
+      "sources": [
+        "S04",
+        "S05",
+        "S19",
+        "S03"
+      ]
+    },
+    {
+      "id": "B-3",
+      "unit": "Unit B",
+      "composition": "11.5% banked + 1.6% annual = 13.1%",
+      "increase_pct": "13.1",
+      "increase_usd": "$412.65",
+      "new_rent_usd": "$3,562.65",
+      "notice_days": 90,
+      "mail_days": 95,
+      "example_effective": "2027-02-15",
+      "serve_by_personal": "2026-11-17",
+      "serve_by_mail": "2026-11-12",
+      "exposure": "banked portion above the proposed 10% ceiling if File No. 261020 is enacted as drafted",
+      "status": "calculated-conditional",
+      "sources": [
+        "S04",
+        "S05",
+        "S19",
+        "S03"
+      ]
+    }
+  ],
+  "banking_unit_b": {
+    "assumption": "zero intervening increases since 2019-06-01 (unverified, FR-05)",
+    "stack": [
+      {
+        "year": "2020-21",
+        "rate_pct": "1.8",
+        "cumulative_pct": "1.8"
+      },
+      {
+        "year": "2021-22",
+        "rate_pct": "0.7",
+        "cumulative_pct": "2.5"
+      },
+      {
+        "year": "2022-23",
+        "rate_pct": "2.3",
+        "cumulative_pct": "4.8"
+      },
+      {
+        "year": "2023-24",
+        "rate_pct": "3.6",
+        "cumulative_pct": "8.4"
+      },
+      {
+        "year": "2024-25",
+        "rate_pct": "1.7",
+        "cumulative_pct": "10.1"
+      },
+      {
+        "year": "2025-26",
+        "rate_pct": "1.4",
+        "cumulative_pct": "11.5"
+      }
+    ],
+    "total_banked_pct": "11.5",
+    "maturation_rule": "banks 12 full months after first imposable; additive only (Rules 4.12, 4.10)",
+    "sources": [
+      "S04",
+      "S05",
+      "S06",
+      "S07"
+    ]
+  },
+  "flags": [
+    {
+      "id": "FR-01",
+      "item": "Building coverage, 1940 construction year and rent-control status",
+      "verified_value": null,
+      "detail": "Owner intake only; never authenticated against parcel or Rent Board records. All unit analysis assumes coverage.",
+      "sources": [
+        "S15"
+      ]
+    },
+    {
+      "id": "FR-02",
+      "item": "Rent-increase license and Housing Inventory status for both units",
+      "verified_value": null,
+      "detail": "No portal access; cannot confirm whether reports were filed or a license is active. Every scenario is conditional on this.",
+      "sources": [
+        "S02",
+        "S01"
+      ]
+    },
+    {
+      "id": "FR-03",
+      "item": "Lawful base rent for Unit A ($3,995.00 claimed) and Unit B ($3,150.00 claimed)",
+      "verified_value": null,
+      "detail": "Intake amounts are not rent ledgers; concessions, passthroughs or prior overcharges would change every computed figure.",
+      "sources": [
+        "S03",
+        "S17"
+      ]
+    },
+    {
+      "id": "FR-04",
+      "item": "Unit A actual occupancy (one original and one subsequent occupant reported)",
+      "verified_value": null,
+      "detail": "Roommate composition reported but not documented here; affects the Costa-Hawkins/6.14 analysis only, not the allowance arithmetic.",
+      "sources": [
+        "S12"
+      ]
+    },
+    {
+      "id": "FR-05",
+      "item": "Unit B intervening increases since 2019-06-01",
+      "verified_value": null,
+      "detail": "Any increase or concession since 2019 shrinks the 11.5% assumed bank; if unknown, treat B-3 as an upper bound, not an entitlement.",
+      "sources": [
+        "S05",
+        "S06"
+      ]
+    },
+    {
+      "id": "FR-06",
+      "item": "Whether the reported 2026-04-01 Unit A arrangement created a fixed-term lease, and whether timely Rule 6.14 written notice was given",
+      "verified_value": null,
+      "detail": "A fixed term can bar mid-lease increases; a missed reasonable-time notice can convert a subsequent occupant&rsquo;s status.",
+      "sources": [
+        "S12",
+        "S03"
+      ]
+    },
+    {
+      "id": "FR-07",
+      "item": "Lease terms, addenda, subsidy or program restrictions for both units",
+      "verified_value": null,
+      "detail": "No lease document was reviewed; subsidies can layer program rules on top of the ordinance.",
+      "sources": [
+        "S15"
+      ]
+    },
+    {
+      "id": "FR-08",
+      "item": "Allowable increase for effective dates on or after 2027-03-01",
+      "verified_value": null,
+      "detail": "Not yet published; expected around March 2027. The Form 571 table carries a deliberately blank row.",
+      "sources": [
+        "S04"
+      ]
+    },
+    {
+      "id": "FR-09",
+      "item": "Final text and enactment of Board of Supervisors File No. 261020",
+      "verified_value": null,
+      "detail": "Pending Land Use and Transportation Committee as of 2026-11-11 (Legistar record 8217304). If enacted as drafted, combined banked and capital-improvement increases cap at 10% per year for notices on or after 2026-09-15. Recheck before serving any banked increase.",
+      "sources": [
+        "S03"
+      ]
+    },
+    {
+      "id": "FR-10",
+      "item": "Neighborhood market-norm increase for Outer Sunset / 94122",
+      "verified_value": null,
+      "detail": "No official benchmark exists; the verified lawful allowance is the 1.6% citywide annual figure. Any 'normal for the neighborhood' number here would be fabrication.",
+      "sources": [
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "id": "FR-11",
+      "item": "How large corporate owners in practice choose increases vs individual owners",
+      "verified_value": null,
+      "detail": "No official empirical study reviewed; only the legal common denominator could be verified.",
+      "sources": [
+        "S02",
+        "S15"
+      ]
+    },
+    {
+      "id": "FR-12",
+      "item": "City rent-increase page worked-example date label",
+      "verified_value": null,
+      "detail": "The first example on the live page ties the 1.6% rate to a June 1, 2025 effective date even though 1.4% governed that period; the labeled period is the typo, the 1.6% heading period (2026-03-01 to 2027-02-28) is correct. Verified persisting on 2026-11-11.",
+      "sources": [
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "id": "FR-13",
+      "item": "City banked-increases page example label",
+      "verified_value": null,
+      "detail": "An example on the banking page mislabels an August 1, 2024 date with the 1.4% figure that belongs to the 2025-26 period; surrounding rule text and Form 571 are consistent.",
+      "sources": [
+        "S05",
+        "S04"
+      ]
+    },
+    {
+      "id": "FR-14",
+      "item": "internal/notes.md ordinance number 261015",
+      "verified_value": null,
+      "detail": "Should read File No. 261020 per the official legislative record (pending committee action, introduced 2026-09-15). Audited, not edited - owned by another session.",
+      "sources": [
+        "S03"
+      ]
+    },
+    {
+      "id": "FR-15",
+      "item": "Repository citation hygiene",
+      "verified_value": null,
+      "detail": "Form 1007 URL with literal [74] instead of %5B74%5D (verified-register row R60 and scripts/build.py), leginfo citations with trailing periods, and HTML entities inside a CSV column.",
+      "sources": [
+        "S18",
+        "S19"
+      ]
+    },
+    {
+      "id": "FR-16",
+      "item": "Frozen 2026-11-07 research date on the archived base page set",
+      "verified_value": null,
+      "detail": "Predates the 2026-11-09 File No. 261020 posting; hub pages are newer. Refresh belongs to the owning sessions.",
+      "sources": [
+        "S03"
+      ]
+    },
+    {
+      "id": "FR-17",
+      "item": "Historical personal identifiers in public git history",
+      "verified_value": null,
+      "detail": "Prior commits contain literal identifier tokens (F15-class finding by earlier sessions). Current files scan clean; erasure needs a history rewrite by the repository owner and is not performed here.",
+      "sources": [
+        "S01"
+      ]
+    },
+    {
+      "id": "FR-18",
+      "item": "Banking-forfeiture interpretation for an early Unit A increase",
+      "verified_value": null,
+      "detail": "The statement that imposing an annual increase before 2027-02-01 ends accrual of the skipped 1.4% is this session&rsquo;s reading of Rule 4.12(a)&rsquo;s 12-month maturation, applied consistently with the City&rsquo;s published examples; the Rent Board has not ruled on this property. Treat as interpretation, not adjudication.",
+      "sources": [
+        "S05",
+        "S07"
+      ]
+    },
+    {
+      "id": "FR-19",
+      "item": "Exemption eligibility for the Rent Board Fee",
+      "verified_value": null,
+      "detail": "No owner facts (owner-occupancy, program participation) were verified; deadline and amounts are verified, eligibility is not.",
+      "sources": [
+        "S13"
+      ]
+    },
+    {
+      "id": "FR-20",
+      "item": "Email or text message service sufficiency",
+      "verified_value": null,
+      "detail": "Civil Code Sec. 827 authorizes personal delivery or statutory mail; no official authorization of electronic service for these notices was identified. Treated as unavailable; confirm with counsel before relying on electronic service.",
+      "sources": [
+        "S19"
+      ]
+    }
+  ],
+  "inquiries": [
+    {
+      "id": "Q1",
+      "topic": "reasonable and normal increases, 94122",
+      "answer": "1.6% lawful annual allowance citywide; no official neighborhood benchmark exists",
+      "sources": [
+        "S03",
+        "S04"
+      ]
+    },
+    {
+      "id": "Q2",
+      "topic": "corporate vs individual owner practice",
+      "answer": "identical legal duties; empirical practice comparison unverified (FR-11)",
+      "sources": [
+        "S02",
+        "S11"
+      ]
+    },
+    {
+      "id": "Q3",
+      "topic": "correct notification and reasonable reasons",
+      "answer": "written 30/90-day notice with dollar, percentage, effective date; no reason required by rule",
+      "sources": [
+        "S19",
+        "S03",
+        "S09"
+      ]
+    },
+    {
+      "id": "Q4",
+      "topic": "tenant-advocate scrutiny",
+      "answer": "twelve-point stress test; free tenant petition route with no deadline",
+      "sources": [
+        "S17",
+        "S10",
+        "S20"
+      ]
+    },
+    {
+      "id": "Q5",
+      "topic": "one unit or both",
+      "answer": "no uniform-increase statute identified; neutral written policy recommended",
+      "sources": [
+        "S23",
+        "S24",
+        "S25"
+      ]
+    }
+  ],
+  "repo_review": {
+    "verified": [
+      "V01",
+      "V02",
+      "V03"
+    ],
+    "irregularities": [
+      "RA-01",
+      "RA-02",
+      "RA-03",
+      "RA-04",
+      "RA-05",
+      "RA-06"
+    ],
+    "linked_flags": [
+      "FR-14",
+      "FR-15",
+      "FR-16",
+      "FR-17"
+    ]
+  }
+}

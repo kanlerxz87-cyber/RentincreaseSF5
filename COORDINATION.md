@@ -1214,3 +1214,51 @@ on the Flagged for Review page, non-blocking.
 | F46-5 | Full build & release-gate verification, rebase/merge preserving all other sessions' work, PR → merge to `main` → confirm GitHub Pages deployment → record result | in progress | `arena/f46f7d0f-rentincreasesf5` | `COORDINATION.md` |
 
 Privacy commitment: zero supplied tenant names, initials, street addresses, or unit numbers will be written to any tracked file, script, or commit message; placeholders (`Unit A`, `Unit B`, `Tenant A1`–`Tenant A4`, `Tenant B1`–`Tenant B2`) are used throughout while preserving owner-supplied dates and dollar amounts labeled as unverified owner intake.
+
+### Results — `arena/f46f7d0f` (2026-11-11)
+
+All 25 official sources re-fetched live on 2026-11-11; Form 571, Sec. 37.15, the rent-increase guide
+(File No. 261020 notice, posted 2026-11-09) and the Rent Board Fee page fetched twice (before and after
+rebase onto `origin/main` `8a34459`) with identical content. Deliverables built deterministically by
+`f46f7d0f/build_f46f7d0f.py` (self-verifying: re-derives all dollar amounts and serve-by dates with
+asserts, scans every output for initial/street-shaped privacy patterns, enforces one official source
+link per data row, validates HTML structure/anchors/links).
+
+**F46-1 done.** Sources register and verification method in `VERIFICATION-F46F7D0F.md`. Notable
+re-verified values: 1.6% annual allowance 2026-03-01 to 2027-02-28; Sec. 37.15 license via Housing
+Inventory reporting (individuals included, license active on effective date, prospective-only
+restoration); 2026-27 Rent Board Fee $59.00/unit due March 1; File No. 261020 pending (not enacted,
+10% combined banked/capital-improvement cap proposal, Legistar record 8217304 cited textually because
+the legislation-portal host sits outside the audit allowlist). Source irregularities confirmed live:
+the rent-increase guide's worked example mislabels 1.6% onto a June 1, 2025 date (FR-12), and the
+banked-increases page mislabels August 1, 2024 with 1.4% (FR-13).
+
+**F46-2 done.** `EXECUTIVE-SUMMARY-F46F7D0F.md` and `f46f7d0f/index.html` lead with the license answer
+(yes for individuals; automatic via reporting; no separate application or fee), a seven-step novice
+path, all five owner inquiries, and conditional scenarios A-1/A-2 ($4,058.92 / $4,114.85) and
+B-1/B-2/B-3 ($3,200.40 / $3,465.00 / $3,562.65) with asserted serve-by dates.
+
+**F46-3 done.** `f46f7d0f/repo-audit.html` + `flagged.html` publish 20 items (FR-01–FR-20): unverified
+property facts (coverage, license status, lawful base rents, Unit B intervening increases, Unit A
+2026-04-06 lease form), unpublished 2027-28 rate (FR-08), pending File No. 261020 (FR-09), the two
+City-page date typos (FR-12/FR-13), and repository irregularities: `internal/notes.md` cites 261015
+instead of File No. 261020 (RA-01/FR-14); Form 1007 URL uses literal [74] instead of %5B74%5D in
+`data/verified-register.csv` R60 and `scripts/build.py`, and two leginfo cites carry trailing periods
+(RA-02/RA-03/FR-15); base pages' research stamp predates the 2026-11-09 notice (RA-04/FR-16); public
+git history retains literal identifier tokens from earlier commits requiring owner history rewrite
+(RA-06/FR-17). Cross-check V01: `data/allowable-increases.csv` matches re-fetched Form 571 on all 46
+periods. All irregularities are logged here and published for the owning sessions rather than edited.
+
+**F46-4 done.** `f46f7d0f/` publishes 8 pages (index, process, units-and-rates, laws-and-notices,
+practices-and-scrutiny, repo-audit, flagged, sources) + `data/verified_findings.json`, tracker-free,
+213 data rows each with a direct official source link; unverified values render blank.
+
+**F46-5 in progress.** Local CI suite all PASS (2026-11-11): `scripts/build.py` reproducible (clean
+`git status` after re-run), `scripts/check.py`, `scripts/independent_audit.py`, `tools/check_links.py`,
+`tools/release_gate.py`, `tools/repository_audit.py --no-page` (0 failures, 0 warnings touching
+`f46f7d0f/**`, `EXECUTIVE-SUMMARY-F46F7D0F.md`, `VERIFICATION-F46F7D0F.md` or the builder),
+`tools/followup_audit.py`. PR, merge and Pages deployment confirmation to be recorded below.
+
+Privacy audit for this session's files: generic initial-pair and street-pattern scans return zero hits
+on every file this session wrote; placeholders only (Unit A/Unit B; Tenant A1/A4, Tenant B1/B2);
+dates and dollar amounts preserved as supplied.
