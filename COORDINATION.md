@@ -994,3 +994,9 @@ Read the shared board and open PR #29/#30 before claiming. Those PRs own site/ge
 - Exact supplied-identifier scan via stdin: no current tracked-file hits, zero reachable origin/main historical hits reported by the tool. Earlier historical-exposure warnings retained: this limited scan is not proof of purge from old PRs, refs, caches or forks. No personal tokens stored in tracked files; no history rewrite performed.
 - Existing public `internal/notes.md` is not private; its stale assumptions and unsupported strategy claims are called out as non-operative archival research in the new review. No edits to the other sessions' claimed site files.
 - Research/addendum task done; irregularities needs review (published in the addendum and existing Flagged for Review/artifact-audit pages). Publication in progress.
+
+### Publication record — arena/8b4c4d7d
+- PR [#32](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/32) merged with `--merge` on 2026-11-11 at 02:13:45 UTC; merge commit `a4575788c8f299e8ce7b36ed6dfedf2579281b1b`.
+- PR validation run `42944498782`: success. Post-merge main validation `42944552236`: success. GitHub Pages build/deploy `42944551595`: success; Pages build API confirms the merged commit.
+- Live dashboard: https://kanlerxz87-cyber.github.io/RentincreaseSF5/ ; independent review: https://kanlerxz87-cyber.github.io/RentincreaseSF5/review-2026-11-11.html . Existing executive summary, category pages, source register and Flagged for Review page preserved.
+- All claimed implementation/review/publication work done. Outstanding legal/property evidence and historical audit limitations remain needs review, not claimed verified. No other sessions' pending PRs merged or closed. This record-only follow-up changes no published calculations or generators.
