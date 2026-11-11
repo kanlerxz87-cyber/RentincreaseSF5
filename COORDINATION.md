@@ -1020,3 +1020,31 @@ Read the shared board and open PR #29/#30 before claiming. Those PRs own site/ge
 - Exact supplied-identifier scan via stdin: no current tracked-file hits, zero reachable origin/main historical hits reported by the tool. Earlier historical-exposure warnings retained: this limited scan is not proof of purge from old PRs, refs, caches or forks. No personal tokens stored in tracked files; no history rewrite performed.
 - Existing public `internal/notes.md` is not private; its stale assumptions and unsupported strategy claims are called out as non-operative archival research in the new review. No edits to the other sessions' claimed site files.
 - Research/addendum task done; irregularities needs review (published in the addendum and existing Flagged for Review/artifact-audit pages). Publication in progress.
+
+---
+
+## Session `arena/47ecd4e4` — merge resolution + publication (2026-11-11)
+
+### Conflict resolution
+
+`origin/main` advanced to `a457578` (PR #32) while this branch’s PR #31 was open. The only conflicting file was `COORDINATION.md`; the new files `REVIEW-2026-11-11.md` and `review-2026-11-11.html` were additive.
+
+- Resolved `COORDINATION.md` by **preserving both sessions verbatim** — Session `arena/47ecd4e4` block first, then Session `arena/8b4c4d7d` block — with no deletion.
+- Added `REVIEW-2026-11-11.md` + `review-2026-11-11.html` from `origin/main` (no overwrite of this branch’s `hub/**`, `index.html`, `site/**`, `EXECUTIVE-SUMMARY.md`, `VERIFICATION-47ECD4E4.md`).
+- Merged via `git merge origin/main --no-ff` (commit `9c7460e`), logged as *Merge origin/main (PR #32) into arena/47ecd4e4 — preserve both sessions*.
+- Re-ran `python3 scripts/build.py` → PASS (200 files, 116 HTML, 2145 rows, 1611 direct, 0 failures, 379 warnings, 5 scenarios recomputed); `repository_audit` PASS (0 failures).
+
+### Final status for this session
+
+| ID | Task | Status |
+|---|---|---|
+| R1 | Re-fetch controlling sources, confirm rates/licence/notice | **done** — 5 core pages + 4 supporting pages re-fetched live 2026-11-11; all match published site |
+| R2 | Privacy re-check, placeholders only | **done** — 0 identifier hits in current tree; placeholders `Tenant A1/A2/B1/B2` `Unit A/B` only |
+| R3 | Recompute dollar scenarios, every row sourced | **done** — 5 scenarios to the cent, no rounding up; every table row source-linked or explicit blank+flag |
+| R4 | Refresh executive summary + hub stamps to 11 Nov 2026 | **done** — `EXECUTIVE-SUMMARY.md` + `tools/followup_audit.py` + `tools/build_hub.py` TODAY |
+| R5 | Full build pipeline + release gate; PR → merge → Pages deploy | **in progress** (second push + PR rebase/merge pending) |
+
+### Next
+
+- Push merged branch → update PR #31 (close/reopen or new PR if needed) → merge → confirm Pages deploy → record final PR link + deploy status below.
+- No tenant identifiers, addresses or parcels added; no filing/notice action performed; research, not legal advice.
