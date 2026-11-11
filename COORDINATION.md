@@ -1054,3 +1054,23 @@ Read the shared board and open PR #29/#30 before claiming. Those PRs own site/ge
 - PR validation run `42944498782`: success. Post-merge main validation `42944552236`: success. GitHub Pages build/deploy `42944551595`: success; Pages build API confirms the merged commit.
 - Live dashboard: https://kanlerxz87-cyber.github.io/RentincreaseSF5/ ; independent review: https://kanlerxz87-cyber.github.io/RentincreaseSF5/review-2026-11-11.html . Existing executive summary, category pages, source register and Flagged for Review page preserved.
 - All claimed implementation/review/publication work done. Outstanding legal/property evidence and historical audit limitations remain needs review, not claimed verified. No other sessions' pending PRs merged or closed. This record-only follow-up changes no published calculations or generators.
+
+---
+
+### Publication record — `arena/47ecd4e4` (2026-11-11)
+
+| Item | Value |
+|---|---|
+| Branch | `arena/47ecd4e4-rentincreasesf5` |
+| Pull request | [#31](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/31) |
+| PR branch head | `036a56a` (merged via `ae99a3f` privacy fix + `4279399` re-verify) |
+| CI on PR | **success** — `42944748457` (build, checks, release_gate, audit, followup) |
+| CI on push | **success** — `42944740978` (same, after merge of `cd203b5`) |
+| Merge result | **MERGED** 2026-11-11 02:15:39 UTC, merge commit `8dacc21be9b216ba96afd5e35e0121046ade3222` (PR #31 `--merge`) |
+| Validate on `main` | **success** — `42944785859` (post-merge) |
+| Pages build/deploy | **success** — `42944785652`; Pages API status `built` at `8dacc21`, error `null` |
+| Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
+| Live verification | `index.html` (1.6% tile, 5 scenarios, category nav), `hub/executive-summary.html` (licence-first answer, 62 rows), `hub/flagged.html` (F09 proposed-not-enacted, F15 history), `VERIFICATION-47ECD4E4.md` all served from `main:/`; `review-2026-11-11.html` preserved |
+| Follow-up audit | `tools/followup_audit.py` PASS; `EXECUTIVE-SUMMARY.md` recheck stamp 11 Nov 2026; hub stamps 11 Nov 2026 |
+
+**Reconciliation note:** `main` advanced twice during this session (`a457578` PR #32, `cd203b5` PR #34). Both were merged into this branch via explicit `git merge origin/main` (commits `9c7460e`, `036a56a`), preserving every other session’s files. No session work discarded; no history rewrite; flagged irregularities remain published and non-blocking per instructions.
