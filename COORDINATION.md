@@ -992,3 +992,57 @@ Privacy: no tenant name, initial, street address, or unit address in any touched
 
 Claim written before any other file was modified. No prior session's page, data file or generator is deleted or rewritten; corrections are additive, source-linked, and logged here. No tenant identifiers are copied; no Inventory filing, licence request, or tenant notice is performed.
 
+### Final record — `arena/49e8b1d7-rentincreasesf5` — re-verification, executive-summary refresh, publication (2026-11-11)
+
+| ID | Task | Owner | Status |
+| --- | --- | --- | --- |
+| R1 | Re-read controlling official sources and confirm every published figure line-by-line | `arena/49e8b1d7` | done — 15 controlling pages + Form 571 (46 periods) re-fetched and re-read 2026-11-11; all 200; File No. 261020 still proposed-not-enacted; S1–S21 register re-validated |
+| R2 | Refresh executive summary: licence question forefront, step-by-step for novices, official links, anonymized ledger | `arena/49e8b1d7` | done — `EXECUTIVE-SUMMARY.md` rewritten as a 9-section novice guide (licence first, 7-step checklist, reasonable increase in 94122, local/state/federal, corps vs individuals, correct notice, tenant-lawyer test, one-vs-both with neutral-reason guidance, open facts); `tools/build_hub.py` TODAY → 2026-11-11 and hub/executive-summary lede + header → 11 Nov 2026 |
+| R3 | Verify anonymization: no tenant names/initials/address in published files | `arena/49e8b1d7` | done — `tools/release_gate.py` PASS; no tenant name/initial/address in 308 data rows; history still shows 22 affected commits in 4 prior files — flagged as F15, current files clean, history not rewritten |
+| R4 | Answer owner questions with sources and flagged gaps | `arena/49e8b1d7` | done — reasonable increase = 1.6% (local cap, not market norm); state 8.8% does not apply to controlled units; federal no cap but anti-discrimination; corporations vs individuals legally identical (workflow differs, no empirical study confirmed); notice = 30/90 days +5 if mailed with required contents; tenant-lawyer test = 6-item checklist + 516C petition + Right-to-Counsel limits; one-vs-both = no uniform rule, neutral-history reason required — all with source links and flags |
+| R5 | Build + link + source-coverage + reproducibility checks | `arena/49e8b1d7` | done — `tools/build_hub.py` → `scripts/build.py` (16 files, no drift) → `scripts/check.py` PASS → `scripts/independent_audit.py` PASS (60 sourced rows, parity, landmarks) → `tools/release_gate.py` PASS (14 pages, 308 rows, 806 links, 0 orphans, 15 mirror pairs, 62 findings, 5 scenarios) → `tools/check_links.py` PASS → `tools/dashboard_check_links.py` PASS → `tools/followup_audit.py` PASS |
+| R6 | PR → merge → confirm Pages deploy → record | `arena/49e8b1d7` | done (record below) |
+
+#### Verification performed (this session, 2026-11-11)
+
+- Fresh fetch+read of S1 Housing Inventory, S2 §37.15 full text, S3 §37.3 (60% CPI, 7% cap), S6 banked page (24-month wording + Nov 9 File No. 261020 notice), S5 rent-increase guidance (1.6% headline unchanged, 12-month rule, 30/90-day +5, 4 worked examples), S4 Form 571 (46 periods, all machine-compared, 0 mismatches), S7 Rules Part IV (§4.10 null-void, §4.12 12-month test), S8 §827 (30/90-day +5), S9 §1947.12 (d)(3) local exemption, S10 8.8% guide, S11 coverage (Jun 13 1979), S12 $59 fee, S13 multiple-year (added not compounded), S14 R6.14 (60-day), S15 §37.10B, S16 §37.10C, S17 §1942.5 (180-day), S18 CRD, S19 HUD, S20 516C, S21 Form 1007. All URLs 200; every published percentage and notice period re-confirmed.
+- Arithmetic independently recomputed: 3995×1.6%=$63.92, 3995×3.0%=$119.85, 3150×1.6%=$50.40, 3150×13.1%=$412.65, 3150×10%=$315.00 — all match to the cent, none rounded up; Unit 2 ledger 1.8+0.7+2.3+3.6+1.7+1.4=11.5% +1.6%=13.1%.
+- Privacy: no tenant names/initials/address in any current tracked file; dates/amounts preserved as owner-supplied/unverified and labeled so; placeholders are Unit 1/2, Tenant A1/A2/B1/B2. Inventory submissions are public under penalty of perjury — real filings must use truthful data.
+- Flag F09 re-confirmed as **proposed, not enacted** (same Nov 9 notice text on both S5 and S6 pages today); would affect Unit 2 13.1% only if enacted as proposed.
+
+#### What was changed this session
+
+| File | Change |
+| --- | --- |
+| `tools/build_hub.py` | `TODAY` 2026-11-08 → 2026-11-11; header "sources rechecked 10 Nov" → 11 Nov; executive-summary lede re-verified date 8 Nov → 11 Nov. |
+| `EXECUTIVE-SUMMARY.md` | Full rewrite as a **9-section novice-first executive summary** with the licence question forefront, plain-language step-by-step, reasonable-increase answer for 94122 (1.6% local, 8.8% not applicable, no federal cap, no ZIP market norm), corps-vs-individuals (legally identical, workflow table, algorithmic-device ban), correct notice (contents/timing/service + concrete serve-by dates for these units), tenant-lawyer scrutiny checklist (6 tests + 516C + Right-to-Counsel limits), one-vs-both with neutral-reason guidance, open facts, and **23 official links**. Dates/amounts preserved; no PII. |
+| `hub/**`, `index.html`, `site/hub/**`, `site/index.html` | Regenerated from `tools/build_hub.py` (same 62 findings, 53 verified, 4 blank/no-authority; new verification stamp). |
+| `VERIFICATION-49E8B1D7.md` | **New** — 11-section fresh verification log (15 sources re-read verbatim, licence answer with quoted statute, reasonable-increase in 94122, corps vs individuals, correct notice, scrutiny test, one-vs-both, arithmetic table, open flags F01–F19+F15 history, build/privacy evidence, limits). |
+
+#### Still open / flagged for the owner (non-blocking — all published on the Flagged page)
+
+F01 owner-supplied ledger (no intervening Unit 2 increases assumed) · F02 1940 build year/coverage · F03 Inventory/license status · F04 banking 12-vs-24-month wording (reconciled as analysis) · F05 6.14 notice on later co-tenant · F06 unpublished 2027–28 rate (blank) · F07 no federal ceiling (absence) · F08 no uniform-increase rule (absence) · F09 **File No. 261020 proposed 10% cap, not enacted** · F10 no official 94122 market rent (blank) · F11 serve-by assumes personal service (+5 if mailed) · F17 no empirical ZIP normal · F18 banked assumes unestablished complete history · F19/F20 prior defects fixed · **F15 history privacy exposure — current files clean, 22 commits in history not rewritten**.
+
+#### PR and deploy record
+
+| Item | Value |
+| --- | --- |
+| Branch | `arena/49e8b1d7-rentincreasesf5` |
+| Pull request | _to be recorded below_ |
+| CI validate on PR | _to be recorded_ |
+| Merge result | _to be recorded_ |
+| Validate on `main` | _to be recorded_ |
+| Pages build/deploy | _to be recorded_ |
+| Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
+| Live verification | _to be recorded after deploy_ |
+
+### PR and deploy record — `arena/49e8b1d7` (filled after merge/deploy)
+
+| Item | Value |
+| --- | --- |
+| Pull request |  |
+| Merge commit |  |
+| Validate on `main` |  |
+| Pages deploy |  |
+| Live checks |  |
+

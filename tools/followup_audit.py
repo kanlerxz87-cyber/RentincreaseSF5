@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproducible standalone summary and regression checks for the November 8 audit.
+"""Reproducible standalone summary and regression checks for the November 11 audit.
 
 Official pages were read with the page-fetch tool; these checks are local regression
 checks, not a live legal-verification service or a substitute for lawyer review.
@@ -9,7 +9,7 @@ from decimal import Decimal
 
 SUMMARY = '''# Executive summary — San Francisco rent increases
 
-Key rules rechecked November 8, 2026. Research, not legal advice or permission to serve notices.
+Key rules rechecked November 11, 2026. Research, not legal advice or permission to serve notices.
 
 ## First: an individual owner needs the rent-increase license too
 
