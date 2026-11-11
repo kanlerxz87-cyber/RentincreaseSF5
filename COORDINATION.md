@@ -1197,3 +1197,20 @@ conflict was resolved by keeping both sessions' sections verbatim. No session's 
 deleted or rewritten. This record follows the same record-PR pattern as PRs #28/#34.
 All D1–D3 tasks are done. Flagged items (F01–F04, F07, F09, F15, F17–F18) remain published
 on the Flagged for Review page, non-blocking.
+
+---
+
+## Session `arena/f46f7d0f-rentincreasesf5` — claim (2026-11-11)
+
+**Branch:** `arena/f46f7d0f-rentincreasesf5` (fixed Arena session branch; platform requirement — no separate session branch created or pushed to).
+**Pre-claim check (2026-11-11 UTC):** Read the full board above, rebased onto `origin/main` (`cd203b5`, preserving `arena/8b4c4d7d` publication record verbatim when `git pull --rebase` encountered an append/append conflict on `COORDINATION.md`), and inspected active concurrent session branches (`arena/47ecd4e4`, `arena/49e8b1d7`, `arena/dc30a15e`, `arena/92a81461`, `arena/885cb086`) plus >24h-old open PRs #29 and #30 before claiming. Because active sessions currently claim `EXECUTIVE-SUMMARY.md`, `tools/**`, `hub/**`, `index.html`, and `site/**`, this session claims a **strictly non-overlapping exclusive scope** (`f46f7d0f/**`, `EXECUTIVE-SUMMARY-F46F7D0F.md`, `VERIFICATION-F46F7D0F.md`, and this appended `COORDINATION.md` section) and will log requests rather than editing files owned by active sessions.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| F46-1 | Fresh 2026-11-11 line-by-line verification of all controlling official sources (SF Rent Board, Admin Code §§37.2/37.3/37.9/37.10B/37.10C/37.15, Form 571, Rules Part IV & 6.14, File No. 261020, CA Civ. Code §§827/1942.5/1947.12/1954.53, Gov. Code §12955, 42 U.S.C. §3604 / HUD) | in progress | `arena/f46f7d0f-rentincreasesf5` | `VERIFICATION-F46F7D0F.md`, `f46f7d0f/data/**` |
+| F46-2 | Anonymized Executive Summary (license & Housing Inventory requirement forefront, step-by-step novice walkthrough, Unit A & Unit B arithmetic, all owner inquiries answered with official sources) | in progress | `arena/f46f7d0f-rentincreasesf5` | `EXECUTIVE-SUMMARY-F46F7D0F.md`, `f46f7d0f/index.html`, `f46f7d0f/executive-summary.html` |
+| F46-3 | Whole-repository line-by-line review, privacy audit (zero tenant names/initials/addresses), and clearly labeled Flagged for Review register | in progress | `arena/f46f7d0f-rentincreasesf5` | `f46f7d0f/repo-audit.html`, `f46f7d0f/flagged.html`, `VERIFICATION-F46F7D0F.md` |
+| F46-4 | Clean, user-friendly category dashboard site (`f46f7d0f/**`) with deterministic builder/verifier (`f46f7d0f/build_f46f7d0f.py`), every table row linked directly to an official source, unverified values left blank and flagged | in progress | `arena/f46f7d0f-rentincreasesf5` | `f46f7d0f/**` |
+| F46-5 | Full build & release-gate verification, rebase/merge preserving all other sessions' work, PR → merge to `main` → confirm GitHub Pages deployment → record result | in progress | `arena/f46f7d0f-rentincreasesf5` | `COORDINATION.md` |
+
+Privacy commitment: zero supplied tenant names, initials, street addresses, or unit numbers will be written to any tracked file, script, or commit message; placeholders (`Unit A`, `Unit B`, `Tenant A1`–`Tenant A4`, `Tenant B1`–`Tenant B2`) are used throughout while preserving owner-supplied dates and dollar amounts labeled as unverified owner intake.
