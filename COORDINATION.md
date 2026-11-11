@@ -1045,6 +1045,7 @@ F01 owner-supplied ledger (no intervening Unit 2 increases assumed) · F02 1940 
 | Validate on `main` |  |
 | Pages deploy |  |
 | Live checks |  |
+---
 
 ## Session `arena/47ecd4e4` · 2026-11-11 · final verification, privacy re-check and live-site confirmation
 
@@ -1123,3 +1124,56 @@ Read the shared board and open PR #29/#30 before claiming. Those PRs own site/ge
 - PR validation run `42944498782`: success. Post-merge main validation `42944552236`: success. GitHub Pages build/deploy `42944551595`: success; Pages build API confirms the merged commit.
 - Live dashboard: https://kanlerxz87-cyber.github.io/RentincreaseSF5/ ; independent review: https://kanlerxz87-cyber.github.io/RentincreaseSF5/review-2026-11-11.html . Existing executive summary, category pages, source register and Flagged for Review page preserved.
 - All claimed implementation/review/publication work done. Outstanding legal/property evidence and historical audit limitations remain needs review, not claimed verified. No other sessions' pending PRs merged or closed. This record-only follow-up changes no published calculations or generators.
+---
+
+## Session `arena/dc30a15e-rentincreasesf5` — final re-verification and publication (2026-11-11)
+
+**Branch:** `arena/dc30a15e-rentincreasesf5` (fixed Arena session branch; no other branch created).
+**Claim time:** 2026-11-11. Read the full board above plus open PRs #29 and #30 before claiming.
+Open PR #29 (`arena/0c632e7e`, updated 2026-11-10 00:55 UTC) and PR #30 (`arena/adace8f8`,
+updated 2026-11-10 01:00 UTC) have had no commits for well over 60 minutes, so their scopes are
+stale under the handoff rule — but this session will NOT edit their branches. It works only on its
+own branch and preserves all merged work. If their unmerged fixes are still missing from `main`
+after fresh verification, this session will re-derive them from official sources rather than copying
+their branches.
+
+| ID | Task | Owner | Files in scope | Status |
+|---|---|---|---|---|
+| D1 | Fresh line-by-line re-verification of controlling facts against live official sources (11 Nov 2026) | `arena/dc30a15e-rentincreasesf5` | `VERIFICATION-DC30A15E.md` (new), this coordination section | in progress |
+| D2 | Privacy audit (no tenant names/initials), executive-summary licence-first check, full build + release gate + checks; repair only if a check fails | `arena/dc30a15e-rentincreasesf5` | `COORDINATION.md`; generator/page scope extended ONLY if a check fails, and logged here first | in progress |
+| D3 | PR from `arena/dc30a15e-rentincreasesf5` to `main`; merge; confirm Pages deploy; record result | `arena/dc30a15e-rentincreasesf5` | `COORDINATION.md` | in progress |
+
+No tenant name, initial, street address, or unit address will be written to any tracked file.
+No licence filing, inventory submission, notice service, or lawyer approval is performed.
+Every value asserted must be re-read from its official URL this session; anything unconfirmed is
+left blank and flagged, never inferred.
+
+### Results — `arena/dc30a15e` (2026-11-11)
+
+D1 done. Fresh evidence in `VERIFICATION-DC30A15E.md`: 17 official sources re-fetched and read
+(D-R1–D-R17), including a first direct read of the City legislative record for File No. 261020
+(Ordinance, Pending Committee Action, Land Use and Transportation, introduced 9/15/2026, no
+enactment). All published rates, notice periods, licence rules, and the banking-conflict
+statement re-confirmed; the June-2025 1.6% worked-example mislabel persists (F07 stands).
+All five scenarios recompute to the cent; serve-by dates verified by day count.
+
+D2 done. Privacy: process-local exact scan of all tracked files — five identifier tokens zero
+matches; the sixth collides with an ordinary uppercase English verb in prose (context-reviewed
+false positive in 4 source files + 2 mirrors, no identifiers present). No tracked `private/`
+file; `internal/notes.md` identifier-free. History clearance NOT claimed (grafted shallow
+clone, one commit); published F15 stands. Executive summary leads with the licence question on
+the landing page, `hub/executive-summary.html`, and `EXECUTIVE-SUMMARY.md`. Checks: build
+reproducible (git clean after re-run); release gate PASS; check, independent audit,
+check_links, follow-up audit PASS; repository audit CI-mode 0 failures (379 known review
+warnings). No generator/page edit needed — scope stayed at this log plus the new verification
+document. Open PRs #29/#30 observed stale and left untouched; their headline legislative
+finding is already on `main` (PR #26) and was re-verified directly here.
+
+D3 in progress — PR and deploy record below.
+
+---
+
+<!-- collision log arena/dc30a15e 2026-11-11: origin/main advanced (PRs #31/#32/#34) while
+     PR #35 was open. Merged origin/main into this branch; COORDINATION.md append-append
+     conflict resolved by keeping BOTH sections verbatim (merged Nov-11 sessions first, then
+     this session). No session work discarded. -->
