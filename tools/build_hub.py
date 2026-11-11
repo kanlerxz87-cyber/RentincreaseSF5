@@ -673,7 +673,7 @@ serve the notice. <a href="hub/process.html">Read the nine-step process &rarr;</
 
 def page_exec():
     b = head("Executive summary",
-             "Compiled 7 November 2026; every figure re-verified against the same official sources on 11 November 2026. The licence question comes first because nothing else "
+             "Compiled 7 November 2026; every figure re-verified against the same official sources on 8 &amp; 11 November 2026. The licence question comes first because nothing else "
              "can be done safely until it is settled.")
     b += '<section class="panel"><h2>1. The licence question</h2><div class="answer">'
     b += ("<p><strong>You must be licensed, but you do not apply.</strong> Report each unit into the Rent "
@@ -893,7 +893,7 @@ def page_rates():
     b += '<section class="panel"><h2>Official rate table</h2>'
     rows = [[e("%s - %s" % (_d(a).isoformat(), _d(bb).isoformat())), "%.1f%%" % r,
              badge(VERIFIED) + " " + src("S4")] for a, bb, r in RATES]
-    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026 and re-read on 8 November 2026. "
+    b += table("Transcribed from Rent Board Form 571, retrieved 7 November 2026 and re-read on 8 &amp; 11 November 2026. "
                "Only one of the two 1992-1993 increases may be imposed, based on the tenant's anniversary date.",
                ["Effective period", "Allowable increase", "Status and source"], rows)
     b += ('<p class="note">The 12/8/1992 - 2/28/1993 and 3/1/1992 - 12/7/1992 rows overlap by design; '
@@ -1214,10 +1214,10 @@ def page_verification():
          e("Defect found in the previous landing page and fixed; now guarded."), badge(VERIFIED) + " " + src("S5")],
         ["Merge markers", e("Scan for unresolved conflict markers in tracked files."),
          e("Markers found in the coordination file and repaired; now guarded."), badge(VERIFIED) + " " + src("S5")],
-        ["Rate table years", e("Every effective period re-read from Form 571 on 8 November 2026 and the two-digit years re-checked."),
+        ["Rate table years", e("Every effective period re-read from Form 571 on 11 November 2026 and the two-digit years re-checked."),
          e("Defect found: 1982-1999 printed as 2082-2099 (F19). Fixed, table re-checked row by row; gate now rejects any year outside 1982-2027."),
          badge(VERIFIED) + " " + src("S4")],
-        ["Independent re-verification", e("Section 37.15, section 37.3, Form 571, the rent increase and banking pages, Rules 4.10 and 4.12, Civil Code sections 827, 1942.5 and 1947.12, the AB 1482 page, the Rent Board fee page, Form 516C and Form 1007 re-fetched and re-read on 8 November 2026."),
+        ["Independent re-verification", e("Section 37.15, section 37.3, Form 571, the rent increase and banking pages, Rules 4.10 and 4.12, Civil Code sections 827, 1942.5 and 1947.12, the AB 1482 page, the Rent Board fee page, Form 516C and Form 1007 re-fetched and re-read on 11 November 2026. See VERIFICATION-47ECD4E4.md for today’s line-by-line check."),
          e("All published values matched. The 1.6% rate, the licence rule, the notice periods and the AB 1482 exemption are unchanged."),
          badge(VERIFIED) + " " + src("S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S12", "S20", "S21")],
         ["Arithmetic re-check", e("Both units' five scenarios recomputed from the base rents and the published percentages."),
