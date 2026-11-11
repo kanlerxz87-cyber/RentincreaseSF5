@@ -1204,8 +1204,8 @@ on the Flagged for Review page, non-blocking.
 
 | ID | Task | Owner | Files in scope | Status |
 |---|---|---|---|---|
-| N1 | Fresh line-by-line audit of current published hub, every table row/source link, privacy, and legal/rate claims against official sources | `arena/92a81461` | `COORDINATION.md`, `VERIFICATION-2026-11-11.md`, `README.md`, `EXECUTIVE-SUMMARY.md`, `tools/**`, `data/verified-register.csv`, `hub/**`, `index.html`, corresponding `site/**` mirrors (corrections only if audit finds a defect) | in progress |
-| N2 | Rebuild, run all release checks, and independently inspect the generated site | `arena/92a81461` | same integration scope as N1 | in progress |
+| N1 | Fresh line-by-line audit of the current hub and every other published set, table-row citations, privacy, and legal/rate claims against official sources | `arena/92a81461` | `COORDINATION.md`, `VERIFICATION-2026-11-11.md`, `README.md`, `EXECUTIVE-SUMMARY.md`, `research/**`, `tools/**`, `build.py`, `scripts/**`, `data/**` (no identity tokens), `pages/**`, `docs/**`, `dashboard/**`, `hub/**`, root published HTML, `audit/**`, and corresponding `site/**` mirrors; correction-only scope | in progress |
+| N2 | Rebuild, run all release checks, resolve every source-row warning or leave unconfirmed values blank and flagged, and independently inspect the generated site | `arena/92a81461` | same integration scope as N1, including generated outputs | in progress |
 | N3 | Open PR from this Arena-assigned branch, merge, verify Pages deployment, and record result | `arena/92a81461` | `COORDINATION.md` | in progress |
 
 Claimed after reading the shared board and checking the branch and working tree. No unresolved active edit claim was present; the November 10 correction and final integration are already recorded as merged in PRs #26–#27. This session uses only the Arena-assigned branch, not a separate session branch. Tenant names/initials and identifying details are explicitly out of scope and will not be copied into any file.
