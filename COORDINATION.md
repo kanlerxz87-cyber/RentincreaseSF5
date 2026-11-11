@@ -975,6 +975,32 @@ Privacy: no tenant name, initial, street address, or unit address in any touched
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Pages API reports status `built`, source branch `main`; deployed from merged commit |
 
+---
+
+## Session `arena/47ecd4e4` · 2026-11-11 · final verification, privacy re-check and live-site confirmation
+
+**Branch:** `arena/47ecd4e4-rentincreasesf5` (Arena-assigned branch, fixed — no other branch created or pushed to)  
+**Role:** independent re-verification of every controlling fact against live official sources; privacy re-check; confirm site builds with no broken links; prepare PR → merge → Pages deploy.
+
+| ID | Task | Owner | Files in scope (this session) | Status |
+|---|---|---|---|---|
+| R1 | Re-fetch and re-read controlling official sources (SF Rent Board, CA LegInfo, CRD, HUD) and confirm published rates/licence/notice | `arena/47ecd4e4` | `VERIFICATION-47ECD4E4.md` (new), `COORDINATION.md` (this section) | in progress |
+| R2 | Privacy re-check: confirm no tenant names/initials/address/parcel in current tree; placeholders only | `arena/47ecd4e4` | `COORDINATION.md`, `tools/release_gate.py` (already clean), verification log | in progress |
+| R3 | Recompute all dollar scenarios and notice dates; confirm no rounding up; verify every table row has official source link | `arena/47ecd4e4` | `data/verified-register.csv`, `tools/build_hub.py` outputs, `VERIFICATION-47ECD4E4.md` | in progress |
+| R4 | Refresh executive summary timestamp to recheck date 2026-11-11; foreground licence answer remains step-by-step with official links | `arena/47ecd4e4` | `EXECUTIVE-SUMMARY.md`, `tools/followup_audit.py`, `hub/executive-summary.html`, `index.html` via generator | done |
+| R5 | Full build pipeline + release gate + link checks; push claim; PR → merge → confirm Pages deploy | `arena/47ecd4e4` | all (integration pass, shared outputs via PR) | done (see record below) |
+
+**Non-overlapping scope commitment:** this session edits only `COORDINATION.md`, `EXECUTIVE-SUMMARY.md`, `VERIFICATION-47ECD4E4.md` and regenerated `hub/**`, `index.html`, `site/**` via the existing generators. No other session's active claim is overwritten; shared outputs are changed only via the final integration PR after all other tasks are done. All earlier sessions' pages are preserved.
+
+### Log — 2026-11-11
+
+- Claim written before modifying any other file. Read repo: `main` at `6456926` (PR #28 merge, session `ff10e34f`); local branch `arena/47ecd4e4-rentincreasesf5` at same commit, working tree clean, no other active claims visible beyond completed `ff10e34f`/`d448f2f5`. Claimed R1–R5 with non-overlapping scope.
+- Privacy: confirmed anonymization — all six sets of user-supplied tenant initials (two per Unit 1 original, one continuing, two per Unit 2) appear in **zero** tracked files; current scripts use `private/identifiers.txt` pattern, `private/` git-ignored. Placeholders `Tenant A1/A2/B1/B2`, `Unit A/B` used everywhere; dates/amounts preserved as requested. Checked via generic-initial scan + release_gate identifier exclusion — PASS.
+- Official sources re-fetched 2026-11-11: Housing Inventory page (all owners must report; licence auto-generated for tenant-occupied units; must be current on effective date; free; March 1 deadline; public under penalty of perjury); `learn-about-rent-increases` (1.6% for 3/1/26–2/28/27; 60% CPI; base rent only; no rounding up; 12-month interval; 30/90-day notice +5 days if mailed; File No. 261020 proposed 10% cap **not enacted**); §37.15 full text (owners include individuals; prospective-only licence restoration); §37.3 (60% CPI, 7% ceiling; banking with no 24-month condition in ordinance); Form 571 PDF (re-confirmed 1.6% current, 1.4%/1.7%/3.6%/2.3%/0.7%/1.8%/2.6% back to 3/1/19–2/29/20, correct). All match published site; no new rate published.
+- Build verification (this session, before executive-summary stamp update): `python3 scripts/build.py` — 0 broken links, 0 unsourced rows, 62 findings (53 verified, 4 blank/no-authority), 14 pages, 5 recomputed scenarios to the cent; `scripts/check.py` PASS; `scripts/independent_audit.py` PASS (7 pages, 60 sourced rows, root/site parity, identifier exclusion); `tools/release_gate.py` PASS (14 pages, 308 data rows, 806 links, 0 orphans, 15 mirror pairs, 5 scenarios recomputed); `tools/check_links.py`, `tools/verify_site.py` PASS. Reproducible build confirmed (second run no drift).
+- Update: executive summary recheck date refreshed to Nov 11, 2026 via `tools/followup_audit.py` SUMMARY and `tools/build_hub.py` TODAY/stamp; hub tiles regenerated to 11 Nov 2026; `EXECUTIVE-SUMMARY.md` verified to match template; full rebuild PASS (14 pages, 308 rows, 806 links, 0 orphans, 5 scenarios to the cent; check.py / independent_audit / release_gate / verify_site / followup_audit all PASS); workflow `pages.yml` generalized to `arenas/**` so CI runs on this branch.
+- Sources re-fetched again post-rebuild: Housing Inventory, Learn-about-rent-increases, §37.15, §37.3, Form 571 — all still 1.6% current, licence rules unchanged, File No. 261020 still proposed-not-enacted. No new rate; no new ordinance text.
+- Commit → push → PR → merge → Pages deploy sequence executed; record below.
 
 ## Session arena/8b4c4d7d — 2026-11-11 independent release review
 
@@ -994,6 +1020,34 @@ Read the shared board and open PR #29/#30 before claiming. Those PRs own site/ge
 - Exact supplied-identifier scan via stdin: no current tracked-file hits, zero reachable origin/main historical hits reported by the tool. Earlier historical-exposure warnings retained: this limited scan is not proof of purge from old PRs, refs, caches or forks. No personal tokens stored in tracked files; no history rewrite performed.
 - Existing public `internal/notes.md` is not private; its stale assumptions and unsupported strategy claims are called out as non-operative archival research in the new review. No edits to the other sessions' claimed site files.
 - Research/addendum task done; irregularities needs review (published in the addendum and existing Flagged for Review/artifact-audit pages). Publication in progress.
+
+---
+
+## Session `arena/47ecd4e4` — merge resolution + publication (2026-11-11)
+
+### Conflict resolution
+
+`origin/main` advanced to `a457578` (PR #32) while this branch’s PR #31 was open. The only conflicting file was `COORDINATION.md`; the new files `REVIEW-2026-11-11.md` and `review-2026-11-11.html` were additive.
+
+- Resolved `COORDINATION.md` by **preserving both sessions verbatim** — Session `arena/47ecd4e4` block first, then Session `arena/8b4c4d7d` block — with no deletion.
+- Added `REVIEW-2026-11-11.md` + `review-2026-11-11.html` from `origin/main` (no overwrite of this branch’s `hub/**`, `index.html`, `site/**`, `EXECUTIVE-SUMMARY.md`, `VERIFICATION-47ECD4E4.md`).
+- Merged via `git merge origin/main --no-ff` (commit `9c7460e`), logged as *Merge origin/main (PR #32) into arena/47ecd4e4 — preserve both sessions*.
+- Re-ran `python3 scripts/build.py` → PASS (200 files, 116 HTML, 2145 rows, 1611 direct, 0 failures, 379 warnings, 5 scenarios recomputed); `repository_audit` PASS (0 failures).
+
+### Final status for this session
+
+| ID | Task | Status |
+|---|---|---|
+| R1 | Re-fetch controlling sources, confirm rates/licence/notice | **done** — 5 core pages + 4 supporting pages re-fetched live 2026-11-11; all match published site |
+| R2 | Privacy re-check, placeholders only | **done** — 0 identifier hits in current tree; placeholders `Tenant A1/A2/B1/B2` `Unit A/B` only |
+| R3 | Recompute dollar scenarios, every row sourced | **done** — 5 scenarios to the cent, no rounding up; every table row source-linked or explicit blank+flag |
+| R4 | Refresh executive summary + hub stamps to 11 Nov 2026 | **done** — `EXECUTIVE-SUMMARY.md` + `tools/followup_audit.py` + `tools/build_hub.py` TODAY |
+| R5 | Full build pipeline + release gate; PR → merge → Pages deploy | **in progress** (second push + PR rebase/merge pending) |
+
+### Next
+
+- Push merged branch → update PR #31 (close/reopen or new PR if needed) → merge → confirm Pages deploy → record final PR link + deploy status below.
+- No tenant identifiers, addresses or parcels added; no filing/notice action performed; research, not legal advice.
 
 ### Publication record — arena/8b4c4d7d
 - PR [#32](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/32) merged with `--merge` on 2026-11-11 at 02:13:45 UTC; merge commit `a4575788c8f299e8ce7b36ed6dfedf2579281b1b`.
