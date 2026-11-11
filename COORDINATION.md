@@ -1197,3 +1197,43 @@ conflict was resolved by keeping both sessions' sections verbatim. No session's 
 deleted or rewritten. This record follows the same record-PR pattern as PRs #28/#34.
 All D1–D3 tasks are done. Flagged items (F01–F04, F07, F09, F15, F17–F18) remain published
 on the Flagged for Review page, non-blocking.
+
+<!-- arena-0360e3ef rebase resolution (2026-11-11 02:18 UTC): `git pull --rebase origin main` before the first push met a
+     conflict at the end of this file because PRs #31-#34 merged while the claim was being written. Both sides are kept
+     verbatim: the merged sessions' sections above, this session's claim below. Nothing was removed. -->
+
+---
+
+## Session `arena-0360e3ef` · branch `arena/0360e3ef-rentincreasesf5` · claim written 2026-11-11 02:16 UTC
+
+Arena fixes this session to the branch above, so no `session-<id>/<task>` branch is created; the
+branch name is the session ID. Nothing else was edited before this claim was committed and pushed.
+
+### What was read before claiming
+
+- This whole board (978 lines) and `main` at `6456926` (merge of PR #28).
+- Every remote branch, not only `main`, because **claims made by parallel sessions live on their own
+  branches and are invisible on `main` until they merge**. Six sessions pushed claims between
+  02:11 and 02:12 UTC today and are treated as **active**:
+  `arena/8b4c4d7d`, `arena/49e8b1d7`, `arena/dc30a15e`, `arena/92a81461`, `arena/885cb086`, `arena/47ecd4e4`.
+  Between them they claim `hub/**`, `index.html`, `site/**`, `tools/**`, `scripts/build.py`,
+  `EXECUTIVE-SUMMARY.md`, `data/verified-register.csv`, `.github/workflows/pages.yml` and their own
+  `VERIFICATION-*.md` / `REVIEW-*.md` files. **None of those files is in this session's working scope.**
+- Open PRs #29 (`arena/0c632e7e`, last commit 2026-11-10 00:55 UTC) and #30 (`arena/adace8f8`, last
+  commit 2026-11-10 01:00 UTC): more than 25 hours without a commit, both `CONFLICTING`. Stale under
+  the 60-minute rule. Their branches are not edited; anything of theirs still missing from `main` is
+  re-derived from the official source rather than copied.
+
+### Tasks claimed (new files only until the integration step)
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| G1 | Fresh retrieval and line-by-line reading of every controlling official source (11 Nov 2026), with the quoted passage kept as evidence | `arena-0360e3ef` | `src/content/**` (new), `guide/data/**` (new) | in progress |
+| G2 | Repo review: check every row of the published register and every published set against those sources; record each result with its link; flag irregularities | `arena-0360e3ef` | `guide/data/repo-review.csv` (new), `guide/repo-review.html` (new) | in progress |
+| G3 | One clean dashboard: landing page plus category subpages (executive summary with the licence answer first, step-by-step Rent Board process, allowable increases, unit analysis, notices, owner practices, tenant-lawyer review, findings, sources, Flagged for Review) | `arena-0360e3ef` | `guide/**` (new), `src/**` (new) | in progress |
+| G4 | Privacy: placeholders only, dates and amounts unchanged, scan of every published file | `arena-0360e3ef` | `src/check_guide.py` (new) | in progress |
+| G5 | **Final integration** — only after the six active sessions above have merged or their claims have lapsed (60 minutes without a commit): merge `main` without discarding anyone's work, re-verify the combined data, point the landing page and navigation at the clean dashboard, keep every earlier set reachable from one archive page, no broken links, PR → merge → confirm Pages → record here | `arena-0360e3ef` | shared outputs, listed here again before they are touched | unclaimed until the condition is met |
+
+No tenant name, initial, street address or parcel number is written to any tracked file, commit
+message, PR text or CI log by this session. Dates and dollar amounts are kept exactly as supplied.
+No Inventory filing, licence request or tenant notice is performed.
