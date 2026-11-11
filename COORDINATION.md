@@ -975,3 +975,20 @@ Privacy: no tenant name, initial, street address, or unit address in any touched
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Pages API reports status `built`, source branch `main`; deployed from merged commit |
 
+---
+
+## Session `arena/49e8b1d7-rentincreasesf5` — independent re-verification, executive summary refresh, and final publication (2026-11-11)
+
+**Branch:** `arena/49e8b1d7-rentincreasesf5` (Arena-assigned; platform requirement — no session branch created). Base commit at claim time: `6456926` (merge of PR #28), working tree clean. All prior sessions' claims are released: `main` contains PRs #1–#4, #6, #8–#15, #16, #19, #24, #26–#28 and no board row names a session that is still working. No file owned by another live session is in this scope.
+
+| ID | Task | Owner | Files in scope | Status |
+| --- | --- | --- | --- | --- |
+| R1 | Re-read controlling official sources (Housing Inventory, §37.15, §37.3, Form 571, banked guidance, Rules Part IV, Civ. Code §§827/1947.12/1942.5, CRD, HUD) and confirm every published figure line-by-line | `arena/49e8b1d7-rentincreasesf5` | `VERIFICATION-49E8B1D7.md` (new), this section | in progress |
+| R2 | Refresh executive summary: licence question forefront, step-by-step for novices, official links, anonymised unit ledger | `arena/49e8b1d7-rentincreasesf5` | `EXECUTIVE-SUMMARY.md`, `hub/executive-summary.html` via `tools/build_hub.py`, `hub/process.html`, `hub/units.html` | in progress |
+| R3 | Verify anonymization: no tenant names/initials/address in any published file; dates/amounts preserved; privacy scan | `arena/49e8b1d7-rentincreasesf5` | `tools/release_gate.py`, whole tree | in progress |
+| R4 | Answer owner questions: reasonable increase in 94122, corporations vs individuals, notice method, tenant-lawyer scrutiny, one vs both units — with sources and flagged gaps | `arena/49e8b1d7-rentincreasesf5` | `hub/practices.html`, `hub/review.html`, `hub/laws.html`, `hub/rates.html`, `dashboard/questions.html`, `docs/owners.html` | in progress |
+| R5 | Build + link + source-coverage + reproducibility checks; repair any failure | `arena/49e8b1d7-rentincreasesf5` | `tools/build_hub.py`, `tools/release_gate.py`, `scripts/build.py`, `tools/check_links.py`, etc. | in progress |
+| R6 | PR → merge → confirm GitHub Pages deploy → record result | `arena/49e8b1d7-rentincreasesf5` | `COORDINATION.md` | in progress |
+
+Claim written before any other file was modified. No prior session's page, data file or generator is deleted or rewritten; corrections are additive, source-linked, and logged here. No tenant identifiers are copied; no Inventory filing, licence request, or tenant notice is performed.
+
