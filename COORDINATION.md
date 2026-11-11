@@ -1109,3 +1109,23 @@ D3 in progress — PR and deploy record below.
      PR #35 was open. Merged origin/main into this branch; COORDINATION.md append-append
      conflict resolved by keeping BOTH sections verbatim (merged Nov-11 sessions first, then
      this session). No session work discarded. -->
+
+### PR and deploy record — `arena/dc30a15e` (D3 done)
+
+| Item | Value |
+|---|---|
+| Branch | `arena/dc30a15e-rentincreasesf5` |
+| Pull request | [#35](https://github.com/kanlerxz87-cyber/RentincreaseSF5/pull/35) |
+| CI validate on PR | success (build, release gate, checkers, artifact audit, reproducibility; runs 42944970208 push + 42944976495 pull_request) |
+| Merge result | **MERGED** 2026-11-11T02:18:23Z, merge commit `6b4dec3692d310af47697f14464da740d9786461` |
+| Validate on `main` | **success** (run 42945106795) |
+| Pages build/deploy | **success** (run 42945106110); Pages API status `built`, source `main:/` |
+| Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
+| Live verification | `VERIFICATION-DC30A15E.md` retrieved from the deployed URL and read; content matches the merged commit |
+
+Collisions handled: `main` advanced (PRs #31/#32/#34) while PR #35 was open. Merged
+`origin/main` into this branch (commit `c39bd20`); the `COORDINATION.md` append-append
+conflict was resolved by keeping both sessions' sections verbatim. No session's work was
+deleted or rewritten. This record follows the same record-PR pattern as PRs #28/#34.
+All D1–D3 tasks are done. Flagged items (F01–F04, F07, F09, F15, F17–F18) remain published
+on the Flagged for Review page, non-blocking.
