@@ -975,3 +975,22 @@ Privacy: no tenant name, initial, street address, or unit address in any touched
 | Live site | https://kanlerxz87-cyber.github.io/RentincreaseSF5/ |
 | Live verification | Pages API reports status `built`, source branch `main`; deployed from merged commit |
 
+
+## Session arena/8b4c4d7d — 2026-11-11 independent release review
+
+| Task | Status | Owner | Files |
+|---|---|---|---|
+| Fresh controlling-source review, existing site validation, independent public review addendum and publication | in progress | arena/8b4c4d7d | COORDINATION.md (append only), REVIEW-2026-11-11.md (new) |
+
+Read the shared board and open PR #29/#30 before claiming. Those PRs own site/generator revisions; this session will not edit their files or merge their unreviewed changes. Existing claims predate this review; no takeover necessary for this non-overlapping addendum. Platform requires the fixed Arena branch rather than a new session branch. Baseline matches origin/main. No personal identifiers will be written to tracked files. Existing site remains the primary deliverable; this task independently checks its findings and deployment rather than duplicating it.
+
+- Claim bootstrap: assigned remote branch did not yet exist; `git pull --rebase` failed without changes. Pulled/rebased `origin main` (already current) and pushed the claim successfully.
+- Scope extension: new standalone `review-2026-11-11.html` alongside `REVIEW-2026-11-11.md`. This adds a public independent review without editing active PR #29/#30 navigation/generators. Existing consolidated Flagged for Review page already carries the source, privacy and banking limitations; this addendum makes audit scope explicit.
+
+### Independent review completed
+- Freshly retrieved/read official SF Housing Inventory, §37.15, annual-increase guide, banking guide, coverage guide; California Civil Code §§827, 1947.12 and 1942.5; CRD housing guide; HUD Fair Housing Act overview. Sixteen source-linked findings and plain-language workflow published in `review-2026-11-11.html` / `REVIEW-2026-11-11.md`. Source URLs appear per row in both outputs.
+- Confirmed license applies to individual owners, automatically generated after reporting, current on effective date; 1.6% current allowance and both annual-only computations; no new banked recommendation. Reconfirmed November 9 City warning: File No. 261020 proposed, not enacted per the Rent Board; no independent docket verification claimed.
+- Build, all existing checkers, release gate and follow-up audit pass, with no generated-file drift. Whole-repository audit after the addendum: 199 tracked files, 116 HTML, 2,145 rows; 1,611 direct sources, 166 indirect, 368 untraceable; 0 failures / 379 review warnings. This is not an all-rows substantive verification claim. Archived source gaps remain needs review, already disclosed in the public artifact audit and consolidated flags.
+- Exact supplied-identifier scan via stdin: no current tracked-file hits, zero reachable origin/main historical hits reported by the tool. Earlier historical-exposure warnings retained: this limited scan is not proof of purge from old PRs, refs, caches or forks. No personal tokens stored in tracked files; no history rewrite performed.
+- Existing public `internal/notes.md` is not private; its stale assumptions and unsupported strategy claims are called out as non-operative archival research in the new review. No edits to the other sessions' claimed site files.
+- Research/addendum task done; irregularities needs review (published in the addendum and existing Flagged for Review/artifact-audit pages). Publication in progress.
